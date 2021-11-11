@@ -86,9 +86,26 @@
 	卡塔兰数 $ C_n $
 	
 	从0开始 $ 1, 1, 2, 5, 14, 42, \dots $
-%	\[
-%	C_{n+1} = C_0 C_n + C_1 C_{n-1} + \dots + C_n C_0
-%	\]
+	\[
+	C_{n+1} = C_0 C_n + C_1 C_{n-1} + \dots + C_n C_0
+	\]
+	
+	该公式的证明可以通过
+	\[
+	\Bigg( \bigg( \Big( \big( \Bigg) \bigg) \Big) \big)
+	\]
+	如图所示的括号匹配，$ C_n $可以看成上面四组括号的合理排列形式，（合理排列意味着每一对括号都是左右对应的，像$ )( $这样的形式是非法的）
+	
+	在$ n $对括号的排列中，假设最后一个括号和第$ i $个左括号匹配。则在第$ i $个左括号之前，一定已经匹配上了$ (i-1) $对左括号。如下图，因此，此种情况的数量为$ f(i-1)*f(n-i-1) $。$ (1\leq i\leq n) $最后一个右括号可以$ 1 \sim n $个左括号匹配共n种情况。
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{pic/catalan_proof-001}
+		\caption{catalan number - proof}
+		\label{fig:catalanproof-001}
+	\end{figure}
+	
+	
 %	\[
 %???	(n-3)C_n = \frac{n}{2}(C_3 C_{n-1} + C_4 C_{n-2} + \dots + C_{n-2} C_4 + C_{n-1} C_3 )
 %	\]
