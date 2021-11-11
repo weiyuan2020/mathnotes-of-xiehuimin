@@ -1,21 +1,107 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{ctex}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+%//LaTeX 头部添加
+%\newtheorem{theorem}{Theorem}[section]
+%
+%\begin{theorem}
+%	***//定理内容
+%	\label{thm-1}
+%\end{theorem}
+%
+%\begin{proof}
+%	***//证明过程
+%\end{proof}
+%
+%//LaTeX 头部添加
+%\newtheorem{lemma}{Lemma}[section]
+%
+%\begin{lemma} 
+%	***//引理内容
+%	\label{lem-1}
+%\end{lemma}
+%
+%//LaTeX 头部添加
+%\newtheorem{corollary}{Corollary}[section]
+%
+%\begin{corollary} 
+%	***//推论内容
+%	\label{cor-1}
+%\end{corollary}
+
+
+
 \begin{document}
-	20.08.07\\
+	\chapter{2020年笔记}
+	\section{20.07.27}
+	\begin{equation}
+		\begin{aligned}
+			I &= \int_{\frac{\pi}{4}}^{\pi}\int_{0}^{2\sin\theta} f(r\cos\theta,r\sin\theta)r\text{d}r\text{d}\theta\\	
+			&=[\int_{0}^{\sqrt{2}}\int_{\frac{\pi}{4}}^{\pi-\arcsin\frac{r}{2}} 
+			+ \int_{\sqrt{2}}^{2} \int_{\arcsin\frac{r}{2}}^{\pi-\arcsin\frac{r}{2}}  ]
+			f(r\cos\theta,r\sin\theta)r\text{d}r\text{d}\theta\\
+		\end{aligned}
+	\end{equation}
 	
-	A-G 不等式\\ $a_1, a_2, \dots, a_n$ n个非负实数\\
+	\section{20.08.03}
+	
+	\begin{equation}
+		\lim\limits_{n \rightarrow +\infty }
+	(1-\frac{1}{1+2})(1-\frac{1}{1+2}) (1-\frac{1}{1+2+3})\dots(1-\frac{1}{1+2+\dots+n}) = ?
+	\end{equation}
+
+	\begin{equation}
+		\begin{aligned}
+			1-\frac{1}{\frac{n(n+1)}{2}} &= 1-\frac{2}{n(n+1)}\\
+			&=\frac{n^2+n-2}{n(n+1)}\\
+			&=\frac{(n+2)(n-1)}{n(n+1)}
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			I&=\lim\limits_{n\rightarrow +\infty}\frac{1\times 4}{2\times 3}\frac{2\times 5}{3\times 4}\dots \frac{(n-2)(n+1)}{(n-1)n}\frac{(n-1)(n+2)}{n(n+1)}\\
+			&=\lim\limits_{n\rightarrow+\infty}\frac{1}{3}\frac{4}{2}\frac{2}{4}\frac{5}{3}\frac{3}{5}\frac{6}{4}\dots \frac{n+2}{n}\\
+			&=\lim\limits_{n\rightarrow+\infty}\frac{1}{3}\frac{n+2}{n}\\
+			&=\frac{1}{3}\lim\limits_{n \rightarrow +\infty }\frac{n+2}{n}\\
+			&=\frac{1}{3}
+		\end{aligned}
+	\end{equation}
+	
+	卡塔兰数 $ C_n $
+	
+	从0开始 $ 1, 1, 2, 5, 14, 42, \dots $
+	\[
+	C_{n+1} = C_0 C_n + C_1 C_{n-1} + \dots + C_n C_0
+	\]
+	\[
+	(n-3)C_n = \frac{n}{2}(C_3 C_{n-1} + C_4 C_{n-2} + \dots)
+	\]
+	
+	
+	\section{20.08.07}
+	\begin{theorem}
+	A-G 不等式\\ 任意n个非负实数$ a_1, a_2, \dots, a_n$ \\
 	\begin{equation}
 		\frac{a_1 + a_2 + \dots + a_n}{n} \geq \sqrt[n]{a_1\dots a_n}
 	\end{equation}
-	等号成立 $\iff a_1 = a_2 = \dots = a_n$	\\
-	\\
-	证明 1\\
+	其中等号成立 $\iff a_1 = a_2 = \dots = a_n$
+
+	\label{thm-1}
+	\end{theorem}
+
+	\begin{proof}\label{1}
 	数学归纳法\\ $n=1$时结论平凡\\
 	$n=2\qquad \frac{a_1+a_2}{2} \geq \sqrt{a_1a_2}$\\
 	\[(a_1 - a_2)^2 = a_1^2 - 2 a_1 a_2 + a_2^2 \geq 0 \]
@@ -31,8 +117,9 @@
 		=&\frac{ka_{k+1}-(a_1+\dots+a_k)}{k(k+1)}\\		
 	\end{aligned}
 	\end{equation}
-	we found $\frac{a_1+\dots + a_k + a_{k+1}}{k+1} =  \frac{a_1+\dots + a_k}{k} + \frac{ka_{k+1}-(a_1+\dots + a_k)}{k(k+1)} $\\
-	note $ A := \frac{a_1+\dots + a_k}{k} , \qquad B:=\frac{ka_{k+1}-(a_1+\dots + a_k)}{k(k+1)} $
+	we found 
+	\[\frac{a_1+\dots + a_k + a_{k+1}}{k+1} =  \frac{a_1+\dots + a_k}{k} + \frac{ka_{k+1}-(a_1+\dots + a_k)}{k(k+1)} \]
+	note \[ A := \frac{a_1+\dots + a_k}{k} , \qquad B:=\frac{ka_{k+1}-(a_1+\dots + a_k)}{k(k+1)}\]
 	
 	\begin{equation}
 		(\frac{a_1+\dots + a_k + a_{k+1}}{k+1})^{k+1}=(A+B)^{k+1}\geq A^{k+1}+(k+1)A^k B
@@ -53,9 +140,10 @@
 	使用二项式展开定理的条件：\\
 	在归纳法第二步对$a_1 \dots a_{k+1}  $重编号，使$ a_{k+1} $为其中最大的数（之一）\\
 	这使得分解式右边第二项$ \frac{ka_{k+1}-(a_1+\dots+a_k)}{k(k+1)} $ 一定是非负数
+	\end{proof}
 	
 	
-	证明 2\\
+	\begin{proof}\label{证明 2}
 	Forward and backward (Cauchy, 1897)\\
 	Forward Part:\\
 	$ n=2 $ 
@@ -131,11 +219,19 @@
 		 \frac{1}{n-1}\sum_{i=1}^{n-1}a_i  \geq \sqrt[n-1]{\prod_{i=1}^{n-1}a_i}
 	\end{equation}
 	
+	\end{proof}
 	
-	1.3.5 柯西，施瓦茨不等式
+	\begin{theorem}
+		柯西，施瓦茨不等式\\	
+		对$ a_1,\dots,a_n $和$ b_1, \dots ,b_n \in \mathbb{R}$，成立
+		\begin{equation}
+			|\sum_{i=1}^n a_ib_i|\leq \sqrt{\sum_{i=1}^n a_i^2}\sqrt{\sum_{i=1}^n b_i^2}
+		\end{equation}
+		\label{1.3.5}
+	\end{theorem}
 	
-	对$ a_1,\dots,a_n $和$ b_1, \dots ,b_n \in \mathbb{R}$，成立
-	\begin{equation}
-		|\sum_{i=1}^n a_ib_i|\leq \sqrt{\sum_{i=1}^n a_i^2}\sqrt{\sum_{i=1}^n b_i^2}
-	\end{equation}
+
+
+	\section{20.08.12}
+	
 \end{document}
