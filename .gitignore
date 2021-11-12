@@ -1,7 +1,6 @@
 .DS_Store
 .texpadtmp
 main.pdf
-*.pdf
 ~$figures.pptx
 
 *.synctex(busy)
