@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{ctex}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{listings}   % include the package before using it
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+%//LaTeX 头部添加
+%\newtheorem{theorem}{Theorem}[section]
+%
+%\begin{theorem}
+%	***//定理内容
+%	\label{thm-1}
+%\end{theorem}
+%
+%\begin{proof}
+%	***//证明过程
+%\end{proof}
+%
+%//LaTeX 头部添加
+%\newtheorem{lemma}{Lemma}[section]
+%
+%\begin{lemma} 
+%	***//引理内容
+%	\label{lem-1}
+%\end{lemma}
+%
+%//LaTeX 头部添加
+%\newtheorem{corollary}{Corollary}[section]
+%
+%\begin{corollary} 
+%	***//推论内容
+%	\label{cor-1}
+%\end{corollary}
+\newtheorem{myDef}{Definition}
+%\begin{myDef}
+%	\label{label}
+%	...
+%\end{myDef}
+%
+
+
+\usepackage{geometry}
+%\geometry{right=2.0cm,left=2.0cm}% 
+\geometry{right=2.0cm,left=2.0cm,top = 2.0cm, bottom = 2.0cm}
+
+\title{one numbers and games reading notes}
+\author{weiyuan}
+\date{2021.11.14}
+\begin{document}
+	\maketitle
+\chapter{All numbers gerat and small}
+Construction
+
+Two sets of numbers $  L,R  $\\
+no member of $ L $ is $ \ge  $ any members of $ \mathbb{R} $\\
+then there is a number$ \{L|R\} $\\
+All numbers are constructed in this way.\\
+
+Convension
+
+If $ x\in\{L|R\} $ we write $ x^L $ for the typical member of L, and $ x^R $ for the typical member of $ \mathbb{R} $. For $ x $ itself we then write $ \{x^L|x^R\} $ 
+\begin{gather}
+	x = \{ a,b,c,\dots | d,e,f,\dots \}
+\end{gather}
+means that $ x\in \{L|R\} $, where $ a,b,c,\dots $ are the typical members of $ L $, and $ d,e,f,\dots $ the typical members of $ R $\\
+
+
+\begin{myDef}
+	$ x \ge y, x \le y $\\
+	\begin{gather*}
+		x \ge y \quad \iff \text{no} x^R \le y \text{and} x \le \text{no} y^L\\
+	\end{gather*}
+	and $ x\le y \iff y\ge x $
+	We write $ x\ngeq y $ to mean that $ x \le y $ does not hold
+	
+\end{myDef}
+
+\begin{myDef}
+	$ x=y, x>y, x<y $\\
+	\begin{gather*}
+		x = y \iff x\ge y \text{and} y \ge x\\
+		x > y \iff x\ge y \text{and} y \ngeq x\\
+		x < y \iff y>x\\		
+	\end{gather*}
+	
+\end{myDef}
+
+\begin{myDef}
+	$ x+y $\\
+	\begin{gather*}
+		x+y = \{x^L+y , x+y^L | x^R+y, x+y^R\}
+	\end{gather*}
+\end{myDef}
+	
+	\begin{myDef}
+		$ -x $\\
+		\begin{gather*}
+			-x = \{ -x^R | -x^L \}
+		\end{gather*}
+	\end{myDef}
+	
+	\begin{myDef}
+		$x\cdot y$\\
+		\begin{gather*}
+			x\cdot y = \{x^L+y+xy^L-x^Ly^L, x^Ry+xy^R-x^Ry^R|\\
+			\qquad\quad x^Ly+xy^R-x^Ly^R, x^Ry+xy^L-x^Ry^L\}
+		\end{gather*}
+	\end{myDef}
+	
+	\begin{proof}
+		\begin{gather}
+			xy>x^Ly+xy^L-x^Ly^L\\
+			\because	(x-x^L)(y-y^L)>0
+		\end{gather}
+	\end{proof}
+\end{document}
