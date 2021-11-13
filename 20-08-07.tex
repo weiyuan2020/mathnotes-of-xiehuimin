@@ -150,10 +150,6 @@
 	
 	\section{20.08.07}
 	
-
-	
-	
-	
 	\begin{theorem}
 	A-G 不等式\\ 任意n个非负实数$ a_1, a_2, \dots, a_n$ \\
 	\begin{equation}
@@ -296,15 +292,89 @@
 		\[ \sum_{i=1}^n (a_i - \lambda b_i)^2 = \sum_{i=1}^n a_i^2 - 2\lambda \sum_{i=1}^n a_i b_i + \lambda^2 \sum_{i=1}^n b_i^2 \geq 0  \]
 		由韦达定理（视$ \lambda $为未知数），原方程无解或只有唯一解
 		
-		\begin{equation*}
+		\begin{equation}
 			\begin{aligned}
 				 \Delta = b^2-4ac \leq 0\\
 				 (-2\sum_{i=1}^n a_i b_i)^2-4\sum_{i=1}^na_i^2\sum_{i=1}^nb_i^2\leq 0\\	
 				 (\sum_{i=1}^n a_i b_i)^2 \leq \sum_{i=1}^na_i^2\sum_{i=1}^nb_i^2\\
 				 \sum_{i=1}^n a_i b_i \leq \sqrt{\sum_{i=1}^na_i^2}\sqrt{\sum_{i=1}^nb_i^2}\\
 			 \end{aligned}
-		\end{equation*}
+		\end{equation}
 	\end{proof}
+
+	\section{20.08.11}
+\begin{theorem}	定积分第一中值定理\\
+	设函数$ f(x),g(x) \in \mathbb{C}[a,b]. $且在$ [a,b] $上不变号，则存在$ \zeta \in  [a,b]$，使得$ \int_{a}^{b}f(x)g(x) = f(\zeta)\int_{a}^bg(x)\text{d}x $
+	
+\end{theorem}
+\begin{proof}
+	suppose that $ g(x)\ge 0 $. $ f(x) $ continuous on close set,so we can get the maximum and minimum value of $ f $. We note that m is the minimum value of $f(x), x\in [a,b] $,and M is the maximum value of $ f(x) $, then we have:
+
+	\begin{gather}
+		mg(x) \le f(x)g(x) \le Mg(x)\\
+		m\int_{a}^{b}g(x)\text{d}x \le \int_{a}^{b}f(x)g(x)\text{d}x\le M\int_{a}^{b}g(x)\text{d}x
+	\end{gather}
+
+	note that we don't know$ \int_{a}^{b}g(x)\text{d}x \neq 0$
+	
+	When $ \int_{a}^{b}g(x)\text{d}x = 0$, then $ g(x) \equiv 0 $, So $ \forall \zeta \in [a,b] $, the theorem works.
+	
+	When $ \int_{a}^{b}g(x)\text{d}x = 0$, then $ m\le \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{\int_{a}^{b}g(x)\text{d}x} \leq M $
+	
+	From the Intermediate Value Theorem, $ f(x) \in \mathbb{C}[a, b] \quad m\le f(x) \le M $
+	
+	\begin{gather}
+		\exists \zeta \in [a,b] \quad f(\zeta) = \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{\int_{a}^{b}f(x)\text{d}x}\\
+		\int_{a}^{b}f(x)g(x)\text{d}x = f(\zeta)\int_{a}^{b}g(x)\text{d}x
+	\end{gather}
+
+\end{proof}
+
+设$ g(x) $在$ [a,b] $上连续可积，$ f(x) $在$ [a,b] $上连续单调递增，且$ f'(x) \ge 0 $，并对$ \forall x\in [a,b] $ 有$ f(x)\ge 0 $。则存在$ \zeta \in [a,b] $，使得
+\begin{gather}
+	\int_{a}^{b}f(x)g(x)\text{d}x = f(b)\int_{\zeta}^{b}g(x)\text{d}x
+\end{gather}
+
+\begin{proof}
+	set$ G(x) = \int_{x}^{b}g(t)\text{d}t , g(x)\text{在}[a,b] $	上可积
+
+	则$ G(x),x\in [a,b] $存在最值，设最小值和最大值分别为$ m,M $
+	
+	\begin{gather}
+		G(x) = -\int_{b}^{x}g(t)\text{d}t,\quad  G'(x) = -g(x)
+	\end{gather}
+
+\begin{equation}
+	\begin{aligned}
+		\int_{a}^{b}f(x)g(x)\text{d}x &= -\int_{a}^{b}f(x)\text{d}G(x)\\
+		&=-{(f(b)G(b) - f(a)G(a)) -\int_{a}^{b}G(x)f'(x)\text{d}x }\\
+		&= f(a)G(a)+ \int_{a}^{b}G(x)f'(x)\text{d}x\\
+	\end{aligned}
+\end{equation}
+	\begin{gather}
+		m\int_{a}^{b}f'(x)\text{d}x \le \int_{a}^{b} G(x)f'(x)\text{d}x \le M\int_{a}^{b}f'(x)\text{d}x\\
+		m[f(b-f(a))] \le  \int_{a}^{b} G(x)f'(x)\text{d}x \le M[f(b-f(a))]\\
+	\end{gather}
+$ \because $
+	\begin{gather}
+		mf(a) \le  f(a)G(a) \le Mf(a)\\	
+		mf(b) \le  \int_{a}^{b} f(x)g(x) \text{d}x \le Mf(b)\\	
+	\end{gather}
+\begin{equation}
+	\begin{gather}
+		\text{when} f(b)=0,    &f(x)\equiv 0, \forall \zeta \in [a,b], \text{等式恒成立}\\
+		\text{when} f(b)\neq0, &m\le \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{f(b)}\le M\\
+	\end{gather}
+\end{equation}
+	From the Intermediate Value Theorem, $ \exists \zeta \in [a,b] s.t. G(\zeta) = \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{f(b)} $\\
+	then we have
+	\begin{gather}
+		\int_{a}^{b}f(x)g(x)\text{d}x = f(b)G(\zeta) = f(b)\int_{\zeta}^{b}g(x)\text{d}x
+	\end{gather}
+	
+	
+\end{proof}
+
 
 
 	\section{20.08.12}
@@ -386,7 +456,7 @@
 	\[ (\frac{1+2+\dots + n}{n})^n = (\frac{n(n+1)}{2n})^n = (\frac{n+1}{2})^n \]
 	(2) when $ n>1 $
 	\[ (n!)^2 = (n\cdot 1)((n-1)\cdot 2)\dots(1\cdot n) < (\frac{n\cdot 1 + (n-1)\cdot 2 + \dots + 1\cdot n}{n})^n \]
-	\begin{equation*}
+	\begin{equation}
 		\begin{aligned}
 			n\cdot 1 + (n-1)\cdot 2 + \dots + 1\cdot n &= \sum_{k=1}^n (n-k+1)k \\
 			\sum_{k=1}^n (n-k+1)k 
@@ -395,9 +465,9 @@
 			&= \frac{n(n+1)}{6}(3(n+1)-(2n+1))\\
 			&= \frac{n(n+1)(n+2)}{6}
 		\end{aligned}
-	\end{equation*}
+	\end{equation}
 	
-	\begin{equation*}
+	\begin{equation}
 		\begin{aligned}
 			(n!)^2  &= (n\cdot 1)((n-1)\cdot 2)\dots(1\cdot n)\\
 					&< (\frac{n\cdot 1 + (n-1)\cdot 2 + \dots + 1\cdot n}{n})^n\\
@@ -405,29 +475,29 @@
 					&= (\frac{(n+1)(n+2)}{6})^n\\
 					&< (\frac{n+2}{6})^{2n}
 		\end{aligned}
-	\end{equation*}
+	\end{equation}
 
-	\begin{equation*}
+	\begin{equation}
 		\therefore \qquad	n! < (\frac{n+2}{\sqrt{6}})^{n}
-	\end{equation*}
+	\end{equation}
 	
 	(3) 
-	\begin{equation*}
+	\begin{equation}
 		\frac{n+1}{2} = \frac{n+2}{\sqrt{6}}
-	\end{equation*}
+	\end{equation}
 	解得$ n=1+\sqrt{6} >3 $, 
 	$ n>3 $时 (2)式更精确，结果比(1)式更好。
 	
 	(4) $ \forall r \in \mathbb{R} \quad (n!)^r \le \frac{1}{n^n}(\sum_{k=1}^n k^r)^n$
 	由A-G不等式
-	\begin{equation*}
+	\begin{equation}
 		\frac{1}{n}\sum_{k=1}^n k^r \ge \sqrt[n]{\prod_{k=1}^n k^r}
-	\end{equation*}
-	\begin{equation*}
+	\end{equation}
+	\begin{equation}
 		\begin{aligned}
 			(n!)^r  = \prod_{k=1}^n k^r\le (\frac{1}{n}\sum_{k=1}^n k^r)^n =\frac{1}{n^n}(\sum_{k=1}^n k^r)^n
 		\end{aligned}
-	\end{equation*}
+	\end{equation}
 	
 	\section{20.08.13}
 	2.(4) 
@@ -482,9 +552,9 @@
 			\end{aligned}
 		\end{equation}
 	
-	\begin{equation*}
+	\begin{equation}
 		\because a,b,c \ge 0 \qquad 	\frac{ab+bc+ca}{3} \le \frac{a^2+b^2+c^2+ab+bc+ca}{6}
-	\end{equation*}
+	\end{equation}
 	需要证明 $ \sqrt{\frac{ab+bc+ca}{3}}\le\frac{a+b+c}{3} $\\
 	对该式两边平方
 	\begin{equation}
