@@ -59,6 +59,7 @@
 \begin{document}
 	\maketitle
 \chapter{All numbers gerat and small}
+\sffamily
 \section{Construction}
 
 Two sets of numbers $  L,R  $\\
@@ -157,6 +158,29 @@ Is 0 a number? Yes, since we cannot have inquality of the form $ 0^L\ge 0^R $, f
 
 Is $ 0\ge 0 $? Yes, for we can have no inequality of the form $ 0^R \le 0 $ or $ 0\le 0^L $. So by the definition, and happily, we have $ 0=0 $. We also see from the definitions that $ -0=0+0=0 $, since there is no number of any of the forms $ -0^R, -0^L, 0^L+0, 0+0^L, 0^R+0, 0+0^R $. A slightly more complicated observation of the same type is that $ x0=0 $, since in every one of the terms defining $ xy $ there is a mention of $ y^L $ or $ y^R $, so that when $ y=0 $ no term is needed and the expression for the expression of $ xy $ reduces to $ \{|\} =0 $. So the number 0 has at least some of the properties we know and love. 
 
+\section{The number 1 and -1}
+We can now use the set \{\} and \{0\} for L and R, obtaining hopefully the numbers \{|\}, \{0|\}, \{|0\}, \{0|0\}. But since we have already proved that $ 0\ge 0 $, \{0|0\} is \textit{not} a number, and we have only two cases, which we call 1 = \{0|\} and -1 = \{|0\}. Note that -1 is indeed a case of the difinition $ -x $.
 
+Is $ 0 \ge 1 $? This will be true unless there is $ 0^R $ with $ 0^R \le 1 $(there isn't) or $ 1^L $ with $ 0 \le 1^L $ (there is, namely $ 1^L = 0 $). So we do \textit{not} have $ 0\ge 1 $.
+
+Is $ 1 \ge 0 $? This will be true unless there is $ 1^R $ with "$ \dots $" or $ 0^L $ with "$ \dots $" (what ever "$ \dots $" is, there plainly can't be). So we have $ 1 \ge 0 $, and so $ 1 > 0 $.
+
+By symmetry, we have $ -1 < 0 $, and so if inequalities "behave", then we should have $ -1 < 1 $. We check this:
+
+Is $ -1 \ge 1 $? This will happen unless there is $ (-1)^R \le 1 $ or ... (there is, namely $ (-1)^R = 0 $). So we do not have $ -1 \ge 1 $.
+
+Is $ 1 \ge -1 $? This will happen unless there is $ 1^R $ with ... or $ (-1)^L $ with ... (there isn't). So $ 1 \ge -1 $, so $ 1 > -1 $, as we hoped.
+
+We can generalise a part of this last argument. If there is no $ x^R $ and no $ y^L $, then $ x \ge y $ holds vacuously.
+
+We forgot to check that $ 1 \ge 1 $. Why not do this yourself.
+
+\begin{proof}
+	Is $ 1 \ge 1 $? This will happen unless there is $ 1^R \le 1 $ or $ 1^L \le 1 $. 
+	By the definition, 1 = \{0|\}, so $ 1^L = 0 $ and $ 1^R = \emptyset $. 
+	$ 1^R \le 1 $ is $ \emptyset le 1 $(there is), 
+	$ 1^L \le 1 $ is $ 0 \le 1 $(there is). 
+	So we have $ 1 \ge 1 $.
+\end{proof}
 
 \end{document}
