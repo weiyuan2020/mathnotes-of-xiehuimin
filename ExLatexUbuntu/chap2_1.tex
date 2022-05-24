@@ -1,0 +1,46 @@
+\section{2.1.5}
+1. prove by Limit definition:\\
+(1). $ \lim_{n\rightarrow\infty}\frac{3n^2}{n^2-4} = 3 $.\\
+(2). $ \lim_{n\rightarrow\infty}\frac{\sin n}{n} = 0 $.\\
+(3). $ \lim_{n\rightarrow\infty}(1+n)^\frac{1}{n} = 0 $.\\
+(4). $ \lim_{n\rightarrow\infty}\frac{a^n}{n!} = 0, (a>0) $.\\
+
+2. Suppose $ a_n, n\in\mathbb{N}_+ $. sequence {$ a_n $} converge to $ a $.\\ Prove $ \lim_{n\rightarrow\infty}\sqrt{a_n} = \sqrt{a} $.
+
+proof:\\
+$ n\rightarrow\infty  a_n \rightarrow a $.\\
+$ \forall \epsilon >0, \exists N(\epsilon) \in \mathbb{N}^+, \forall n>N(\epsilon), |a_n - a|<\epsilon $.
+\begin{equation*}
+	|\sqrt{a_n}-\sqrt{a}| = \Big|\frac{a_n-a}{\sqrt{a_n}+\sqrt{a}}\Big| < \frac{\epsilon}{\sqrt{a_n}+\sqrt{a}}
+\end{equation*}
+$ \therefore \lim_{n\rightarrow\infty}\sqrt{a_n} = \sqrt{a}. \qquad\square  $
+
+(check, not consider the condition$ a=0 $)
+add $ a=0, \forall \epsilon \in (0,1), \exists N(\epsilon) \in \mathbb{N}^+, \forall n>N(\epsilon), |a_n - a|<\epsilon $. s.t $ a_n<\epsilon^2 <\epsilon $, $ \sqrt{a_n} < \epsilon $.
+
+3. If $ \lim_{n\rightarrow\infty} a_n = a $.\\ Prove $ \lim_{n\rightarrow\infty} |a_n| = |a| $. Vice versa?\\
+
+Proof:\\
+$ \forall \epsilon>0, \exists N(\epsilon) \in \mathbb{N}^+, \forall n>N(\epsilon), |a_n - a| <\epsilon$. 
+\begin{equation*}
+	\Big| |a_n| - |a| \Big| \le |a_n - a| <\epsilon
+\end{equation*}
+$ \therefore \lim_{n\rightarrow\infty} |a_n| = |a| $\\
+If We know $ \lim_{n\rightarrow\infty} |a_n| = |a| $.\\
+$ \forall \epsilon>0, \exists N(\epsilon) \in \mathbb{N}^+, \forall n>N(\epsilon), \big||a_n| - |a|\big| <\epsilon$.  We can't get $ \lim_{n\rightarrow\infty} a_n = a $. For example: $ a_n = \frac{1}{n}+1, a = -1 $, $ \lim_{n\rightarrow\infty} |a_n| = |a| $ is $ \lim_{n\rightarrow\infty} |\frac{1}{n}+1| = |-1| $, but $ \lim_{n\rightarrow\infty} \frac{1}{n}+1 \neq -1 \qquad\square $\\
+
+4. (1). Suppose $ p(x) $ is a polynomial of $ x $, if $ \lim_{n\rightarrow\infty} a_n = a $, Prove $ \lim_{n\rightarrow\infty} p(a_n) = p(a) $.\\
+
+Proof:\\
+$ \forall \epsilon>0, \exists N(\epsilon) \in \mathbb{N}^+, \forall n>N(\epsilon), $
+$ |a_n-a| <\epsilon $.\\
+$ p(a) = k_{m}a^{m} + k_{m-1}a^{m-1} + \dots +  k_{0}a^{0} $.\\
+$ \therefore p(a_n) - p(a) =  k_{m}(a_n^{m}-a^{m}) + k_{m-1}(a_n^{m-1}-a^{m-1}) + \dots +  k_{0}(a_n^{0}-a^{0}) $.
+\begin{align*}
+	|a_n^m - a^m| 
+	&= |a_n-a|\cdot |a_n^{m-1} + a_n^{m-2}a + \cdots + a^{m-1}|\\
+	&< \epsilon \cdot |a_n^{m-1} + a_n^{m-2}a + \cdots + a^{m-1}|\\
+	&< \epsilon (m-1)\cdots(a+\delta)^{m-1}
+\end{align*}
+$ \therefore \lim_{n\rightarrow\infty} p(a_n) = p(a).\qquad\square  $  
+
