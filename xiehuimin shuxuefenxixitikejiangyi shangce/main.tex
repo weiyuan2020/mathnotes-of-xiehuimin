@@ -7,20 +7,21 @@
 \usepackage{Ctex}
 
 \usepackage{amsmath}
-%\newtheorem{theorem}{theorem}
-%\newtheorem{lemma}{lemma}
-%\newtheorem{proof}{Proof}[section]
-
 \usepackage{amssymb}
 
 \usepackage{amsthm}
-\newtheorem{theorem}{{定理}} 
-\newtheorem{proposition}{{命题}} 
-\newtheorem{lemma}{{引理}} 
-\newtheorem{corollary}{{推论}}[theorem] 
-\newtheorem{definition}{{定义}} 
-\newtheorem{example}{{例}} 
-\newtheorem{solve}{{解}} 
+\newtheorem{theorem}{{Theorem}}%{{定理}} 
+\newtheorem{proposition}{{Proposition}}%{{命题}} 
+\newtheorem{lemma}{{Lemma}}%{{引理}} 
+\newtheorem{corollary}{{Corollary}}[theorem]%{{推论}}[theorem] 
+\newtheorem{definition}{{Definition}}%{{定义}} 
+\newtheorem{example}{{Example}}%{{例}} 
+\newtheorem{solve}{{Solve}}%{{解}} 
+%\newtheorem*{solve*}{{Solve}}%{{解}} 
+%\newtheorem*{prf}{Proof}
+\renewcommand{\proofname}{\indent\bf Proof}
+\newtheorem{qs}{{Quetion}}%{{题目}} 
+\newtheorem*{qs*}{{Quetion}}%{{题目}} 
 
 \usepackage{color}
 
@@ -32,5 +33,8 @@
 \begin{document}
 	\maketitle
 	\newpage
+	\include{data/20-08-07}
 	\include{data/chapter1}
+	\include{data/chap1_3}
+	\include{data/chap2_1}
 \end{document}
