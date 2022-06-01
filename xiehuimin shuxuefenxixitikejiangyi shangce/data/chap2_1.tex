@@ -180,12 +180,12 @@ $ \forall \epsilon>0, \exists N(\epsilon) \in \mathbb{N}^+, \forall n>N(\epsilon
 	\begin{align*}
 	 a_1a_2\dots a_n = \frac{1}{2}\cdot\frac{2}{3}\cdots\frac{n}{n+1} = \frac{1}{n+1} . \\
 	\lim\limits_{n\rightarrow\infty}
-	(a_1a_2\dots a_n) =  
+	(a_1a_2\dots a_n) \\=  
 	\lim\limits_{n\rightarrow\infty}
 	\frac{1}{n}
 	=0
-	\end{align*}	
-but $ 	\lim\limits_{n\rightarrow\infty}a_n=	\lim\limits_{n\rightarrow\infty}
+\end{align*}	
+but $ 	\lim\limits_{n\rightarrow\infty}a_n=$  $	\lim\limits_{n\rightarrow\infty}
 \frac{n}{n+1} = 1 \neq 0  $
 \end{proof}
 
@@ -194,7 +194,8 @@ but $ 	\lim\limits_{n\rightarrow\infty}a_n=	\lim\limits_{n\rightarrow\infty}
 2. 单调有界数列的收敛定理.
 
 \begin{example}2.2.2
-	$ \lim_{n\rightarrow\infty}\frac{x_n-1}{x_n+a} = 0 $, prove $ \lim_{n\rightarrow\infty}x_n=a $
+	$ \lim_{n\rightarrow\infty}\frac{x_n-1}{x_n+a} = 0 $, \\
+	prove $ \lim_{n\rightarrow\infty}x_n=a $
 \end{example}
 \begin{proof}
 	$\forall \epsilon >0, \exists N \in \mathbb{N}^+. \forall n \geqslant N, |\frac{x_n-1}{x_n+a}- 0| < \epsilon$.\\
@@ -553,11 +554,9 @@ $ \therefore \lim\limits_{n\rightarrow\infty}a_n = \lim\limits_{n\rightarrow\inf
 \end{qs}
 \begin{proof}
 	分类讨论, 不妨设$ x_1 \geqslant 0 $\\
-	\begin{enumerate}
-		\item {$ x_n $}单调递增, {$ |x_n| $}从第一项开始单调.
-		\item {$ x_n $}单调递减, 且$ |x_n| \geqslant 0 $. {$ |x_n| $}从第一项开始单调.
-		\item {$ x_n $}单调递减, 且$ \exists N $ s.t.  $ x_n <0 $(第一个负数项). 则{$ |x_n| $}从第$ N $项($ x_N $)开始单调.
-	\end{enumerate}
+	1. {$ x_n $}单调递增, {$ |x_n| $}从第一项开始单调.\\
+	2. {$ x_n $}单调递减, 且$ |x_n| \geqslant 0 $. {$ |x_n| $}从第一项开始单调.\\
+	3. {$ x_n $}单调递减, 且$ \exists N $ s.t.  $ x_n <0 $(第一个负数项). 则{$ |x_n| $}从第$ N $项($ x_N $)开始单调.\\
 	反之该结论不成立.\\
 	反例: $ x_n =\frac{(-1)^n}{n} $, {$ |x_n| $}单调递减.
 	但$ x_{2k} = \frac{1}{2k} >0 >x_{2k-1} = \frac{-1}{2k-1} $
