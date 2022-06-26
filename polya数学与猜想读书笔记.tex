@@ -1,64 +1,65 @@
-\documentclass[10pt,a4paper]{book}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{ctex}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-
-\usepackage{listings}   % include the package before using it
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
-
-%//LaTeX 头部添加
+%\documentclass[10pt,a4paper]{book}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{amsmath}
+%\usepackage{amsthm}
+%\usepackage{ctex}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+%
+%\usepackage{listings}   % include the package before using it
+%
 %\newtheorem{theorem}{Theorem}[section]
-%
-%\begin{theorem}
-%	***//定理内容
-%	\label{thm-1}
-%\end{theorem}
-%
-%\begin{proof}
-%	***//证明过程
-%\end{proof}
-%
-%//LaTeX 头部添加
 %\newtheorem{lemma}{Lemma}[section]
-%
-%\begin{lemma} 
-%	***//引理内容
-%	\label{lem-1}
-%\end{lemma}
-%
-%//LaTeX 头部添加
 %\newtheorem{corollary}{Corollary}[section]
 %
-%\begin{corollary} 
-%	***//推论内容
-%	\label{cor-1}
-%\end{corollary}
-\newtheorem{myDef}{Definition}
-%\begin{myDef}
-%	\label{label}
-%	...
-%\end{myDef}
+%%//LaTeX 头部添加
+%%\newtheorem{theorem}{Theorem}[section]
+%%
+%%\begin{theorem}
+%%	***//定理内容
+%%	\label{thm-1}
+%%\end{theorem}
+%%
+%%\begin{proof}
+%%	***//证明过程
+%%\end{proof}
+%%
+%%//LaTeX 头部添加
+%%\newtheorem{lemma}{Lemma}[section]
+%%
+%%\begin{lemma} 
+%%	***//引理内容
+%%	\label{lem-1}
+%%\end{lemma}
+%%
+%%//LaTeX 头部添加
+%%\newtheorem{corollary}{Corollary}[section]
+%%
+%%\begin{corollary} 
+%%	***//推论内容
+%%	\label{cor-1}
+%%\end{corollary}
+%\newtheorem{myDef}{Definition}
+%%\begin{myDef}
+%%	\label{label}
+%%	...
+%%\end{myDef}
+%%
 %
+%
+%\usepackage{geometry}
+%%\geometry{right=2.0cm,left=2.0cm}% 
+%\geometry{right=2.0cm,left=2.0cm,top = 2.0cm, bottom = 2.0cm}
 
-
-\usepackage{geometry}
-%\geometry{right=2.0cm,left=2.0cm}% 
-\geometry{right=2.0cm,left=2.0cm,top = 2.0cm, bottom = 2.0cm}
-
+\documentclass[mode=geye ]{ elegantnote}
 \title{波利亚 数学与猜想 笔记}
 \author{weiyuan}
-\date{2020}
+\date{\today}
 \begin{document}
 	\maketitle
-	\chapter{归纳方法}
+	\section{归纳方法}
 	一个猜想性的一般命题若能在新特例中得到证实，则变得更加可信。\\
 	\begin{enumerate}
 		\item 随时准备修正我们的信念
