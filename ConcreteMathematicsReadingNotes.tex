@@ -1,0 +1,198 @@
+\documentclass[mode=geye]{elegantnote}
+\usepackage{amssymb}
+\title{具体数学阅读笔记}
+\author{weiyuan}
+\date{\today}
+\begin{document}
+	\section{递归问题}
+	\subsection{河内塔}
+	使用递归方法解决河内塔问题。先从n为1的情况考虑该问题。为了递归式的完整？将n等于0也纳入考虑
+	\begin{align*}
+		T_0 = 0\\
+		T_1 = 1\\
+		T_2 = 3\\
+		T_3 = 7
+	\end{align*}
+	从圆盘的移动规律可以看出，要将n个圆盘从A柱移动到C柱上，首先需要将n-1个圆盘移动到B柱上，再移动最大的圆盘到C柱上，最后将n-1个圆盘从B柱移动到A柱上。
+	
+	书中使用
+		\begin{align*}
+			&T_n \leqslant 2T_{n-1}+1\\
+			&T_n \geqslant 2T_{n-1}+1
+		\end{align*}
+	得到 $ T_n = 2T_{n-1}+1 $ 。 将n等于0的情况作为初始条件，得到完整的递归式 (recurrence)
+	\begin{equation}\label{Henei1}
+		\begin{aligned}
+			&T_0 = 0\\
+			&T_n = 2T_{n-1}+1, \quad n > 0
+		\end{aligned}
+	\end{equation}
+	
+	计算得到
+	\begin{equation}\label{HeneiRecur}
+		T_n = 2^n - 1 , \quad n\geqslant 0
+	\end{equation}
+
+\textbf{数学归纳法} (mathematical induction)\footnote{数学归纳法的难点并不在于证明本身，而是如何得到关系式}
+\begin{enumerate}
+	\item 基础 basis, n取最小值 $ n_0 $证明该命题
+	\item 归纳 induction, 假设$ k=n-1 $时归纳结果成立，证明$ k=n $时该结果也成立
+\end{enumerate}
+
+使用数学归纳法证明河内塔问题递归式
+\begin{proof}证明河内塔问题递归式
+	1. $ k=0 $时， $ T_0 = 2^0-1 = 0 $\\
+	2. 假设 $ k=n-1 $时 $ T_{n-1} = 2^{n-1} - 1 $成立。\\
+	3. $ k=n $时， $ T_{n} = 2*T_{n-1}+1 = 2*(2^{n-1} - 1)+1 = 2^n-1 $
+\end{proof}
+
+\begin{remark}
+	\begin{enumerate}
+		\item  研究小的情形
+		\item  求解递归式(\ref{Henei1})
+		\item  求解递归式(\ref{HeneiRecur})
+	\end{enumerate}
+\end{remark}
+
+Q: 递归式$ T_n= 2^n -1 $是怎样得到的？
+\begin{align*}
+	&T_0 + 1 = 1\\
+	&T_n+1 = 2T_{n-1}+2 = 2(T_{n-1}+1)
+\end{align*}
+令$ U_n = T_n+1 $
+\begin{align*}
+	&U_0 = 1\\
+	&U_n = 2U_{n-1}, \quad n>0.
+\end{align*}
+容易推出$ U_n  = 2^n, T_n = 2^n-1 $
+
+\subsection{平面上的直线}
+平面上n条直线所界定的区域最大个数$ L_n $是多少？
+\begin{align*}
+	&L_0 = 1\\
+	&L_1 = 2\\
+	&L_2 = 4\\
+	&L_3 = 7\\
+	&\ldots\\
+	&L_n \leqslant L_{n-1}+n, \quad n>0	
+\end{align*}
+
+\begin{align*}
+	L_n &= L_{n-1} + n\\
+	& = L_{n-2}+(n-1)+n\\
+	&=\cdots\\
+	&=L_0+1+2+\dots+n\\
+	&=1+S_n
+\end{align*}
+其中$ S_n = 1+2+\dots+n $被称为\textbf{三角形数}。
+\begin{equation}\label{sanjiaoxingshu}
+	S_n = \frac{n(n+1)}{2}
+\end{equation}
+由此得到平面分割数$ L_n = \frac{n(n+1)}{2}+1 $.
+
+使用数学归纳法证明该公式
+\begin{proof}
+	1. $ k=0 $, $ L_0 = 1 $.\\
+	2. 设$ k=n-1 $, $ L_{n-1} = \frac{(n-1)((n-1)+1)}{2}+1=\frac{(n-1)n}{2}+1 $成立.\\
+	3. $ k=n $, $ L_n = L_{n-1}+n = \frac{(n-1)n}{2}+1+n = \frac{n(n+1)}{2}+1 $
+\end{proof}
+
+\begin{remark}
+	将直线的情况拓展到折线。
+	\begin{align*}
+		&Z_1 = 2\\
+		&Z_2 = 7
+	\end{align*}
+\end{remark}
+做法，将折线补齐成两条直线\footnote{$ L_n \sim \frac{1}{2}n^2\\ Z_n \sim 2n^2 $}
+\begin{align*}
+	Z_n& = L_2n-2n \qquad\text{锯齿点不在交点}\\
+	&=\frac{2n(2n+1)}{2}+1 - 2n\\
+	&=2n^2-n+1, \quad n\geqslant 0
+\end{align*}
+
+\section{约瑟夫问题}
+n个人围城一圈，从第一个人开始，每隔一个删除一个。
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{约瑟夫问题最终剩余数字 J(n) 与全体数字 n 之间的关系}
+	\begin{tabular}{c|cccccc}
+		\toprule
+		n & 1 & 2 & 3 & 4 & 5 & 6 \\  
+		\midrule
+		J(n) & 1 & 1 & 3 & 1 & 3 & 5 \\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:reg}%
+\end{table}%
+
+人数总数为偶数 $ J(2n)   = 2J(n)-1, n\geqslant 1 $.
+人数总数为奇数 $ J(2n+1) = 2J(n)+1, n\geqslant 1 $.
+
+递归式
+\begin{align*}
+	J(1)  &= 1&\\
+	J(2n) &= 2J(n)-1,&  n\geqslant 1 \\
+	J(2n+1) &= 2J(n)+1,&  n\geqslant 1 
+\end{align*}
+
+计算得到 $ n = 2^m+l $，封闭形式$ J(2^m+l) = 2l+1, m\geqslant 0, 0\leqslant l <2^m  $.
+\begin{proof}
+	1. l is even.
+	\begin{align*}
+		J(2^m+l) &= 2J(2^m+\frac{l}{2})-1\\
+		&=2(2*\frac{l}{2}+1)-1\\
+		&=2l+1
+	\end{align*}
+	2. l is odd.
+	\begin{align*}
+		J(2^m+l) &= 2J(2^m+\frac{l-1}{2})-1\\
+		&=2(2*\frac{l-1}{2}+1)-1\\
+		&=2l+1
+	\end{align*}
+\end{proof}
+
+\begin{equation}\label{JosephRecur1}
+	J(2n+1)-J(2n)=2
+\end{equation}
+
+\begin{remark}
+	将n和J(n)以2为基数表示 (表示为二进制). 假设:\\
+	\begin{align*}
+		n&=(b_mb_{m-1} \dots b_1 b_0)_2\\
+		&=b_m2^m+b_{m-1}2^{m-1}+\dots+b_1 2^1+b_0 2^0
+	\end{align*}
+其中$ b_m = 1, b_i = 0\text{ 或 }1  \quad(0\leqslant i <m, i\in\mathbb{N}^+)$
+\end{remark}
+
+\begin{align*}
+	n&=2^m+l\\
+	n&=(1 b_{m-1} b_{m-2}\dots b_1 b_0)_2\\
+	l&=(0 b_{m-1} b_{m-2}\dots b_1 b_0)_2\\
+	2l&=(b_{m-1} b_{m-2}\dots b_1 b_0 0)_2\\
+	2l+1&=(b_{m-1} b_{m-2}\dots b_1 b_0 1)_2\\
+	J(n)&=(b_{m-1} b_{m-2}\dots b_1 b_0 1)_2
+\end{align*}
+
+因此我们得到 $ J((1 b_{m-1} b_{m-2}\dots b_1 b_0)_2)=(b_{m-1} b_{m-2}\dots b_1 b_0 1)_2 $.\\
+n向左循环移动一位得到J(n)!\\
+
+\begin{case}
+	$ J((1011)_2) = (0111)_2 = (111)_2 $, 该式即 $ J(11) = 7 $
+\end{case}
+注意：0移动至首位会消失，而不需要保留空位。
+
+$ 2^{\nu(n)}-1 $, 其中$ \nu(n) $为n转换成的二进制数中1的个数
+
+\begin{case}
+	n=13, $ (13)_{10} = (1101)_2 $, $ \mu(13) = 3 $.\\
+	$ J(J(\dots(J(13))\dots)) = 2^3-1 = 7 $
+\end{case}
+\begin{case}
+	n=23403, $ \mu(23403)=10 $, therefore 	$ J(J(\dots(J(23403))\dots)) = 2^{10}-1 = 1023 $
+\end{case}
+
+pp10
+\end{document}
