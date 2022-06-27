@@ -1,8 +1,8 @@
 \documentclass[mode=geye]{elegantnote}
 \usepackage{amssymb}
-\title{具体数学阅读笔记}
+\title{具体数学阅读笔记-chap1}
 \author{weiyuan}
-\date{\today}
+\date{2022-06-26}
 \begin{document}
 	\section{递归问题}
 	\subsection{河内塔}
@@ -118,11 +118,11 @@ n个人围城一圈，从第一个人开始，每隔一个删除一个。
 	\centering
 	\small
 	\caption{约瑟夫问题最终剩余数字 J(n) 与全体数字 n 之间的关系}
-	\begin{tabular}{c|cccccc}
+	\begin{tabular}{c|ccccccccc}
 		\toprule
-		n & 1 & 2 & 3 & 4 & 5 & 6 \\  
+		n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\  
 		\midrule
-		J(n) & 1 & 1 & 3 & 1 & 3 & 5 \\
+		J(n) & 1 & 1 & 3 & 1 & 3 & 5 & 7 & 1 & 3\\
 		\bottomrule
 	\end{tabular}%
 	\label{tab:reg}%
@@ -194,5 +194,338 @@ $ 2^{\nu(n)}-1 $, 其中$ \nu(n) $为n转换成的二进制数中1的个数
 	n=23403, $ \mu(23403)=10 $, therefore 	$ J(J(\dots(J(23403))\dots)) = 2^{10}-1 = 1023 $
 \end{case}
 
-pp10
+%pp10
+回到第一个猜测 $ J(n) = \frac{n}{2} $ n为偶数。
+这个猜想在什么情况下成立？
+
+目前已知 $ n = 2^m + l $, 
+
+\begin{align*}
+	J(n) &= \frac{n}{2}\\
+	2l+1 &= (2^m+l)/2\\
+	\frac{3}{2} l &=2^{m-1}-1\\
+	l&=\frac{1}{3}(2^{m-1}-2)
+\end{align*}
+
+m为奇数， $ 2^m - 2 $是3的倍数
+
+m为偶数， $ 2^m - 2 $不是3的倍数
+
+$ J(n) = \frac{n}{2} $ 有无穷多组解
+
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{J(n)关系式之间的关系}
+	\begin{tabular}{ccccr}
+		\toprule
+		m & l & $ n = 2^m +l $ & $ J(n) = 2l+1 = \frac{n}{2} $ & $ (n)_2 $ \\
+		\midrule
+		1 & 0  & 2   & 1  & 10\\
+		3 & 2  & 10  & 5  & 1010\\
+		5 & 10 & 42  & 21 & 101010\\
+		7 & 42 & 170 & 85 & 10101010\\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:J(n)关系式之间的关系}%
+\end{table}%
+
+\begin{remark}
+	再推广，引入常数 $ \alpha, \beta, \gamma $.
+\end{remark}
+
+\begin{equation}\label{J(n)forConst}
+	\left\{
+	\begin{aligned}
+		f(1)    &= \alpha\\
+		f(2n)   &= 2f(n)+\beta,  \quad n\geqslant 1\\
+		f(2n+1) &= 2f(n)+\gamma, \quad n\geqslant 1
+	\end{aligned}
+	\right.
+\end{equation}
+
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{f(n)常数的变化规律}
+%	\begin{tabular}{c|l}
+%		\toprule
+%		n & f(n)\\
+%		\midrule
+%		1 & $ \;\alpha $\\
+%		2 & $ 2\alpha + \;\beta $\\
+%		3 & $ 2\alpha \qquad + \gamma $\\ 
+%		4 & $ 4\alpha + 3\beta $\\ 
+%		5 & $ 4\alpha + 2\beta  + \gamma $\\ 
+%		6 & $ 4\alpha + \;\beta + 2\gamma $\\ 
+%		7 & $ 4\alpha \qquad + 3\gamma $\\ 
+%		8 & $ 8\alpha + 7\beta $\\ 
+%		9 & $ 8\alpha + 6\beta + \gamma $\\ 
+%		\bottomrule
+%	\end{tabular}%
+	\begin{tabular}{c|lcccc}
+	\toprule
+	n & f(n) & $ \qquad $ & $ \alpha $ & $ \beta $ & $ \gamma $ \\
+	\midrule
+	1 & $ \;\alpha $                    && 1& 0 &0 \\
+	2 & $ 2\alpha + \;\beta $           && 2& 1 &0 \\
+	3 & $ 2\alpha \qquad + \gamma $     && 2& 0 &1 \\ 
+	4 & $ 4\alpha + 3\beta $            && 4& 3 &0 \\ 
+	5 & $ 4\alpha + 2\beta  + \gamma $  && 4& 2 &1 \\ 
+	6 & $ 4\alpha + \;\beta + 2\gamma $ && 4& 1 &2 \\ 
+	7 & $ 4\alpha \qquad + 3\gamma $    && 4& 0 &3 \\ 
+	8 & $ 8\alpha + 7\beta $            && 8& 7 &0 \\ 
+	9 & $ 8\alpha + 6\beta + \gamma $   && 8& 6 &1 \\ 
+	\bottomrule
+\end{tabular}%
+	\label{tab:fnLists}%
+\end{table}%
+
+假设$ f(n) $具有如下迭代形式
+\begin{equation}\label{fnReccu}
+	f(n) = A(n)\alpha + B(n)\beta + C(n)\gamma
+\end{equation}
+
+看起来似乎有
+%\begin{align*}
+%	A(n) &= 2^m
+%\end{align*}
+
+\begin{equation}
+	\left\{
+	\begin{aligned}
+		A(n) &= 2^m\\
+		B(n) &= 2^m-1-l\\
+		C(n) &= l
+	\end{aligned}
+	\right.\quad
+	\begin{aligned}
+    	n=2^m+l, \\ 
+		0\leqslant l \leqslant 2^m \\
+		(n\geqslant 1)
+	\end{aligned}
+\end{equation}
+
+使用归纳法证明过程较为繁琐，可选用特殊值组合
+
+1. $ \alpha =1, \beta=\gamma = 0 $, 此时 $ f(n) = A(n) $, 式\ref{J(n)forConst} 变为
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		A(1)&=1\\
+		A(2n)   &= 2A(n),  \quad n\geqslant 1\\
+		A(2n+1) &= 2A(n),  \quad n\geqslant 1
+	\end{aligned}
+	\right.
+\end{equation*}
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{f(n)在$ \alpha =1, \beta=\gamma = 0 $时的变化情况}
+	\begin{tabular}{c|cccccccccccccccccc}
+		\toprule
+		n   & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\
+		\midrule
+		f(n)& 1 & 2 & 2 & 4 & 4 & 4 & 4 & 8 & 8 &  8 &  8 &  8 &  8 &  8 &  8 & 16 & 16 & 16 \\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:fncase1}%
+\end{table}%
+
+此时由归纳法可得 $ A(2^m+l)=2^m $
+
+2. $ f(n) = 1 $
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		1 &= \alpha             \\
+		1 &= 2\times 1 + \beta  \\
+		1 &= 2\times 1 + \gamma 
+	\end{aligned}
+	\right.
+	\rightarrow
+	\left\{
+	\begin{aligned}
+		\alpha &= 1  \\
+		\beta  &= -1 \\ 
+		\gamma &= -1
+	\end{aligned}
+	\right.	
+\end{equation*}
+
+\begin{equation*}
+	A(n)-B(n)-C(n) = f(n) = 1
+\end{equation*}
+
+3. $ f(n) = n $
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		1    &= \alpha             \\
+		2n   &= 2\times n + \beta  \\
+		2n+1 &= 2\times n + \gamma 
+	\end{aligned}	
+	\right.
+	\rightarrow
+	\left\{
+	\begin{aligned}
+		\alpha &= 1  \\
+		\beta  &= 0  \\ 
+		\gamma &= 1
+	\end{aligned}
+	\right.	
+\end{equation*}
+
+\begin{equation*}
+	A(n) + C(n) = f(n) = n
+\end{equation*}
+
+当 $ n = 2^m+l, 0\leqslant l< 2^m $时，
+由上述三种情况可以得到
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		A(n) &       &          &= 2^m        \\
+		A(n) &- B(n) &-  C(n)   &= 1          \\
+		A(n) &       &+  C(n)   &= n = 2^m+l
+	\end{aligned}
+	\right.
+\end{equation*}
+解得
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		A(n) &= 2^m        \\
+		B(n) &= 2^m-1-1    \\
+		C(n) &= l
+	\end{aligned}
+	\right.
+\end{equation*}
+以上为求解递归式的\textbf{成套方法}(repertorire method)
+
+\begin{remark}
+	约瑟夫递归式 二进制解的推广
+\end{remark}
+已知约瑟夫递归式的解为
+\begin{equation*}
+	J((b_m b_{m-1}\dots b_1 b_0)_2) = (b_{m-1} b_{m-2}\dots b_1 b_0 b_m)_2, \qquad b_m = 1
+\end{equation*}
+推广的约瑟夫递归式有无这种形式的解？
+
+令$ \beta_0 = \beta, \beta_1 = \gamma $
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		f(1)    &= \alpha  \\
+		f(2n+j) &= 2f(n) + \beta_j, \quad j=0,1, \quad n\leqslant 1  
+	\end{aligned}
+	\right.
+\end{equation*}
+\begin{align*}
+	    f((b_m b_{m-1}\dots b_3 b_2 b_1 b_0)_2) 
+	&= 2f((b_m b_{m-1}\dots b_3 b_2 b_1)_2)     +  \beta_{b_0}  \\
+	&= 2f((b_m b_{m-1}\dots b_3 b_2)_2)         + 2\beta_{b_1}+ \beta_{b_0}  \\
+	&=\qquad\qquad\vdots\\
+	&= 2^{m} f((b_{m})_2) + 2^{m-1} f((b_{m-1})_2) + \dots + 2\beta_{b_1}+ \beta_{b_0}  \\
+	&= 2^{m} \alpha + 2^{m-1} \beta_{b_{m-1}} + \dots + 2\beta_{b_1}+ \beta_{b_0}  
+\end{align*}
+
+\begin{equation*}
+    f((b_m b_{m-1}\dots b_1 b_0)_2) = (\alpha b_{m-1}\dots b_1 b_0)_2
+\end{equation*}
+使用成套方法再次求解约瑟夫问题
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{成套方法各项系数}
+		\begin{tabular}{c|l c}
+			\toprule
+			n & f(n)                             & J(n)  \\
+			\midrule
+			1 & $ \;\alpha $                     & 1     \\
+			2 & $ 2\alpha + \beta  $             & 1     \\
+			3 & $ 2\alpha + \gamma $             & 3     \\ 
+			4 & $ 4\alpha + 2\beta  + \beta $    & 1     \\ 
+			5 & $ 4\alpha + 2\beta  + \gamma $   & 3     \\ 
+			6 & $ 4\alpha + \;\beta + 2\gamma $  & 5     \\ 
+			7 & $ 4\alpha \qquad + 3\gamma $     & 7     \\ 
+			8 & $ 8\alpha 7\beta $               & 1     \\ 
+			7 & $ 4\alpha 6\beta + \;\gamma $    & 3     \\ 
+			\bottomrule
+		\end{tabular}%
+	\label{tab:fnLists002}%
+\end{table}%
+
+$ n = 100 = (1100100)_2 $, $ (\alpha, \beta, \gamma) = (1, -1, 1) $
+\begin{equation*}
+	\begin{array}{rlrrrrrrrll}
+		n    &= ( &   1  &  1  &  0  &  0  &  1 &  0 &  0&)_2   &= 100  \\
+		f(n) &= ( &   1  &  1  & -1  &  -1 &  1 & -1 & -1&)_2   &       \\
+		     &=   & +64  & +32 & -16 &  -8 & +4 & -2 & -1&      &= 73   \\
+	\end{array}
+\end{equation*}
+
+总结：
+\begin{equation*}
+	\begin{array}{rlrrrrrrrll}
+		n    &= ( &   1     &  1       & 0     &  0     &  1      &  0    &  0    &)_2   &= 100  \\
+		f(n) &= ( & \alpha  &  \gamma  & \beta &  \beta &  \gamma & \beta & \beta &)_2   &       \\
+		     &= ( &   1     &  1       & -1    &  -1    &  1      & -1    & -1    &)_2   &       \\
+		     &=   & +2^6    & +2^5     & -2^4  &  -2^3  & +2^2    & -2^1  & -2^0  &      &= 73   \\
+	\end{array}
+\end{equation*}
+
+由于在n的二进制表示中每一块二进制数字 $ (1000\dots00)_{2} $ 都被变换成 
+\begin{equation}\label{JnCurrBina}
+	(1 {-1} {-1} {-1}\dots {-1} {-1})_{2} = (000\dots01)_{2}
+\end{equation}
+ 因而推出循环移位性质
+
+\begin{align*}
+	f(j)    &= \alpha_{j}          & 1 \leqslant j < d. &                     \\
+	f(dn+j) &= c f(n) + \beta_{j}  & 0 \leqslant j < d, &\quad n \leqslant 1  
+\end{align*}
+有变动基数的解
+\begin{equation}\label{JnForDiffBase}
+	f((b_m b_{m-1}\dots b_1 b_0)_{d}) = (\alpha_{b_{m}} \beta_{b_{m-1}}\dots \beta_{b_1} \beta_{b_0})_{c}
+\end{equation}
+前一式基数为d， 后一式基数为c \footnote{之后会用tikz绘图标注}
+
+
+example:
+\begin{align*}
+	f(   1) &= 34              &               \\
+	f(   2) &= 5               &               \\
+	f(3n  ) &= 10f(n) + 76,    & n \geqslant 1 \\
+	f(3n+1) &= 10f(n) -  2,    & n \geqslant 1 \\
+	f(3n+2) &= 10f(n) +  8,    & n \geqslant 1 \\
+\end{align*}
+计算$ f(19) $.
+
+Solve:
+通过基数方法可知 $ d = 3, c = 10 $.
+\begin{align*}
+	\alpha_{1} &=  34  \\
+	\alpha_{2} &=  5   \\
+	\beta_{1}  &=  76  \\
+	\beta_{2}  &= -2  \\
+	\beta_{3}  &=  8  
+\end{align*}
+
+\begin{equation*}
+	(19)_{10}   = 2 \times 3^2 + 0 \times 3^1 + 1 \times 3^0 = (201)_{3}
+\end{equation*}
+\begin{align*}
+	f((19)_{10}) 
+	&= f((201)_3) \\
+	&= (5 \quad 76 \quad -2)_{10}\\
+	&=5\times 10^2 + 76 \times 10^1 + (-2) \times 10^0\\
+	&=500+760-2\\
+	&=1258
+\end{align*}
+
+
 \end{document}
