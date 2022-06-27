@@ -1,8 +1,84 @@
 \documentclass[mode=geye]{elegantnote}
 \usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{exercise}{练习}
+\newtheorem{answer}{解}
+
 \title{具体数学阅读笔记-chap1 exercise}
 \author{weiyuan}
 \date{2022-06-27}
 \begin{document}
+	\maketitle
+	
+	\section{Exercises}
+	\subsection{Warmups}
+	
+	\begin{exercise}
+		All horses are the same color; we can prove this by induction on the
+		number of horses in a given set. Here's how: "If there's just one horse
+		then it's the same color as itself, so the basis is trivial. For the induction
+		step, assume that there are n horses numbered 1 to n. By the induc-
+		tion hypothesis, horses 1 through n − 1 are the same color, and similarly
+		horses 2 through n are the same color. But the middle horses, 2 through
+		n − 1, can't change color when they're in different groups; these are
+		horses, not chameleons. So horses 1 and n must be the same color as
+		well, by transitivity. Thus all n horses are the same color; QED." What,
+		if anything, is wrong with this reasoning?
+	\end{exercise}
+	\begin{answer}
+		n=1 情况下马有相同颜色
+		
+		但 n=2 时	该假设不一定成立
+	\end{answer}
+	
+	\begin{answer}
+		不允许在A B之间直接移动, 求最短的移动序列
+		\begin{align*}
+			k=1     & 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=2\\
+			k=2     & 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+					& 2\quad A \rightarrowtail C                 		& 1	\\
+				 	& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+				 	& 2\quad C \rightarrowtail B						& 1	\\
+				 	& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=8 \\
+			k=3     & 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+					& 2\quad A \rightarrowtail C                 		& 1	\\
+					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+					& 2\quad C \rightarrowtail B						& 1	\\
+					& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=8\\
+					& 3\quad A \rightarrowtail C                 		& 1	\\
+					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+					& 2\quad B \rightarrowtail C						& 1	\\
+					& 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+					& 2\quad C \rightarrowtail A						& 1	\\
+					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+					& 3\quad C \rightarrowtail B						& 1	\quad sum=18\\
+					& 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+					& 2\quad A \rightarrowtail C                 		& 1	\\
+					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+					& 2\quad C \rightarrowtail B						& 1	\\
+					& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=26\\
+			\vdots  &													&
+			k=n     & 1\quad A \rightarrowtail C, C \rightarrowtail B	& ?\\
+		\end{align*}
+		从前面的移动可以看出 $ f(n) = 3*f(n-1)+2 $, 设 $ g(n) = f(n)+1 $, $ g(1)=f(1)+1 = 3 $, $ g(n) = 3g(n-1) $. $ g(n) = 3^{n} $, $ f(n) = 3^{n}-1 $.
+	\end{answer}
+	
+	\begin{answer}
+		是的，以n个圆盘为例
+		正确的叠放方法有$ 3^n $种 将ABC视为3个序列，将所有圆盘从大到小依次放置在3个序列中，每个圆盘放置时有3种选择，所共有$ 3^n $种正确的叠放方法。第二题移动$ 3^n-1 $次，再加上移动前所有圆盘都在A柱上的情况，共有$ 3^n $种情况，所以所有正确的叠放方法均会出现。
+		
+		我的思考，n个圆盘在3根柱子上任意放的方法有多少种？
+	\end{answer}
+
+	\begin{answer}
+		Are there any starting and ending configurations of n disks on three pegs
+		that are more than $ 2^n − 1 $ moves apart, under Lucas's original rules?
+		
+		是否存在 $ m > 2^n-1 $
+		
+		I don't know...
+	\end{answer}
+	
 	
 \end{document}
