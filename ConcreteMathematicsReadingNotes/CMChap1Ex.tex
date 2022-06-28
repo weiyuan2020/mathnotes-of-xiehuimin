@@ -77,8 +77,21 @@
 		
 		是否存在 $ m > 2^n-1 $
 		
-		I don't know...
+%		I don't know...
+		不存在。根据卢卡斯的规则，将可能出现的移动情况分为两种：\\		
+		1. 最大的圆盘不需要移动，根据归纳法，最多需要移动$ 2^{n-1}-1 $次。\\	
+		2. 最大的圆盘需要移动，根据归纳法，最多需要移动 $ 2^{n-1}-1 + 1 + 2^{n-1}-1 $ 即 $  2^{n}-1  $次
 	\end{answer}
 	
+	\begin{answer}
+		3个给定集合，共有8个可能子集。使用 Venn 图表示
+		
+		\footnote{Venn 图之后会补上}
+%		空集 $ \emptyset $ 或 $ \varnothing $ 
+%		并集$ \cup $, 交集 $\cap$
+		$ A, B, C, $ 三个集合的所有子集为 $ \{\varnothing, A, B, C, A\cap B, A\cap C, B\cap C, A \cap B \cap C, \} $ , $\{A\setminus B, A\setminus C, B\setminus A, B\setminus C, C\setminus A, C\setminus B \}$, $ \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{A\cup B, A\cup C, B\cup C, A\cup B\cup C\} $. $ \dots $
+		
+		我认为这里所将的八个子集应当是$ \{\varnothing\}, \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{(A\cap B)\setminus C, (C\cap A)\setminus B, (B\cap C)\setminus A \} $, $ \{A\cap B\cap C\} $. 空集和7个互不相交的真子集
+	\end{answer}
 	
 \end{document}
