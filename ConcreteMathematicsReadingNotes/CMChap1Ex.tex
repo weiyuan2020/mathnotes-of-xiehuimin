@@ -1,97 +1,212 @@
 \documentclass[mode=geye]{elegantnote}
+%\usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 
 \newtheorem{exercise}{练习}
-\newtheorem{answer}{解}
+\newtheorem{answer}{题目解答}
 
 \title{具体数学阅读笔记-chap1 exercise}
 \author{weiyuan}
 \date{2022-06-27}
 \begin{document}
-	\maketitle
-	
-	\section{Exercises}
-	\subsection{Warmups}
-	
-	\begin{exercise}
-		All horses are the same color; we can prove this by induction on the
-		number of horses in a given set. Here's how: "If there's just one horse
-		then it's the same color as itself, so the basis is trivial. For the induction
-		step, assume that there are n horses numbered 1 to n. By the induc-
-		tion hypothesis, horses 1 through n − 1 are the same color, and similarly
-		horses 2 through n are the same color. But the middle horses, 2 through
-		n − 1, can't change color when they're in different groups; these are
-		horses, not chameleons. So horses 1 and n must be the same color as
-		well, by transitivity. Thus all n horses are the same color; QED." What,
-		if anything, is wrong with this reasoning?
-	\end{exercise}
-	\begin{answer}
-		n=1 情况下马有相同颜色
-		
-		但 n=2 时	该假设不一定成立
-	\end{answer}
-	
-	\begin{answer}
-		不允许在A B之间直接移动, 求最短的移动序列
-		\begin{align*}
-			k=1     & 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=2\\
-			k=2     & 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
-					& 2\quad A \rightarrowtail C                 		& 1	\\
-				 	& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
-				 	& 2\quad C \rightarrowtail B						& 1	\\
-				 	& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=8 \\
-			k=3     & 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
-					& 2\quad A \rightarrowtail C                 		& 1	\\
-					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
-					& 2\quad C \rightarrowtail B						& 1	\\
-					& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=8\\
-					& 3\quad A \rightarrowtail C                 		& 1	\\
-					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
-					& 2\quad B \rightarrowtail C						& 1	\\
-					& 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
-					& 2\quad C \rightarrowtail A						& 1	\\
-					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
-					& 3\quad C \rightarrowtail B						& 1	\quad sum=18\\
-					& 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
-					& 2\quad A \rightarrowtail C                 		& 1	\\
-					& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
-					& 2\quad C \rightarrowtail B						& 1	\\
-					& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=26\\
-			\vdots  &													&
-			k=n     & 1\quad A \rightarrowtail C, C \rightarrowtail B	& ?\\
-		\end{align*}
-		从前面的移动可以看出 $ f(n) = 3*f(n-1)+2 $, 设 $ g(n) = f(n)+1 $, $ g(1)=f(1)+1 = 3 $, $ g(n) = 3g(n-1) $. $ g(n) = 3^{n} $, $ f(n) = 3^{n}-1 $.
-	\end{answer}
-	
-	\begin{answer}
-		是的，以n个圆盘为例
-		正确的叠放方法有$ 3^n $种 将ABC视为3个序列，将所有圆盘从大到小依次放置在3个序列中，每个圆盘放置时有3种选择，所共有$ 3^n $种正确的叠放方法。第二题移动$ 3^n-1 $次，再加上移动前所有圆盘都在A柱上的情况，共有$ 3^n $种情况，所以所有正确的叠放方法均会出现。
-		
-		我的思考，n个圆盘在3根柱子上任意放的方法有多少种？
-	\end{answer}
+\maketitle
 
-	\begin{answer}
-		Are there any starting and ending configurations of n disks on three pegs
-		that are more than $ 2^n − 1 $ moves apart, under Lucas's original rules?
-		
-		是否存在 $ m > 2^n-1 $
-		
-%		I don't know...
-		不存在。根据卢卡斯的规则，将可能出现的移动情况分为两种：\\		
-		1. 最大的圆盘不需要移动，根据归纳法，最多需要移动$ 2^{n-1}-1 $次。\\	
-		2. 最大的圆盘需要移动，根据归纳法，最多需要移动 $ 2^{n-1}-1 + 1 + 2^{n-1}-1 $ 即 $  2^{n}-1  $次
-	\end{answer}
+\section{Exercises}
+\subsection{Warmups}
+
+\begin{exercise}1
+	All horses are the same color; we can prove this by induction on the
+	number of horses in a given set. Here's how: "If there's just one horse
+	then it's the same color as itself, so the basis is trivial. For the induction
+	step, assume that there are n horses numbered 1 to n. By the induc-
+	tion hypothesis, horses 1 through n − 1 are the same color, and similarly
+	horses 2 through n are the same color. But the middle horses, 2 through
+	n − 1, can't change color when they're in different groups; these are
+	horses, not chameleons. So horses 1 and n must be the same color as
+	well, by transitivity. Thus all n horses are the same color; QED." What,
+	if anything, is wrong with this reasoning?
+\end{exercise}
+
+\begin{answer}
+	n=1 情况下马有相同颜色
 	
-	\begin{answer}
-		3个给定集合，共有8个可能子集。使用 Venn 图表示
-		
-		\footnote{Venn 图之后会补上}
+	但 n=2 时	该假设不一定成立
+\end{answer}
+
+
+\begin{exercise}2
+\end{exercise}
+
+\begin{answer}
+	不允许在A B之间直接移动, 求最短的移动序列
+	\begin{equation*}
+	\begin{array}{cll}
+		k=1     & 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=2\\
+		k=2     & 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+				& 2\quad A \rightarrowtail C                 		& 1	\\
+			 	& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+			 	& 2\quad C \rightarrowtail B						& 1	\\
+			 	& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=8 \\
+		k=3     & 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+				& 2\quad A \rightarrowtail C                 		& 1	\\
+				& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+				& 2\quad C \rightarrowtail B						& 1	\\
+				& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=8\\
+				& 3\quad A \rightarrowtail C                 		& 1	\\
+				& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+				& 2\quad B \rightarrowtail C						& 1	\\
+				& 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+				& 2\quad C \rightarrowtail A						& 1	\\
+				& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+				& 3\quad C \rightarrowtail B						& 1	\quad sum=18\\
+				& 1\quad A \rightarrowtail C, C \rightarrowtail B,  & 2	\\
+				& 2\quad A \rightarrowtail C                 		& 1	\\
+				& 1\quad B \rightarrowtail C, C \rightarrowtail A,  & 2	\\
+				& 2\quad C \rightarrowtail B						& 1	\\
+				& 1\quad A \rightarrowtail C, C \rightarrowtail B   & 2 \quad sum=26\\
+		\vdots  &													& \\
+		k=n     & 1\quad A \rightarrowtail C, C \rightarrowtail B	&  \\
+	\end{array}
+	\end{equation*}
+	从前面的移动可以看出 $ f(n) = 3*f(n-1)+2 $, 设 $ g(n) = f(n)+1 $, $ g(1)=f(1)+1 = 3 $, $ g(n) = 3g(n-1) $. $ g(n) = 3^{n} $, $ f(n) = 3^{n}-1 $.
+\end{answer}
+
+\begin{exercise}3
+\end{exercise}
+
+\begin{answer}
+	是的，以n个圆盘为例
+	正确的叠放方法有$ 3^n $种 将ABC视为3个序列，将所有圆盘从大到小依次放置在3个序列中，每个圆盘放置时有3种选择，所共有$ 3^n $种正确的叠放方法。第二题移动$ 3^n-1 $次，再加上移动前所有圆盘都在A柱上的情况，共有$ 3^n $种情况，所以所有正确的叠放方法均会出现。
+	
+	我的思考，n个圆盘在3根柱子上任意放的方法有多少种？
+\end{answer}
+
+\begin{exercise}4
+\end{exercise}
+
+\begin{answer}
+	Are there any starting and ending configurations of n disks on three pegs
+	that are more than $ 2^n − 1 $ moves apart, under Lucas's original rules?
+	
+	是否存在 $ m > 2^n-1 $
+	
+%		I don't know...
+	不存在。根据卢卡斯的规则，将可能出现的移动情况分为两种：\\		
+	1. 最大的圆盘不需要移动，根据归纳法，最多需要移动$ 2^{n-1}-1 $次。\\	
+	2. 最大的圆盘需要移动，根据归纳法，最多需要移动 $ 2^{n-1}-1 + 1 + 2^{n-1}-1 $ 即 $  2^{n}-1  $次
+\end{answer}
+
+\begin{exercise}5
+\end{exercise}
+
+\begin{answer}
+	3个给定集合，共有8个可能子集。使用 Venn 图表示
+	
+	\footnote{Venn 图之后会补上}
 %		空集 $ \emptyset $ 或 $ \varnothing $ 
 %		并集$ \cup $, 交集 $\cap$
-		$ A, B, C, $ 三个集合的所有子集为 $ \{\varnothing, A, B, C, A\cap B, A\cap C, B\cap C, A \cap B \cap C, \} $ , $\{A\setminus B, A\setminus C, B\setminus A, B\setminus C, C\setminus A, C\setminus B \}$, $ \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{A\cup B, A\cup C, B\cup C, A\cup B\cup C\} $. $ \dots $
-		
-		我认为这里所将的八个子集应当是$ \{\varnothing\}, \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{(A\cap B)\setminus C, (C\cap A)\setminus B, (B\cap C)\setminus A \} $, $ \{A\cap B\cap C\} $. 空集和7个互不相交的真子集
-	\end{answer}
+	$ A, B, C, $ 三个集合的所有子集为 $ \{\varnothing, A, B, C, A\cap B, A\cap C, B\cap C, A \cap B \cap C, \} $ , $\{A\setminus B, A\setminus C, B\setminus A, B\setminus C, C\setminus A, C\setminus B \}$, $ \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{A\cup B, A\cup C, B\cup C, A\cup B\cup C\} $. $ \dots $
 	
+	我认为这里所将的八个子集应当是$ \{\varnothing\}, \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{(A\cap B)\setminus C, (C\cap A)\setminus B, (B\cap C)\setminus A \} $, $ \{A\cap B\cap C\} $. 空集和7个互不相交的真子集。
+	
+	对于4个集合，Venn图不能给出可能的16个子集，因为不同的圆至多交于两点。 参考答案中说的卵形 (ovals) 是什么意思？
+\end{answer}
+
+\begin{exercise}6
+\end{exercise}
+
+\begin{answer}
+	无界区域个数$ 2n $\\
+	所有区域个数$ \frac{n(n+1)}{2}+1 $ \\
+	二者相减得到有界区域个数 $ \frac{(n-1)(n-2)}{2} $
+\end{answer}
+
+\begin{exercise}7
+\end{exercise}
+
+\begin{answer}
+	设 $ H(n) = J(n+1) - J(n) $.\\
+	$ H(2n) = 2 $, 对$ n\geqslant 1 $有\\
+	\begin{align*}
+		 H(2n+1)
+		 &= J(2n+2) - J(2n+1) \\
+		 &= (2J(n+1)-1) - (2J(n)+1)\\
+		 &= 2H(n) - 2
+	\end{align*}
+	但在$ n=0 $	时，由此推出
+	\begin{equation*}
+		H(1) = J(2)-J(1) = 1 - 1 = 0 \neq 2
+	\end{equation*}
+\end{answer}
+
+\subsection{作业题}
+\begin{exercise}	
+	\begin{align*}
+		Q_0 &= \alpha\\
+		Q_1 &= \beta \\
+		Q_n &= \frac{1+Q_{n-1}}{Q_{n-2}} ,\quad n>1
+	\end{align*}
+	(hint: $ Q_4 = \frac{1+\alpha}{\beta} $)
+\end{exercise}
+
+\begin{answer}
+	\begin{equation*}
+		\begin{array}{lllll}
+			Q_0 &= \alpha & & &= \alpha\\
+			Q_1 &= \beta  & & &= \beta\\
+			Q_2 &= \cfrac{1+Q_1}{Q_0} & &&= \cfrac{1+\beta}{\alpha} \\
+			Q_3 &= \cfrac{1+Q_2}{Q_1} &= \cfrac{1+\cfrac{1+\beta}{\alpha}}{\beta} 
+			&&= \cfrac{1+\alpha+\beta}{\alpha\beta} \\
+			Q_4 &= \cfrac{1+Q_3}{Q_2} 
+			&= \cfrac{1+\cfrac{1+\alpha+\beta}{\alpha\beta} }{\cfrac{1+\beta}{\alpha}}
+			&= \cfrac{\alpha\beta+1+\alpha+\beta}{\beta(1+\beta)} 
+			&= \cfrac{1+\alpha}{\beta} \\
+			Q_5 &= \cfrac{1+Q_4}{Q_3} 
+			&= \cfrac{1+\cfrac{1+\alpha}{\beta}}{ \cfrac{1+\alpha+\beta}{\alpha\beta}}
+			&= \cfrac{\alpha\beta+\alpha(1+\alpha)}{1+\alpha+beta} &= \alpha \\
+			Q_6 &= \cfrac{1+Q_5}{Q_4} &= \cfrac{1+\alpha}{\cfrac{1+\alpha}{\beta}} & &= \beta\\
+		\end{array}
+	\end{equation*}
+	因此解得 
+	\begin{equation*}
+		\begin{array}{clcccccc}
+			Q_i &= \{ &\alpha ,& \beta ,& \cfrac{1+\beta}{\alpha} ,& \cfrac{1+\alpha+\beta}{\alpha\beta} ,& \cfrac{1+\alpha}{\beta} & \}\\
+			(i\%n) &= \{ & 0 ,& 1 ,& 2 ,& 3 ,& 4 ,& \}\\
+		\end{array}
+	\end{equation*}
+\end{answer}	
+
+\begin{exercise}
+		反向归纳法，从 $ n $ 到 $  n-1 $ 证明命题
+	\begin{equation*}
+		P(n) : \; x_{1} \dots x_{n} \leqslant \left( \frac{x_{1}+\cdots+x_{n}}{n}\right) ^n, \quad x_i \geqslant 0, i=1,\dots,n
+	\end{equation*}
+	$ n=2 $时为真 
+	\begin{equation*}
+		(x_{1}+x_{2})^2-4x_{1}x_{2} = (x_{1}-x_{2})^2 \geqslant 0
+	\end{equation*}
+	\begin{enumerate}[a)]
+		\item $ x_n = \frac{x_{1}+\cdots+x_{n-1}}{n-1} $, 证明只要 $ n>1 $ 时 $ P(n) $ 蕴含 $ P(n-1) $.
+		\item 证明 $ P(n) $和 $ P(2) $蕴含 $ P(2n) $
+		\item 由 a), b) 说明这就蕴含了$ P(n) $对所有$ n $为真
+	\end{enumerate}
+\end{{exercise}
+
+\begin{answer}
+	a) $ P(n) $成立，$ \forall n>1 $\\
+	给定 $ x_n = \frac{x_{1}+\cdots+x_{n-1}}{n-1} $，则有
+	\begin{equation*}
+		\begin{array}{ll}
+			x_1 \dots x_{n-1} \cdot \cfrac{x_{1}+\dots+x_{n-1}}{n-1} 
+			&\leqslant \left( \frac{	x_1 + x_{n-1} + \cfrac{x_{1}+\dots+x_{n-1}}{n-1} }{n} \right) ^n \\
+			x_1 \dots x_{n-1} \cdot \cfrac{x_{1}+\dots+x_{n-1}}{n-1}
+			&\leqslant \left(  \cfrac{x_{1}+\dots+x_{n-1}}{n-1} \right) ^n \\
+			x_1 \dots x_{n-1}
+			&\leqslant \left(  \cfrac{x_{1}+\dots+x_{n-1}}{n-1} \right) ^{n-1}\\
+		\end{array}
+	\end{equation*}
+	$ P(n) $成立
+\end{answer}
+
 \end{document}
