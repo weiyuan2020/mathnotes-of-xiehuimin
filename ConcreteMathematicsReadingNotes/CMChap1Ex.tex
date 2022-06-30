@@ -328,6 +328,184 @@
 \begin{equation*}
 	R_n = 4S_{n-1}+3 = 2^{n+2}-5 \quad(n\geqslant 1)
 \end{equation*}
-	
+\end{answer}
+
+\begin{exercise}
+	12 11推广,	$ m_k $个尺寸为$ k $的圆盘，不区分相同尺寸的圆盘
+	移动一个塔最少次数 $ A(m_1, \dots, m_n) $
+\end{exercise}
+
+\begin{answer}
+	\begin{align*}
+		F(0) 	&= 0	\\
+		F(1) 	&= m_1	\\
+		F(2) 	&= 2F(1)+m_2 = 2m_1+m_2	\\
+				&\vdots	\\
+		F(n)	&= 2F(n-1)+m_n
+	\end{align*}
+	\begin{align*}
+		A(m_1, \dots, m_n) 
+		&= F(n) = 2F(n-1)+m_n\\
+		&= 2^{n-1}m_1+2^{n-2}m_2+\cdots+m_n\\
+		&= \sum_{k=1}^{n} 2^{n-k} m_{k}
+	\end{align*}
+\end{answer}
+
+\begin{exercise}
+	13
+\end{exercise}
+
+\begin{answer}
+	\begin{equation*}
+		\begin{array}{ll}
+			k=1 & ZZ_1 = 2+0 = 2\\
+			k=2	& ZZ_2 = 4+8 = 12\\
+			k=3	& ZZ_3 = 6+25 = 31\\
+		\end{array}
+	\end{equation*}
+对于定义了$ L_n $个区域的$ n $条直线，
+可以用极狭窄的Z形线来代替。
+
+例如，每一对Z形线间有9个交点
+\begin{equation}
+	\begin{array}{ll}
+		ZZ_n 	&= ZZ_{n-1}+9n-8,\quad (n>0)\\
+		ZZ_n	&= 9S_n - 8n+1\\
+				&= 9\cfrac{n(n+1)}{2} - 8n+1\\
+				&= \frac{9}{2}n^2 - \frac{7}{2}n + 1\\
+	\end{array}
+\end{equation}
+\end{answer}
+
+\begin{exercise}
+	14
+\end{exercise}
+
+\begin{answer}
+	\begin{equation*}
+		\begin{array}{ll}
+			n=0	& P_0 = 1	\\
+			n=1	& P_1 = 2	\\
+			n=2 & P_2 = 4	\\
+			n=3 & P_3 = 8	\\
+			n=4 & P_4 = 8+6=14	\\
+		\end{array}
+	\end{equation*}
+\begin{equation*}
+	P_n = P_{n-1}+L_{n-1}
+\end{equation*}
+其中
+\begin{equation*}
+	L_n = 1+S_n,\quad S_n = \frac{n(n+1)}{2}
+\end{equation*}
+$ \therefore  P_n = P_{n-1}+1+\frac{n(n+1)}{2}$
+\begin{equation*}
+	\begin{array}{llll}
+		P_0 &= 1 		& 							&		\\
+		P_1 &= P_0+L_0 	&= 1+1+\frac{0\cdot 1 }{2} 	&= 2	\\ 
+		P_2 &= P_1+L_1 	&= 2+1+\frac{1\cdot 2 }{2} 	&= 4	\\ 
+		P_3 &= P_2+L_2 	&= 4+1+\frac{2\cdot 3 }{2} 	&= 8	\\ 
+		P_4 &= P_3+L_3 	&= 8+1+\frac{3\cdot 4 }{2} 	&= 15	\\ 
+		P_5 &= P_4+L_4 	&=15+1+\frac{4\cdot 5 }{2} 	&= 26	\\ 
+	\end{array}
+\end{equation*}
+\begin{align*}
+	P_n 
+	&= P_{n-1}+L_{n-1} 		\\
+	&= 0 + \sum_{k=0}^{n-1}\left(1+\frac{k(k+1)}{2}\right)	\\
+	&= n + \frac{(n-1)n(n+1)}{6} \\
+	&= \frac{n(n^2+5)}{6}
+\end{align*}
+\end{answer}
+
+\begin{exercise}
+	15 约瑟夫问题， 倒数第二个 $ I(n) $
+\end{exercise}
+
+\begin{answer}
+	\begin{table}[htbp]
+		\centering
+		\small
+		\caption{约瑟夫问题J(n)与I(n)}
+%		\begin{tabular}{c|c|cc|cccc|cccccccc|ccccc}
+		\begin{tabular}{c|c cc cccc cccccccc ccc}
+			\toprule
+			n 
+			& 1 
+			& 2 & 3 
+			& 4 & 5 & 6 & 7 
+			& 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 
+%			& 16 & 17 & 18 & 19 & 20 \\  
+			& 16 & 17 & 18 \\
+			\midrule
+			J(n) 
+			& 1 
+			& 1 & 3 
+			& 1 & 3 & 5 & 7 
+			& 1 & 3	& 5 & 7 & 9 & 11 & 13 & 15
+%			& 1 & 3 & 5 & 7 & 9\\			
+			& 1 & 3 & 5 \\
+			\midrule
+			I(n) 
+			& $\sim$ 
+			& 2  
+			& 1 & 3 & 5  
+			& 1 & 3	& 5 & 7 & 9 & 11 
+%			& 1 & 3	& 5 & 7 & 9 & 11 &13 &15 &17 \\
+			& 1 & 3	& 5 & 7 & 9 & 11 &13 \\
+			\bottomrule
+		\end{tabular}%
+		\label{tab:JNIN}%
+	\end{table}%
+
+$ n >1 $时， $ J(n), I(n) $有相同递归式
+\begin{align*}
+	& I(2) = 2, I(1) = 1\\
+	& n=2^m + 2^{m-1}+k, \quad 0\leqslant k \leqslant 2^m + 2^{m-1}\\
+	& I(n) = 2k+1 
+\end{align*}
+\begin{equation*}
+	n = 2^m + l ,\quad I(n) =
+	\left\{
+	\begin{array}{ll}
+		J(n)+2^{m-1}, 	& 0 		\leqslant l < 2^{m-1} 	\\
+		J(n)-2^{m}, 	& 2^{m-1}	\leqslant l < 2^{m} 	\\
+	\end{array}
+	\right.
+\end{equation*}
+
+\begin{exercise}
+	\begin{equation*}
+		\left\{
+		\begin{array}{rl}
+			g(1) 	&= \alpha	\\
+			g(2n+j)	&= 3g(n)+\gamma n + \beta_j, \quad j=0,1, n\leqslant 1\\
+		\end{array}
+		\right.
+	\end{equation*}
+(提示，用$ g(n)=n $)
+\end{exercise}
+
+\begin{answer}
+	Suppose $ g(n) = n $
+	\begin{equation*}
+		\begin{aligned}
+			g(1) 	&= 1 = \alpha,\\
+			g(2n+j)	&= 2n+j = 3n+\gamma n+\beta_j.
+		\end{aligned}
+	\end{equation*}
+解得 $   \alpha = 1, \gamma = -1, \beta_j = \left\{ \begin{array}{l}
+	0,\quad j=0\\
+	1,\quad j=1\\
+\end{array}\right.$
+
+%(题解)
+%\begin{equation*}
+%	g(n) = a(n)\alpha + b(n)\beta_0 + c(n)\beta_1+d(n)\gamma
+%\end{equation*}
+%$ n = (1 b_{m-1}\dots b_1b_0)_2 $ 将$ n $以基数2展开(写成二进制)。\\
+%$ a(n)\alpha + b(n)\beta_0 + c(n)\beta_1 =  $
+\end{answer}
+
 \end{answer}
 \end{document}
