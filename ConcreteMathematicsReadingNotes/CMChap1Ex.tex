@@ -20,9 +20,9 @@
 	number of horses in a given set. Here's how: "If there's just one horse
 	then it's the same color as itself, so the basis is trivial. For the induction
 	step, assume that there are n horses numbered 1 to n. By the induc-
-	tion hypothesis, horses 1 through n − 1 are the same color, and similarly
+	tion hypothesis, horses 1 through n - 1 are the same color, and similarly
 	horses 2 through n are the same color. But the middle horses, 2 through
-	n − 1, can't change color when they're in different groups; these are
+	n - 1, can't change color when they're in different groups; these are
 	horses, not chameleons. So horses 1 and n must be the same color as
 	well, by transitivity. Thus all n horses are the same color; QED." What,
 	if anything, is wrong with this reasoning?
@@ -76,10 +76,10 @@
 \end{exercise}
 
 \begin{answer}
-	是的，以n个圆盘为例
-	正确的叠放方法有$ 3^n $种 将ABC视为3个序列，将所有圆盘从大到小依次放置在3个序列中，每个圆盘放置时有3种选择，所共有$ 3^n $种正确的叠放方法。第二题移动$ 3^n-1 $次，再加上移动前所有圆盘都在A柱上的情况，共有$ 3^n $种情况，所以所有正确的叠放方法均会出现。
+	是的, 以n个圆盘为例
+	正确的叠放方法有$ 3^n $种 将ABC视为3个序列, 将所有圆盘从大到小依次放置在3个序列中, 每个圆盘放置时有3种选择, 所共有$ 3^n $种正确的叠放方法。第二题移动$ 3^n-1 $次, 再加上移动前所有圆盘都在A柱上的情况, 共有$ 3^n $种情况, 所以所有正确的叠放方法均会出现。
 	
-	我的思考，n个圆盘在3根柱子上任意放的方法有多少种？
+	我的思考, n个圆盘在3根柱子上任意放的方法有多少种？
 \end{answer}
 
 \begin{exercise}4
@@ -87,21 +87,21 @@
 
 \begin{answer}
 	Are there any starting and ending configurations of n disks on three pegs
-	that are more than $ 2^n − 1 $ moves apart, under Lucas's original rules?
+	that are more than $ 2^n - 1 $ moves apart, under Lucas's original rules?
 	
 	是否存在 $ m > 2^n-1 $
 	
 %		I don't know...
-	不存在。根据卢卡斯的规则，将可能出现的移动情况分为两种：\\		
-	1. 最大的圆盘不需要移动，根据归纳法，最多需要移动$ 2^{n-1}-1 $次。\\	
-	2. 最大的圆盘需要移动，根据归纳法，最多需要移动 $ 2^{n-1}-1 + 1 + 2^{n-1}-1 $ 即 $  2^{n}-1  $次
+	不存在。根据卢卡斯的规则, 将可能出现的移动情况分为两种：\\		
+	1. 最大的圆盘不需要移动, 根据归纳法, 最多需要移动$ 2^{n-1}-1 $次。\\	
+	2. 最大的圆盘需要移动, 根据归纳法, 最多需要移动 $ 2^{n-1}-1 + 1 + 2^{n-1}-1 $ 即 $  2^{n}-1  $次
 \end{answer}
 
 \begin{exercise}5
 \end{exercise}
 
 \begin{answer}
-	3个给定集合，共有8个可能子集。使用 Venn 图表示
+	3个给定集合, 共有8个可能子集。使用 Venn 图表示
 	
 	\footnote{Venn 图之后会补上}
 %		空集 $ \emptyset $ 或 $ \varnothing $ 
@@ -110,7 +110,7 @@
 	
 	我认为这里所将的八个子集应当是$ \{\varnothing\}, \{A\setminus (B\cup C), B\setminus (C\cup A), C\setminus (A\cup B)\} $, $ \{(A\cap B)\setminus C, (C\cap A)\setminus B, (B\cap C)\setminus A \} $, $ \{A\cap B\cap C\} $. 空集和7个互不相交的真子集。
 	
-	对于4个集合，Venn图不能给出可能的16个子集，因为不同的圆至多交于两点。 参考答案中说的卵形 (ovals) 是什么意思？
+	对于4个集合, Venn图不能给出可能的16个子集, 因为不同的圆至多交于两点。 参考答案中说的卵形 (ovals) 是什么意思？
 \end{answer}
 
 \begin{exercise}6
@@ -134,7 +134,7 @@
 		 &= (2J(n+1)-1) - (2J(n)+1)\\
 		 &= 2H(n) - 2
 	\end{align*}
-	但在$ n=0 $	时，由此推出
+	但在$ n=0 $	时, 由此推出
 	\begin{equation*}
 		H(1) = J(2)-J(1) = 1 - 1 = 0 \neq 2
 	\end{equation*}
@@ -178,7 +178,7 @@
 \end{answer}	
 
 \begin{exercise}
-		反向归纳法，从 $ n $ 到 $  n-1 $ 证明命题
+		反向归纳法, 从 $ n $ 到 $  n-1 $ 证明命题
 	\begin{equation*}
 		P(n) : \; x_{1} \dots x_{n} \leqslant \left( \frac{x_{1}+\cdots+x_{n}}{n}\right) ^n, \quad x_i \geqslant 0, i=1,\dots,n
 	\end{equation*}
@@ -194,8 +194,8 @@
 \end{exercise}
 
 \begin{answer}
-	a) $ P(n) $成立，$ \forall n>1 $\\
-	给定 $ x_n = \frac{x_{1}+\cdots+x_{n-1}}{n-1} $，则有
+	a) $ P(n) $成立, $ \forall n>1 $\\
+	给定 $ x_n = \frac{x_{1}+\cdots+x_{n-1}}{n-1} $, 则有
 	\begin{equation*}
 		\begin{array}{ll}
 			x_1 \dots x_{n-1} \cdot \cfrac{x_{1}+\dots+x_{n-1}}{n-1} 
@@ -275,7 +275,7 @@
 \end{answer}
 
 \begin{exercise}
-	双重河内塔 2n个圆盘，第$ 2k-1 $个与第$ 2k $个大小相同。
+	双重河内塔 2n个圆盘, 第$ 2k-1 $个与第$ 2k $个大小相同。
 \end{exercise}
 
 \begin{answer}
@@ -331,7 +331,7 @@
 \end{answer}
 
 \begin{exercise}
-	12 11推广,	$ m_k $个尺寸为$ k $的圆盘，不区分相同尺寸的圆盘
+	12 11推广,	$ m_k $个尺寸为$ k $的圆盘, 不区分相同尺寸的圆盘
 	移动一个塔最少次数 $ A(m_1, \dots, m_n) $
 \end{exercise}
 
@@ -363,10 +363,10 @@
 			k=3	& ZZ_3 = 6+25 = 31\\
 		\end{array}
 	\end{equation*}
-对于定义了$ L_n $个区域的$ n $条直线，
+对于定义了$ L_n $个区域的$ n $条直线, 
 可以用极狭窄的Z形线来代替。
 
-例如，每一对Z形线间有9个交点
+例如, 每一对Z形线间有9个交点
 \begin{equation}
 	\begin{array}{ll}
 		ZZ_n 	&= ZZ_{n-1}+9n-8,\quad (n>0)\\
@@ -419,7 +419,7 @@ $ \therefore  P_n = P_{n-1}+1+\frac{n(n+1)}{2}$
 \end{answer}
 
 \begin{exercise}
-	15 约瑟夫问题， 倒数第二个 $ I(n) $
+	15 约瑟夫问题,  倒数第二个 $ I(n) $
 \end{exercise}
 
 \begin{answer}
@@ -458,7 +458,7 @@ $ \therefore  P_n = P_{n-1}+1+\frac{n(n+1)}{2}$
 		\label{tab:JNIN}%
 	\end{table}%
 
-$ n >1 $时， $ J(n), I(n) $有相同递归式
+$ n >1 $时,  $ J(n), I(n) $有相同递归式
 \begin{align*}
 	& I(2) = 2, I(1) = 1\\
 	& n=2^m + 2^{m-1}+k, \quad 0\leqslant k \leqslant 2^m + 2^{m-1}\\
@@ -473,6 +473,7 @@ $ n >1 $时， $ J(n), I(n) $有相同递归式
 	\end{array}
 	\right.
 \end{equation*}
+\end{answer}
 
 \begin{exercise}
 	\begin{equation*}
@@ -483,7 +484,7 @@ $ n >1 $时， $ J(n), I(n) $有相同递归式
 		\end{array}
 		\right.
 	\end{equation*}
-(提示，用$ g(n)=n $)
+(提示, 用$ g(n)=n $)
 \end{exercise}
 
 \begin{answer}
@@ -499,13 +500,105 @@ $ n >1 $时， $ J(n), I(n) $有相同递归式
 	1,\quad j=1\\
 \end{array}\right.$
 
-%(题解)
-%\begin{equation*}
-%	g(n) = a(n)\alpha + b(n)\beta_0 + c(n)\beta_1+d(n)\gamma
-%\end{equation*}
-%$ n = (1 b_{m-1}\dots b_1b_0)_2 $ 将$ n $以基数2展开(写成二进制)。\\
-%$ a(n)\alpha + b(n)\beta_0 + c(n)\beta_1 =  $
+(题解)
+\begin{equation*}
+	g(n) = a(n)\alpha + b(n)\beta_0 + c(n)\beta_1+d(n)\gamma
+\end{equation*}
+$ n = (1 b_{m-1}\dots b_1b_0)_2 $ 将$ n $以基数2展开(写成二进制)。\\
+\begin{equation*}
+	a(n)\alpha + b(n)\beta_0 + c(n)\beta_1 =  (\alpha\beta_{m-1}\beta_{m-2}\dots\beta_{b_1}\beta_{b_0})_3
+\end{equation*}
+$ g(n) = n.\quad (\alpha=1,\beta_0 = 0,\beta_1=1,  \gamma = -1 )$ 
+\begin{equation*}
+	a(n)+c(n)-d(n)=n
+\end{equation*}
+$ g(n)=1. \quad (\alpha=1,\beta_0 = -2,\beta_1=2, \gamma = 0)  $ 
+\begin{equation*}
+	a(n)-2b(n)-c(n)=1
+\end{equation*}
+\begin{align*}
+	d(n)&=a(n)+c(n)-n\\
+	b(n)&=\frac{1}{2}a(n)-\frac{1}{2}c(n)-\frac{1}{2}  
+\end{align*}
+\begin{align*}
+	g(n)&=a(n)\alpha+(\frac{1}{2}a(n)-\frac{1}{2}c(n)-\frac{1}{2})\beta_0 \\
+	&+ c(n)\beta_1 + (a(n)+c(n)-n)\gamma
+\end{align*}
+
+若$ \beta_i=0\;(i=0,1), \gamma=0 $ 
+\begin{equation*}
+	\left\{
+		\begin{aligned}
+			g(1)&=\alpha\\
+			g(2n+j)&=3g(n)
+		\end{aligned}
+	\right.
+\end{equation*}
+$ g(1)=\alpha $, $ g(2)=g(3)=3\alpha $, $ g(4)=g(5)=g(6)=g(7)= 9\alpha $, 
+$ g(8)=3g(4)=27\alpha $.
+由此推知
+\begin{equation*}
+	g(n)=g(2^m+k)=3^m,\quad a(n)=3^m
+\end{equation*}
+继续计算$ d(n) $ 遇到困难
+
+若$ \alpha=0,\beta_0=0, \gamma=0 $, $ g(n)=\beta_1 c(n) $  
+\begin{equation*}
+	\left\{
+		\begin{aligned}
+			g(1)&=0\\
+			g(2n)&=3g(n)\\
+			g(2n+1)&=3g(n)+1
+		\end{aligned}
+	\right.
+\end{equation*}
+$ g(2)=0 $ , $ g(3)=1 $ , $ g(4)=0 $ , $ g(5)=1 $ , 
+$ g(6)=3g(3)=3 $ , $ g(7)=3g(3)+1=4 $ , $ g(8)=0 $, $ g(9)=1 \dots$  
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{m,k变化规律}
+	\begin{tabular}{c|ccccc ccccc ccccc cccc}
+		\toprule
+		n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 \\
+		\midrule
+		& 0 & 0 & 1 & 0 & 1 & 3 & 4 & 0 & 1 & 3  & 4  & 9  & 10 & 12 & 13 & 0  & 1  & 3  & 4  \\
+		m & 0 & 1 &   & 2 &   &   &   & 3 &   &    &    &    &    &    & & 4  &    &    &    \\  
+		k& &   & 1 &   & 1 & 2 & 3 &   & 1 & 2  & 3  & 4  & 5  & 6  & 7 &   & 1  & 2  & 3 \\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:EX16}%
+\end{table}%
+\begin{equation*}
+	g(2^{m}+k)=g(\left( 1 b_{m-1}b_{m-2}\dotsb_1b_0 \right)_2)
+\end{equation*}
 \end{answer}
 
+复习和重做16题的部分暂不录入
+
+
+\begin{exercise} 
+	\begin{equation*}
+		W_{n(n+1)/2} \leqslant 2W_{n(n-1)/2}+T_n, \quad n>0
+	\end{equation*}
+\end{exercise}
+
+\begin{answer}
+	In general we have $ W_m\leqslant 2W_{m-k}+T_k, \; 0\leqslant k \leqslant M $ 
+( This relation corresponds to transferring the top $ m-k $. 
+then using only three pegs to move the bottom $ k\rightarrow T_k $, then finishing with the top $ m-k \rightarrow 2\cdot W_{m-k} $ )
+
+The stated relation turns out to be based on the unique value of k that minimizes the right-hand side of this general inequality， when $ m\frac{n(n+1)}{2} $.
+
+(However, we cannot conclude that equality holds. Many other
+strategies for transferring the tower are conceivale.)
+
+If we set $ Y_n = (W_{n(n+1)/2}-1)/2^n $ 
+
+we find that $ Y_n \leqslant Y_{n-1}+1 $ . 
+hence $ W_{n(n+1)/2} \leqslant 2^n(n-1)+1 $ 
 \end{answer}
+
+
 \end{document}
