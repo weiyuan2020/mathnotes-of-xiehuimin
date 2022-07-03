@@ -1,5 +1,6 @@
 \documentclass[mode=geye]{elegantnote}
-%\usepackage{amsmath}
+%!TEX program=xelatex
+\usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 
@@ -275,7 +276,7 @@
 \end{answer}
 
 \begin{exercise}
-	双重河内塔 2n个圆盘, 第$ 2k-1 $个与第$ 2k $个大小相同。
+	双重河内塔 2n 个圆盘, 第$ 2k-1 $个与第$ 2k $个大小相同。
 \end{exercise}
 
 \begin{answer}
@@ -600,5 +601,121 @@ we find that $ Y_n \leqslant Y_{n-1}+1 $ .
 hence $ W_{n(n+1)/2} \leqslant 2^n(n-1)+1 $ 
 \end{answer}
 
+\begin{exercise}
+	证明如下的一组$ n $ 条折线定义$ Z_n $ 个区域
+	\begin{equation}
+		\begin{aligned}
+			Z_n = L_{2n}-2n &= \frac{2n(2n+1)}{2}+1-2n \\
+			&=2n^2-n+1. \quad n\geqslant 0.
+		\end{aligned}
+	\end{equation}
+	第$ j $ 条折线$ (1\leqslant j\leqslant n) $ 的锯齿点在$ (n^{kj},0) $ . 并向上经过点$ (n^{2j}-n^j,1) $ 与 $ (n^{2j}-n^j-n^{-n}, 1) $ 
+\end{exercise}
+
+\begin{answer}
+	
+\end{answer}
+
+\begin{exercise}
+	当每一个锯齿的角度为$ 30^{\circ} $ 时, 有可能由$ n $ 条折线得到$ Z_n $ 个区域吗?
+\end{exercise}
+
+\begin{answer}
+	
+\end{answer}
+
+\begin{exercise}
+	利用成套方法解递归式：
+	\begin{equation*}
+		\left\{
+			\begin{array}{llll}
+				h(1) &= \alpha &&\\
+				h(2n) &= 4h(n) &+\gamma_0 n&+\beta_0\\
+				h(2n) &= 4h(n) &+\gamma_1 n&+\beta_1\\
+			\end{array}
+		\right.\quad n\geqslant 1
+	\end{equation*}
+\end{exercise}
+
+\begin{answer}
+	\begin{equation*}
+		h(n)=\alpha A(n)+\beta_0 B(n)+ \gamma_0 C(n)+\beta_1 D(n) + \gamma_1 E(n)
+	\end{equation*}
+	1. $ h(1)=1 $ 
+	\begin{equation*}
+		\left\{
+			\begin{array}{llll}
+				1 &= \alpha &&\\
+				1 &= 4\times 1 &+ \gamma_0 n &+ \beta_0\\
+				1 &= 4\times 1 &+ \gamma_1 n &+ \beta_1\\
+			\end{array}
+		\right.
+	\end{equation*}
+	解得 $ (\alpha, \beta_0,\gamma_0,\beta_1,\gamma_1)=(1,-3,0,-3,0) $ 
+	\begin{equation*}
+		1 = A(n)-3B(n)-3D(n)
+	\end{equation*}
+	2. $ h(n)=n $ 
+	\begin{equation*}
+		\left\{
+			\begin{array}{llll}
+				1 &= \alpha &&\\
+				2n &= 4\times n &+ \gamma_0 n &+ \beta_0\\
+				2n+1 &= 4\times n &+ \gamma_1 n &+ \beta_1\\
+			\end{array}
+		\right.
+	\end{equation*}
+	解得 $ (\alpha, \beta_0,\gamma_0,\beta_1,\gamma_1)=(1,0,-2,1,-2) $ 
+	\begin{equation*}
+		n = A(n)-2C(n)+D(n)-2E(n)
+	\end{equation*}
+	3. $ h(n)=n^2 $ 
+	\begin{equation*}
+		\left\{
+			\begin{array}{llll}
+				1 &= \alpha &&\\
+				(2n)^2 &= 4\times n^2 &+ \gamma_0 n &+ \beta_0\\
+				(2n+1)^2 &= 4\times n^2 &+ \gamma_1 n &+ \beta_1\\
+			\end{array}
+		\right.
+	\end{equation*}
+	解得 $ (\alpha, \beta_0,\gamma_0,\beta_1,\gamma_1)=(1,0,0,1,4) $ 
+	\begin{equation*}
+		n^2 = A(n)+D(n)+4E(n)
+	\end{equation*}
+	最终结果???
+\end{answer}
+
+\begin{exercise}
+	$ 2 n $  个人围成圈, 前$ n $ 个好伙计后 $ n $ 个坏家伙. 证明: 总存在一
+个整数$  q $  (与 $ n $ 有关), 使得若在绕圆圈走时每隔 $ q - 1 $  个人处死一个, 那么所有坏家伙首先出局.\\
+(例如, $ n=3 $ 时取$ q=5 $, $ n=4 $ 时取$ q=30
+ $ )
+\end{exercise}
+
+\begin{answer}
+	We can let $ m $ be the least (or any) common multiple of $ 2n, 2n-1, \dots, n+1 $.\\
+	a non-rigorous argument suggests that "random" value of m will succeed with probability 
+	\begin{equation*}
+		\frac{n}{2n} \frac{n-1}{2n-1} \dots \frac{1}{n+1} = \frac{1}{\binom{2n}{n}} \sim \frac{\sqrt{\pi n}}{4^n}
+	\end{equation*}
+\end{answer}
+
+\subsection{附加题}
+\begin{exercise}
+	22
+\end{exercise}
+
+\begin{answer}
+	22
+\end{answer}
+
+\begin{exercise}
+	假如 约瑟夫发现自己处在$ j $, 但能指定 $ q $,  隔 $ q-1 $  人处死一人. 他是否能保全自己?
+\end{exercise}
+
+\begin{answer}
+	
+\end{answer}
 
 \end{document}
