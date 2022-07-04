@@ -64,5 +64,25 @@
         S = n \sum_{k=1}^{n} a_k b_k - \left(\sum_{k=1}^{n} a_k \right) \left(\sum_{k=1}^{n} b_k \right)
     \end{equation*}
 \end{solve}
+对上式结果重新排序得
+\begin{equation*}
+    \left(\sum_{k=1}^{n} a_k \right) \left(\sum_{k=1}^{n} b_k \right) = n \sum_{k=1}^{n} a_k b_k - \sum_{1\leqslant j < k \leqslant n} (a_k-a_j)(b_k-b_j)
+\end{equation*}
+
+\begin{theorem}
+    切比雪夫单调不等式 (Chebyshec's monotonic inequality)
+
+\begin{equation*}
+    \begin{array}{lll}
+        \left(\sum_{k=1}^{n} a_k \right) \left(\sum_{k=1}^{n} b_k \right)   &\leqslant n \sum_{k=1}^{n} a_k b_k & \quad a_1\leqslant a_2\leqslant \dots\leqslant a_n, \text{and } b_1\leqslant b_2\leqslant \dots\leqslant b_n \\        
+        & & \quad a_1\geqslant a_2\geqslant \dots\geqslant a_n, \text{and } b_1\geqslant b_2\geqslant \dots\geqslant b_n\\
+        \left(\sum_{k=1}^{n} a_k \right) \left(\sum_{k=1}^{n} b_k \right)   &\geqslant n \sum_{k=1}^{n} a_k b_k & \quad a_1\leqslant a_2\leqslant \dots\leqslant a_n, \text{and } 
+        b_1\geqslant b_2\geqslant \dots\geqslant b_n\\
+        & & \quad a_1\geqslant a_2\geqslant \dots\geqslant a_n, \text{and }
+        b_1\leqslant b_2\leqslant \dots\leqslant b_n \\        
+    \end{array}
+\end{equation*}
+
+\end{theorem}
 
 \end{document}
