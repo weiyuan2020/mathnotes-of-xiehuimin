@@ -1,0 +1,68 @@
+\documentclass[mode=geye]{elegantnote}
+%!TEX program=xelatex
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{exercise}{练习}
+\newtheorem{answer}{题目解答}
+\newtheorem{solve}{解}
+
+\title{具体数学阅读笔记-chap2}
+\author{weiyuan}
+\date{2022-07-04}
+\begin{document}
+\maketitle
+\begin{equation}
+    A = \begin{bmatrix}
+        a_1 a_1 & a_1 a_2 & \cdots & a_1 a_n \\
+        a_2 a_1 & a_2 a_2 & \cdots & a_2 a_n \\
+        \vdots  & \vdots  &        & \vdots  \\
+        a_n a_1 & a_n a_2 & \cdots & a_n a_n \\
+    \end{bmatrix}
+\end{equation}
+求 $ S_{\triangleleft} = \sum_{1\leqslant j \leqslant k \leqslant n} a_j a_k $ \footnote{下三角形矩阵的符号是一个右上部分的直角三角形, 目前我还不会输入}
+
+\begin{solve}
+    $ \because a_j a_k = a_k a_j $ , $ \therefore  $ 矩阵A沿主对角线对称, $ S_{\triangleleft} = S_{\triangleright} $ .
+    \begin{equation*}
+        [1\leqslant j \leqslant k \leqslant n] + [1\leqslant k \leqslant j \leqslant n] =[1\leqslant j , k \leqslant n] + [1\leqslant j = k \leqslant n]
+    \end{equation*}
+    \begin{align*}
+        2S_{\triangleleft} &= S_{\triangleleft}+S_{\triangleright} = S_{A}+S_{diag(A)} \\
+        &= \sum_{1\leqslant j , k \leqslant n} a_j a_k + \sum_{1\leqslant j = k \leqslant n} a_j a_k\\
+        &= \left(\sum_{j=1}^{n} a_j\right)\left(\sum_{k=1}^{n} a_k\right) + \sum_{k=1}^{n} a_k^2\\
+        &= \left(\sum_{k=1}^{n} a_k\right)^2 + \sum_{k=1}^{n} a_k^2
+    \end{align*}
+    $ \therefore S_{\triangleleft} = \frac{1}{2}[\left(\sum_{k=1}^{n} a_k\right)^2 + \sum_{k=1}^{n} a_k^2] $ 
+\end{solve}
+
+\begin{equation}
+    S = \sum_{1\leqslant j < k \leqslant n} (a_k-a_j)(b_k-b_j)
+\end{equation}
+
+\begin{solve}
+    交换$ j,k $ 仍有对称性.\\
+    \begin{equation*}
+        S = \sum_{1\leqslant j < k \leqslant n} (a_k-a_j)(b_k-b_j)
+          = \sum_{1\leqslant j < k \leqslant n} (a_j-a_k)(b_j-b_k)
+    \end{equation*}
+    \begin{equation*}
+        [1\leqslant j < k \leqslant n] + [1\leqslant k < j \leqslant n] =[1\leqslant j , k \leqslant n] - [1\leqslant j = k \leqslant n]
+    \end{equation*}
+    \begin{align*}
+        2S  &= 2\sum_{1\leqslant j < k \leqslant n} (a_k-a_j)(b_k-b_j)\\
+            &= \sum_{1\leqslant j < k \leqslant n} (a_k-a_j)(b_k-b_j) + \sum_{1\leqslant k < j \leqslant n} (a_k-a_j)(b_k-b_j)\\
+            &= \sum_{1\leqslant j , k \leqslant n} (a_k-a_j)(b_k-b_j) - \sum_{1\leqslant j = k \leqslant n} (a_k-a_j)(b_k-b_j)\\
+            & (a_j-a_k=0, b_j-b_k=0, [j=k])
+            &= \sum_{1\leqslant j , k \leqslant n} (a_k b_k - a_j b_k - a_k b_j + a_j b_j) \\
+            &= \sum_{j=1}^{n} \sum_{k=1}^{n} a_k b_k - \sum_{j=1}^{n} \sum_{k=1}^{n} a_j b_k - \sum_{j=1}^{n} \sum_{k=1}^{n} a_k b_j + \sum_{j=1}^{n} \sum_{k=1}^{n} a_j b_j \\
+            &= n\sum_{k=1}^{n} a_k b_k - \sum_{j=1}^{n} \sum_{k=1}^{n} a_j b_k - \sum_{j=1}^{n} \sum_{k=1}^{n} a_k b_j + n \sum_{j=1}^{n}  a_j b_j \\
+            &= 2 n \sum_{k=1}^{n} a_k b_k - 2 \sum_{j=1}^{n} a_j  \sum_{k=1}^{n} b_k 
+    \end{align*}
+    \begin{equation*}
+        S = n \sum_{k=1}^{n} a_k b_k - \left(\sum_{k=1}^{n} a_k \right) \left(\sum_{k=1}^{n} b_k \right)
+    \end{equation*}
+\end{solve}
+
+\end{document}
