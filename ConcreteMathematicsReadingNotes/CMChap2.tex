@@ -6,17 +6,30 @@
 \usepackage{hyperref}
 \usepackage{mathtools} % xrightarrow
 
+\usepackage{tikz}       % tikz
+% \usepackage{colortbl}   % tikznode color 块上色
+
+
 \newtheorem{exercise}{练习}
 \newtheorem{answer}{题目解答}
 \newtheorem{solve}{解}
 
+% falling factorial power
 \newcommand{\fallingfactorial}[1]{%
   ^{\underline{#1}}%
 }
-
+% rising factorial power
 \newcommand{\risingfactorial}[1]{%
   ^{\overline{#1}}%
 }
+% tikz pic draw
+% \newcommand\y{\cellcolor{clight2}}
+\definecolor{clight2}{RGB}{212, 237, 244}%
+\newcommand\tikznode[3][]%
+{\tikz[remember picture,baseline=(#2.base)]
+	\node[minimum size=0pt,inner sep=0pt,#1](#2){#3};%
+}
+\tikzset{>=stealth}
 
 \title{具体数学阅读笔记-chap2}
 \author{weiyuan}
@@ -25,12 +38,59 @@
 \maketitle
 \section{求和}
 \subsection{求和符号}
+\begin{equation}
+    \sum_{k=1}^{n}a_k = \sum_{1\leqslant k\leqslant n}a_k
+\end{equation}
+\begin{align*}
+    \sum_{1\leqslant k<100}k^2
+    &= 1^2+3^2+\dots +99^2\\
+    &= 1^2+2^2+\dots +100^2-(2^2+4^2+\dots 100^2)\\
+    &= 1^2+2^2+\dots +100^2-4\times(1^2+2^2+\dots 50^2)\\
+    &= \frac{100\times 101\times 201}{6}-4 \frac{50\times 51\times 101}{6}\\
+    &= \frac{100\times 101}{6}(201-102)\\
+    &= \frac{99\times 100\times 101}{6}\\
+    &= 166650
+\end{align*}
+⼀般形式 ⽐有确定界限形式 更好处理
+
+$ k\rightarrow k+1$ \\
+⼀般形式, 
+\begin{equation}
+    \sum_{1\leqslant k\leqslant n}a_k =
+    \sum_{1\leqslant k+1\leqslant n}a_{k+1} = 
+    \sum_{0\leqslant k\leqslant n-1}a_{k+1}
+\end{equation}
+有确定界限形式
+\begin{equation}
+    \sum_{k=1}^{n}a_k = \sum_{k=0}^{n-1}a_{k-1}
+\end{equation}
+{\color{red}不要轻易省略 0项
+计算有效性不等同于理解的有效性}
+\begin{equation*}
+    \sum_{k=0}^{n}k(k-1)(n-k)\quad
+    \sum_{k=2}^{n-1}k(k-1)(n-k)
+\end{equation*}
+保持求和界限简单大有裨益
+
+\begin{equation}
+    \sum_{\begin{array}{l}p\leqslant N \\ p\text{是素数}\\ \end{array}}\frac{1}{p} = \sum_{p}[p\text{是素数}][p\leqslant N]/p
+\end{equation}
+
+$ [p(k)] $ 约定$ \rightarrow p(k)$ 为假 $ \left\{\begin{array}{l}
+    [p(k)]\text{必定是}0 \\
+    a_k[p(k)],a_k\text{无意义},\; a_k[p(k)]\text{仍是}0
+\end{array}\right. $ 
+
+由约定$ \frac{[0\text{是素数}][0\leqslant N]}{0} = 0 $ 
+
 \subsection{求和与递归式 Sums and recurrences}
 和式
 \begin{equation}
     S_n = \sum_{k=0}^{n}a_k
 \end{equation}
 等价于递归式
+
+封闭形式解递归式的值 $ \Rightarrow $ 封闭形式解和式
 \begin{equation}
     \left\{
         \begin{array}{l}
@@ -133,7 +193,139 @@ $ R_n = n^3 $
     D(n) &= \frac{1}{3}\left((n+1)(n+\frac{1}{2})n\right)
 \end{align*}
 
+1. 和式用递归式求解\\
+2. 递归式用和式求解\\
+\begin{equation*}
+    \left\{
+        \begin{array}{lll}
+            T_0 &= 0 & \\
+            T_n &= 2 T_{n-1}+1, & n>0 \\
+fallings        \end{array}
+    \right.
+\end{equation*}
+\begin{equation*}
+    \left\{
+        \begin{array}{lll}
+            \frac{T_0}{2^0} &= 0 & \\
+            \frac{T_n}{2^n} &= \frac{T_{n-1}}{2^{n-1}}+\frac{1}{2^n}, & n>0 \\
+        \end{array}
+    \right.
+\end{equation*}
+记$ S_n = \frac{T_n}{2^n} $ 
+
+{\color{red}求和因子} $ s_n $ 
+\begin{align*}
+    a_n T_n     &= b_n T_{n-1}+c_n \\
+    s_n a_n T_n &= s_n b_n T_{n-1}+s_n c_n
+\end{align*}
+选取求和因子使得 $ \quad s_n b_n = s_{n-1} a_{n-1}  $ 
+这样一来，如果记 $ S_n = S_{n-1}+s_n c_n $ ，我们就得到一个和式-递归式
+\begin{equation*}
+    S_n = S_{n-1}+s_n c_n
+\end{equation*}
+\begin{equation*}
+    S_n = s_0 a_0 T_0 +\sum_{k=1}^{n} s_k c_k = s_1b_1T_0 +\sum_{k=1}^{n} s_k c_k 
+\end{equation*}
+\begin{equation}
+    T_n = \frac{1}{s_n a_n}\left(s_0 a_0 T_0+\sum_{k=1}^{n}s_k c_k\right)
+\end{equation}
+例如，当 $ n=1 $ 时得到 $ T_1 = \cfrac{(s_1 b_1 T_0+s_1c_1)}{s_1a_1} = \cfrac{(b_1 T_0+c_1)}{a_1} $ \footnote{$ s_1 $ 的值消去了，所以它可以是除零以外的任何数．）}
+
+但是，我们怎样才能有足够的智慧求出正确的 $ s_n $ 呢？没有问题：关系
+式$ s_n=\cfrac{s_{n-1}a_{-1}}{b_n} $  可以被展开，从而我们发现，分式
+\begin{equation}
+    s_n = \frac{a_{n-1}a_{n-2}\dots a_1}{b_{n}b_{n-1}\dots b_2}
+\end{equation}
+或者这个值的任何适当的常数倍，会是一个合适的求和因子．例如，
+河内塔递归式有 $ a_n=1 $ 和 $ b_n = 2 $ ，由刚刚推导出来的一般方法可知，如
+果要把递归式转化为和式，那么 $ s_n = 2^{-n} $ 就是一个用来相乘的好东西．
+发现这个乘数并不需要闪光的思想灵感．
+
+我们必须小心谨慎，永远不用0做除数．只要所有的 a 和所有的 b 都不为
+零，那么求和因子方法就能奏效．
+
+我们来把这些想法应用到“快速排序”研究中所出现的递归式，快速
+排序是计算机内部数据排序的一种最重要的方法．当把它应用到有 n 个随机排列的项目时，用典型的快速排序方法所做的比较步骤的平均
+次数满足递归式
+\begin{equation}
+    \begin{array}{l}
+        C_0 = C_1 = 0;
+        C_n = n+1+\frac{2}{n}\sum_{k=0}^{n-1}C_k, \quad n>1.
+    \end{array}
+\end{equation}
+
+$ C_2 = 3 $ , $ C_3 = 6 $ , $ C_4 = \frac{19}{2} $ 
+
+\begin{equation*}
+    C_n = n+1+\frac{2}{n}\sum_{k=0}^{n-1}C_k, \quad n>1.
+\end{equation*}
+消去分母中的$ n $ 
+\begin{equation}\label{nCn}
+    nC_n = n(n+1)+2\sum_{k=0}^{n-1}C_k, \quad n>1.
+\end{equation}
+$ n\rightarrow (n-1) $ 
+\begin{equation}\label{n-1Cn}
+    (n-1)C_{n-1} = (n-1)n+2\sum_{k=0}^{n-2}C_k, \quad n-1>1.
+\end{equation}
+% (\ref{nCn})-(\ref{n-1Cn})可以消去和式
+\begin{equation*}
+    nC_n - (n-1)C_{n-1} = 2n+2C_{n-1}, \quad n>2.
+\end{equation*}
+递归式化为
+\begin{equation}
+    \begin{array}{l}
+        C_0 = C_1 = 0;C_2 = 3
+        nC_n = (n+1)C_{n-1} + 2n, \quad n>2.
+    \end{array}
+\end{equation}
+
+使用求和因子方法处理 $ a_n = n, b_n = n+1 $ 且
+\begin{equation*}
+    {\color{red}c_n = 2n-2[n=1]+2[n=2].}
+\end{equation*}
+故而我们现在能用求和因子方法．前面描述的一般方法告诉我们，要
+用
+\begin{equation*}
+    s_n = \frac{a_{n-1}a_{n-2}\dots a_1}{b_{n}b_{n-1}\dots b_2} = \frac{(n-1)\times (n-2)\dots \times 1}{(n+1)\times n\times \dots \times 3} = \frac{2}{(n+1)n}
+\end{equation*}
+的某个倍数来遍乘该递归式
+\begin{equation*}
+    T_n = \frac{1}{s_n a_n}\left(s_0 a_0 T_0+\sum_{k=1}^{n}s_k c_k\right)
+\end{equation*}
+\begin{align*}
+    T_n 
+    &= \frac{n+1}{2}\left(0+\sum_{k=1}^{n}s_k c_k\right)\\
+    &= \frac{n+1}{2}\left(\sum_{k=1}^{n}\frac{2}{k(k+1)}2k\right)\\
+    &= 2(n+1)\sum_{k=1}^{n}\frac{1}{k+1}\\
+    &= 2(n+1)\sum_{k=1}^{n}\frac{1}{k+1}-\frac{2}{3}(n+1), \quad n>1
+\end{align*}
+mynote({\color{blue}！这里的推导有问题，$ s_0=0 $ 不能直接代入})
+
+调和数（harmonic number）
+\begin{equation}
+    H_n= 1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{n}=\sum_{k=1}^{n}\frac{1}{k}.
+\end{equation}
+之
+所以这样命名，是因为小提琴弦所产生的第k个泛音（harmonic）是弦
+长 $ \frac{1}{k} $ 处所产生的基音．
+\begin{align*}
+    \sum_{q\leqslant k\leqslant n}\frac{1}{k+1}
+    &= \sum_{1\leqslant k-1 \leqslant n}\frac{1}{k} \\
+    &= \sum_{2\leqslant k \leqslant n+1}\frac{1}{k} \\
+    &= \sum_{1\leqslant k \leqslant n}\frac{1}{k}- \frac{1}{1}+\frac{1}{n+1} \\
+    &= H_n - \frac{n}{n+1}.
+\end{align*}
+\begin{equation}
+    C_n = 2(n+1)H_n-\frac{8}{3}n-\frac{2}{3}, \; n>1.
+\end{equation}
 \subsection{求和式处理}
+分配律  distributive law \\
+结合律  associative law \\
+交换律  communicative law \\
+等差级数 arithmetic progression \\
+扰动法 perturbation method 把单独⼀次从和式中分出去 \\
+⼏何级数 geometric progression \\
+
 \subsection{多重求和}
 
 \subsubsection{Exercise 1}
@@ -845,4 +1037,159 @@ $  F \subset \mathbb{N} $ , $ \forall i\in F, i\leqslant n $ , $ \exists \sum_{k
     \end{align*}
 \end{exercise}
 
+\begin{exercise}
+    \begin{align*}
+        \sum_{k\geqslant0} \frac{1}{(k+1)(k+2)}
+        &= \sum_{k\geqslant0} k\fallingfactorial{-2} \\
+        &= \lim_{n\rightarrow\infty} \sum_{k=0}^{n-1} k\fallingfactorial{-2} \delta k \\
+        &= \lim_{n\rightarrow\infty} \frac{k\fallingfactorial{-1}}{-1}\Big|_0^n \\
+        &= \lim_{n\rightarrow\infty} (-1)\left(\frac{1}{n+1}-\frac{1}{0+1}\right) \\
+        &= 1
+    \end{align*}
+\end{exercise}
+
+⾮负和式$ \rightarrow $ 和式中有⾮负项与负项
+1. 
+\begin{align*}
+    \sum_{k\geqslant 0}(-1)^k
+    &= 1-1+1-1+1-1+\dots \\
+    &= (1-1)+(1-1)+(1-1)+\dots = 0\\
+    &= 1+(-1+1)+(-1+1)+(-1+1)+\dots = 1
+\end{align*}
+\begin{equation*}
+    \sum_{k\geqslant 0} x^k = \frac{1}{1-x},\; x\in \left[0,1\right)
+\end{equation*}
+$ x=-1 $ 代入上式，$ I=\frac{1}{1-(-1)}=\frac{1}{2} $ 
+
+2. 双向⽆限 $ \sum_k a_k $ 
+\begin{equation*}
+    \begin{array}{ll}
+        k\geqslant 0 & a_k = \frac{1}{k+1} \\
+        k< 0 & a_k = \frac{1}{k-1} \\
+    \end{array}
+\end{equation*}
+\begin{equation*}
+    \begin{array}{cl}
+        \dots + (-\frac{1}{4})+(-\frac{1}{3})+(-\frac{1}{2})+1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\dots & \\
+        \dots + 
+        \Biggl((-\frac{1}{4})+
+        \biggl((-\frac{1}{3})+
+        \Bigl((-\frac{1}{2})+
+        \bigl(1\bigr)+
+        \frac{1}{2}\Bigr)+
+        \frac{1}{3}\biggr)+
+        \frac{1}{4}\Biggr) +\dots & = 1 \\
+        \dots + 
+        \biggl((-\frac{1}{4})+
+        \Bigl((-\frac{1}{3})+
+        \bigl((-\frac{1}{2})\bigr)+
+        1\Bigr)+
+        \frac{1}{2}\biggr)+
+        \frac{1}{3}+
+        \frac{1}{4} +\dots & = 1 \\
+        {\color{red}(\;)=1-\frac{1}{n}-\frac{1}{n+1}} & \\
+        \dots + 
+        \Biggl((-\frac{1}{4})+
+        \biggl((-\frac{1}{3})+
+        \Bigl((-\frac{1}{2})+
+        1+
+        \frac{1}{2}\Bigr)+
+        \frac{1}{3}+
+        \frac{1}{4}\biggr) +
+        \frac{1}{5}+
+        \frac{1}{6}+
+        \Biggr)
+        \dots & = 1+\ln{2} \\
+    \end{array}
+\end{equation*}
+从内往外第n对括号包含数
+\begin{equation*}
+    -\frac{1}{n+1}-\frac{1}{n}-\dots-\frac{1}{2}+1 +\frac{1}{2}+\dots +\frac{1}{2n-1} +\frac{1}{2n}=1+H_{2n}-H_{n+1}
+\end{equation*}
+
+$ \lim_{n\rightarrow\infty}\left(H_{2n}-H_{n+1}\right) = \ln{2} $ 
+
+按照不同方式对其项相加而得出不同值的和式，有某些不同寻常之
+处．关于分析学的高等教材中有五花八门的定义，它们对这样自相矛
+盾的和式赋予了有意义的值，但是，如果我们采用那些定义，就不能
+像一直在做的那样自由地对记号$  \sum $ 进行操作．就本书的目的而言，不
+需要“条件收敛”这种精巧的改进，因此我们会坚持使用无限和的一
+种定义，以保证在这一章里所做的所有运算都是正确的．
+
+事实上，我们关于无限和式的定义相当简单．设 $ K $  是任意一个集合，
+而$ a_k $  是对每一个 $ k\in K $ 定义的实值项（这里“ $ k $  ”实际上可以代表若干
+个指标$ k_1,k_2,\dots $  ，因而 $ K $ 可以是多维的）．任何实数 $ x $ 都可以写成其正
+的部分减去负的部分
+\begin{equation*}
+    x=x^+-x^-,\; x^+:= x\times [x>0],\; x^- := -x\times [x<0]
+\end{equation*}
+对$ \{a_k\} $ 中的每一项这样操作，得到无限和式 $ \sum_{k\in K}a_k^+ $ 和 $ \sum_{k\in K}a_k^- $ (mynote: 将任意和式拆成两个非负和式)
+\begin{equation}
+     \sum_{k\in K}a_k =  \sum_{k\in K}a_k^+ -  \sum_{k\in K}a_k^-
+\end{equation}
+除非右边的两个和式都等于$ \infty $  ．在后面这种情形，我们不定义 $ \sum_{k\in K}a_k  $ \\
+设 
+$ A^+ = \sum_{k\in K}a_k^+  $ , 
+$ A^- = \sum_{k\in K}a_k^-  $ . 
+如果 $ A^+ $ 和$ A^- $ 都是有限的，就说和式 $ \sum_{k\in K}a_k  $ 绝对收敛(converge absolutely) 于值 $ A= A^+-A^- $ ．
+如果 $ A^+=\infty $ 而 $ A^- $ 是有限的，就说和式 $ \sum_{k\in K}a_k  $ 发散 (diverge) 于 $ +\infty $ ．
+类似地，如果 $ A^+ $ 是有限的 而 $ A^-=\infty $ ，就说和式 $ \sum_{k\in K}a_k  $ 发散 (diverge) 于 $ -\infty $ ．
+如果 $ A^+ = A^-=\infty $ ，结果还很难说．
+\footnote{换句话说，绝对收敛就意味着绝对值的和式收敛．}
+
+mynote:\\
+$ \forall $ 集合$ K $ (可以是多维的), $ a_k\in \mathbb{R} \;(k\in K) $ . $ \forall x\in\mathbb{R} $ , $ x = x^+-x^- $ 
+\begin{equation*}
+    \sum_{k\in K}a_k = \sum_{k\in K}\tikznode{ak1}{$ a_k^+ $ } - \sum_{k\in K}\tikznode{ak2}{$ a_k^- $ }
+\end{equation*}
+
+\begin{tikzpicture}[remember picture,overlay,cyan,rounded corners]
+    % explicit coordinates are relative to the end of arrow,
+	% they do not accumulate (note the single + preceding the coords)
+    % "nonnegative"
+    \draw[<-,shorten <=1pt] (ak1)
+    % -- +(0.4,0)% short line to the right
+    |- +(4,0.4)% short up and long right
+    coordinate (pp)% remember position for other arrows
+    node[right] {$ a_k^+,a_k^- $ 均非负};
+    \draw(ak2)
+    |- (pp);
+\end{tikzpicture}
+
+$ \sum_{k\in K} a_k^+ $ ,
+$ \sum_{k\in K} a_k^- $ 不同时为0
+\begin{equation*}
+    \begin{array}{llll}
+        A &= A^+ &- A^- & A =  \sum_{k\in K} a_k \\ 
+          &A^+\text{有限} & A^-\text{有限}& \sum_{k\in K} a_k \text{绝对收敛(converge absolutely)} \\
+          &A^+=\infty & A^-\text{有限}& \sum_{k\in K} a_k \text{发散(diverge)于}\infty \\
+          &A^+\text{有限} & A^-=\infty& \sum_{k\in K} a_k \text{发散(diverge)于}-\infty \\
+    \end{array}
+\end{equation*}
+$ a_k\in\mathbb{R} \Rightarrow a_k\in\mathbb{C} $ 
+\begin{equation*}
+    \sum_{k\in K} a_k =
+    \tikznode{akRe}{$ \sum_{k\in K} \Re{(a_k)} $ } +
+    i\tikznode{akIm}{$ \sum_{k\in K} \Im{(a_k)} $ }    
+\end{equation*}
+
+\begin{tikzpicture}[remember picture,overlay,cyan,rounded corners]
+    % explicit coordinates are relative to the end of arrow,
+	% they do not accumulate (note the single + preceding the coords)
+    % "nonnegative"
+    \draw[<-,shorten <=1pt] (akRe)
+    % -- +(0.4,0)% short line to the right
+    |- +(4,0.4)% short up and long right
+    coordinate (pp2)% remember position for other arrows
+    node[right] {$\begin{array}{l}\text{两式均有定义时，}\\ \sum_{k\in K}a_k \text{有定义}\\ \end{array}$};
+    \draw(akIm)
+    |- (pp2);
+\end{tikzpicture}
+
+$\begin{array}{l}
+    \text{分配律}\\
+    \text{结合律}\\
+    \text{交换律}\\
+\end{array}$
+$ \Rightarrow $ 多个指标集绝对收敛的和式，永远可以对指标中的任何一个首先求和。（结果与求和顺序无关）
 \end{document}
