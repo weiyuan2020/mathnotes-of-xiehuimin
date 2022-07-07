@@ -963,9 +963,9 @@ $ \Delta u(x) = x\fallingfactorial{-1} $ , $ v(x) = \frac{1}{2}x\fallingfactoria
 {\color{blue}借助有限微积分的原理，我们
 很容易地记住}
 \begin{equation}
-    \sum_{0\leqslant k<n}k = \frac{n^2}{2} = n(n-1)/2
+    \sum_{0\leqslant k<n}k = \frac{n\fallingfactorial{2}}{2} = n(n-1)/2
 \end{equation}
-
+\footnote{数学的终极目标是不需要聪明的想法}
 myex $ \sum_{0\leqslant k < n}H_k $ 
 \begin{equation*}
     \begin{array}{ll}
@@ -1192,4 +1192,66 @@ $\begin{array}{l}
     \text{交换律}\\
 \end{array}$
 $ \Rightarrow $ 多个指标集绝对收敛的和式，永远可以对指标中的任何一个首先求和。（结果与求和顺序无关）
+
+$ \forall $ 指标集$  J $  且 $ \{K_j|j\in J\} $  的元素是任意的指标集. s.t.
+\begin{equation*}
+    \sum_{
+        \begin{array}{l}
+            j\in J \\
+            k\in K_j\\
+        \end{array}}a_{j,k}
+    \text{绝对收敛于}A
+\end{equation*} 
+那么对每一
+个 $ j\in J $ , $ \exists A_j \in \mathbb{C} $ .s.t.
+\begin{equation*}
+    \sum_{k\in K_j}a_{j,k}
+    \text{绝对收敛于}A_j. \;
+    \text{且}\sum_{j\in J}A_j
+    \text{绝对收敛于}A
+\end{equation*}
+
+对所有项非负证明这一结记即可.\\
+每项分解成实部与虚部，正的和负的部分，证明一般情形.\\
+设对所有指标 $ (j,k)\in M  $ 都有 $ a_{j,k}\geqslant 0 $.\\ 
+其中$ M $ 是主指标集 $ \{(j,k)| j\in J, k\in K_j \} $ \\
+给定 $ \sum_{(j,k)\in M}a_{j,k} $  是有限的 即 对所有有限子集 $ F\subset M $  有\\
+\begin{equation*}
+    \sum_{(j,k)\in M}a_{j,k} \leqslant A
+\end{equation*}
+而 A 是这样的最小上界.
+
+$ \forall j\in J  $  形如 $ \sum_{k\in F_j}a_{j,k}  $ 的每一个和都以 A 为上界. 
+其中 $ F_j $ 是 $ k_j $  的一
+个有限子集, 从而这些和式有一
+个最小上界 $ A_j \geqslant 0 $. 
+且根据定义有 $ \sum_{k\in K_j} =A_j$.
+
+
+需证明对所有有限子集 $ G\subset J $. A 是 $ \sum_{j\in G} A_j $  的最小上界.\\
+
+
+假设 $ G $  是 $ J $  满足 $ \sum_{j\in G}A_j = A' > A $  的有限子集.\\
+我们可以求出一个有限子集 $ F_j \subseteq K_j $ .\\
+使得对每个满足 $ A_j >0 $ 的 $ j\in G $  均有$ \sum_{k\in F_j}a_{j,k}>\left(\frac{A}{A'}\right) A_j$ .\\
+至少存在一个这样的$ j $ .\\
+但此时有$ \sum_{j\in G, k\in F_j} a_{j,k}>\left(\frac{A}{A'}\right) \sum_{j\in G}A_j = A $ .\\
+这与如下事实矛盾. 对有限子集 $ F\subseteq M $  有 
+$ \sum_{(j,k)\in F} a_{j,k} \leqslant A $.\\ 
+从而对所有有限子集 $ G\subset J $  都有 $ \sum_{j\in G}A_j \leqslant A $ .
+
+最后, 设 $ A' $  是小于$ A $ 的任何一
+个实数如果我们能找到一个有限集合
+$ G\subseteq J $ s.t $ \sum_{j\in G} A_j > A' $. 
+证明就完成了.
+
+已知存在有限集合 $ F\subseteq M $ s.t. $ \sum_{(j,k)a_{j,k}> A'} $.\\
+设 $ G $ 是 $ F $ 中 $ j $ 组成的集合, 又设
+$ F_j = \{k|(j,k)\in F\} $ 
+那么有
+\begin{equation*}
+    \sum_{j\in G}A_j \geqslant \sum_{j\in G}\sum_{k\in F_j} a_{j,k} = \sum_{(j,k)\in F}a_{j,k}>A'
+\end{equation*}
+证完.
+
 \end{document}
