@@ -443,7 +443,8 @@ $ \square_n $ 近似等于 $ \frac{n^3}{3} $ 。
     \end{array}
 \end{equation*}
 
-为使差分运算在形式上与微分运算类似，引入下降阶乘幂和上升阶乘幂。\\
+为使差分运算在形式上与微分运算类似，引入下降阶乘幂和上升阶乘幂。
+
 下降阶乘幂 (failing factorial power), $ x\fallingfactorial{m} $ , 读作$ x $ 直降$ m $ 次.\\
 \begin{equation*}
     x\fallingfactorial{m} = \underbrace{x(x-1)\dots(x-m+1)}_{\textit{m个因子}}, \quad (m\leqslant 0, m\in\mathbb{N}) 
@@ -733,7 +734,115 @@ $ m<0 $ 时，$ \Delta x\fallingfactorial{m} = m x\fallingfactorial{m-1} $ 是�
 \end{solve}
 
 \begin{equation}
-    \sum_{0\leqslant k< n}=nH_n-n
+    \sum_{0\leqslant k< n} H_k =nH_n-n
 \end{equation}
+
+求解看起来更困难的和式$ \sum_{0\leqslant k< n} k H_k $ 
+
+类比$ \int x\ln{x} dx $ 
+\begin{align*}
+    I &= \int x\ln{x} dx \\
+    &= x^2 \ln{x} - \int x(\ln{x}+x\cdot \frac{1}{x})dx\\
+    &= x^2 \ln{x} - I - \int xdx\\
+    I &= \frac{1}{2}x^2 \ln{x} - \frac{1}{2}x^2 + C
+\end{align*}
+对$ \sum_{0\leqslant k< n} k H_k $，取 $ u(x)=H_x \Delta $ , $ v(x)=x = x\fallingfactorial{1}$\\
+$ \Delta u(x) = x\fallingfactorial{-1} $ , $ v(x) = \frac{1}{2}x\fallingfactorial{2} $ ,$ Ev(x) = v(x+1)=\frac{1}{2}(x+1)\fallingfactorial{2} $ 
+\begin{align*}
+    \sum x H_x \delta x
+    &= \frac{1}{2}x\fallingfactorial{2}H_x - \sum \frac{1}{2}(x+1)\fallingfactorial{2}x\fallingfactorial{-1} \delta x\\
+    &= \frac{x\fallingfactorial{2}}{2}H_x - \sum \frac{(x+1)x}{2} \frac{1}{x+1} \delta x\\
+    &= \frac{x\fallingfactorial{2}}{2}H_x - \sum \frac{x\fallingfactorial{1}}{2}\delta x\\
+    &= \frac{x\fallingfactorial{2}}{2}H_x - \frac{1}{4}x\fallingfactorial{2}+C
+\end{align*}
+\begin{equation*}
+    \sum_{0\leqslant k< n} k H_k 
+    = \sum_{x=0}^{n-1}x H_x \delta x = \frac{(n-1)\fallingfactorial{2}}{2}(H_{n-1}-\frac{1}{2})
+\end{equation*}
+教材上是
+\begin{equation*}
+    \sum_{0\leqslant k< n} k H_k 
+    = {\color{red}\sum_{x=0}^{n}x H_x \delta x = \frac{n\fallingfactorial{2}}{2}(H_{n}-\frac{1}{2})}
+\end{equation*}
+% 这是由求和符号的定义决定的，在本书中，求和符号定义是
+% \begin{equation}
+    % \sum_{k=1}^{n}a_k = \sum_{1\leqslant k \leqslant n} = a_1 + a_2 + \dots +a_n
+% \end{equation}
+{\color{blue}借助有限微积分的原理，我们
+很容易地记住}
+\begin{equation}
+    \sum_{0\leqslant k<n}k = \frac{n^2}{2} = n(n-1)/2
+\end{equation}
+
+myex $ \sum_{0\leqslant k < n}H_k $ 
+\begin{equation*}
+    \begin{array}{ll}
+        u(x) = H_x & \Delta v(x) = x\fallingfactorial{0}=1 \\
+        \Delta u(x) = x\fallingfactorial{-1} & v(x) = x\fallingfactorial{1} \\
+        & E v(x) = v(x+1) = (x+1)\fallingfactorial{1}\\
+    \end{array}
+\end{equation*}
+\begin{align*}
+    \sum H_x\cdot 1 \delta x
+    &= x\fallingfactorial{1}H_x - \sum x\fallingfactorial{-1}(x+1)\fallingfactorial{1} \delta x\\
+    &= x\fallingfactorial{1}H_x - \sum x\fallingfactorial{0}\delta x\\
+    &= x\fallingfactorial{1}H_x - x\fallingfactorial{1} + C
+\end{align*}
+\begin{equation*}
+    \sum_{0\leqslant k<n}H_k = \sum_{0}^{n}H_x\delta x = n H_n - n - (0-0) = n H_n - n
+\end{equation*}
+
+\subsection{无限和式 Infinite sums}
+$ a_k $ 非负，$ \sum_{k\in K} a_k$ 
+\begin{definition}
+    如果有 $ A= const $ . s.t. $ \forall $ 有限⼦集 $ F\subset K $, 均有
+    \begin{equation*}
+        \sum_{k\in F}a_k \leqslant A
+    \end{equation*}
+    那么我们定义 $ \sum_{k\in K} a_k$ 是最小的这样的A
+    (所有这样的A总包含⼀个最小元素)。
+    若没有这样的常数A，
+    我们就说 $ \sum_{k\in K} a_k = \infty $
+    即
+    $ \forall A\in \mathbb{R} $ , $ \exists $ 
+    有限多项 $ a_k $ 组成的
+    ⼀个集合, 它的和超过A
+\end{definition}
+该定义与指标集K 中可能存在的任何次序⽆关
+
+特殊情形：K为非负整数集合
+$ a_k \leqslant 0 $ 意味着
+\begin{equation*}
+    \sum_{k\geqslant 0} a_k = \lim_{n\rightarrow \infty}\sum_{k=0}^{n}a_k
+\end{equation*}
+理由： 实数任意非减序列均有极限
+
+$  F \subset \mathbb{N} $ , $ \forall i\in F, i\leqslant n $ , $ \exists \sum_{k\in F}a_k \leqslant \sum_{k=0}^{n}a_k \leqslant A $ . \;
+ $ \therefore $  $  \left\{\begin{array}{l}
+    A=\infty\\
+    A\text{为有界常数}\\
+\end{array}\right. $ 
+
+又$ \forall A' < A$ . $ \exists n $ . s.t $ \sum_{k=0}^{n}a_k > A' $ , $ F = \{0,1,\dots,n\} $. 证明$ A' $ 不是有界常数。
+
+\begin{exercise}
+    $ a_k = x^k $ 有
+    \begin{equation*}
+        \sum_{k\geqslant 0}x^k = \lim_{n\rightarrow\infty}\frac{1-x^{n+1}}{1-x} = \left\{\begin{array}{ll}
+            \frac{1}{1-x}, & 0\leqslant x<1 \\
+            \infty, & x\geqslant 1 \\
+        \end{array}\right.
+    \end{equation*}
+\end{exercise}
+
+\begin{exercise}
+    \begin{align*}
+        S &= 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dots\\
+        \frac{1}{2} S &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dots = S-1,\; S=2\\
+        T &= 1+2+4+8+\dots\\
+        2T &= 2+4+8+\dots = T-1, \; T=-1({\color{red}\times})\\
+        T &= \infty.\;(\text{另一个解})
+    \end{align*}
+\end{exercise}
 
 \end{document}
