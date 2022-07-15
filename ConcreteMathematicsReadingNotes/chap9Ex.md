@@ -10,8 +10,8 @@ $g_2(n)=-n^4$
 
 此时有  $f_1(n)\prec g_1(n), f_2(n)\prec g_2(n)$
 但是  $f_1(n)+f_2(n)=n^3$,$g_1(n)+g_2(n)=n^2$,
-$\lim_{n \to \infty}\frac{f_1(n)+f_2(n)}{g_1(n)+g_2(n)} = \lim_{n \to \infty} \frac{n^3}{n^2} = \infty \neq 0 $.
-$f_1(n)+f_2(n)\prec g_1(n)+g_2(n)$不成立。 
+$\lim_{n \to \infty}\frac{f_1(n)+f_2(n)}{g_1(n)+g_2(n)} = \lim_{n \to \infty} \frac{n^3}{n^2} = \infty \neq 0$.
+$f_1(n)+f_2(n)\prec g_1(n)+g_2(n)$ 不成立。 
 
 2. 增长速度
 a. $n^{\ln n}, \; (\ln n)^n$
@@ -59,9 +59,10 @@ $$
         &+n!\ln(n-1)!\\
         =&\Bigl((n-1)!+n!\Bigr)\ln(n-1)!-(n-1)!+\sigma+O(\frac{1}{(n-1)!}) \\
         =&\Bigl((n-1)!+n!\Bigr)\biggl((n-1)\ln(n-1)-(n-1)+\sigma+O(\frac{1}{n-1})\biggr)-(n-1)!+\sigma+O(\frac{1}{(n-1)!}) \\
-        =&\Bigl((n-1)!+n!\Bigr)\biggl((n-1)\ln(n-1)\biggr)-\Bigl((n-1)!+n!\Bigr)(n-1)+\Bigl((n-1)!+n!\Bigr)\sigma+O(n)-(n-1)!+\sigma+O(\frac{1}{(n-1)!}) \\
+        =&\Bigl((n-1)!+n!\Bigr)\biggl((n-1)\ln(n-1)\biggr)-\Bigl((n-1)!+n!\Bigr)(n-1)+\Bigl((n-1)!+n!\Bigr)\sigma+O(n)-(n-1)!+\sigma+O(\frac{1}{(n-1)!}) 
     \end{align*}
-$$.
+$$
+
 这么做太复杂。
 
 $$
@@ -71,7 +72,7 @@ $$
           &= \ln n!-n!+\sigma+O(\frac{1}{n!})\\
           &\quad +n!\ln (n-1)!
     \end{align*}
-$$.
+$$
 
 $$
     \begin{align*}
@@ -82,7 +83,7 @@ $$
         &\quad -(n-1)!(n-1)\ln (n-1)+(n-1)(n-1)! - \sigma+O(\frac{1}{n}) \\
         &= n!\ln n -n!\ln (n-1)+(n-1)!\ln (n-1)! - \sigma+O(\frac{1}{n}) 
     \end{align*}
-$$.
+$$
 
 $n!\ln (1+\frac{1}{n}) >0$, $\therefore A>B$.
 因此 $(n!)!$更大。
