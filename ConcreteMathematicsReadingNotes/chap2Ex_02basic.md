@@ -201,3 +201,89 @@ $$
 $f(n) = D(n) = \frac{1}{2}(-1)^n n(n+1)$
 
 
+## 2.14 
+$$\sum_{k=1}^{n}k2^k \rightarrow \sum_{1\leqslant j\leqslant k\leqslant n} 2^k$$
+
+$$
+    \begin{array}{rrrrr}
+        \sum_{k=1}^{n}k2^k 
+        = &1\cdot 2 +& 2\cdot 2^2+&\dots+&n\cdot 2^n\\
+          & 2 +&  2^2+&\dots+& 2^n &\text{n个}\\
+          &    &  2^2+&\dots+& 2^n\\
+          &    &      & & \vdots\;\;\\
+          &    &      &+& 2^n\\
+    \end{array}
+$$
+
+$$
+    \sum_{1\leqslant j\leqslant k\leqslant n} 2^k = \sum_{1\leqslant k\leqslant n}\Bigl(\sum_{1\leqslant j\leqslant k}2^k\Bigr) = \sum_{1\leqslant k\leqslant n}k\cdot 2^k
+$$
+
+$$
+    \begin{align*}
+    \sum_{1\leqslant j\leqslant k\leqslant n} 2^k 
+        &= \sum_{1\leqslant k\leqslant n}\Bigl(\sum_{1\leqslant j\leqslant k}2^k\Bigr) \\
+        &= \sum_{1\leqslant j\leqslant n}\sum_{j\leqslant k\leqslant n}2^k \\
+        &= \sum_{1\leqslant j\leqslant n}\Bigl(2^{n+1}-2^j\Bigr)\\
+        &= n\cdot 2^{n+1}-(2^1+\dots+2^n) \\
+        &= n\cdot 2^{n+1}-\frac{2^{n+1}-2}{2-1} \\
+        &= (n-1)\cdot 2^{n+1}+2 \\
+    \end{align*}
+$$
+
+## 2.15
+立方体$_n = \sum_{k=1}^{n}k^3$
+
+$$
+    \begin{align*}
+        \square^3_n + \square_n
+        &= 2 \sum_{1\leqslant j\leqslant k\leqslant n} jk \\
+        &= 2 \sum_{1\leqslant j\leqslant n} \Bigl(\sum_{j\leqslant k\leqslant n} jk \Bigr) \\
+        &= \sum_{1\leqslant j\leqslant n} j(n+j)(n-j+1) \\
+        &= \sum_{1\leqslant j\leqslant n} -j^3+j^2+(n^2+n)j \\
+        &= -\square^3_n + \square_n+(n^2+n)\frac{(1+n)}{2}\cdot n \\
+        2 \square^3_n &= \frac{n^2(n+1)^2}{2}\\
+        \square^3_n &= \frac{n^2(n+1)^2}{4}=\Bigl[\sum_{1\leqslant k\leqslant n}k\Bigr]^2\\
+    \end{align*}
+$$
+
+## 2.16
+证明 $\frac{x^{\underline{m}}}{(x-n)^{\underline{m}}}=\frac{x^{\underline{n}}}{(x-m)^{\underline{n}}}$, 除非其中一个分母为0.
+
+$$
+    x^{\underline{m}} = x(x-1)\cdots(x-m+1),\quad m\in \mathbb{N}^+
+$$
+
+$$
+    \frac{x^{\underline{m}}}{(x-n)^{\underline{m}}}
+    =\frac{x(x-1)\cdots(x-m+1)}{(x-n)(x-n-1)\cdots(x-n-m+1)}
+$$
+
+$$
+    \frac{x^{\underline{n}}}{(x-m)^{\underline{n}}}
+    =\frac{x(x-1)\cdots(x-n+1)}{(x-m)(x-m-1)\cdots(x-m-n+1)}
+$$
+
+$m=n$时，显然成立
+
+$m>n$时
+$$
+    \begin{align*}
+        \frac{x^{\underline{m}}}{(x-n)^{\underline{m}}}
+        &= \frac{x(x-1)\cdots(x-n+1){\color{green}(x-n)\cdots(x-m+1)}}{{\color{green}(x-n)(x-n-1)\cdots(x-m+1)}(x-m)\cdots(x-m-n+1)} \\
+        &= \frac{x(x-1)\cdots(x-n+1)}{(x-m)\cdots(x-n-m+1)} \\
+        &= \frac{x^{\underline{n}}}{(x-m)^{\underline{n}}}\\
+    \end{align*}
+$$
+
+$m<n$时
+$$
+    \begin{align*}
+        \frac{x^{\underline{m}}}{(x-n)^{\underline{m}}}
+        &= \frac{x(x-1)\cdots(x-m+1)}{(x-n)\cdots(x-n-m+1)} \\
+        &= \frac{x(x-1)\cdots(x-m+1){\color{green}(x-m)\cdots(x-n+1)}}{{\color{green}(x-m)\cdots(x-n-1)}(x-n)\cdots(x-n-m+1)} \\
+        &= \frac{x^{\underline{n}}}{(x-m)^{\underline{n}}}\\
+    \end{align*}
+$$
+
+    
