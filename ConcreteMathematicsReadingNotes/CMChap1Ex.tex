@@ -1,4 +1,12 @@
-\documentclass[mode=geye]{elegantnote}
+% \documentclass[mode=geye, chinesefont=ctexfont]{elegantnote}
+% 使用方正字体替代win10字体，解决找不到字体的问题
+
+\makeatletter
+\newif\ifntx@origotf
+\makeatother
+\PassOptionsToPackage{nofontspec}{newtxtext}
+
+\documentclass[mode=geye, chinesefont=founder]{elegantnote}
 %!TEX program=xelatex
 \usepackage{amsmath}
 \usepackage{amssymb}

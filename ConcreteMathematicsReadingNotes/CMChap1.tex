@@ -1,5 +1,27 @@
-\documentclass[mode=geye]{elegantnote}
+% \documentclass[mode=geye, chinesefont=ctexfont]{elegantnote}
+% 使用方正字体替代win10字体，解决找不到字体的问题
+
+\makeatletter
+\newif\ifntx@origotf
+\makeatother
+\PassOptionsToPackage{nofontspec}{newtxtext}
+
+\documentclass[mode=geye, chinesefont=founder]{elegantnote}
 %!TEX program=xelatex
+
+
+% \setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03}]{FZShuSong-Z01}
+% \setCJKsansfont[BoldFont={FZHei-B01},ItalicFont={FZHei-B01}]{FZHei-B01}
+% \setCJKmonofont[BoldFont={FZHei-B01},ItalicFont={FZHei-B01}]{FZFangSong-Z02}
+% \setCJKfamilyfont{zhsong}{FZShuSong-Z01}
+% \setCJKfamilyfont{zhhei}{FZHei-B01}
+% \setCJKfamilyfont{zhkai}{FZKai-Z03}
+% \setCJKfamilyfont{zhfs}{FZFangSong-Z02}
+% \newcommand*{\songti}{\CJKfamily{zhsong}}
+% \newcommand*{\heiti}{\CJKfamily{zhhei}}
+% \newcommand*{\kaishu}{\CJKfamily{zhkai}}
+% \newcommand*{\fangsong}{\CJKfamily{zhfs}}
+
 \usepackage{amssymb}
 \title{具体数学阅读笔记-chap1}
 \author{weiyuan}
