@@ -1,0 +1,280 @@
+% chap 1 the real and complex number system
+\chapter{the real and complex number system}
+
+\section{Introduction}
+First we use $\sqrt{2}$ to construct real number system from integer and rational numbers.
+
+1.1 Example
+\begin{equation}\label{eq:1-001}
+    p^2=2
+\end{equation}
+$p$ is not a rational number.
+
+Proof: (反证法) 假设 $p$ 是有理数， $\exists m,n \in \mathbf{N}$, s.t. $p=m/n$. $\gcd (m,n) = 1$.
+Then \ref{eq:1-001}
+
+\begin{equation}\label{eq:1-002}
+    m^2 = 2n^2.
+\end{equation}
+
+$m$ is even, $m = 2k$.
+那么有 $(2k)^2 = 2n^2$, $2k^2 = n^2$, $k$ is even, $\gcd (m,n)=2\neq 1$,
+contrary to our choice of $m$ and $n$. Hence p can't be a rational number.
+
+After proving $\sqrt{2}$ isn't a rational number, rudin use $\sqrt{2}$ to divide the rationals
+在证明 $\sqrt{2}$ 不是有理数后，使用 $\sqrt{2}$ 将有理数集分成两部分。 引出了分划的概念？
+
+\begin{align*}
+    A = \{p|p^2<2\}\\
+    B = \{p|p^2>2\}
+\end{align*}
+
+$A$ \emph{contains no largest number},
+$B$ \emph{contains no smallest number}.
+
+$\forall p\in A$, $\exists q\in A$, s.t. $p<q$,
+$\forall p\in B$, $\exists q\in B$, s.t. $p>q$,
+
+$\forall p>0$
+
+\begin{equation}\label{eq:1-003}
+    q = p-\frac{p^2-2}{p+2} = \frac{2p+2}{p+2}
+\end{equation}
+
+Then 
+\begin{equation}
+    \label{eq:1-004}
+    q^2 - 2 = \frac{2(p^2-2)}{(p+2)^2}
+\end{equation}
+
+If $p\in A$, $p^2<2$. \ref{eq:1-003} shows that $q>p$, \ref{eq:1-004} shows that $q^2<2$, $q\in A$.
+If $p\in B$, $p^2>2$. \ref{eq:1-003} shows that $q<p$, \ref{eq:1-004} shows that $q^2>2$, $q\in B$.
+
+
+1.2 Remark
+
+The purpose of the above discussion has been to show that the rational number system has certain gaps, 
+in spite of the fact that between any two rationals there is another: If $r<s$ then $r<(r+s)/2<s$.
+The real number system fills these gaps.
+This is the principal reason for the fundamental role which it plays in analysis.
+
+mynotes:
+有理数的稠密性与实数的连续性。在分析中，考察极限等需要的是数系的连续性，因此需要先建立实数系。
+事实上，我们是先有微积分，后有实数理论的。
+三次数学危机：
+无理数，微积分基础，集合论
+实数理论是极限的基础。
+
+In order to elucidate its structure, as well as that of the complex numbers, 
+we start with a brief discussion of the genral concepts of \emph{ordered set} and \emph{field}.
+
+mynotes：
+rudin引入复数的方法非常怪，对初学者非常不友好，过于抽象了。
+想起一个法国笑话，问小学生$2+3$等于几，回答 $2+3=3+2$ 加法是一个交换群（Abel 群）。。。
+
+Here is some of the standard set-theoretic terminology taht will be used throughout this book.
+接下来引入一些集合论的定义
+
+1.3 Definitions
+If $A$ is any set (whose elements(这里elements还没定义，笑啦) may be numbers or any other objects(object指代什么？我个人认为集合理解的难点在于集合的集合。这一点可以引出罗素悖论)), we write $x\in A$ to indicate that $x$ is a member (or an element) of $A$.
+
+If $x$ is not a member of $A$, we write: $x\notin A$.
+
+\emph{empty set} $\varnothing$ contains no element, If a set has at least one element, it is called \emph{nonempty}.
+
+$A,B$ are sets, $\forall x\in A$, $x\in B$, we say that $A$ is a \emph{subset} of $B$, $A\subset B$ or $B\supset A$. If $\exists x\in B$, $x\notin A$, A is a \emph{proper subset} of $B$, $A \subsetneqq B$.
+Note that $A\subset A$ for every set $A$.
+
+(Bernstein) If $A\subset B$ and $B\subset A$, we write $A = B$. Otherwise $A\neq B$.
+
+mynotes:
+这条性质在证明集合相等时很常用
+
+1.4 Definitions
+Throughout Chap. 1, the set of all rational numbers will be denoted by $\mathbb{Q}$.
+
+有理数集$\mathbb{Q}$
+
+\section{Ordered sets}
+有序集
+
+1.5 Definitions
+Let $S$ be a set. An \emph{order} on $S$ is a relation, denoted by $<$, with the following two properties:
+
+(i) If $x\in S$ and $y\in S$ then one and only one of the statements
+\begin{equation*}
+    x<y, \quad
+    x=y, \quad
+    y<x
+\end{equation*}
+The statement $x<y$ may be read as 
+$x$ is less than $y$, or 
+$x$ is smaller than $y$, or
+$x$ precedes $y$.
+(It's often convenient to write $y>x$ in place of $x<y$)
+(less-great, smaller-bigger, precedes-succeeds)
+% form wiki,
+% The relationship x precedes y is written $x ≺ y$. The relation x precedes or is equal to y is written x ≼ y.
+% The relationship x succeeds (or follows) y is written x ≻ y. The relation x succeeds or is equal to y is written x ≽ y.
+% ≺ \prec 
+% ≼ \preccurlyeq 
+% ≻ \succ 
+% ≽ \succcurlyeq  
+
+(ii) If $x,y,z\in S$, if $x<y$ and $y<z$, then $x<z$.
+
+偏序关系
+1. 三歧性
+2. 传递性
+
+建立偏序关系后，可以使用不等式进行分析。在后续根据极限定义计算时，需要大量使用不等式分析数列和函数的极限计算结果。
+
+
+$x\leq y$ indicates taht $x<y$ or $x=y$, without specofying which of these two is to hold.
+In other words, $x\leq y$ is the negation of $x>y$.
+
+1.6 Definitions
+An \emph{ordered set} is a set $S$ in which an order is defined.
+
+For example, $\mathbb{Q}$ is an ordered set if $r<s$ is defined to mean that $s-r$ is a positive rational number.
+
+存在偏序关系的集合称为有序集
+$\mathbb{Q}, \mathbb{R}$ 均是有序集，但$\mathbb{C}$ 不是有序集。
+
+1.7 Definitions (bounded above)
+Suppose $S$ is an ordered set, and $E \subset S$. If there exists a
+$\beta \in S$ such that $x \leq \beta$ for every $x \in E$, we say that $E$ is \emph{bounded above}, and call
+$\beta$ an \emph{upper bound} of $E$.
+
+Lower bounds are defined in the same way (with $\geq$ in place of $\leq$).
+
+
+1.8 Definitions (least upper bound)
+Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above.
+Suppose there exists an $a\alpha \in S$ with the following properties:
+
+(i) $\alpha$ is an upper bound of $E$.
+(ii) If $\gamma <\alpha$ then $\gamma$ is not an upper bound of $E$.
+
+Then $\alpha$ is called the \emph{least upper bound} of $E$ [that there is at most one such
+$\alpha$ is clear from (ii)] or the \emph{supremum} of $E$, and we write
+
+\begin{equation*}
+    \alpha = \sup E.
+\end{equation*}
+
+The \emph{greatest lower bound}, or \emph{infimum}, of a set $E$ which is bounded below
+is defined in the same manner: The statement
+
+\begin{equation*}
+    \alpha = \inf E
+\end{equation*}
+
+means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound
+of $E$.
+
+从上界引出最小上界，没有直接定义最大下界，而是使用对称定义引出。
+从最小上界引出的最小上界性质更为常用。Dedekind分划
+
+1.9 example
+(a) Consider the set $A, B$
+\begin{equation*}
+    A = \{p|p^2 < 2\},\quad
+    B = \{p|p^2 > 2\}.
+\end{equation*}
+$A$ has no least upper bound in $\mathbb{Q}$.
+$B$ has no great lower bound in $\mathbb{Q}$.
+
+(b) If $\alpha = \sup E$ exists, $\alpha\in E$ or $\alpha \notin E$.
+\begin{align*}
+    E_1 = \{r |r\in Q, r < 0\}\\
+    E_2 = \{r |r\in Q, r \leq 0\}
+\end{align*}
+\begin{equation*}
+    \sup E_1 = \sup E_2 = 0,
+\end{equation*}
+and $0\not\in E_1$, $0\in E_2$.
+
+(c) $E = \{1/n | n = 1,2,3,...\}$. Then $\sup E = 1$, which is in $E$, and $\inf E = 0$, which is not in $E$.
+
+1.10 Definitions (least-upper-bound property)(important!!)
+An ordered set $S$ is said to have the \emph{least-upper-bound property}
+if the following is true:
+
+If $E \subset S$, $E$ is not empty, and $E$ is bounded above, then $\sup E$ exists in $S$.
+
+Example 1.9(a) shows that $\mathbb{Q}$ does not have the least-upper-bound property.
+
+We shall now show that there is a close relation between greatest lower
+bounds and least upper bounds, and that every ordered set with the least-upper-bound property also has the greatest-lower-bound property.
+
+
+1.11 Theorem 
+Suppose $S$ is an ordered set with the least-upper-bound property,
+$B \subset S$, $B$ is not empty, and $B$ is bounded below. Let $L$ be the set of all lower
+bounds of $B$. Then
+
+\begin{equation*}
+    \alpha = \sup L
+\end{equation*}
+
+exists in $S$, and $\alpha = \inf B$.
+
+In particular, $\inf B$ exists in $S$.
+
+Proof 
+Since $B$ is bounded below, $L$ is not empty. Since $L$ consists of
+exactly those $y \in S$ which satisfy the inequality $y \leq x$ for every $x \in B$, we
+see that \emph{every} $x \in B$ \emph{is an upper bound of} $L$. Thus $L$ is bounded above.
+Our hypothesis about $S$ implies therefore that $L$ has a supremum in $S$;
+call it $\alpha$.
+
+If $\gamma <\alpha$ then (see Definition 1.8) $\gamma$ is not an upper bound of $L$,
+hence $\gamma \not\in B$. It follows that $\alpha \leq x$ for every $x \in B$. Thus $\alpha \in L$.
+
+If $\alpha < J$ then $f ¢L$, since $\alpha$ is an upper bound of $L$.
+
+We have shown that $a eL$ but $f¢ L$ if $§>a$. In other words, $a$
+is a lower bound of $B$, but $8$ is not if $# > a$. This means that $a = \inf B$.
+
+mynotes
+这个证明第一次看比较难理清
+我试着用自己的话重写梳理一下：
+已知条件
+$S$, ordered set + least-upper-bound property.
+$B\in S$, $B\neq \varnothing $, $B$ is bounded below.
+$L$ is the set of all lower bounds of $B$.
+
+$\exists \alpha\in S$, $\alpha = \sup L$, and $\alpha = \inf B$.
+
+proof:
+思路 由最小上界 $\rightarrow $ 最大下界
+
+\begin{align*}
+    \text{最小上界}  & \rightarrow  &\text{最大下界} \\
+    \downarrow      &               &\uparrow \\
+    L\text{最小上界}  & \rightarrow  &B\text{最大下界} \\
+\end{align*}
+
+$L = \{y| y\in S; \forall x\in B, y\leq x\}$
+    关于 $L$ 中有没有不在 $S$ 中的元素这一点我还没想明白. 定理中只是说 $L$ 是 $B$ 的下界组成的. $B$ 是 $S$ 的子集, 但 $B$ 的下界不一定全在 $S$ 中。
+
+$L$ 由 $B$ 在 $S$ 中的全部下界组成
+
+$\forall x\in B$, $x$ 为 $L$ 的上界. $L\subset S$.
+$S$ 有最小上界性质,
+$\therefore \exists \alpha\in S$, $\alpha = \sup L$.
+
+$\forall \gamma <\alpha$ 由 $\alpha = \sup L$ 的定义 (Definitions 1.8)
+$\gamma$ 不是 $L$ 的上界.
+
+$\forall x \in B$, $x$ 为 $L$ 的上界, $x \geq \alpha$. $\therefore \alpha \in L$.
+
+$\alpha < \beta$, $\alpha = \sup L$. $\therefore \beta \not\in L$.
+$L$ 由 $B$ 在 $S$ 中的全部下界组成, $\beta \not\in L$.
+$\beta$ 不是 $B$ 的下界.
+
+$\therefore \alpha = \inf B$, $\inf B\in S$.
+
+
+\section{fields}
