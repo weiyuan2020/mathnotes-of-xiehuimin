@@ -4,13 +4,18 @@
 \section{Introduction}
 First we use $\sqrt{2}$ to construct real number system from integer and rational numbers.
 
-1.1 Example
+% 1.1 Example
+\begin{Example}
 \begin{equation}\label{eq:1-001}
     p^2=2
 \end{equation}
 $p$ is not a rational number.
+\end{Example}
 
-Proof: (反证法) 假设 $p$ 是有理数， $\exists m,n \in \mathbf{N}$, s.t. $p=m/n$. $\gcd (m,n) = 1$.
+\begin{proof}
+    
+% Proof: 
+(反证法) 假设 $p$ 是有理数,  $\exists m,n \in \mathbf{N}$, s.t. $p=m/n$. $\gcd (m,n) = 1$.
 Then \ref{eq:1-001}
 
 \begin{equation}\label{eq:1-002}
@@ -20,9 +25,10 @@ Then \ref{eq:1-001}
 $m$ is even, $m = 2k$.
 那么有 $(2k)^2 = 2n^2$, $2k^2 = n^2$, $k$ is even, $\gcd (m,n)=2\neq 1$,
 contrary to our choice of $m$ and $n$. Hence p can't be a rational number.
+\end{proof}
 
 After proving $\sqrt{2}$ isn't a rational number, rudin use $\sqrt{2}$ to divide the rationals
-在证明 $\sqrt{2}$ 不是有理数后，使用 $\sqrt{2}$ 将有理数集分成两部分。 引出了分划的概念？
+在证明 $\sqrt{2}$ 不是有理数后, 使用 $\sqrt{2}$ 将有理数集分成两部分.  引出了分划的概念? 
 
 \begin{align*}
     A = \{p|p^2<2\}\\
@@ -51,32 +57,37 @@ If $p\in A$, $p^2<2$. \ref{eq:1-003} shows that $q>p$, \ref{eq:1-004} shows that
 If $p\in B$, $p^2>2$. \ref{eq:1-003} shows that $q<p$, \ref{eq:1-004} shows that $q^2>2$, $q\in B$.
 
 
-1.2 Remark
+\begin{Remark}
+    
+% 1.2 Remark
 
 The purpose of the above discussion has been to show that the rational number system has certain gaps, 
 in spite of the fact that between any two rationals there is another: If $r<s$ then $r<(r+s)/2<s$.
 The real number system fills these gaps.
 This is the principal reason for the fundamental role which it plays in analysis.
+\end{Remark}
 
-mynotes:
-有理数的稠密性与实数的连续性。在分析中，考察极限等需要的是数系的连续性，因此需要先建立实数系。
-事实上，我们是先有微积分，后有实数理论的。
+\mybox{
+% mynotes:
+有理数的稠密性与实数的连续性. 在分析中, 考察极限等需要的是数系的连续性, 因此需要先建立实数系. 
+事实上, 我们是先有微积分, 后有实数理论的. 
 三次数学危机：
-无理数，微积分基础，集合论
-实数理论是极限的基础。
+无理数, 微积分基础, 集合论
+实数理论是极限的基础. 
+}
 
 In order to elucidate its structure, as well as that of the complex numbers, 
 we start with a brief discussion of the genral concepts of \emph{ordered set} and \emph{field}.
 
 mynotes：
-rudin引入复数的方法非常怪，对初学者非常不友好，过于抽象了。
-想起一个法国笑话，问小学生$2+3$等于几，回答 $2+3=3+2$ 加法是一个交换群（Abel 群）。。。
+rudin引入复数的方法非常怪, 对初学者非常不友好, 过于抽象了. 
+想起一个法国笑话, 问小学生$2+3$等于几, 回答 $2+3=3+2$ 加法是一个交换群（Abel 群）. . . 
 
 Here is some of the standard set-theoretic terminology taht will be used throughout this book.
 接下来引入一些集合论的定义
 
 1.3 Definitions
-If $A$ is any set (whose elements(这里elements还没定义，笑啦) may be numbers or any other objects(object指代什么？我个人认为集合理解的难点在于集合的集合。这一点可以引出罗素悖论)), we write $x\in A$ to indicate that $x$ is a member (or an element) of $A$.
+If $A$ is any set (whose elements(这里elements还没定义, 笑啦) may be numbers or any other objects(object指代什么? 我个人认为集合理解的难点在于集合的集合. 这一点可以引出罗素悖论)), we write $x\in A$ to indicate that $x$ is a member (or an element) of $A$.
 
 If $x$ is not a member of $A$, we write: $x\notin A$.
 
@@ -127,7 +138,7 @@ $x$ precedes $y$.
 1. 三歧性
 2. 传递性
 
-建立偏序关系后，可以使用不等式进行分析。在后续根据极限定义计算时，需要大量使用不等式分析数列和函数的极限计算结果。
+建立偏序关系后, 可以使用不等式进行分析. 在后续根据极限定义计算时, 需要大量使用不等式分析数列和函数的极限计算结果. 
 
 
 $x\leq y$ indicates taht $x<y$ or $x=y$, without specofying which of these two is to hold.
@@ -139,7 +150,7 @@ An \emph{ordered set} is a set $S$ in which an order is defined.
 For example, $\mathbb{Q}$ is an ordered set if $r<s$ is defined to mean that $s-r$ is a positive rational number.
 
 存在偏序关系的集合称为有序集
-$\mathbb{Q}, \mathbb{R}$ 均是有序集，但$\mathbb{C}$ 不是有序集。
+$\mathbb{Q}, \mathbb{R}$ 均是有序集, 但$\mathbb{C}$ 不是有序集. 
 
 1.7 Definitions (bounded above)
 Suppose $S$ is an ordered set, and $E \subset S$. If there exists a
@@ -173,8 +184,8 @@ is defined in the same manner: The statement
 means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound
 of $E$.
 
-从上界引出最小上界，没有直接定义最大下界，而是使用对称定义引出。
-从最小上界引出的最小上界性质更为常用。Dedekind分划
+从上界引出最小上界, 没有直接定义最大下界, 而是使用对称定义引出. 
+从最小上界引出的最小上界性质更为常用. Dedekind分划
 
 1.9 example
 (a) Consider the set $A, B$
@@ -232,10 +243,10 @@ call it $\alpha$.
 If $\gamma <\alpha$ then (see Definition 1.8) $\gamma$ is not an upper bound of $L$,
 hence $\gamma \not\in B$. It follows that $\alpha \leq x$ for every $x \in B$. Thus $\alpha \in L$.
 
-If $\alpha < J$ then $f ¢L$, since $\alpha$ is an upper bound of $L$.
+If $\alpha < \beta$ then $\beta \not\in L$, since $\alpha$ is an upper bound of $L$.
 
-We have shown that $a eL$ but $f¢ L$ if $§>a$. In other words, $a$
-is a lower bound of $B$, but $8$ is not if $# > a$. This means that $a = \inf B$.
+We have shown that $\alpha \in L$ but $\beta \not\in  L$ if $\beta>\alpha$. In other words, $\alpha$
+is a lower bound of $B$, but $\alpha$ is not if $\beta > \alpha$. This means that $\alpha = \inf B$.
 
 mynotes
 这个证明第一次看比较难理清
@@ -250,14 +261,14 @@ $\exists \alpha\in S$, $\alpha = \sup L$, and $\alpha = \inf B$.
 proof:
 思路 由最小上界 $\rightarrow $ 最大下界
 
-\begin{align*}
-    \text{最小上界}  & \rightarrow  &\text{最大下界} \\
-    \downarrow      &               &\uparrow \\
-    L\text{最小上界}  & \rightarrow  &B\text{最大下界} \\
-\end{align*}
+% \begin{align*}
+%     \text{最小上界}  & \rightarrow  &\text{最大下界} \\
+%     \downarrow      &               &\uparrow \\
+%     L\text{最小上界}  & \rightarrow  &B\text{最大下界} \\
+% \end{align*}
 
 $L = \{y| y\in S; \forall x\in B, y\leq x\}$
-    关于 $L$ 中有没有不在 $S$ 中的元素这一点我还没想明白. 定理中只是说 $L$ 是 $B$ 的下界组成的. $B$ 是 $S$ 的子集, 但 $B$ 的下界不一定全在 $S$ 中。
+    关于 $L$ 中有没有不在 $S$ 中的元素这一点我还没想明白. 定理中只是说 $L$ 是 $B$ 的下界组成的. $B$ 是 $S$ 的子集, 但 $B$ 的下界不一定全在 $S$ 中. 
 
 $L$ 由 $B$ 在 $S$ 中的全部下界组成
 
@@ -278,3 +289,125 @@ $\therefore \alpha = \inf B$, $\inf B\in S$.
 
 
 \section{fields}
+域, 交换除环 $<\mathbb{R},+,\times>$ 
+$<\mathbb{R},+>$, $<\mathbb{R}\backslash\{0\},\times>$
+都是交换群, 且满足分配律. 
+则 $<\mathbb{R},+,\times>$ 是域. 
+
+axiom 公理
+
+(A) Axioms for addition
+
+(Al) If $x\in F$  and $y \in F$, then their sum \(x + y\) is in F.
+
+(A2) Addition is commutative: \(x + y=y+ x\) for all \(x, y \in F\).
+
+(A3) Addition is associative: \((x+ y)+z = x + (y+ z)\) for all \(x, y, z \in F\).
+
+(A4) $F$ contains an element $0$ such that $0 + x = x$ for every $x \in F$.
+
+(A5) To every $x\in F$ corresponds an element $-x\in F$ such that
+
+\begin{equation*}
+    x+(-x)=0.
+\end{equation*}
+
+(M) Axioms for multiplication
+
+(M1) If $x\in F$ and $x\in F$, then their product $xy$ is in $F$.
+
+(M2) Multiplication is commutative: $xy = yx$ for all $x, y \in  F$.
+
+(M3) Multiplication is associative: $(xy)z = x(yz)$ for all $x, y, z \in  F$.
+
+(M4) $F$ contains an element $1 \neq 0$ such that $1x = x$ for every $x \in F$.
+
+(M5) If $x \in F$ and $x \neq 0$ then there exists an element $1/x \in F$ such that
+
+\begin{equation*}
+    x\cdot(1/x)=1.
+\end{equation*}
+% 6 PRINCIPLES OF MATHEMATICAL ANALYSIS
+
+(D) The distributive law
+
+\begin{equation*}
+    x(y+z)=xy+ xz
+\end{equation*}
+
+holds for all $x, y, z \in F$.
+
+1.13 Remark
+
+(a) Our usual writes (in any filed)
+
+只定义了加法和乘法, 使用逆元分别表示减法和除法.
+$x-y = x+(-y)$, $x/y=x\cdot (1/y)$.
+
+(b) The field axioms clearly hold in $\mathbb{Q}$, the set of all rational numbers, if
+addition and multiplication have their customary meaning. Thus $\mathbb{Q}$ is a
+field.
+
+全体有理数的集合是一个域.
+
+(c) Although it is not our purpose to study fields (or any other algebraic
+structures) in detail, it is worthwhile to prove that some familiar properties
+of $\mathbb{Q}$ are consequences of the field axioms; once we do this, we will \underline{not
+need to do it} again for the real numbers and for the complex numbers.
+
+1.14 Proposition
+
+The axioms for addition imply the following statements.
+
+(a) If $x+y=x+z$ then $y=z$.
+(b) If $x+y=x$ then $y=0$.
+(c) If $x+y=0$ then $y= -x$.
+(d) $-(-x)=x$.
+
+Statement (a) is a cancellation law. Note that (b) asserts the uniqueness
+of the element whose existence is assumed in (A4), and that (c) does the same
+for (A5).
+
+mynotes
+what is the difference between axiom and proposition?
+An axiom is a proposition regarded as self-evidently true without proof. The word "axiom" is a slightly archaic synonym for postulate. Compare conjecture or hypothesis, both of which connote apparently true but not self-evident statements.
+A proposition is a mathematical statement such as "3 is greater than 4," "an infinite set exists," or "7 is prime." An axiom is a proposition that is assumed to be true. With sufficient information, mathematical logic can often categorize a proposition as true or false, although there are various exceptions (e.g., "This statement is false").
+\url{https://www.nutritionmodels.com/terminology.html}
+
+
+Proof(rudin)
+If $x + y =x + z$, the axioms (A) give
+
+\begin{align*}
+    y =0+y&=(-x+x)+y=-x+(x+y)\\
+    &=-x+(x+z)=(-x+x)+z=0+z=z
+\end{align*}
+
+This proves (a). Take $z = 0$ in (a) to obtain (b). Take $z= -x$ in (a) to
+obtain (c).
+Since $-x + x = 0$, (c) (with $-x$ in place of $x$) gives (d).
+
+mynotes 我自己证明上述四条性质时都是从定义开始的, 而 rudin 这里在后一步的证明中都利用了刚推导出的结论, 这一点需要借鉴.
+% THE REAL AND COMPLEX NUMBER SYSTEMS 7
+
+1.15 Proposition 
+The axioms for multiplication imply the following statements.
+
+(a) If $x\neq0$ and $xy=xz$ then $y=z$.
+
+(b) If $x\neq0$ and $xy=x$ then $y=1$.
+
+(c) If $x\neq0$ and $xy=1$ then $y=1/x$.
+
+(d) If $x\neq0$ then $1/(1/x) = x$.
+
+
+The proof is so similar to that of Proposition 1.14 that we omit it.
+
+mynotes
+Proof
+(a) 
+\begin{align*}
+    y&=1\cdot y=\left(\frac{1}{x}\cdot x\right)y =\frac{1}{x}\left( xy \right)\\
+    &=\frac{1}{x}(xz) =\left(\frac{1}{x}x\right)z = z
+\end{align*}
