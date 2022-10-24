@@ -1,0 +1,58 @@
+% chap01appendix.tex
+\section*{appendix}
+Theorem \ref{thm:1.19} will be proved in this appendix by constructing $\mathbb{R}$ from $\mathbb{Q}$. We
+shall divide the construction into several steps.
+
+\textbf{Step 1} 
+The members of $\mathbb{R}$ will be certain subsets of $\mathbb{Q}$, called \emph{cuts}. A cut is,
+by definition, any set\footnote{分划 $\alpha$ 是一个集合} $\alpha = \mathbb{Q}$ with the following three properties.
+
+(I) $\alpha$ is not empty, and $\alpha \in \mathbb{Q}$.
+
+(Il) If $p\in \alpha$,$q \in \mathbb{Q}$, and $q <p$, then $q \in \alpha$.
+
+(III) If $p \in \alpha$, then $p <r$ for some $r\in \alpha$.
+
+The letters $p, q, r, ...$ will always denote rational numbers, and $\alpha, \beta, \gamma, ...$
+will denote cuts.
+
+Note that (III) simply says that a has no largest member: (II) implies two facts which will be used freely:
+
+If $p\in\alpha$ and $q\not\in\alpha$ then $p<q$.
+
+If $r\not\in \alpha$ and $r<s$ then $s\not\in \alpha$.
+
+\textbf{Step 2}
+Define ``$\alpha < \beta$'' to mean: $\alpha$ is a proper subset of $\beta$.\footnote{这里使用真子集关系定义了分划(集合)间的序}
+
+Let us check that this meets the requirements of Definition \ref{myDefinition:1.5}.
+
+If $\alpha < \beta$ and $\beta < \gamma$ it is clear that $\alpha < \gamma$. (A proper subset of a proper subset is a proper subset.) It is also clear that at most one of the three relations
+\begin{equation*}
+    \alpha < \beta, \qquad
+    \alpha = \beta, \qquad
+    \beta < \alpha.
+\end{equation*}
+can hold for any pair $\alpha, \beta$. To show that at least one holds, assume that the first two fail. Then $\alpha$ is not a subset of $\beta$. Hence there is a $p \in \alpha$ with $p \not\in \beta$. If $q \in \beta$, it follows that $q <p$ (since $p \not\in \beta$), hence $q \in \alpha$, by (II). Thus $\beta \subset \alpha$. Since $\beta \neq \alpha$, we conclude: $\beta < \alpha$.
+
+Thus $\mathbb{R}$ is now an ordered set.
+
+\mybox{利用集合关系定义的偏序关系具有传递性和三歧性}
+
+\textbf{Step 3}
+The ordered set $\mathbb{R}$ has the least-upper-bound property.
+
+To prove this, let $A$ be a nonempty subset of $\mathbb{R}$, and assume that $\beta \in \mathbb{R}$ is an upper bound of $A$. Define $\gamma$ to be the union of all $\alpha \in A$. In other words, $p\in \gamma$ if and only if $p \in \alpha$ for some $\alpha \in A$. We shall prove that $\gamma \in \mathbb{R}$ and that $\gamma = \sup A$.
+
+Since $A$ is not empty, there exists an $a_0 \in A$. This a is not empty. Since $\alpha_0 \in \gamma$, $\gamma$ is not empty. Next, $\gamma \in \beta$ (since $\alpha \in \beta$ for every $\alpha \in A$), and therefore $\gamma \neq \mathbb{Q}$. Thus $\gamma$ satisfies property (I). To prove (II) and (III), pick $p \in \gamma$. Then $p \in \alpha_1$ for some $\alpha_1 \in A$. If $q <p$, then $q \in \alpha_1$, hence $q \in \gamma$; this proves (II). If $r \in \alpha_1$ is so chosen that $r > p$, we see that $r\in \gamma$ (since $\alpha_1 \subset \gamma$), and therefore $\gamma$
+satisfies (III).
+
+Thus $\gamma \in \mathbb{R}$.
+
+It is clear that $\alpha \leq \gamma$ for every $\alpha \in A$.
+
+Suppose $\delta < \gamma$. Then there is an $s \in \gamma$ and that $s \not\in \delta$. Since $s \in \gamma, s \in \alpha$
+for some $\alpha \in A$. Hence $\delta <a$, and $\delta$ is not an upper bound of $A$.
+
+This gives the desired result: $\gamma = \sup A$.
+
