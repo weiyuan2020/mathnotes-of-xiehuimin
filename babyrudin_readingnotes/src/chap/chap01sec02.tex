@@ -83,8 +83,6 @@ is defined in the same manner: The statement
 means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound
 of $E$.
 \end{myDefinition}
-
-
 \mybox{从上界引出最小上界, 没有直接定义最大下界, 而是使用对称定义引出. 
 从最小上界引出的最小上界性质更为常用. Dedekind分划}
 
@@ -98,7 +96,7 @@ of $E$.
     $A$ has no least upper bound in $\mathbb{Q}$.
     $B$ has no great lower bound in $\mathbb{Q}$.
     
-    (b) If $\alpha = \sup E$ exists, $\alpha\in E$ or $\alpha \notin E$.
+    (b) If $\alpha = \sup E$ exists, $\alpha$ may be or may not be a member of $E$.
     \begin{align*}
         E_1 = \{r |r\in Q, r < 0\}\\
         E_2 = \{r |r\in Q, r \leq 0\}
@@ -111,8 +109,10 @@ of $E$.
     (c) $E = \{1/n | n = 1,2,3,...\}$. Then $\sup E = 1$, which is in $E$, and $\inf E = 0$, which is not in $E$.
 \end{myExample}
 
-\begin{myDefinition}(least-upper-bound property)(important!!)\label{myDefinition:1.10}
+\begin{myDefinition}\label{myDefinition:1.10}
 % 1.10 myDefinition 
+{\color{red}{least-upper-bound property}}
+
 An ordered set $S$ is said to have the \emph{least-upper-bound property}
 if the following is true:
 
@@ -180,7 +180,7 @@ $\forall x\in B$, $x$ 为 $L$ 的上界. $L\subset S$.
 $S$ 有最小上界性质,
 $\therefore \exists \alpha\in S$, $\alpha = \sup L$.
 
-$\forall \gamma <\alpha$ 由 $\alpha = \sup L$ 的定义 (myDefinition 1.8)
+$\forall \gamma <\alpha$ 由 $\alpha = \sup L$ 的定义 (\ref{myDefinition:1.8})
 $\gamma$ 不是 $L$ 的上界.
 
 $\forall x \in B$, $x$ 为 $L$ 的上界, $x \geq \alpha$. $\therefore \alpha \in L$.
