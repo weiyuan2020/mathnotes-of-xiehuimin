@@ -5,9 +5,9 @@ shall divide the construction into several steps.
 
 \textbf{Step 1} 
 The members of $\mathbb{R}$ will be certain subsets of $\mathbb{Q}$, called \emph{cuts}. A cut is,
-by definition, any set\footnote{分划 $\alpha$ 是一个集合} $\alpha = \mathbb{Q}$ with the following three properties.
+by definition, any set\footnote{分划 $\alpha$ 是一个集合} $\alpha \subset \mathbb{Q}$ with the following three properties.
 
-(I) $\alpha$ is not empty, and $\alpha \in \mathbb{Q}$.
+(I) $\alpha$ is not empty, and $\alpha \neq \mathbb{Q}$.
 
 (Il) If $p\in \alpha$,$q \in \mathbb{Q}$, and $q <p$, then $q \in \alpha$.
 
@@ -15,6 +15,8 @@ by definition, any set\footnote{分划 $\alpha$ 是一个集合} $\alpha = \math
 
 The letters $p, q, r, ...$ will always denote rational numbers, and $\alpha, \beta, \gamma, ...$
 will denote cuts.
+
+\mybox{建立分划定义的这三条性质说明了有理数集是稠密而不是连续的}
 
 Note that (III) simply says that a has no largest member: (II) implies two facts which will be used freely:
 
@@ -44,7 +46,7 @@ The ordered set $\mathbb{R}$ has the least-upper-bound property.
 
 To prove this, let $A$ be a nonempty subset of $\mathbb{R}$, and assume that $\beta \in \mathbb{R}$ is an upper bound of $A$. Define $\gamma$ to be the union of all $\alpha \in A$. In other words, $p\in \gamma$ if and only if $p \in \alpha$ for some $\alpha \in A$. We shall prove that $\gamma \in \mathbb{R}$ and that $\gamma = \sup A$.
 
-Since $A$ is not empty, there exists an $a_0 \in A$. This a is not empty. Since $\alpha_0 \in \gamma$, $\gamma$ is not empty. Next, $\gamma \in \beta$ (since $\alpha \in \beta$ for every $\alpha \in A$), and therefore $\gamma \neq \mathbb{Q}$. Thus $\gamma$ satisfies property (I). To prove (II) and (III), pick $p \in \gamma$. Then $p \in \alpha_1$ for some $\alpha_1 \in A$. If $q <p$, then $q \in \alpha_1$, hence $q \in \gamma$; this proves (II). If $r \in \alpha_1$ is so chosen that $r > p$, we see that $r\in \gamma$ (since $\alpha_1 \subset \gamma$), and therefore $\gamma$
+Since $A$ is not empty, there exists an $a_0 \in A$. This a is not empty. Since $\alpha_0 \in \gamma$, $\gamma$ is not empty. Next, $\gamma \subset \beta$ (since $\alpha \subset \beta$ for every $\alpha \in A$), and therefore $\gamma \neq \mathbb{Q}$. Thus $\gamma$ satisfies property (I). To prove (II) and (III), pick $p \in \gamma$. Then $p \in \alpha_1$ for some $\alpha_1 \in A$. If $q <p$, then $q \in \alpha_1$, hence $q \in \gamma$; this proves (II). If $r \in \alpha_1$ is so chosen that $r > p$, we see that $r\in \gamma$ (since $\alpha_1 \subset \gamma$), and therefore $\gamma$
 satisfies (III).
 
 Thus $\gamma \in \mathbb{R}$.
@@ -56,3 +58,5 @@ for some $\alpha \in A$. Hence $\delta <a$, and $\delta$ is not an upper bound o
 
 This gives the desired result: $\gamma = \sup A$.
 
+\mybox{这里分划之间所用的 $\in$ 让我很费解, 上文对分划的定义是集合, 那么应该用子集形式而不是元素形式来描述偏序关系. 分划是不是集合的一个元素? 
+查询原始pdf文件发现确实是子集形式描述的!}
