@@ -1,44 +1,4 @@
-% \documentclass[mode=geye, chinesefont=ctexfont]{elegantnote}
-% 使用方正字体替代win10字体，解决找不到字体的问题
-
-\makeatletter
-\newif\ifntx@origotf
-\makeatother
-\PassOptionsToPackage{nofontspec}{newtxtext}
-
-\documentclass[mode=geye, chinesefont=founder]{elegantnote}
-%!TEX program=xelatex
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{hyperref}
-\usepackage{mathtools} % xrightarrow
-
-\usepackage{tikz}       % tikz
-% \usepackage{colortbl}   % tikznode color 块上色
-
-
-\newtheorem{exercise}{练习}
-\newtheorem{answer}{题目解答}
-\newtheorem{solve}{解}
-
-% falling factorial power
-\newcommand{\fallingfactorial}[1]{%
-  ^{\underline{#1}}%
-}
-% rising factorial power
-\newcommand{\risingfactorial}[1]{%
-  ^{\overline{#1}}%
-}
-% tikz pic draw
-% \newcommand\y{\cellcolor{clight2}}
-\definecolor{clight2}{RGB}{212, 237, 244}%
-\newcommand\tikznode[3][]%
-{\tikz[remember picture,baseline=(#2.base)]
-	\node[minimum size=0pt,inner sep=0pt,#1](#2){#3};%
-}
-\tikzset{>=stealth}
-
+\input{mydef.tex}
 \title{具体数学阅读笔记-chap2}
 \author{weiyuan}
 \date{2022-07-04}
