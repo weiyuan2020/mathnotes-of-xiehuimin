@@ -543,7 +543,7 @@ Here is some of the standard set-theoretic terminology that will be used
 throughout this book.
 
 1.3 Definitions If A is any set (whose elements may be numbers or any other
-objects), we write x  \in  A to indicate that x is a member (or an element) of A.
+objects), we write x \in A to indicate that x is a member (or an element) of A.
 
 If x is not a member of A, we write: x c A.
 
@@ -565,7 +565,7 @@ ORDERED SETS
 1.5 Definition Let S be a set. An order on S is a relation, denoted by <, with
 the following two properties:
 
-(i) If xe Sand y  \in  S then one and only one of the statements
+(i) If xe Sand y \in S then one and only one of the statements
 
 x<y, x=}, y<x
 is true.
@@ -585,14 +585,14 @@ For example, Q is an ordered set if r <s is defined to mean that s - ris a
 positive rational number.
 
 1.7 Definition Suppose S is an ordered set, and E = S. If there exists a
-f= S such that x < f for every x  \in  E, we say that E is bounded above, and call
+f= S such that x < f for every x \in E, we say that E is bounded above, and call
 B an upper bound of E.
 
 Lower bounds are defined in the same way (with > in place of I).
 4 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 1.8 Definition Suppose § is an ordered set, E = §, and E is bounded above.
-Suppose there exists an a  \in  S with the following properties:
+Suppose there exists an a \in S with the following properties:
 
 (i) ais an upper bound of E.
 (ii) If y <a then y is not an upper bound of E.
@@ -868,7 +868,7 @@ property.
 (a) If xe R, ye R, and x > 0, then there is a positive integer n such that
 nx > y.
 
-(b) Ifxe Rye R,and x < y, then there existsap  \in  Q suchthat x <p <y.
+(b) Ifxe Rye R,and x < y, then there existsap \in Q suchthat x <p <y.
 
 Part (a)is usually referred to as the archimedean property of R. Part (b)
 may be stated by saying that Q is dense in R: Between any two real numbers
@@ -880,7 +880,7 @@ Proof
 If (a) were false, then y would be an upper bound of A. But then A has a
 least upper bound in R. Put a =sup A. Since x >0, a - x <a, and
 2 - x is not an upper bound of A. Hence x - x < mx for some positive
-integer m. But then a <(m + 1)x  \in  A, which is impossible, since « is an
+integer m. But then a <(m + 1)x \in A, which is impossible, since « is an
 upper bound of A.
 
 (b) Since x <y, we have y - x > 0, and (a) furnishes a positive integer
@@ -1005,7 +1005,7 @@ and two symbols, +00 and -oco. We preserve the original order in R, and
 define
 
 -0 <x< +o
-for every x  \in  R.
+for every x \in R.
 12 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 It is then clear that + 00 is an upper bound of every subset of the extended
@@ -1295,27 +1295,27 @@ Thus R is now an ordered set.
 Step 3 The ordered set R has the least-upper-bound property.
 
 To prove this, let A be a nonempty subset of R, and assume that fe R
-is an upper bound of A. Define y to be the union of all x  \in  A. In other words,
-pey if and only if p  \in  « for some «x  \in  A. We shall prove that y eR and that
+is an upper bound of A. Define y to be the union of all x \in A. In other words,
+pey if and only if p \in « for some «x \in A. We shall prove that y eR and that
 y = sup A.
 
-Since A is not empty, there exists an ay  \in  A. This a is not empty. Since
-®%y cy, y is not empty. Next, y c ff (since a c f for every a  \in  A), and therefore
-y # Q. Thus y satisfies property (I). To prove (II) and (111), pick p  \in  y. Then
-p  \in ay for some a;  \in  A. If q <p, then q \in ay, hence q \in  y; this proves (II). If
+Since A is not empty, there exists an ay \in A. This a is not empty. Since
+®%y cy, y is not empty. Next, y c ff (since a c f for every a \in A), and therefore
+y # Q. Thus y satisfies property (I). To prove (II) and (111), pick p \in y. Then
+p  \in ay for some a; \in A. If q <p, then q \in ay, hence q \in  y; this proves (II). If
 rea, is so chosen that r > p, we see that r \in y (since a, = y), and therefore y
 satisfies (111).
 
 Thus y eR.
 
-It is clear that a <y for every x  \in  A.
+It is clear that a <y for every x \in A.
 
 Suppose 6 <y. Then there is an s \in y and that sc6. Since sey, sea
-for some a  \in  A. Hence 6 <a, and 6 is not an upper bound of A.
+for some a \in A. Hence 6 <a, and 6 is not an upper bound of A.
 
 This gives the desired result: y = sup A.
 
-Step4 If eR and f  \in  R we define a + § to be the set of all sums r +s, where
+Step4 If eR and f \in R we define a + § to be the set of all sums r +s, where
 reoand sep.
 We define 0* to be the set of all negative rational numbers. It is clear that
 0* is a cut. We verify that the axioms for addition (see Definition 1.12) hold in
@@ -1330,14 +1330,14 @@ q-s<r, so q-sea, and q=(q-s)+sea+ B. Thus (II) holds.
 Choose tea so that t >r. Thenp <t+ sand t+sea+ j. Thus (III)
 holds.
 
-(A2) o+ Bisthe setof all r +s, with r  \in  a, s  \in  f. By the same definition,
+(A2) o+ Bisthe setof all r +s, with r \in a, s \in f. By the same definition,
 f+ ais the set of all s+r. Sincer+s=s+r forall re Q, se Q, we
 havea + f =f +a.
 
 (A3) As above, this follows from the associative law in Q.
 
 (A4) Ifreaand se 0% thenr +s <r, hencer + sec. Thusa+ 0* Ci
-To obtain the opposite inclusion, pick p  \in  «, and pick r  \in  a, r > p. Then
+To obtain the opposite inclusion, pick p \in «, and pick r \in a, r > p. Then
 THE REAL AND COMPLEX NUMBER SYSTEMS 19
 
 p-re0* and p=r+(p-r)ea + 0% Thus « = a+ 0*. We conclude
@@ -1349,7 +1349,7 @@ There exists r > 0 such that -p - rc a.
 In other words, some rational number smaller than -p fails to
 be in a.
 
-We show that f  \in  R and that a + § = 0*.
+We show that f \in R and that a + § = 0*.
 
 Ifsc xandp= -s- 1, then -p - 1 c a, hence pe f. So pis not
 empty. If q \in a, then -gc f. So ff # Q. Hence f satisfies (I).
@@ -1359,13 +1359,13 @@ Pick pep, and pick r>0, so that -p -réc a. If q<p, then
 t=p +(r/2). Then t>p, and -t-(r/2)= -p -rc a, so that te f.
 Hence f satisfies (111).
 
-We have proved that f  \in  R.
+We have proved that f \in R.
 
 If reaxand s \in  ff, then -sc a, hence r< -s, r +5 <0. Thus
 a+ fc Ox
 
 To prove the opposite inclusion, pick ve 0*, put w = -/2. Then
-w > 0, and there is an integer n such that nw  \in  a but (n + 1)w c a. (Note
+w > 0, and there is an integer n such that nw \in a but (n + 1)w c a. (Note
 that this depends on the fact that Q has the archimedean property!) Put
 p= -(n + 2)w. Then pe f, since -p - wc a, and
 
@@ -1388,7 +1388,7 @@ It also follows that a > 0* if and only if -a < 0%,
 
 Step 6 Multiplication is a little more bothersome than addition in the present
 context, since products of negative rationals are positive. For this reason we
-confine ourselves first to RT, the set of all a  \in  R with a > 0*.
+confine ourselves first to RT, the set of all a \in R with a > 0*.
 
 If ae RY and fe R*, we define af to be the set of all p such that p < rs
 for some choice of rea, se f,r>0,5>0.
@@ -1433,7 +1433,7 @@ We have now completed the proof that R is an orderedfield with the least-
 upper-bound property.
 
 Step 8 We associate with each re Q the set r* which consists of all pe Q
-such that p <r. Itis clear that each r* is a cut; that is, r*  \in  R. These cuts satisfy
+such that p <r. Itis clear that each r* is a cut; that is, r* \in R. These cuts satisfy
 the following relations:
 
 (a) r*+s*=(r+s),
@@ -1441,7 +1441,7 @@ the following relations:
 (c) r*<s*ifandonly ifr <s.
 
 To prove (a), choose per* + s*. Then p=u+uv, where u<r, v<s.
-Hence p < r +s, which says that p  \in  (r + s)*.
+Hence p < r +s, which says that p \in (r + s)*.
 THE REAL AND COMPLEX NUMBER SYSTEMS 21
 
 Conversely, suppose pe(r+s)*. Then p<r+s. Choose c so that
@@ -1449,7 +1449,7 @@ Conversely, suppose pe(r+s)*. Then p<r+s. Choose c so that
 2t=r+s5-p, put
 r=r-ts=s-t
 
-Then r'  \in  r*, s'es*, and p =r’ +5’, so that pe r* + s*
+Then r' \in r*, s'es*, and p =r’ +5’, so that pe r* + s*
 
 This proves (a). The proof of (b)is similar.
 
@@ -1461,7 +1461,7 @@ that r <s.
 This proves (c).
 
 Step 9 We saw in Step 8 that the replacement of the rational numbers r by the
-corresponding "rational cuts’ r*  \in  R preserves sums, products, and order. This
+corresponding "rational cuts’ r* \in R preserves sums, products, and order. This
 fact may be expressed by saying that the ordered field Q is isomorphic to the
 ordered field Q* whose elements are the rational cuts. Of course, r* is by no
 means the same as r, but the properties we are concerned with (arithmetic and
@@ -1515,7 +1515,7 @@ and B is an upper bound of E. Prove that « <p.
 
 10
 
-the set of all numbers - x, where x  \in  4. Prove that
+the set of all numbers - x, where x \in 4. Prove that
 inf 4 = -sup(- A).
 
 . Fix b>1,
@@ -1600,7 +1600,7 @@ za].
 
 Under what conditions does equality hold in the Schwarz inequality?
 Suppose k >3, x, y \in  R*, [x -y| =d>0, and r >0. Prove:
-(a) If 2r > d, there are infinitely many z  \in  R* such that
+(a) If 2r > d, there are infinitely many z \in R* such that
 |z-x| =|z-y| =r.
 
 (b) If 2r -=d, there is exactly one such z,
@@ -1611,9 +1611,9 @@ Prove that
 Ix +yl*+[x-y* =2|x]*+2]y|*
 if XxeR" and ye R". Interpret this geometrically, as a statement about parallel-
 ograms.
-If k >2 and xe R%, prove that there exists y  \in  R* such that y #0 but x+y =0.
+If k >2 and xe R%, prove that there exists y \in R* such that y #0 but x+y =0.
 Is this also true if k =17
-Suppose a \in  R', b  \in  R*. Find c  \in  R* and r > 0 such that
+Suppose a \in  R', b \in R*. Find c \in R* and r > 0 such that
 
 |x -a] =2|x-b|
 if and only if |x -c| =r.
@@ -1714,7 +1714,7 @@ A is equivalent to one of its proper subsets.
 2.7 Definition By a sequence, we mean a function f defined on the set J of all
 positive integers. Iff (n)= x,, for ne J, it is customary to denote the sequence
 f by the symbol {x,), or sometimes by x;, X,, X3,.... The values off, that is,
-the elements x, , are called the ferms of the sequence. If A is a set and if x,  \in  A
+the elements x, , are called the ferms of the sequence. If A is a set and if x, \in A
 for all neJ, then {x,} is said to be a sequence in A, or a sequence of elements of A.
 
 Note that the terms xy, X, , X3,... of a sequence need not be distinct.
@@ -1732,9 +1732,9 @@ nonnegative integers, i.e., to start with O rather than with 1.
 Proof Suppose E = A, and E is infinite. Arrange the elements x of A in
 a sequence {x,) of distinct elements. Construct a sequence {#,} as follows:
 
-Let n; be the smallest positive integer such that x,  \in  E. Having
+Let n; be the smallest positive integer such that x, \in E. Having
 chosen ny, ...,m_ (k=2,3,4,...), let n; be the smallest integer greater
-than »,_, such that x,  \in  E.
+than »,_, such that x, \in E.
 
 Putting f(k) = x,, (k=1, 2,3,...), we obtain a 1-1 correspondence
 between E and J.
@@ -1752,8 +1752,8 @@ The set whose elements are the sets E, will be denoted by {E,}. Instead
 of speaking of sets of sets, we shall sometimes speak of a collection of sets, or
 a family of sets.
 
-The union of the sets E, is defined to be the set S such that x  \in  Sif and only
-if x  \in  E, for at least one a  \in  A. We use the notation
+The union of the sets E, is defined to be the set S such that x \in Sif and only
+if x \in E, for at least one a \in A. We use the notation
 
 5=E.
 aed
@@ -1769,7 +1769,7 @@ lection of sets is taken, and should not be confused with the symbols + co, - co
 introduced in Definition 1.23.
 
 The intersection of the sets E, is defined to be the set P such that x e P if
-and only if x  \in  E, for every a  \in  A. We use the notation
+and only if x \in E, for every a \in A. We use the notation
 
 P=) E,
 
@@ -1787,7 +1787,7 @@ E, u E, consists of 1, 2, 3, 4, whereas E; Nn E, consists of 2, 3.
 28 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 (b) Let A be the set of real numbers x such that 0 < x <1. For every
-x  \in  A, let E, be the set of real numbers y such that 0 < y < x. Then
+x \in A, let E, be the set of real numbers y such that 0 < y < x. Then
 
 (a) E cE ifandonlyif0<x<z<1;
 (ii) UE. = Ei;
@@ -1818,7 +1818,7 @@ The distributive law also holds:
 To prove this, let the left and right members of (10) be denoted by E and F,
 respectively.
 
-Suppose xe E. Then xe A and xe Bu C, that is, x  \in  B or x  \in  C (pos-
+Suppose xe E. Then xe A and xe Bu C, that is, x \in B or x \in C (pos-
 sibly both). Hence xe A n Bor xe A n C, so that xe F. Thus Ec F.
 
 Next, suppose x \in  F. Thenxe An Bor xe An C. Thatis, xe A, and
@@ -1864,7 +1864,7 @@ integers such that S~T, which shows that S is at most countable
 (Theorem 2.8). Since E; = S, and E, is infinite, S is infinite, and thus
 countable.
 
-Corollary Suppose A is at most countable, and, for every a  \in  A, B, is at most
+Corollary Suppose A is at most countable, and, for every a \in A, B, is at most
 countable. Put
 
 T=|JB..
@@ -1949,7 +1949,7 @@ By Theorem 1.37, the conditions of Definition 2.15 are satisfied by (19).
 
 It is important to observe that every subset Y of a metric space X is a metric
 space in its own right, with the same distance function. For it is clear that if
-conditions (a) to (c) of Definition 2.15 hold for p, q, r  \in  X, they also hold if we
+conditions (a) to (c) of Definition 2.15 hold for p, q, r \in X, they also hold if we
 restrict p,q. r to lie in Y.
 
 Thus every subset of a euclidean space is a metric space. Other examples
@@ -1971,7 +1971,7 @@ coordinates satisfy the inequalities a; < x; <b; (1 <i<k) is called a k-cell.
 Thus a 1-cell is an interval, a 2-cell is a rectangle, etc.
 
 If xe R* and r > 0. the open (or closed) ball B with center at x and radius r
-is defined to be the set of all y  \in  R* such that |y - x| <r (or |y -x|< 7).
+is defined to be the set of all y \in R* such that |y - x| <r (or |y -x|< 7).
 
 We call a set Ec R¥ convex if
 
@@ -2014,7 +2014,7 @@ such that pc E.
 (h) Eis perfect if E is closed and if every point of E is a limit point
 of E.
 
-(i) E is bounded if there is a real number M and a point g  \in  X such that
+(i) E is bounded if there is a real number M and a point g \in X such that
 d(p,q)< M for all pe E.
 
 (j) E is dense in X if every point of X is a limit point of E, or a point of
@@ -2030,7 +2030,7 @@ Then there is a positive real number 4 such that
 d(p,q) =r -h.
 For all points s such that d(g, s) < h, we have then
 d(p,s) <d(p,q)+ dg, s)<r-h+h=r,
-so that s  \in  E. Thus c is an interior point of E.
+so that s \in E. Thus c is an interior point of E.
 2.20 Theorem If p is a limit point of a set E, then every neighborhood of p
 contains infinitely many points of E.
 
@@ -2091,27 +2091,27 @@ In (g), we left the second entry blank. The reason is that the segment
 2.22 Theorem Let {E,} be a (finite or infinite) collection of sets E,. Then
 (20) Y Ej = (ED.
 
-Proof Let A and B be the left and right members of (20). If x  \in  A, then
-x c\, E,, hence x c E, for any a, hence x  \in  E{ forevery a, so that x  [ ES.
+Proof Let A and B be the left and right members of (20). If x \in A, then
+x c\, E,, hence x c E, for any a, hence x \in E{ forevery a, so that x  [ ES.
 Thus A < B.
 34 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 2.23
 
-Conversely, if x  \in  B, then x  \in  E for every a, hence x c E, for any o,
-hence x c J, Es, so that x  \in  (UU, E,)*. Thus Bc A.
+Conversely, if x \in B, then x \in E for every a, hence x c E, for any o,
+hence x c J, Es, so that x \in (UU, E,)*. Thus Bc A.
 It follows that A = B.
 
 Theorem A set Eis open if and only if its complement is closed.
 
-Proof First, suppose E \in  is closed. Choose x  \in  E. Then x c Ec, and x is
+Proof First, suppose E \in  is closed. Choose x \in E. Then x c Ec, and x is
 not a limit point of E°. Hence there exists a neighborhood N of x such
 that En N is empty, that is, N c E. Thus X is an interior point of E,
 and E is open.
 
 Next, suppose E is open. Let x be a limit point of E°. Then every
 neighborhood of X contains a point of E°, so that x is not an interior point
-of E. Since E is open, this means that x  \in  E°. It follows that Eis closed.
+of E. Since E is open, this means that x \in E°. It follows that Eis closed.
 
 Corollary A set F is closed if and only if its complement is open.
 
@@ -2139,7 +2139,7 @@ By Theorem 2.22,
 and Fy is open, by Theorem 2.23. Hence (a)implies that (21) is open so
 that (, F, is closed.
 
-Next, put H = ()/., G;. For any x  \in  H, there exist neighborhoods
+Next, put H = ()/., G;. For any x \in H, there exist neighborhoods
 N; of x, with radii r;, such that N;c G;(i=1,...,n). Put
 
 r=min (ry, ..., 1),
@@ -2190,16 +2190,16 @@ Lety =sup E. ThenyeE. Hence y \in  E if E is closed.
 Compare this with the examples in Sec. 1.9.
 
 Proof If y \in E then ye E. Assume yc E. For every h > 0 there exists
-then a point x  \in  E such that y - 2 <x <y, for otherwise y - h would be
-an upper bound of E. Thus y is a limit point of E. Hence y  \in  E.
+then a point x \in E such that y - 2 <x <y, for otherwise y - h would be
+an upper bound of E. Thus y is a limit point of E. Hence y \in E.
 
 2.29 Remark Suppose Ec Yc X, where Xis a metric space. To say that E
-is an open subset of X means that to each point p  \in  E there is associated a
-positive number r such that the conditions d(p,q) <r, g \in  X imply that q  \in  E.
+is an open subset of X means that to each point p \in E there is associated a
+positive number r such that the conditions d(p,q) <r, g \in  X imply that q \in E.
 But we have already observed (Sec. 2.16) that Y is also a metric space, so that
 our definitions may equally well be made within ¥. To be quite explicit, let us
-say that E is open relative to Y if to each p  \in  E there is associated an r > Q such
-that gq  \in  E whenever d(p,q) <r and ge Y. Example 2.21(g) showed that a set
+say that E is open relative to Y if to each p \in E there is associated an r > Q such
+that gq \in E whenever d(p,q) <r and ge Y. Example 2.21(g) showed that a set
 36 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 may be open relative to Y without being an open subset of X. However, there
@@ -2208,7 +2208,7 @@ is a simple relation between these concepts, which we now state.
 2.30 Theorem Suppose Y <= X. A subset E of Y is open relative to Y if and
 only if E = Y nn G for some open subset G of X.
 
-Proof Suppose E is open relative to Y. To each p  \in  E there is a positive
+Proof Suppose E is open relative to Y. To each p \in E there is a positive
 number r, such that the conditions d(p,q) <r,,qe Y imply that ge E.
 Let ¥, be the set of all ge X such that d(p, q) <r,, and define
 G=V,.
@@ -2218,7 +2218,7 @@ Then G is an open subset of X, by Theorems 2.19 and 2.24.
 
 Since pe V, forall pe E, itis clear that Ec Gn Y.
 
-By our choice of ¥,, we have ¥, n Y = E for every p  \in  E, so that
+By our choice of ¥,, we have ¥, n Y = E for every p \in E, so that
 Gn Yc E. Thus E=G n Y, and one half of the theorem is proved.
 
 Conversely, if G is open in X and E=G Nn Y, every pe FE has a
@@ -2343,7 +2343,7 @@ Corollary If {K,} is a sequence of nonempty compact sets such that K, > K,, ,,
 2.37 Theorem If E is an infinite subset of a compact set K, then E has a limit
 point in K.
 
-Proof If no point of K were a limit point of E, then each g  \in  K would
+Proof If no point of K were a limit point of E, then each g \in K would
 have a neighborhood V, which contains at most one point of E (namely,
 gq, if ge E). It is clear that no finite subcollection of {V;} can cover Ej
 and the same is true of K, since E - K. This contradicts the compactness
@@ -2436,12 +2436,12 @@ If E is not bounded, then E contains points x, with
 The set S consisting of these points x, is infinite and clearly has no limit
 point in R¥, hence has none in E. Thus (c) implies that E is bounded.
 
-If Eis not closed, then there is a point x,  \in  R¥ which is a limit point
-of E but not a point of E. For n=1,2,3,..., there are points x,  \in  E
+If Eis not closed, then there is a point x, \in R¥ which is a limit point
+of E but not a point of E. For n=1,2,3,..., there are points x, \in E
 such that (x, - Xo| <1/n. Let S be the set of these points x . Then S is
 infinite (otherwise |% - X,| would have a constant positive value, for
 infinitely many n), S has X, as a limit point, and S has no other limit
-point in R¥. For if y  \in  R*, y # Xo, then
+point in R¥. For if y \in R*, y # Xo, then
 
 |X, = ¥| = |X -¥| - | Xs - Xo]
 
@@ -2472,7 +2472,7 @@ Proof Since P has limit points, P must be infinite. Suppose P is count-
 able, and denote the points of P by x,, X,, X3,.... We shall construct a
 sequence {V, ,of neighborhoods, as follows.
 
-Let ¥, be any neighborhood of x,. If ¥; consists of all y  \in  R* such
+Let ¥, be any neighborhood of x,. If ¥; consists of all y \in R* such
 that |y - x, | <r, the closure V; of V, is the set of all ye R*such that
 ly -x| <r.
 
@@ -2535,11 +2535,11 @@ ITM <
 P contains no segment.
 
 To show that P is perfect, it is enough to show that P contains no isolated
-point. Let x  \in  P, and let S be any segment containing x. Let J, be that interval
+point. Let x \in P, and let S be any segment containing x. Let J, be that interval
 of E, which contains x. Choose n large enough, so that J, = S. Let x, be an
 endpoint of I,, such that x, # x.
 
-It follows from the construction of P that x,  \in  P. Hence x is a limit point
+It follows from the construction of P that x, \in P. Hence x is a limit point
 of P, and P is perfect.
 
 One of the most interesting properties of the Cantor set is that it provides
@@ -2565,13 +2565,13 @@ The connected subsets of the line have a particularly simple structure:
 2.47 Theorem A subset E of the real line R" is connected if and only if it has the
 following property: If xe E, ye E, and x < z <Y, then Z \in  E.
 
-Proof If there exist x \in  E. y  \in  E, and some z  \in  (x, y) such that z c E, then
+Proof If there exist x \in  E. y \in E, and some z \in (x, y) such that z c E, then
 E = A, u B, where
 
 A,= En (-o,z), B,= En (z, ©).
 BASIC TOPOLOGY 43
 
-Since x  \in  A, and y  \in  B,, A and B are nonempty. Since A, = (-0, z)and
+Since x \in A, and y \in B,, A and B are nonempty. Since A, = (-0, z)and
 B, = (z, ©), they are separated. Hence E is not connected.
 
 To prove the converse, suppose Eis not connected. Then there are
@@ -2580,7 +2580,7 @@ and assume (without loss of generality) that x <y. Define
 
 z=sup(A nx, y]).
 
-By Theorem 2.28, 7  \in  A; hence z c B. In particular, x < 7 <y.
+By Theorem 2.28, 7 \in A; hence z c B. In particular, x < 7 <y.
 
 If 7 c A, it follows that Xx < z < y and z c E.
 
@@ -2649,7 +2649,7 @@ E” is called the interior of E.]
 
 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
-Let X be an infinite set. Forp  \in  X and g  \in  X, define
+Let X be an infinite set. Forp \in X and g \in X, define
 1 (fp#q)
 
 d(p,q)= A
@@ -2657,7 +2657,7 @@ d(p,q)= A
 
 Prove that this is a metric. Which subsets of the resulting metric space are open?
 Which are closed? Which are compact?
-For x  \in  R' and y  \in  R, define
+For x \in R' and y \in R, define
 
 dix, y) = (x =»)?
 dax, y= Vx - yl,
@@ -2690,10 +2690,10 @@ word "compact" is replaced by "closed" or by "bounded."
 
 . Regard Q, the set of all rational numbers, as a metric space, with d(p,q) =|p - q].
 
-Let E be the set of all p  \in  Q such that 2 <p? <3. Show that E is closed and
+Let E be the set of all p \in Q such that 2 <p? <3. Show that E is closed and
 bounded in Q, but that Eis not compact. Is E open in Q?
 
-. Let E be the set of all x  \in  [0, 1] whose decimal expansion contains only the digits
+. Let E be the set of all x \in [0, 1] whose decimal expansion contains only the digits
 
 4 and 7. Is E countable? Is E dense in [0, 1]? Is E compact? Is E perfect?
 
@@ -2704,7 +2704,7 @@ are separated.
 
 (b) Prove the same for disjoint open sets.
 
-(c) Fixpe X, 8 >0, define A to be the set of all g  \in  X for which d(p, q) <3, define
+(c) Fixpe X, 8 >0, define A to be the set of all g \in X for which d(p, q) <3, define
 B similarly, with > in place of <<. Prove that A and B are separated.
 
 (d) Prove that every connected metric space with at least two points is uncount-
@@ -2713,7 +2713,7 @@ able. Hint: Use (c).
 Are closures and interiors of connected sets always connected? (Look at subsets
 of R?.)
 
-Let A and B be separated subsets of some R*, suppose a  \in  A, b \in  B, and define
+Let A and B be separated subsets of some R*, suppose a \in A, b \in  B, and define
 
 pt)=(1-1ta+1tb
 for fe R'. Put Ag =p~'(A), Bo =p '(B). [Thus t \in  Aq if and only if p(t) A]
@@ -2737,7 +2737,7 @@ BASIC TOPOLOGY 45
 
 (a) Prove that Ao and By are separated subsets of R'.
 
-(b) Prove that there exists Zo  \in  (0, 1) such that p(to) c AU B.
+(b) Prove that there exists Zo \in (0, 1) such that p(to) c AU B.
 
 (c) Prove that every convex subset of R* is connected.
 
@@ -2746,8 +2746,8 @@ that R* is separable. Hint: Consider the set of points which have only rational
 coordinates.
 
 A collection {¥,} of open subsets of X is said to be a base for X if the following
-is true: For every x  \in  X and every open set G < X such that x  \in  G, we have
-x  \in  V, © G for some a. In other words, every open set in X is the union of a
+is true: For every x \in X and every open set G < X such that x \in G, we have
+x \in V, © G for some a. In other words, every open set in X is the union of a
 subcollection of {V.}.
 
 Prove that every separable metric space has a countable base. Hint: Take
@@ -2755,8 +2755,8 @@ Prove that every separable metric space has a countable base. Hint: Take
 all neighborhoods with rational radius and center in some countable dense subset
 of X.
 Let X be a metric space in which every infinite subset has a limit point. Prove that
-Xis separable. Hint: Fix 6 >0, and pick x;  \in  X. Having chosen Xi, ..., x,  \in  X,
-choose x;  \in  X, if possible, so that d(x, x;,,)>6 for i=1,...,j. Show that
+Xis separable. Hint: Fix 6 >0, and pick x; \in X. Having chosen Xi, ..., x, \in X,
+choose x; \in X, if possible, so that d(x, x;,,)>6 for i=1,...,j. Show that
 this process must stop after a finite number of steps, and that X can therefore be
 covered by finitely many neighborhoods of radius 8. Take6 =1/n(n=1,2,3,...),
 and consider the centers of the corresponding neighborhoods.
@@ -2811,7 +2811,7 @@ be concerned with sequences in euclidean spaces, or even in metric spaces.
 CONVERGENT SEQUENCES
 
 3.1 Definition A sequence {p,} in a metric space X is said to converge if there
-is a point p  \in  X with the following property: For every  \in  > O there is an integer
+is a point p \in X with the following property: For every \in > O there is an integer
 N such that n > N implies that d(p,, p) <e. (Here d denotes the distance in X.)
 
 In this case we also say that {p,} converges to p, or that p is the limit of
@@ -2857,7 +2857,7 @@ in metric spaces.
 
 3.2 Theorem Let{p,) be a sequence in a metric space X.
 
-(a) {p,) converges to p  \in  X if and only if every neighborhood of p contains
+(a) {p,) converges to p \in X if and only if every neighborhood of p contains
 p, for all butfinitely many n.
 
 (b) IfpeX.p' eX, andif {p,} converges to p and to p', then p' =p.
@@ -2870,14 +2870,14 @@ such that p = limp, .
 
 n= ao
 Proof (a) Suppose p, »p and let V be a neighborhood of p. For
-some c > 0, the conditions d(g,p) <&,qe X imply q  \in  V. Correspond-
+some c > 0, the conditions d(g,p) <&,qe X imply q \in V. Correspond-
 ing to this &, there exists N such that n> N implies d(p,,p) <s Thus
-n> N implies p,  \in  V.
+n> N implies p, \in V.
 
 Conversely, suppose every neighborhood of p contains all but
-finitely many of the p,. Fix c > 0, and let V be the set of all q  \in  X such
+finitely many of the p,. Fix c > 0, and let V be the set of all q \in X such
 that d(p,q) <e. By assumption, there exists N (corresponding to this V)
-such that p,  \in  V if n> N. Thus d(p,,p) <é& if n> N; hence p, -p.
+such that p, \in V if n> N. Thus d(p,,p) <é& if n> N; hence p, -p.
 NUMERICAL SEQUENCES AND SERIES 49
 
 (hb) Lete>0 be given. There exist integers N, N' such that
@@ -2901,7 +2901,7 @@ r=max{l,d(p,,p), ...,d(py,P)}.
 
 Then d(p,,p)<rforn=1,23,....
 
-d) For each positive integer n, there is a point p,  \in  E such that
+d) For each positive integer n, there is a point p, \in E such that
 d(p,,p) <1/n. Given E>0, choose N so that Ne>1. If n>N, it
 follows that d(p,, p) <e. Hence p, -p.
 
@@ -3049,7 +3049,7 @@ Png = Pn, =""" =P.
 
 The subsequence {p,,} so obtained converges evidently to p.
 
-If E is infinite, Theorem 2.37 shows that E has a limit point p  \in  X.
+If E is infinite, Theorem 2.37 shows that E has a limit point p \in X.
 Choose n, so that d(p, p,,) < I. Having chosen n,, ..., n;_;, we see from
 Theorem 2.20 that there is an integer n; > n;_, such that d(p, p,,) <1/i.
 Then {p,} converges to p.
@@ -3061,16 +3061,16 @@ subset of R* lies in a compact subset of R*.
 form a closed subset of X.
 
 Proof Let E* be the set of all subsequential limits of {p,) and let c be a
-limit point of E* We have to show that g  \in  E*.
+limit point of E* We have to show that g \in E*.
 
 Choose n, so that p, # g. (If no such n, exists, then E* has only
 one point, and there is nothing to prove.) Put 6 =d(g, p,). Suppose
-n,, ...,n;_y are chosen. Since cq is a limit point of E*, there is an x  \in  E*
-with d(x,q)<27'6. Since x  \in  E* there is an n;>n;_; such that
+n,, ...,n;_y are chosen. Since cq is a limit point of E*, there is an x \in E*
+with d(x,q)<27'6. Since x \in E* there is an n;>n;_; such that
 d(x, p,) <2~'6. Thus
 
 dg, pa) <2'778
-for i=1,2,3,.... This says that {p,} converges to g. Hence q  \in  E*.
+for i=1,2,3,.... This says that {p,} converges to g. Hence q \in E*.
 
 CAUCHY SEQUENCES
 
@@ -3082,7 +3082,7 @@ In our discussion of Cauchy sequences, as well as in other situations
 which will arise later, the following geometric concept will be useful.
 
 3.9 Definition Let E be a nonempty subset of a metric space X, and let S be
-the set of all real numbers of the form d(p, c), with p  \in  E and q  \in  E. The sup
+the set of all real numbers of the form d(p, c), with p \in E and q \in E. The sup
 of Sis called the diameter of E.
 NUMERICAL SEQUENCES AND SERIES 53
 
@@ -3110,7 +3110,7 @@ then NK. consists of exactly one point.
 Proof
 (a) Since Ec E, it is clear that
 diam E < diam E.
-Fix £ > 0, and choose p  \in  E, q  \in  E. By the definition of E, there are
+Fix £ > 0, and choose p \in E, q \in E. By the definition of E, there are
 points p', c', in E such that d(p, p')<c,d(q,q') < e. Hence
 dp, q) <d(p.p') + dp’ q') + dq’, q)
 <2e+d(p',q')<2e+ diam E.
@@ -3166,11 +3166,11 @@ by Definition 3.9 and Theorem 3.10(a). Being a closed subset of the
 compact space X, each Ey is compact (Theorem 2.35). Also Ey © Ey, 1,
 so that Ex © Ey+y.
 
-Theorem 3.10(b) shows now that there is a unique p  \in  X which lies
+Theorem 3.10(b) shows now that there is a unique p \in X which lies
 in every Ey.
 
 Let c>0 be given. By (3) there is an integer Ny such that
-diam Ey <e if N>N,. Since p  \in  Ey, it follows that d(p,q) <e for
+diam Ey <e if N>N,. Since p \in Ey, it follows that d(p,q) <e for
 every q \in  Ey, hence for every qe Ey. In other words, d(p, p,) <c if
 n > Ny. This says precisely that p, - p.
 
@@ -3187,7 +3187,7 @@ Thus Theorem 3.11 says that all compact metric spaces and all Euclidean
 
 spaces are complete. Theorem 3.11 implies also that every closed subset £ of a
 complete metric space X is complete. (Every Cauchy sequence in E is a Cauchy
-sequence in X. hence it converges to some p  \in  X, and actually p  \in  E since E is
+sequence in X. hence it converges to some p \in X, and actually p \in E since E is
 closed.) An example of a metric space which is not complete is the space of all
 rational numbers, with d(x,y) = |x -y|.
 NUMERICAL SEQUENCES AND SERIES 55
@@ -3277,7 +3277,7 @@ most a finite number of values of n, so that 5, =» - oo.
 This establishes (a) in all cases.
 
 (b) Suppose there is a number x >s* such that s, > x for infinitely
-many values of n. In that case, there is a number y  \in  E such that
+many values of n. In that case, there is a number y \in E such that
 y =x > s*, contradicting the definition of s*.
 
 Thus s* satisfies (a) and (b).
@@ -3417,7 +3417,7 @@ nevertheless useful to consider both concepts.
 The Cauchy criterion (Theorem 3.11) can be restated in the following
 form:
 
-3.22 Theorem Za, converges if and only if for every  \in  > 0 there is an integer
+3.22 Theorem Za, converges if and only if for every \in > 0 there is an integer
 N such that
 
 ©)
@@ -3458,7 +3458,7 @@ We now turn to a convergence test of a different nature, the so-called
 converges, then La, converges.
 (b) Ifa, 2d, 20 for n= Ng, and if Xd, diverges, then Xa, diverges.
 Note that (b) applies only to series of nonnegative terms a,.
-Proof Given  \in  > 0, there exists N = Ny such that m > n > N implies
+Proof Given \in > 0, there exists N = Ny such that m > n > N implies
 
 m
 Y a <e,
@@ -4615,7 +4615,7 @@ lim d(p, 4») =0.
 
 Prove that this is an equivalence relation.
 (b) Let X* be the set of dll equivalence classes so obtained. If Pe X* Q& X*,
-{p.} \in P,{g.}  \in  Q, define
+{p.} \in P,{g.} \in Q, define
 
 AP, Q) - lim d(pr, qn);
 
@@ -4666,11 +4666,11 @@ Y, and p is a limit point of E. We writef (x) - c as x - p, or
 x-p
 84 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
-if there is a point c  \in  Y with the following property: For every c > 0 there
+if there is a point c \in Y with the following property: For every c > 0 there
 exists a 6 > 0 such that
 
 J) dy(f(x),q) <ec
-for all points x  \in  E for which
+for all points x \in E for which
 3) 0 < dy(x, p) <0.
 
 The symbols dy and dy refer to the distances in X and Y, respectively.
@@ -4704,8 +4704,8 @@ and 0 <dy(x,p)<6. Also, there exists N such that n> N implies
 shows that (5) holds.
 
 Conversely, suppose (4)is false. Then there exists some & > 0 such
-that for every 6 > 0 there exists a point x  \in  E (depending on 9), for which
-dy(f(x),q)=  \in  but 0 <dy(x,p)<6. Taking6, =1/n(n=1,2,3,...), we
+that for every 6 > 0 there exists a point x \in E (depending on 9), for which
+dy(f(x),q)= \in but 0 <dy(x,p)<6. Taking6, =1/n(n=1,2,3,...), we
 thus find a sequence in E satisfying (6) for which (5) is false.
 
 Corollary [ff has a limit at p, this limit is unique.
@@ -4720,7 +4720,7 @@ and the quotient f/g of the two functions, with the understanding that the quo-
 tient is defined only at those points x of E at which g(x) # 0. Iff assigns to each
 point x of E the same number c, then f is said to be a constant function, or
 simply a constant, and we write f =c. Iff and g are real functions, and if
-f(x) = g(x) for every x  \in  E, we shall sometimes write f > g, for brevity.
+f(x) = g(x) for every x \in E, we shall sometimes write f > g, for brevity.
 Similarly, iff and gc map E into R*, we define f + g and f, g by
 
 T+)(x) =x) + g(x), (89x =x). g(x);
@@ -4752,13 +4752,13 @@ xp
 
 CONTINUOUS FUNCTIONS
 
-45 Definition Suppose X and Yare metric spaces, E cc X, p  \in  E, and f maps
-Einto Y. Thenf is said to be continuous at p if for every  \in  > 0 there exists a
+45 Definition Suppose X and Yare metric spaces, E cc X, p \in E, and f maps
+Einto Y. Thenf is said to be continuous at p if for every \in > 0 there exists a
 6 > 0 such that
 
 dy(f(x), f(p) < &
 
-for all points x  \in  E for which dx(x,p) <0.
+for all points x \in E for which dx(x,p) <0.
 Iff is continuous at every point of E, thenf is said to be continuous on E.
 It should be noted thatf has to be defined at the point p in order to be
 continuous at p. (Compare this with the remark following Definition 4.1.)
@@ -4766,7 +4766,7 @@ continuous at p. (Compare this with the remark following Definition 4.1.)
 
 Ifp is an isolated point of E, then our definition implies that every function
 f which has E as its domain of definition is continuous at p. For, no matter
-which & > 0 we choose, we can pick 6 > 0 so that the only point x  \in  E for which
+which & > 0 we choose, we can pick 6 > 0 so that the only point x \in E for which
 dy(x,p) <6is x =p, then
 
 dy(f(x), f(p)) =0 <e.
@@ -4784,7 +4784,7 @@ maps the range off, f(E), into Z, and h is the mapping of E into Z defined by
 
 h(x) -g(f(x)) (xe E).
 
-Iff is continuous at a point p  \in  E and ifg is continuous at the point f(p), then h is
+Iff is continuous at a point p \in E and ifg is continuous at the point f(p), then h is
 continuous at p.
 
 This function / is called the composition or the composite off and g. The
@@ -4804,7 +4804,7 @@ It follows that
 
 dz(1(x), h(p)) = dz(9(f (x). 9(f(P))) < &
 
-if dy(x, p) <d and x  \in  E. Thus h is continuous at p.
+if dy(x, p) <d and x \in E. Thus h is continuous at p.
 48 Theorem A mapping f'of a metric space X into a metric space Y is con-
 tinuous on X if and only iff ~*(V) is open in X for every open set V in Y.
 
@@ -4814,7 +4814,7 @@ CONTINUITY 87
 
 Proof Suppose fis continuous on X and V is an open setin Y. We have
 to show that every point off ~!(¥) is an interior point off ~!(¥). So,
-suppose p  \in  X and f(p)  \in  V. Since V is open, there exists c > 0 such that
+suppose p \in X and f(p) \in V. Since V is open, there exists c > 0 such that
 ye Vif dy(f(p),y)< ce; and since f is continuous at p, there exists 6 > 0
 such that dy(f(x), f(p)) < c if d(x, p) <6. Thus x ef }(V) as soon as
 dy(x, p) <9.
@@ -4845,7 +4845,7 @@ Then f + g, fg, and fg are continuous on X.
 
 (M
 
-In the last case, we must of course assume that g(x) # 0, for all x  \in  X.
+In the last case, we must of course assume that g(x) # 0, for all x \in X.
 Proof At isolated points of X there is nothing to prove. At limit points,
 
 the statement follows from Theorems 4.4 and 4.6.
@@ -4955,7 +4955,7 @@ space X, and
 
 (14) M = sup fp), m= inf f(p).
 
-Then there exist points p, q  \in  X such that f(p)= M and f(q)=m.
+Then there exist points p, q \in X such that f(p)= M and f(q)=m.
 
 The notation in (14) means that M is the least upper bound of the set of
 all numbers f(p), where p ranges over X, and that m is the greatest lower bound
@@ -4963,7 +4963,7 @@ of this set of numbers.
 90 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 The conclusion may also be stated as follows: There exist points p and q
-in X such that £(q) < f(x) <f(p)for all x  \in  X; that is, f attains its maximum
+in X such that £(q) < f(x) <f(p)for all x \in X; that is, f attains its maximum
 (at p) and its minimum (at q).
 
 Proof By Theorem 4.15, f(X) is a closed and bounded set of real num-
@@ -5014,13 +5014,13 @@ CONTINUITY 91
 into a metric space Y. Then f is uniformly continuous on X.
 
 Proof Let c >0 be given. Since f is continuous, we can associate to
-each point p  \in  X a positive number c(p) such that
+each point p \in X a positive number c(p) such that
 
 oo  \in 
 
 (16) qe X, dy(p.q) < c(p) implies dy(f(p), /(q)) <3
 
-Let J(p) be the set of all c  \in  X for which
+Let J(p) be the set of all c \in X for which
 an dx(p, 9) < 3c(p).
 
 Since p  \in J(p), the collection of all sets J(p) is an open cover of X, and
@@ -5081,7 +5081,7 @@ fx) =x (x \in E).
 
 This is continuous on E (Theorem 4.9), but evidently unbounded. To see
 that (21) is not uniformly continuous, let c > 0 and 6 > 0 be arbitrary, and
-choose a point x  \in  E such that |x - xo| <6. Taking t close enough to
+choose a point x \in E such that |x - xo| <6. Taking t close enough to
 Xp, We can then make the difference | f(t) -f(x)| greater than e, although
 |t - x| <6. Since this is true for every 6 > O,f is not uniformly continu-
 ous on E.
@@ -5097,7 +5097,7 @@ is continuous on E, and is bounded, since 0 < g(x) <1. Itis clear that
 
 sup g(x) =1,
 xeE
-whereas g(x) < 1 for all x  \in  E. Thus g has no maximum on E.
+whereas g(x) < 1 for all x \in E. Thus g has no maximum on E.
 Having proved the theorem for bounded sets E, let us now suppose
 that E is unbounded. Then f(x) = x establishes (a), whereas
 
@@ -5108,7 +5108,7 @@ establishes (b), since
 sup h(x) =1
 xeE
 
-and A(x) <1 for all x  \in  E.
+and A(x) <1 for all x \in E.
 
 Assertion (c) would be false if boundedness were omitted from the
 hypotheses. For, let E be the set of all integers. Then every function
@@ -5154,7 +5154,7 @@ separated. This is impossible if E is connected.
 
 4.23 Theorem Let f be a continuous real function on the interval [a, b]. If
 f(a) <f(b) and if cc is a number such that f(a) < c <f(b), then there exists a
-point x  \in  (a, b) such thatf (x) = c.
+point x \in (a, b) such thatf (x) = c.
 
 A similar result holds, of course, if f(a) > f(b). Roughly speaking, the
 theorem says that a continuous real function assumes all intermediate values on
@@ -5396,7 +5396,7 @@ EXERCISES
 
 lim [fix+h -f(x-m]1=0
 
-for every x  \in  R'. Does this imply thatf is continuous?
+for every x \in R'. Does this imply thatf is continuous?
 2. Iff is a continuous mapping of a metric space X into a metric space Y, prove that
 
 f(E)< f(E)
@@ -5404,7 +5404,7 @@ for every set E < X. (E denotes the closure of E.) Show, by an example, that
 T(E) can be a proper subset of f(E).
 3. Letf be a continuous real function on a metric space X. Let Z(f) (the zeroset off)
 
-be the set of all p  \in  X at which f(p) =0. Prove that Z(f) is closed.
+be the set of all p \in X at which f(p) =0. Prove that Z(f) is closed.
 4. Letf and g be continuous mappings of a metric space X into a metric space Y,
 10.
 
@@ -5417,12 +5417,12 @@ be the set of all p  \in  X at which f(p) =0. Prove that Z(f) is closed.
 CONTINUITY 99
 
 and let E be a dense subset of X. Prove that f(E) is dense in f(X). If g(p) =f(p)
-for all p  \in  E, prove that g(p) = f(p) for all pe X. (In other words, a continuous
+for all p \in E, prove that g(p) = f(p) for all pe X. (In other words, a continuous
 mapping is determined by its values on a dense subset of its domain.)
 
 . Iff is a real continuous function defined on a closed set E < R*, prove that there
 
-exist continuous real functions g on R! such that g(x) = f(x) for all x  \in  E. (Such
+exist continuous real functions g on R! such that g(x) = f(x) for all x \in E. (Such
 functions g are called continuous extensions off from E to R'.) Show that the
 result becomes false if the word "closed" is omitted. Extend the result to vector-
 valued functions. Hint: Let the graph of g be a straight line on each of the seg-
@@ -5430,7 +5430,7 @@ ments which constitute the complement of E (compare Exercise 29, Chap. 2).
 The result remains true if R* is replaced by any metric space, but the proof is not
 so simple.
 
-. Iff'is defined on E, the graph off is the set of points (x, f(x)), for x  \in  E. In partic-
+. Iff'is defined on E, the graph off is the set of points (x, f(x)), for x \in E. In partic-
 
 ular, if Eis a set of real numbers, andf'is real-valued, the graph off is a subset of
 the plane.
@@ -5440,7 +5440,7 @@ its graph is compact.
 
 . If E< X and iff is a function defined on X, the restriction off to E is the function
 
-g whose domain of definition is E, such that g(p) = f(p) forp  \in  E. Definef and g
+g whose domain of definition is E, such that g(p) = f(p) forp \in E. Definef and g
 on R? by: f(0,0)-g(0,0) = 0, f(x,y) -xy?/(x* + y*), g(x, ») -xp*/(x* +")
 if (x,y) #(0,0). Prove that f is bounded on R? that g is unbounded in every
 neighborhood of (0, 0), and that f is nor continuous at (0, 0); nevertheless, the
@@ -5493,7 +5493,7 @@ the function g so defined on X is the desired extension of f.
 Could the range space R* be replaced by R*? By any compact metric space?
 By any complete metric space? By any metric space?
 Let I =[0, 1] be the closed unit interval. Suppose fis a continuous mapping of I
-into I. Prove that f(x) = x for at least one x  \in  I.
+into I. Prove that f(x) = x for at least one x \in I.
 Call a mapping of X into Y open if f(¥) is an open set in Y whenever Vis an open
 set in X.
 
@@ -5549,7 +5549,7 @@ by
 pe(x) = inf d(x, z).
 zeE
 
-(a) Prove that p(x) = 0 if and only if x  \in  E.
+(a) Prove that p(x) = 0 if and only if x \in E.
 (b) Prove that p; is a uniformly continuous function on X, by showing that
 [pe(x) - pe(¥)| < d(x, »)
 
@@ -5568,7 +5568,7 @@ compact.
 Let A and B be disjoint nonempty closed sets in a metric space X, and define
 
 pap)
-=  \in  X).
+= \in X).
 A7) pa(p) + pa(p)
 Show that fis a continuous function on X whose range lies in [0, 1], that f(p) =0
 precisely on 4 and f(p) = 1 precisely on B. This establishes a converse of Exercise
@@ -5598,11 +5598,11 @@ t-s = u-s = u-t
 x+y\ _ fx) +f»)
 (252) a
 
-for all x, y  \in  (a, b). Prove that fis convex.
+for all x, y \in (a, b). Prove that fis convex.
 102 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 25. If A < R* and B = R, define 4 + B to be the set of all sums x + y with xe 4,
-y  \in  B.
+y \in B.
 (a) If K is compact and C is closed in R*, prove that K + C is closed.
 Hint: Take zc K+ C, put F =z - C, the set of all z- y with ye C. Then
 K and F are disjoint. Choose 8 as in Exercise 21. Show that the open ball with
@@ -5613,7 +5613,7 @@ sum C, + C; is not closed, by showing that C; + C; is a countable dense subset
 of R.
 26. Suppose X, Y, Z are metric spaces, and Y is compact. Let f map X into Y, let
 g be a continuous one-to-one mapping of Y into Z, and put A(x) = g(f(x)) for
-x  \in  X.
+x \in X.
 Prove that f is uniformly continuous if 4 is uniformly continuous.
 Hint: g=' has compact domain g(Y), and f(x) = g~'(h(x)).
 Prove also that fis continuous if 4 is continuous.
@@ -5633,7 +5633,7 @@ in Chap. 9.
 
 THE DERIVATIVE OF A REAL FUNCTION
 
-5.1 Definition Let f be defined (and real-valued) on [q, b]. For any x  \in  [a, b]
+5.1 Definition Let f be defined (and real-valued) on [q, b]. For any x \in [a, b]
 form the quotient
 
 _SO)-f®)
@@ -5665,7 +5665,7 @@ detail.
 If f is defined on a segment (a, b) and if a < x < b, then f'(x) is defined
 by (1) and (2), as above. But f’(a) and f”(b) are not defined in this case.
 
-5.2 Theorem Let f be defined on [a, b]. If fis differentiable at a point x  \in  [a, b],
+5.2 Theorem Let f be defined on [a, b]. If fis differentiable at a point x \in [a, b],
 then f is continuous at x.
 
 Proof Ast - x, we have, by Theorem 4.4,
@@ -5678,7 +5678,7 @@ even become acquainted with a function which is continuous on the whole line
 without being differentiable at any point!
 
 5.3 Theorem Suppose f and g are defined on [a, b] and are differentiable at a
-point x  \in  [a, bl. Then f + g, fg, and f|g are differentiable at x, and
+point x \in [a, bl. Then f + g, fg, and f|g are differentiable at x, and
 
 a (+9) x) =f) +g (x);
 ®) (fH) x) =f (X)g(x) + f(x)g' x);
@@ -5713,7 +5713,7 @@ important theorem about derivatives. We shall meet more general versions of it
 in Chap. 9.
 
 5.5 Theorem Suppose f is continuous on [a, bl, f'(x) exists at some point
-x  \in  [a, b], g is defined on an interval I which contains the range of f, and g is
+x \in [a, b], g is defined on an interval I which contains the range of f, and g is
 differentiable at the point f(x). If
 
 h(t) =g(f(t)) (a<t<b),
@@ -5787,8 +5787,8 @@ DIFFERENTIATION 107
 MEAN VALUE THEOREMS
 
 5.7 Definition Let f be a real function defined on a metric space X. We say
-that f has a local maximum at a point p  \in  Xif there exists 6 > 0 such that f(g) XT
-f(p) for all g  \in  X with d(p, q) <6.
+that f has a local maximum at a point p \in Xif there exists 6 > 0 such that f(g) XT
+f(p) for all g \in X with d(p, q) <6.
 
 Local minima are defined likewise.
 
@@ -5814,7 +5814,7 @@ t- x ~ 7
 which shows that f'(x) XT 0. Hence f(x) =0.
 
 5.9 Theorem [ff and g are continuous real functions on [a,b] which are
-differentiable in (a,b), then there is a point x  \in  (a,b) at which
+differentiable in (a,b), then there is a point x \in (a,b) at which
 
 (©?) - f(a)]g'(x) = [9(b) - g(a)]f" (x).
 Note that differentiability is not required at the endpoints.
@@ -5823,12 +5823,12 @@ h(t) = [f() - fa]g(t) - [9(®) - ga]f (1)  (aa<z<b).
 Then h is continuous on [a,b], h is differentiable in (a, b), and
 (12) h(a) - f(b)g(a) - f(a)g(b) = h(D).
 
-To prove the theorem, we have to show that A’(x) = 0 for some x  \in  (a, b).
+To prove the theorem, we have to show that A’(x) = 0 for some x \in (a, b).
 If h is constant, this holds for every x  \in (a,b). If h(t) > h(a) for
 some f \in  (a,b), let x be a point on [a,b]at which h attains its maximum
 108 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
-(Theorem 4.16). By (12), x  \in  (a, b), and Theorem 5.8 shows that A(x) = 0.
+(Theorem 4.16). By (12), x \in (a, b), and Theorem 5.8 shows that A(x) = 0.
 If A(t) < h(a) for some t \in  (a, b), the same argument applies if we choose
 for x a point on [a, b] where h attains its minimum.
 
@@ -5836,14 +5836,14 @@ This theorem is often called a generalized mean value theorenz; the following
 special case is usually referred to as ""the' mean value theorem:
 
 5.10 Theorem If fis a real continuous function on [a, b] which is differentiable
-in (a, b), then there is a point x  \in  (a, b) at which
+in (a, b), then there is a point x \in (a, b) at which
 Sb) = fla) = (b - a) f(x).
 Proof Take g(x) =x in Theorem 5.9.
 
 5.11 Theorem Suppose f is differentiable in (a, b).
-(a) ff'(x) 20 forall x  \in  (a, b), then f is monotonically increasing.
-(b) If f'(x)=0 for all x  \in  (a, b), then fis constant.
-(©) Iff(x) <0 forall x  \in  (a, b), then f is monotonically decreasing.
+(a) ff'(x) 20 forall x \in (a, b), then f is monotonically increasing.
+(b) If f'(x)=0 for all x \in (a, b), then fis constant.
+(©) Iff(x) <0 forall x \in (a, b), then f is monotonically decreasing.
 
 Proof All conclusions can be read off from the equation
 
@@ -5862,10 +5862,10 @@ which are continuous on an interval: Intermediate values are assumed (compare
 Theorem 4.23). The precise statement follows.
 
 5.12 Theorem Suppose fis a real differentiable function on [a, b] and suppose
-f'(a) <A <f'(b). Then there is a point x  \in  (a, b) such that f(x) = A.
+f'(a) <A <f'(b). Then there is a point x \in (a, b) such that f(x) = A.
 A similar result holds of course if f'(a) > f(b).
 Proof Put g(r) =f(t) - It. Then g’(a) <0, so that g(t,) < g(a) for some
-t;  \in  (a,b), and g'(b) > 0, so that g(r,) <g(b) for some ,  \in  (a, b). Hence
+t; \in (a,b), and g'(b) > 0, so that g(r,) <g(b) for some , \in (a, b). Hence
 g attains its minimum on [a, b] (Theorem 4.16) at some point x such that
 a <x <b. By Theorem 5.8, g'(x) = 0. Hence f(x) = A.
 DIFFERENTIATION 109
@@ -5904,7 +5904,7 @@ Definition 4.33.
 
 Proof We first consider the case in which - 00 <A < +00. Choose a
 real number q such that A <q, and then choose r such that A <r <gq.
-By (13) there is a point c  \in  (a,b) such that a < x < c implies
+By (13) there is a point c \in (a,b) such that a < x < c implies
 
 £1)
 Fre
@@ -5926,12 +5926,12 @@ g
 110 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 Next, suppose (15) holds. Keeping y fixed in (18), we can choose
-a point c,  \in  (a, y) such that g(x) > g(y) and g(x) > 0 if a < x < c;. Multi-
+a point c, \in (a, y) such that g(x) > g(y) and g(x) > 0 if a < x < c;. Multi-
 plying (18) by [g(x) - g(»))/g(x), we obtain
 [0 a0) 10) alice
 
 0 0 gx) gl
-If we let x =a in (20). (15) shows that there is a point c,  \in  (a, c;)
+If we let x =a in (20). (15) shows that there is a point c, \in (a, c;)
 such that
 21) TACT (a<x<ey)
 g(x)
@@ -6093,7 +6093,7 @@ mains true for vector-valued functions: From Theorem 5.10 it follows that
 lf) -fa] <b -a) sup. Lf (01
 
 5.19 Theorem Suppose f is a continuous mapping of [a.b] into R* and f is
-differentiable in (a, b). Then there exists x  \in  (a,b) such that
+differentiable in (a, b). Then there exists x \in (a,b) such that
 
 f(b) - fa)| <(b-a)|f'(x)|.
 Proof" Put z = f(b) - f(a). and define
@@ -6103,7 +6103,7 @@ Then c is a real-valued continuous function on [a,b ]which is differentia-
 ble in (a,b). The mean value theorem shows therefore that
 
 eb) - ea) = (b - a)p'(x) = (b - a)z- f(x)
-for some x  \in  (a,b). On the other hand,
+for some x \in (a,b). On the other hand,
 ob) - pla) =z f(b) -~z fla) =z z = |z|*.
 
 (a<t<b).
@@ -6130,7 +6130,7 @@ x) G )
 
 3. Suppose g is a real function on R', with bounded derivative (say |g’| <M). Fix
 £>0, and define f(x) - x + eg(x). Prove that fis one-to-one if & is small enough.
-(A set of admissible values of  \in  can be determined which depends only on M.)
+(A set of admissible values of \in can be determined which depends only on M.)
 
 4. If
 
@@ -6164,7 +6164,7 @@ fa) _fx)
 im-= =-
 x g(t) g&)
 (This holds also for complex functions.)
-8. Suppose f' is continuous on [a,b]and  \in  >0. Prove that there exists 8 >0 such
+8. Suppose f' is continuous on [a,b]and \in >0. Prove that there exists 8 >0 such
 that
 
 fi) - fx) HE
@@ -6237,7 +6237,7 @@ Prove the following statements:
 
 Let f be a differentiable real function defined in (a, b). Prove that fis convex if
 and only iff' is monotonically increasing. Assume next that f”(x) exists for
-every x  \in  (a,b),and prove that fis convex if and only if f(x) >0 forall x  \in  (a,b).
+every x \in (a,b),and prove that fis convex if and only if f(x) >0 forall x \in (a,b).
 Suppose a  \in R', fis a twice-differentiable real function on (a, ©), and Mo, M,, M,
 are the least upper bounds of |f(x)|, |f'(x)|, |f"(x)|, respectively, on (a, x).
 Prove that
@@ -6248,7 +6248,7 @@ Mi <4M,M,.
 Hint: If h > 0, Taylor's theorem shows that
 
 F0) = 35 Ue +20) = f= (6)
-for some £  \in  (x, x + 2h). Hence
+for some £ \in (x, x + 2h). Hence
 
 M
 1/0] <hM, +22.
@@ -6271,16 +6271,16 @@ f(=D)=0, fO=0, [fM)=1, [fO)=
 Prove that f(x) > 3 for some x  \in (-1, 1).
 Note that equality holds for #(x* + x2).
 Hint: Use Theorem 5.15, with a =0 and 8 = +1, to show that there exist
-s \in  (0,1) and t  \in  (-1, 0) such that
+s \in  (0,1) and t \in (-1, 0) such that
 Fs) +r) -6.
 18. Suppose fis a real function on [a,b], n is a positive integer, and f=" exists for
-every t  \in  [a,b]. Let a, B, and P be as in Taylor's theorem (5.15). Define
+every t \in [a,b]. Let a, B, and P be as in Taylor's theorem (5.15). Define
 
 Al SO - £8)
 
 on) = -B
 
-for t  \in  [a,b] ,t # B, differentiate
+for t \in [a,b] ,t # B, differentiate
 fO-f(B)=(t_ BO)
 
 n - I times at f = qa, and derive the following version of Taylor's theorem:
@@ -6383,12 +6383,12 @@ suggested in Exercise 22.)
 
 Do the same when 0 <a < 1.
 Suppose f is twice differentiable on [a,b], f(a) <0, f(b) >0, f'(x)=8>0, and
-0<f"(x)<M for all X \in  [a,b]. Let  \in  be the unique point in (a,b) at which
+0<f"(x)<M for all X \in  [a,b]. Let \in be the unique point in (a,b) at which
 f& =o.
 
 Complete the details in the following outline of Newton's method for com-
 puting &.
-(a) Choose xy  \in  (5,b), and define {x,} by
+(a) Choose xy \in (5,b), and define {x,} by
 
 SOx)
 S£(xn)
@@ -6410,7 +6410,7 @@ Xop1- E=
 
 (xn - 6)?
 
-for some .  \in  (c, x,).
+for some . \in (c, x,).
 (d)If A =M]/28, deduce that
 
 0S x0 - E52 [AC = OI
@@ -6435,8 +6435,8 @@ How does g(x )behave for x near £?
 DIFFERENTIATION 119
 
 Suppose fis differentiable on [a,b],f(a) =0, and there is a real number A such
-that {f'(x)| <Alf(x) on [a,b]. Prove that f(x)=0 for all x  \in  [a,b]. Hint: Fix
-Xo  \in  [a,b], let
+that {f'(x)| <Alf(x) on [a,b]. Prove that f(x)=0 for all x \in [a,b]. Hint: Fix
+Xo \in [a,b], let
 Mo =sup| f(x), ~~ M.=sup|f' (x)!
 for a <x < xo. For any such x,
 [f(x] <M (xo - a)< A(xo - a)Mo.
@@ -6450,7 +6450,7 @@ FO) =d(x, fx) (a<x<b).
 Prove that such a problem has at most one solution if there is a constant A such
 that
 [(x, y2) = $x, y0)| < Aly2 = yi]
-whenever (x, y1)  \in  R and (x,»2)  \in  R.
+whenever (x, y1) \in R and (x,»2) \in R.
 Hint: Apply Exercise 26 to the difference of two solutions. Note that this
 uniqueness theorem does not hold for the initial-value problem
 
@@ -6587,7 +6587,7 @@ This is the Riemann-Stieltjes integral (or simply the Stieltjes integral) of
 f with respect to «, over [a, b].
 
 If (7) exists, i.e., if (5) and (6) are equal, we say thatf is integrable with
-respect to a, in the Riemann sense, and write f  \in  2(a).
+respect to a, in the Riemann sense, and write f \in 2(a).
 
 By taking a(x) = x, the Riemann integral is seen to be a special case of
 the Riemann-Stieltjes integral. Let us mention explicitly, however, that in the
@@ -6666,7 +6666,7 @@ If P, is fixed and the sup is taken over all Py, (11) gives
 
 The theorem follows by taking the inf over all P, in (12).
 
-6.6 Theorem fe Ra) on [a,b] if and only if for every  \in  >0 there exists a
+6.6 Theorem fe Ra) on [a,b] if and only if for every \in >0 there exists a
 partition P such that
 
 (13) UP, fa) - L(P, f, 2) <e.
@@ -6682,8 +6682,8 @@ Thus (13)implies
 Hence, if (13)can be satisfied for every £ > 0, we have
 
 | fda = | fda,
-that is, f  \in  Z(«).
-Conversely, suppose f \in  %(x), and let  \in  > 0 be given. Then there
+that is, f \in Z(«).
+Conversely, suppose f \in  %(x), and let \in > 0 be given. Then there
 
 exist partitions P; and P, such that
 
@@ -6755,7 +6755,7 @@ U(P.f, ®) - L(P, f, 0) = Yom, -~ my) Ax;
 
 <n Ax; =nlad) - wa) <e
 i=
-By Theorem 6.6, f  \in  Z(®).
+By Theorem 6.6, f \in Z(®).
 
 6.9 Theorem [ff is monotonic on [a,b],and if a is continuous on [a,b], then
 fe Ra). (We still assume, of course, that a is monotonic.)
@@ -6782,11 +6782,11 @@ UP. fs) - L(P,f, 0) = PY [fC - fxs]
 
 - 40 0-10 Uf) -fa] <e
 
-if n is taken large enough. By Theorem 6.6, f  \in  %(«).
+if n is taken large enough. By Theorem 6.6, f \in %(«).
 
 6.10 Theorem Suppose f is bounded on [a,b], f has only finitely many points
 of discontinuity on [a,b], and a is continuous at every point at which f is discon-
-tinuous. Then f  \in  R(x).
+tinuous. Then f \in R(x).
 
 Proof Lete > 0 be given. Put M = sup |f(x)|, let E be the set of points
 at which f is discontinuous. Since E is finite and a is continuous at every
@@ -6857,7 +6857,7 @@ Riemann-integrable? The answer is given by Theorem 11.33(b).
 PROPERTIES OF THE INTEGRAL
 
 6.12 Theorem
-(a) If fi  \in  Ra) arid f,  \in  A(2) on [a,b], then
+(a) If fi \in Ra) arid f, \in A(2) on [a,b], then
 
 Si +12 e A),
 
@@ -6883,7 +6883,7 @@ b b
 
 < Mab) - a(a)].
 
-iffe A(x) and c is a positive constant, then f  \in  R(ca) and
+iffe A(x) and c is a positive constant, then f \in R(ca) and
 b b
 [" fdca) = c | fda.
 
@@ -6891,7 +6891,7 @@ Proof Iff=f, +f; and P is any partition of [a,b], we have
 (20) L(P, fy, 0) + L(P, f2, ®) < L(P, f, ®)
 SUP, f,0) < UP, fi, 0) + UP, f2, »).
 
-Iff,  \in  (a) and f,  \in  A(x), let  \in  > 0 be given. There are partitions P;
+Iff, \in (a) and f, \in A(x), let \in > 0 be given. There are partitions P;
 (j= 1, 2) such that
 
 UP; fi, 0) = L(P;, f;, o) <&.
@@ -6925,18 +6925,18 @@ that we omit the details. In part (c)the point is that (by passing to refine-
 ments) we may restrict ourselves to partitions which contain the point c,
 in approximating { f da.
 
-Theorem [ffe A(x) and g  \in  A(%) on [a,b], then
+Theorem [ffe A(x) and g \in A(%) on [a,b], then
 (a) fge A):
 
 ab b
 bf] e #00 and | fd <| fl da.
 
-Proof If we take c(c) = t2, Theorem 6.1 | shows that 2  \in  &(x) if fe R(x).
+Proof If we take c(c) = t2, Theorem 6.1 | shows that 2 \in &(x) if fe R(x).
 The identity
 
 dg=(f+9*-(/-9)
 completes the proof of (a).
-If we take c(z) = ||, Theorem 6.11 shows similarly that |f|  \in  (2).
+If we take c(z) = ||, Theorem 6.11 shows similarly that |f| \in (2).
 Choose c = +1, so that
 cf fdx>0.
 
@@ -7013,7 +7013,7 @@ that
 
 If we let N- co, we obtain (23).
 
-6.17 Theorem Assume a increases monotonically and «'  \in  R on [a,b]. Let f
+6.17 Theorem Assume a increases monotonically and «' \in R on [a,b]. Let f
 be a bounded real function on [a,b].
 
 an
@@ -7026,14 +7026,14 @@ an
 
 E29)
 
-Then f \in  R(x) if and only if fo’  \in  R. In that case
+Then f \in  R(x) if and only if fo’ \in R. In that case
 
 b b
 | fda = Jo f(x)’ (x) dx.
 Proof Let e>0 be given and apply Theorem 6.6 to ci’ There is a par-
 tition P = {x,, ..., x,,)of [a,b]such that
 U(P,a'y - L(P,a')<e.
-The mean value theorem furnishes points #;  \in  [x;_y, x;] such that
+The mean value theorem furnishes points #; \in [x;_y, x;] such that
 Aa; = o'(1;) Ax;
 fori=1,...,n Ifs; e[x;_y, x;], then
 
@@ -7047,7 +7047,7 @@ it follows from (29) that
 In particular,
 2. f(s) Ax, < U(P, fo) + Ms,
 
-for all choices of s;  \in  [x;_,. x;], so that
+for all choices of s; \in [x;_,. x;], so that
 UP, f, a) < U(P, fa") + Me.
 The same argument leads from (30)to
 
@@ -7098,12 +7098,12 @@ differentiable.
 
 6.19 Theorem (change ofvariable) Suppose c is a strictly increasing continuous
 function that maps an interval [A,B] onto [a,b]. Suppose o is monotonically
-increasing on [a,b] and f  \in  A(«) on [a,b]. Define and g on [A,B] by
+increasing on [a,b] and f \in A(«) on [a,b]. Define and g on [A,B] by
 
 (36) BO) = ale), 90) = Se).
 THE RIEMANN-STIELTIESINTEGRAL 133
 
-Then g  \in  R(f) and
+Then g \in R(f) and
 
 (37)
 
@@ -7122,9 +7122,9 @@ exactly the same as those taken by g on [y;_, y;|, we see that
 
 U(Q.9. B= U(P, f, 9), L(Q, g, B) = L(P,f, a).
 
-Since f  \in  Z(x), P can be chosen so that both U(P, f, a) and L(P, f, a)
+Since f \in Z(x), P can be chosen so that both U(P, f, a) and L(P, f, a)
 are close to { fda. Hence (38), combined with Theorem 6.6, shows that
-g  \in  A(P) and that (37)holds. This completes the proof.
+g \in A(P) and that (37)holds. This completes the proof.
 
 Let us note the following special case:
 Take a(x) = x. Then ff = ca. Assume c'  \in # on [A,B]. If Theorem
@@ -7176,7 +7176,7 @@ Fu) -F)
 - 8s
 It follows that F'(x,) = f (xo).
 
-6.21 The fundamental theorem of calculus ff  \in  %# on [a,b] and if there is
+6.21 The fundamental theorem of calculus ff \in %# on [a,b] and if there is
 a differentiable function F on [a,b] such that F' =f, then
 
 [ fi) dx = F(b) - F(a).
@@ -7196,19 +7196,19 @@ F(b) - F(a) - [ f(x) dx | <e.
 Since this holds for every  \in c > 0, the proof is complete.
 
 6.22 Theorem (integration by parts) Suppose F and G are differentiable func-
-tionson [a,b], F' =fe R, and G' = g  \in  92. Then
+tionson [a,b], F' =fe R, and G' = g \in 92. Then
 
 [7 (x)g(x) dx = F(b)G(b) - F(a)G(a) - [rece dx.
 
 Proof Put H(x)= F(x)G(x) and apply Theorem 6.2/ to H and its deriv-
-ative. Note that H'  \in  92, by Theorem 6.13.
+ative. Note that H' \in 92, by Theorem 6.13.
 THE RIEMANN-STIELTJES INTEGRAL 135
 
 INTEGRATION OF VECTOR-VALUED FUNCTIONS
 
 6.23 Definition Let), ..., f, be real functions on [a, b], and let f = (f, ..., f})
 be the corresponding mapping of [a, b] into R*. If « increases monotonically
-on [a, b], to say that f  \in  Z(«) means that f;  \in  #(«) forj=1, ..., k. If this is the
+on [a, b], to say that f \in Z(«) means that f; \in #(«) forj=1, ..., k. If this is the
 case, we define
 
 [fax = (I fds, [4 a).
@@ -7220,15 +7220,15 @@ vector-valued integrals; we simply apply the earlier results to each coordinate.
 The same is true of Theorems 6.17, 6.20, and 6.21. To illustrate, we state the
 analogue of Theorem 6.21.
 
-6.24 Theorem IffandF map [a, b] into R*, iff  \in  # on [a, b), and if F' = {, then
+6.24 Theorem IffandF map [a, b] into R*, iff \in # on [a, b), and if F' = {, then
 b
 | 1(t) dt = F(b) - F(a).
 
 The analogue of Theorem  \in .13(b) offers some new features, however, at
 least in its proof.
 
-6.25 Theorem If f maps [a, b] into R* and if f  \in  R(x) for some monotonically
-increasing function a on [a, b], then |f|  \in  #(«), and
+6.25 Theorem If f maps [a, b] into R* and if f \in R(x) for some monotonically
+increasing function a on [a, b], then |f| \in #(«), and
 
 (40) | [1 dif < | 11] da.
 
@@ -7238,7 +7238,7 @@ Proof Iff,,...,f, are the components of f, then
 By Theorem 6.11, each of the functions f belongs to Z(«); hence so does
 their sum. Since x? is a continuous function of x, Theorem 4.17 shows
 that the square-root function is continuous on [0, M], for every real M.
-If we apply Theorem 6.11 once more, (41) shows that |f|  \in  Z(«).
+If we apply Theorem 6.11 once more, (41) shows that |f| \in Z(«).
 
 To prove (40), puty = (yy, ..., »i), where y; = |/; do. Then we have
 y = [f dx, and
@@ -7368,7 +7368,7 @@ for j=1, 2, 3; and B,(0) = 0, 8,(0) =1, B5(0) = 4. Let f be a bounded function o
 for any a <b.
 
 5. Suppose fis a bounded real function on [a, b], and £2  \in % on [a,b]. Does it
-follow that fe Z? Does the answer change if we assume that f3  \in  2?
+follow that fe Z? Does the answer change if we assume that f3 \in 2?
 
 6. Let P be the Cantor set constructed in Sec. 2.44. Let f be a bounded real function
 on [0, 1] which is continuous at every point outside P. Prove that f \in  Z% on [0, 1].
@@ -7429,7 +7429,7 @@ uv <4 i z.
 p q
 
 Equality holds if and only if u? = v7.
-(b) If fe R(x), g  \in  R(x), f>0,g =>0, and
+(b) If fe R(x), g \in R(x), f>0,g =>0, and
 
 [rr aa= 1= [ora
 then
@@ -7447,12 +7447,12 @@ scribed in Exercises 7 and 8.
 
 140 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
-11. Let a be a fixed increasing function on [a,b]. For u  \in  #(«), define
+11. Let a be a fixed increasing function on [a,b]. For u \in #(«), define
 
 b 1/2
 [lee] = \ judo] .
 
-Suppose f, g, h  \in  #(«), and prove the triangle inequality
+Suppose f, g, h \in #(«), and prove the triangle inequality
 If -hll.<| -gllz+ lig - All:
 as a consequence of the Schwarz inequality, as in the proof of Theorem 1.37.
 12. With the notations of Exercise 11, suppose f \in  #(x) and £>0. Prove that
@@ -7540,7 +7540,7 @@ for a <x <b. Prove that
 [ato dx = G(B)a(b) - G(a)oa) ['G da,
 
 Hint: Take g real, without loss of generality. Given P= {xo, X1, ..., Xn},
-choose #;  \in  (x;-1, x;) so that g(#;) Ax; = G(x;) - G(x;-;). Show that
+choose #; \in (x;-1, x;) so that g(#;) Ax; = G(x;) - G(x;-;). Show that
 
 3 aleg(t) Ax, = G(b)a(b) - G(a)a(a) hy Glxi-1) Aa.
 
@@ -7570,7 +7570,7 @@ DISCUSSION OF MAIN PROBLEM
 
 7.1 Definition Suppose {f,}, n=1,2,3,..., is a sequence of functions
 defined on a set FE, and suppose that the sequence of numbers { f,(x)} converges
-for every x  \in  E. We can then define a function f by
+for every x \in E. We can then define a function f by
 
 M fe) =limf(x)  (xeE).
 144 PRINCIPLES OF MATHEMATICAL ANALYSIS
@@ -7578,7 +7578,7 @@ M fe) =limf(x)  (xeE).
 Under these circumstances we say that {f,} converges on E and that f is
 the limit, or the limit function, of { f,}. Sometimes we shall use a more descriptive
 terminology and shall say that “{f,} converges to f pointwise on E” if (1) holds.
-Similarly, if Zf,(x) converges for every x  \in  E, and if we define
+Similarly, if Zf,(x) converges for every x \in E, and if we define
 
 a f0=F00  (xeB),
 
@@ -7740,14 +7740,14 @@ such that » > N implies
 
 (12) 100) - (0) <e
 
-for all x  \in  E.
+for all x \in E.
 
 It is clear that every uniformly convergent sequence is pointwise con-
 vergent. Quite explicitly, the difference between the two concepts is this: If {£,}
 converges pointwise on E, then there exists a function f such that, for every
-e > 0, and for every x  \in  E, there is an integer N, depending on c and on x, such
+e > 0, and for every x \in E, there is an integer N, depending on c and on x, such
 that (12) holds if n > N; if {f,} converges uniformly on E, it is possible, for each
-c > 0, to find one integer N which will do for all x  \in  E.
+c > 0, to find one integer N which will do for all x \in E.
 
 We say that the series Zf,(x) converges uniformly on FE if the sequence
 {s,} of partial sums defined by
@@ -7763,12 +7763,12 @@ The Cauchy criterion for uniform convergence is as follows.
 
 7.8 Theorem The sequence of functions {f,}, defined on E, converges uniformly
 on E if and only if for every c > 0 there exists an integer N such that m > N,
-n> N, x  \in  E implies
+n> N, x \in E implies
 
 (13) [x)= fulX) | < &.
 
 Proof Suppose {f,} converges uniformly on E, and let f be the limit
-function. Then there is an integer N such that n > N, x  \in  E implies
+function. Then there is an integer N such that n > N, x \in E implies
 
 0 =f] <3»
 so that
@@ -7787,7 +7787,7 @@ let m - oo in (13). Since f,,(x) = f(x) as m - co, this gives
 
 (14) Ix) =f) <e
 
-for every n > N and every x  \in  E, which completes the proof.
+for every n > N and every x \in E, which completes the proof.
 The following criterion is sometimes useful.
 
 7.9 Theorem Suppose
@@ -7832,7 +7832,7 @@ In other words, the conclusion is ft
 a7 lim lim £,(t) = lim lim £,(1).
 
 Proof Let c > 0 be given. By the uniform convergence of {f,}, there
-exists N such that n > N, m > N, t  \in  E imply
+exists N such that n > N, m > N, t \in E imply
 
 (18) [£0 - ful) | Se.
 Letting c - x in (18), we obtain
@@ -7847,7 +7847,7 @@ Next,
 We first choose n such that
 20) FO ~ £0] <5
 
-for all c  \in  E (this is possible by the uniform convergence), and such that
+for all c \in E (this is possible by the uniform convergence), and such that
 QI 4, =A] <5:
 
 Then, for this n, we choose a neighborhood V of x such that
@@ -7858,7 +7858,7 @@ if te VANE, t#x.
 Substituting the inequalities (20) to (22) into (19), we see that
 
 [f()- 4] <e,
-provided r  \in  Vn E, t#x. This is equivalent to (16).
+provided r \in Vn E, t#x. This is equivalent to (16).
 150 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 7.12 Theorem If{f,} is a sequence of continuous functions on E, and if f, > f
@@ -7902,13 +7902,13 @@ We associate with each fe ¥(X) its supremum norm
 
 If = sup [SG
 Since f is assumed to be bounded, [[f|< co. It is obvious that | f| = 0 only if
-f(x) =0 for every x  \in  X, that is, only if f=0. If # =f + g, then
+f(x) =0 for every x \in X, that is, only if f=0. If # =f + g, then
 Ih) | < fC) | + 1g) | < If + lgll
-for all x  \in  X; hence
+for all x \in X; hence
 If + gl < If + lgll.
 SEQUENCES AND SERIES OF FUNCTIONS 151
 
-If we define the distance between fe ¥(X) and g  \in   \in (X) to be [If -g],
+If we define the distance between fe ¥(X) and g \in  \in (X) to be [If -g],
 it follows that Axioms 2.15 for a metric are satisfied.
 
 We have thus made  \in (X) into a metric space.
@@ -7928,15 +7928,15 @@ ec > 0 corresponds an N such that | f, -f,| <& if n> N and m > N.
 It follows (by Theorem 7.8) that there is a function f with domain X to
 which {f,} converges uniformly. By Theorem 7.12, f is continuous.
 Moreover, f is bounded, since there is an n such that |f(x) - f,(x)| <1
-for all x  \in  X, and f, is bounded.
+for all x \in X, and f, is bounded.
 
 Thus fe%(X), and since f, -f uniformly on X, we have
 If-=fol »0asn- co.
 
 UNIFORM CONVERGENCE AND INTEGRATION
 
-7.16 Theorem Let a be monotonically increasing on (a, b]. Suppose f,  \in  &(«)
-onla,b], forn=1,2,3,..., and suppose f, - f uniformly on (a, b]. Then f  \in  R(x)
+7.16 Theorem Let a be monotonically increasing on (a, b]. Suppose f, \in &(«)
+onla,b], forn=1,2,3,..., and suppose f, - f uniformly on (a, b]. Then f \in R(x)
 on [a, b], and
 
 (23) | ’ fda = lim | ’r da.
@@ -7961,7 +7961,7 @@ Hence
 
 Since c, = 0 as n - co (Theorem 7.9), the upper and lower integrals of f
 are equal.
-Thus f  \in  Z(x). Another application of (25) now yields
+Thus f \in Z(x). Another application of (25) now yields
 
 (26) Ix fx - [4 a
 
@@ -7969,7 +7969,7 @@ This implies (23).
 
 < ead) - oa).
 
-Corollary If f,  \in  #(a) on [a, b] and if
+Corollary If f, \in #(a) on [a, b] and if
 
 fx) = py fx) (a<x<D),
 the series converging uniformly on [a, b), then
@@ -8111,7 +8111,7 @@ SEQUENCES AND SERIES OF FUNCTIONS 155
 7.19 Definition Let {f,} be a sequence of functions defined on a set E.
 
 We say that{f,} is pointwise bounded on E if the sequence { f,(x)} is bounded
-for every x  \in  E, that is, if there exists a finite-valued function c defined on E
+for every x \in E, that is, if there exists a finite-valued function c defined on E
 such that
 
 i) <o(x) (xeEn=1,23..).
@@ -8123,7 +8123,7 @@ fi) <M (xeE,n=1,2,3,...).
 
 Now if { f,} is pointwise bounded on E and E| is a countable subset of E,
 it is always possible to find a subsequence {f, } such that {f, (x)} converges for
-every x  \in  E;. This can be done by the diagonal process which is used in the
+every x \in E;. This can be done by the diagonal process which is used in the
 proof of Theorem 7.23.
 
 However, even if {f,} is a uniformly bounded sequence of continuous
@@ -8136,7 +8136,7 @@ is quite simple if we appeal to a theorem from Chap. 11.
 fu(x) = sin nx O0O<x<2n,n=1,23,...).
 
 Suppose there exists a sequence {nm} such that {sin n,x} converges, for every
-x  \in  [0, 2n]. In that case we must have
+x \in [0, 2n]. In that case we must have
 
 lim (sin mx - sin m4 x) = 0 0 <x <2nm);
 
@@ -8195,7 +8195,7 @@ metric space X is said to be equicontinuous on E if for every &c > 0 there exist
 
 fx) =f) <e
 
-whenever d(x, y) < 9d, x  \in  E, y  \in  E, and fe #. Here d denotes the metric of X.
+whenever d(x, y) < 9d, x \in E, y \in E, and fe #. Here d denotes the metric of X.
 
 It is clear that every member of an equicontinuous family is uniformly
 continuous.
@@ -8209,7 +8209,7 @@ which has nothing to do with continuity.
 
 7.23 Theorem If{f,} is a pointwise bounded sequence of complex functions on
 a countable set E, then {f,} has a subsequence {f, } such that {f, (x)} converges for
-every x  \in  E.
+every x \in E.
 SEQUENCES AND SERIES OF FUNCTIONS 157
 
 Proof Let{x;},i=1,2,3,..., be the points of E, arranged in a sequence.
@@ -8247,9 +8247,9 @@ S: fin faz fiz Saar
 
 By (c), the sequence S (except possibly its first n - 1 terms) is a sub-
 sequence of S,, for n=1,2,3,.... Hence (b) implies that {f, .(x)}
-converges, as n - oo, for every x;  \in  E.
+converges, as n - oo, for every x; \in E.
 
-7.24 Theorem If K is a compact metric space, if f,  \in  c(K) for n=1,2,3, ...,
+7.24 Theorem If K is a compact metric space, if f, \in c(K) for n=1,2,3, ...,
 and if {f,} converges uniformly on K, then{f,} is equicontinuous on K.
 
 42)
@@ -8296,31 +8296,31 @@ Proof
 for all n, provided that d(x, y) <4.
 
 Since K is compact, there are finitely many points p,,...,p, in K
-such that to every x  \in  K corresponds at least one p; with d(x, p;) <4.
+such that to every x \in K corresponds at least one p; with d(x, p;) <4.
 Since {f,} is pointwise bounded, there exist M; < oo such that |f,(p,)| < M,
 for all n. If M=max(M,,...,M,), then |f(x)| <M +c for every
-x  \in  K. This proves (a).
+x \in K. This proves (a).
 
 (b) Let E be a countable dense subset of K. (For the existence of such a
 set E, see Exercise 25, Chap. 2.) Theorem 7.23 shows that {f,} has a
-subsequence {f, } such that {f, (x)} converges for every x  \in  E.
+subsequence {f, } such that {f, (x)} converges for every x \in E.
 
 Put f, =g;, to simplify the notation. We shall prove that {g;}
 converges uniformly on XK.
 
 Let c > 0, and pick 6 > 0 as in the beginning of this proof. Let
-V(x, 8) be the set of all y  \in  K with d(x, y) <4. Since E is dense in K, and
+V(x, 8) be the set of all y \in K with d(x, y) <4. Since E is dense in K, and
 K is compact, there are finitely many points x, ..., x,, in E such that
 
 Ke V(x, 8) uu V(x, 9d).
 
-Since {g.(x)} converges for every x  \in  E, there is an integer N such
+Since {g.(x)} converges for every x \in E, there is an integer N such
 that
 
 lgi(xs) - g(x) | <e
 
 whenever i> N,j>N,1 <s<m.
-If x  \in  K, (45) shows that x  \in  V(x,, J) for some s, so that
+If x \in K, (45) shows that x \in V(x,, J) for some s, so that
 
 lg:(x) -gi(x)| <e
 for every i. If i > N and j > N, it follows from (46) that
@@ -8457,7 +8457,7 @@ We shall now isolate those properties of the polynomials which make
 the Weierstrass theorem possible.
 
 7.28 Definition A family of of complex functions defined on a set E is said
-to be an algebra if (i) f+ g  \in  o#, (ii) fg  \in  &/, and (iii) cf  \in  of for all fe of, g  \in  A
+to be an algebra if (i) f+ g \in o#, (ii) fg \in &/, and (iii) cf \in of for all fe of, g \in A
 and for all complex constants c, that is, if o is closed under addition, multi-
 plication, and scalar multiplication. We shall also have to consider algebras of
 real functions; in this case, (iii) is of course only required to hold for all real c.
@@ -8476,22 +8476,22 @@ is the uniform closure of the set of polynomials on [a, 5].
 7.29 Theorem Let B be the uniform closure of an algebra of of bounded
 functions. Then A is a uniformly closed algebra.
 
-Proof If fe # and g  \in  4, there exist uniformly convergent sequences
-{f.},{g,} such that f, » f,g, > g and f,  \in  &/, g,  \in  of. Since we are dealing
+Proof If fe # and g \in 4, there exist uniformly convergent sequences
+{f.},{g,} such that f, » f,g, > g and f, \in &/, g, \in of. Since we are dealing
 
 with bounded functions, it is easy to show that
 Sot ao Sta, fi9-f9, fad,
 
 where c is any constant, the convergence being uniform in each case.
-Hence f +g  \in  8, fg  \in  B, and cf  \in  4, so that 4 is an algebra.
+Hence f +g \in 8, fg \in B, and cf \in 4, so that 4 is an algebra.
 By Theorem 2.27, # is (uniformly) closed.
 162 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 7.30 Definition Let of be a family of functions on a set E. Then & is said
-to separate points on E if to every pair of distinct points x, x,  \in  E there corre-
+to separate points on E if to every pair of distinct points x, x, \in E there corre-
 sponds a function fe & such that f(x,) # f(x).
 
-If to each x  \in  E there corresponds a function g  \in  & such that g(x) #0,
+If to each x \in E there corresponds a function g \in & such that g(x) #0,
 we say that of vanishes at no point of E.
 
 The algebra of all polynomials in one variable clearly has these properties
@@ -8513,7 +8513,7 @@ gx) #g(x2), h(x) #0,  k(x;) #0.
 Put
 u = gk - g(x,)k, v = gh -g(x,)h.
 
-Then u  \in  of, v  \in  of, u(x,) = v(x,) = 0, u(x,) # 0, and v(x,) # 0. Therefore
+Then u \in of, v \in of, u(x,) = v(x,) = 0, u(x,) # 0, and v(x,) # 0. Therefore
 
 cv cu
 - +
@@ -8532,7 +8532,7 @@ uniform closure # of sf consists of all real continuous functions on K.
 
 We shall divide the proof into four steps.
 
-STEP | If fe &B, then |f|  \in  &.
+STEP | If fe &B, then |f| \in &.
 Proof Let
 (52) a=sup |[f(x)| (xeK)
 SEQUENCES AND SERIES OF FUNCTIONS 163
@@ -8551,9 +8551,9 @@ g= Y af!
 i=1
 is a member of #. By (52) and (53), we have
 9x) = If) || <e (xk).
-Since 4 is uniformly closed, this shows that |f|  \in  4.
+Since 4 is uniformly closed, this shows that |f| \in 4.
 
-STEP 2 If fe # and g  \in  B, then max (f, g)  \in  # and min (f, g)  \in  B.
+STEP 2 If fe # and g \in B, then max (f, g) \in # and min (f, g) \in B.
 
 By max (f; g) we mean the function 4 defined by
 
@@ -8568,15 +8568,15 @@ max (f,9) = L344 al,
 min (9) = 34 - V0,
 
 By iteration, the result can of course be extended to any finite set
-of functions: If f,..., f,  \in  &, then max (f},...,f,)  \in  #8, and
+of functions: If f,..., f, \in &, then max (f},...,f,) \in #8, and
 
-min (fy, ...,f,)  \in  AB.
-STEP 3 Given a real function f, continuous on K, a point x  \in  K, and c > 0, there
-exists a function g,  \in  B such that g (x) = f(x) and
+min (fy, ...,f,) \in AB.
+STEP 3 Given a real function f, continuous on K, a point x \in K, and c > 0, there
+exists a function g, \in B such that g (x) = f(x) and
 (54) :(>f)-ce (tek).
 
 Proof Since of = # and &f satisfies the hypotheses of Theorem 7.31 so
-does #. Hence, for every y  \in  K, we can find a function 4,  \in  # such that
+does #. Hence, for every y \in K, we can find a function 4, \in # such that
 
 (55) h(x) =f(x), mb») =SO)
 164 PRINCIPLES OF MATHEMATICAL ANALYSIS
@@ -8598,7 +8598,7 @@ By step 2, g. cB, and the relations (55) to (57) show that g, has the other
 required properties.
 
 STEP 4 Given a real function f, continuous on K, and c > 0, there exists a function
-h  \in  B such that
+h \in B such that
 
 (58)
 
@@ -8616,7 +8616,7 @@ of the theorem.
 
 (62)
 
-Proof Let us consider the functions g,, for each x  \in  KX, constructed in
+Proof Let us consider the functions g,, for each x \in KX, constructed in
 step 3. By the continuity of g,, there exist open sets V, containing x,
 such that
 
@@ -8628,7 +8628,7 @@ KeV,u- ub.
 Put
 h=min(g,,,...,9.)
 
-By step 2, h  \in  #, and (54) implies
+By step 2, h \in #, and (54) implies
 
 ht) > f-e (tek),
 whereas (59) and (60) imply
@@ -8655,14 +8655,14 @@ Proof Let 7; be the set of all real functions on K which belong to «7.
 If fe o and f= u + iv, with u, v real, then 2u = f + f, and since &/
 is self-adjoint, we see that ue oy. If x; # x,, there exists fe &/ such
 that f(x,) = 1, f(x,) = 0; hence 0 = u(x,) # u(x,) = 1, which shows that
-«fp separates points on K. If x  \in  K, then g(x) # 0 for some g  \in  &, and
+«fp separates points on K. If x \in K, then g(x) # 0 for some g \in &, and
 there is a complex number 4 such that Ag(x) > 0; if f= Ag, f=u + iv, it
 follows that u(x) > 0; hence &/, vanishes at no point of K.
 
 Thus « satisfies the hypotheses of Theorem 7.32. It follows that
 every real continuous function on KX lies in the uniform closure of «7p,
 hence lies in #. If fis a complex continuous function on K, f= u +iv,
-then u  \in  8, v  \in  AB, hence fe #4. This completes the proof.
+then u \in 8, v \in AB, hence fe #4. This completes the proof.
 
 EXERCISES
 
@@ -8739,7 +8739,7 @@ function f on a set E. Prove that
 
 lim x) = f(x)
 
-for every sequence of points x,  \in  E such that x, - x, and x  \in  E. Is the converse of
+for every sequence of points x, \in E such that x, - x, and x \in E. Is the converse of
 this true?
 SEQUENCES AND SERIES OF FUNCTIONS 167
 
@@ -8762,7 +8762,7 @@ Show that fis nevertheless Riemann-integrable on every bounded interval.
 Suppose {f+}, {ga} are defined on E, and
 (a) Z f, has uniformly bounded partial sums;
 (b) g»- 0 uniformly on E;
-(c) 91(x) = g2(x) 2 ga(x) = for every x  \in  E.
+(c) 91(x) = g2(x) 2 ga(x) = for every x \in E.
 
 Prove that T f,g. converges uniformly on E. Hint: Compare with Theorem
 3.42.
@@ -8792,11 +8792,11 @@ Assume that {f,} is a sequence of monotonically increasing functions on R! with
 
 SG) = lim f(x)
 
-for every x  \in  R'. (The existence of such a pointwise convergent subsequence is
+for every x \in R'. (The existence of such a pointwise convergent subsequence is
 usually called Helly’s selection theorem.)
 (b) If, moreover, f is continuous, prove that f,, =f uniformly on compact sets.
 Hint: (i) Some subsequence {f,,} converges at all rational points r, say, to
-f(r). (ii) Define f(x), for any x  \in  R", to be sup f(r), the sup being taken over all
+f(r). (ii) Define f(x), for any x \in R", to be sup f(r), the sup being taken over all
 r < x. (iii) Show that f,,(x) = f(x) at every x at which f is continuous. (This is
 where monotonicity is strongly used.) (iv) A subsequence of {f,} converges at
 every point of discontinuity of f since there are at most countably many such
@@ -8827,7 +8827,7 @@ X= F270, = 527),
 
 Prove that a is continuous and that ® maps I = [0, 1] onto the unit square /2 < R2.
 If fact, show that ® maps the Cantor set onto 72.
-Hint: Each (xo, yo)  \in  I? has the form
+Hint: Each (xo, yo) \in I? has the form
 
 Xo = 22 am, Yo =X 2 "an
 
@@ -8895,7 +8895,7 @@ Hint: For every fe of
 0
 
 and this is also true for every f in the closure of #7.
-Assume f  \in  A(x) on [a, b], and prove that there are polynomials P, such that
+Assume f \in A(x) on [a, b], and prove that there are polynomials P, such that
 
 b
 tim | | f= Pa]? do =O.
@@ -8930,15 +8930,15 @@ if |x| <1.
 
 25.
 
-Let X be a metric space, with metric d. Fix a point a  \in  X. Assign to eachpe X
+Let X be a metric space, with metric d. Fix a point a \in X. Assign to eachpe X
 the function f, defined by
 fox) =d(x,p) -d(x,a) (xe X).
 
-Prove that | f,(x)| <d(a, p) for all x  \in  X, and that therefore f,  \in   \in (X).
+Prove that | f,(x)| <d(a, p) for all x \in X, and that therefore f, \in  \in (X).
 Prove that
 Ife - fall =d(p,q)
 
-for all p,q  \in  X.
+for all p,q \in X.
 
 If ®(p) =f; it follows that © is an isometry (a distance-preserving mapping)
 of X onto ®(X) < 4(X).
@@ -8993,8 +8993,8 @@ This fis a solution of the given problem.
 Prove an analogous existence theorem for the initial-value problem
 Vy =2(kxy), y0=c
 
-where now c  \in  R¥, y  \in  R¥, and &® is a continuous bounded mapping of the part of
-Rk! defined by 0 <x <1, y  \in  R* into R*. (Compare Exercise 28, Chap. 5.) Hint:
+where now c \in R¥, y \in R¥, and &® is a continuous bounded mapping of the part of
+Rk! defined by 0 <x <1, y \in R* into R*. (Compare Exercise 28, Chap. 5.) Hint:
 Use the vector-valued version of Theorem 7.25.
 8
 
@@ -9174,7 +9174,7 @@ i=1
 ., and
 
 Now, (14) and (15), together with (12), show that each f; is con-
-tinuous at x,. Since |fi(x)| <b; for x  \in  E, (16) converges uniformly, so
+tinuous at x,. Since |fi(x)| <b; for x \in E, (16) converges uniformly, so
 
 that g is continuous at x, (Theorem 7.11). It follows that
 Y Yay= 3 fit) = g(x) = lim g(x)
@@ -9255,7 +9255,7 @@ It is interesting that the same conclusion can be deduced from much weaker
 hypotheses:
 
 8.5 Theorem Suppose the series Xa,x" and Xb,x" converge in the segment
-S =(-R, R). Let E be the set of all x  \in  S at which
+S =(-R, R). Let E be the set of all x \in S at which
 
 (20) y a,x" = y b,x".
 
@@ -9279,7 +9279,7 @@ Ac E. Thus E=S, and (7) shows that c,=0forn=0, 1, 2, ..., which
 is the desired conclusion.
 178 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
-Thus we have to prove that 4 is open. If x,  \in  4, Theorem 8.4 shows
+Thus we have to prove that 4 is open. If x, \in 4, Theorem 8.4 shows
 that
 
 a) fe) =F dix =x (x= xo <R= |x).
@@ -9560,15 +9560,15 @@ by (c). This establishes the uniqueness assertion in (d).
 
 To prove the existence assertion in (d), fix z so that |z| = 1. Write
 z = x + iy, with x and yp real. Suppose first that x >0 and y > 0. On
-[0, n/2], C decreases from 1 to 0. Hence C(r) = x for some c  \in  [0, 7/2].
+[0, n/2], C decreases from 1 to 0. Hence C(r) = x for some c \in [0, 7/2].
 Since C2 + S? =1 and S > 0 on [0, 7/2], it follows that z = E(it).
 
 If x <0 and y > 0, the preceding conditions are satisfied by -iz.
-Hence -iz = E(it) for some c  \in  [0, 7/2], and since i = E(ni/2), we obtain
+Hence -iz = E(it) for some c \in [0, 7/2], and since i = E(ni/2), we obtain
 z = E(i(t + =/2)). Finally, if y <0, the preceding two cases show that
 184 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
--z = E(it) for some   \in  (0, nr). Hence z = - E(it) = E(i(t + n)).
+-z = E(it) for some  \in (0, nr). Hence z = - E(it) = E(i(t + n)).
 This proves (d), and hence the theorem.
 
 It follows from (d) and (48) that the curve y defined by
@@ -9883,7 +9883,7 @@ By (79) and (81), g(t) cos (#/2) and g(z) sin (c/2) are bounded. The last
 two integrals thus tend to 0 as N - oo, by (74). This proves (80).
 
 Corollary If f(x) =0 for all x in some segment J, then lim sy(f; x) =0 for
-every x  \in  J.
+every x \in J.
 
 Here is another formulation of this corollary:
 If f(t) = g(t) for all t in some neighborhood of x, then
@@ -9898,7 +9898,7 @@ contrast between Fourier series and power series (Theorem 8.5).
 
 We conclude with two other approximation theorems.
 
-8.15 Theorem If f is continuous (with period 2n) and if  \in  > 0, then there is a
+8.15 Theorem If f is continuous (with period 2n) and if \in > 0, then there is a
 trigonometric polynomial P such that
 
 [P(x) -f(x)| <e
@@ -10023,7 +10023,7 @@ then f(x) = I'(x).
 
 Proof Since I satisfies (a), (5), and (c), it is enough to prove that f(x) is
 uniquely determined by (a), (b), (c), for all x > 0. By (a), it is enough to
-do this for x  \in  (0, 1).
+do this for x \in (0, 1).
 Put c =logf. Then
 p(x +1) = p(x) + log x (0< x < 00),
 
@@ -10360,13 +10360,13 @@ that
 lim Sn(f3 x) = Hf (x+) + f(x-)]
 for every x.
 (c) Assume only that f \in  Z on [-m, m] and that f is monotonic in some segment
-(2, B)< [-m, 7]. Prove that the conclusion of (b) holds for every x  \in  («, B).
+(2, B)< [-m, 7]. Prove that the conclusion of (b) holds for every x \in («, B).
 (This is an application of the localization theorem.)
 Define
 f(x)=x®-sin? x tan x
 g(x) = 2x? -sin? x - x tan x.
 Find out, for each of these two functions, whether it is positive or negative for all
-x  \in  (0, m/2), or whether it changes sign. Prove your answer.
+x \in (0, m/2), or whether it changes sign. Prove your answer.
 
 Suppose f is a continuous function on R?, f(x + 2m) = f(x), and «/7 is irrational.
 Prove that
@@ -10436,7 +10436,7 @@ if -1<x<1anda>0.
 
 . Let y be a continuously differentiable closed curve in the complex plane, with
 
-parameter interval [a, b], and assume that y(c) # 0 for every c  \in  [a, b]. Define the
+parameter interval [a, b], and assume that y(c) # 0 for every c \in [a, b]. Define the
 index of y to be
 RAO)
 Ind) =32), 50%
@@ -10478,10 +10478,10 @@ v_v_¥
 
 Y Y2 1 ’
 Let y be a closed curve in the complex plane (not necessarily differentiable) with
-parameter interval [0, 27], such that y(t) # O for every c  \in  [0, 27].
+parameter interval [0, 27], such that y(t) # O for every c \in [0, 27].
 
-Choose 8 > 0 so that |y(c)| > for all   \in  [0, 27]. If P, and P, are trigo-
-nometric polynomials such that |P,(t) - y(t)| <&/4 for all   \in  [0, 27] (their exis-
+Choose 8 > 0 so that |y(c)| > for all  \in [0, 27]. If P, and P, are trigo-
+nometric polynomials such that |P,(t) - y(t)| <&/4 for all  \in [0, 27] (their exis-
 tence is assured by Theorem 8.15), prove that
 
 Ind (P,) = Ind (P,)
@@ -10515,26 +10515,26 @@ Vel
 [In (b) and (c), use the last part of Exercise 26.]
 
 Show that (a), (b), and (c) are contradictory, since n > 0.
-Let D be the closed unit disc in the complex plane. (Thus z  \in  D if and only if
+Let D be the closed unit disc in the complex plane. (Thus z \in D if and only if
 |z] <1.) Let g be a continuous mapping of D into the unit circle 7. (Thus,
-|g(z)| = 1 for every z  \in  D.)
+|g(z)| = 1 for every z \in D.)
 
-Prove that g(z) = -z for at least one z  \in  T..
+Prove that g(z) = -z for at least one z \in T..
 
 Hint: For0<r<1,0<t< 2m, put
 
 y(t) = g(re"),
 
-and put Y(t) = e~ y(t). If g(z) # -z for every z  \in  T, then {)(t) # -1 for every
-t  \in  [0, 27]. Hence Ind (07) = 0, by Exercises 24 and 26. It follows that Ind (y,) =1.
+and put Y(t) = e~ y(t). If g(z) # -z for every z \in T, then {)(t) # -1 for every
+t \in [0, 27]. Hence Ind (07) = 0, by Exercises 24 and 26. It follows that Ind (y,) =1.
 But Ind (yo) = 0. Derive a contradiction, as in Exercise 27.
 SOME SPECIAL FUNCTIONS 203
 
 29. Prove that every continuous mapping f of D into D has a fixed point in D.
 (This is the 2-dimensional case of Brouwer’s fixed-point theorem.)
-Hint: Assume f(z) # z for every z  \in  D. Associate to each z  \in  D the point
-g(z)  \in  T which lies on the ray that starts at f(z) and passes through z. Then g
-maps D into T, g(z) = z if z  \in  T, and g is continuous, because
+Hint: Assume f(z) # z for every z \in D. Associate to each z \in D the point
+g(z) \in T which lies on the ray that starts at f(z) and passes through z. Then g
+maps D into T, g(z) = z if z \in T, and g is continuous, because
 9(2) =z -s(2)[f(2) - 2],
 where s(z) is the unique nonnegative root of a certain quadratic equation whose
 
@@ -10599,7 +10599,7 @@ The set consisting of 0 alone is a vector space; its dimension is O.
 (e) An independent subset of a vector space X which spans X is called
 a basis of X.
 
-Observe that if B =(x,,...,X,} is a basis of X, then every x  \in  X
+Observe that if B =(x,,...,X,} is a basis of X, then every x \in X
 has a unique representation of the form x = Xc;x;. Such a representation
 exists since B spans X, and it is unique since B is independent. The
 
@@ -10634,7 +10634,7 @@ Y a;¥; + Y bx, =0.
 = K=1
 
 If all b,’s were O, the independence of Q would force all a;’s to be 0, a
-contradiction. It follows that some X,  \in  S; is a linear combination of the
+contradiction. It follows that some X, \in S; is a linear combination of the
 other members of T; = S; © {y;,}. Remove this x, from 7; and call the
 remaining set S;.;. Then S;,, spans the same set as T;, namely X, so
 that S;,, has the properties postulated for S; with i + 1 in place of i.
@@ -10664,7 +10664,7 @@ Theorem Suppose X is a vector space, and dim X =n.
 basis containing {y,. ..., ¥,}.
 
 Proof Suppose EF ={xy,..., Xx,}. Sincedim X =n, the set {x,,...,X,,y}
-is dependent, for every y  \in  X. If E is independent, it follows that y is in
+is dependent, for every y \in X. If E is independent, it follows that y is in
 the span of E; hence E spans X. Conversely, if E is dependent, one of its
 members can be removed without changing the span of E. Hence E
 cannot span X, by Theorem 9.2. This proves (a).
@@ -10687,7 +10687,7 @@ to be a linear transformation if
 
 A(Xy + X,) = AX, + AX,, A(ex) = cAX
 
-for all x, x,, x,  \in  X and all scalars c. Note that one often writes Ax instead
+for all x, x,, x, \in X and all scalars c. Note that one often writes Ax instead
 of A(x) if A is linear.
 
 Observe that 40 = 0 if 4 is linear. Observe also that a linear transforma-
@@ -10695,7 +10695,7 @@ Observe that 40 = 0 if 4 is linear. Observe also that a linear transforma-
 tion 4 of X into Y is completely determined by its action on any basis: If
 FUNCTIONS OF SEVERAL VARIABLES 207
 
-{Xy,...,X,} is a basis of X, then every x  \in  X has a unique representation of the
+{Xy,...,X,} is a basis of X, then every x \in X has a unique representation of the
 form
 
 and the linearity of A allows us to compute Ax from the vectors Ax,, ..., Ax,
@@ -10708,7 +10708,7 @@ Linear transformations of X into X are often called linear operators on X.
 If A is a linear operator on X which (i) is one-to-one and (ii) maps X onto
 X, we say that A is invertible. In this case we can define an operator 4! on X
 by requiring that A- (Ax) = x for all xe X. It is trivial to verify that we then
-also have A(A “1x) =x, for all x  \in  X, and that A™! is linear.
+also have A(A “1x) =x, for all x \in X, and that A™! is linear.
 
 An important fact about linear operators on finite-dimensional vector
 spaces is that each of the above conditions (i) and (ii) implies the other:
@@ -10753,7 +10753,7 @@ numbers | Ax|, where x ranges over all vectors in R" with |x| < 1.
 Observe that the inequality
 
 |Ax| < [4] |x]
-holds for all x  \in  R". Also, if 2 is such that |Ax| < A|x| for all xe R",
+holds for all x \in R". Also, if 2 is such that |Ax| < A|x| for all xe R",
 then 4] < 4.
 Theorem
 
@@ -10779,7 +10779,7 @@ so that
 |All <3 | Ae] < co.
 i=1
 
-Since | Ax - Ay| < 4] |x -y| if x, y  \in  R", we see that 4 is uniformly
+Since | Ax - Ay| < 4] |x -y| if x, y \in R", we see that 4 is uniformly
 continuous.
 (b) The inequality in (b) follows from
 
@@ -10846,7 +10846,7 @@ IB7 =A < |B!) [A= BI 47) <
 210 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 9.9 Matrices Suppose {X,..., X,} and {y,, ..., y,} are bases of vector spaces
-X and Y, respectively. Then every A  \in  L(X, Y) determines a set of numbers
+X and Y, respectively. Then every A \in L(X, Y) determines a set of numbers
 a;; such that
 
 3) Ax; =X a; y; (1<j<n).
@@ -10877,7 +10877,7 @@ ranges over the first subscript of a;;, but that we sum over the second subscrip
 when computing coordinates.
 
 Suppose next that an m by n matrix is given, with real entries a;;. If A is
-then defined by (4), it is clear that A  \in  L(X, Y) and that [A Jis the given matrix.
+then defined by (4), it is clear that A \in L(X, Y) and that [A Jis the given matrix.
 Thus there is a natural 1-1 correspondence between L(X, Y) and the set of all
 real m by n matrices. We emphasize, though, that [A Jdepends not only on A
 but also on the choice of bases in X and Y. The same A may give rise to many
@@ -10889,7 +10889,7 @@ If Z is a third vector space, with basis {z,,...,z,}, if A is given by (3),
 and if
 
 By: =) bu, (BAX; = cis
-then A  \in  L(X, Y), Be L(Y,Z), BA  \in  L(X, Z), and since
+then A \in L(X, Y), Be L(Y,Z), BA \in L(X, Z), and since
 B(Ax;) = BY aijyi = ) a;; By,
 t 13
 
@@ -10919,7 +10919,7 @@ that if the matrix elements a;; are continuous functions of a parameter, then th
 same is true of 4. More precisely:
 
 If S is a metric space, if ayy, ..., a, are real continuous functions on S,
-and if, for each p  \in  S, A, is the linear transformation of R" into R™ whose matrix
+and if, for each p \in S, A, is the linear transformation of R" into R™ whose matrix
 has entries a;(p), then the mapping p- A, is a continuous mapping of S into
 L(R", R™).
 
@@ -10930,7 +10930,7 @@ function whose domain is R" (or an open subset of R"), let us take another look
 at the familiar case n = 1, and let us see how to interpret the derivative in that
 case in a way which will naturally extend to n > 1.
 
-If fis a real function with domain (a, b) = R' and if x  \in  (a, b), then f'(x)
+If fis a real function with domain (a, b) = R' and if x \in (a, b), then f'(x)
 is usually defined to be the real number
 
 Sx +h) - f(x)
@@ -10958,7 +10958,7 @@ natural 1-1 correspondence between R' and L(R') which motivates the pre-
 ceding statements. ]
 
 Let us next consider a function f that maps (a, b) = R! into R™. In that
-case, f'(x) was defined to be that vector y  \in  R™ (if there is one) for which
+case, f'(x) was defined to be that vector y \in R™ (if there is one) for which
 a0) i [£0 8)
 
 h=0
@@ -10969,11 +10969,11 @@ We can again rewrite this in the form
 (11) f(x + h) - f(x) = hy + r(h),
 
 where r(h)/h - 0 as h- 0. The main term on the right side of (11) is again a
-linear function of A. Every y  \in  R™ induces a linear transformation of R' into
-R™, by associating to each he R' the vector hy  \in  R™. This identification of R™
+linear function of A. Every y \in R™ induces a linear transformation of R' into
+R™, by associating to each he R' the vector hy \in R™. This identification of R™
 with L(R', R™) allows us to regard f(x) as a member of L(R!, R™).
 
-Thus, if fis a differentiable mapping of (a, b) = R' into R™, and if x  \in  (a, b),
+Thus, if fis a differentiable mapping of (a, b) = R' into R™, and if x \in (a, b),
 then f(x) is the linear transformation of R' into R™ that satisfies
 
 i FG) = £00) = FG _
@@ -10986,7 +10986,7 @@ f h) - f(x) -f’
 h=0 [A]
 
 We are now ready for the case n > 1.
-9.11 Definition Suppose E is an open set in R", f maps E into R", and x  \in  E.
+9.11 Definition Suppose E is an open set in R", f maps E into R", and x \in E.
 If there exists a linear transformation A of R" into R™ such that
 
 (14) Jim x +B) - f(x) - 4h| =
@@ -10997,11 +10997,11 @@ h~0 h|
 then we say that f is differentiable at x, and we write
 (15) f'(x) =A.
 
-If f is differentiable at every x  \in  E, we say that f is differentiable in E.
+If f is differentiable at every x \in E, we say that f is differentiable in E.
 FUNCTIONS OF SEVERAL VARIABLES 213
 
-It is of course understood in (14) that h  \in  R". If |h| is small enough, then
-x + h  \in  E, since E is open. Thus f(x + h) is defined, f(x + h)  \in  R™, and since
+It is of course understood in (14) that h \in R". If |h| is small enough, then
+x + h \in E, since E is open. Thus f(x + h) is defined, f(x + h) \in R™, and since
 Ae L(R", R™), Ahe R". Thus
 f(x +h) - f(x) - Ahe R™.
 The norm in the numerator of (14) is that of R™. In the denominator we have
@@ -11010,7 +11010,7 @@ the R"-norm of h.
 There is an obvious uniqueness problem which has to be settled before
 we go any further.
 
-9.12 Theorem Suppose E and f are as in Definition 9.11, x  \in  E, and (14) holds
+9.12 Theorem Suppose E and f are as in Definition 9.11, x \in E, and (14) holds
 with A = A, and with A = A,. Then A; = A,.
 Proof If B=A4, - A4,, the inequality
 | Bh| < [£(x +h) = f(x) - 4;h| + [f(x +b) - f(x) - 4, h]|
@@ -11040,7 +11040,7 @@ h, the left side of (17) is approximately equal to f'(x)h, that is, to the value
 of a linear transformation applied to h.
 
 (b) Suppose f and E are as in Definition 9.11, and f is differentiable in E.
-For every x  \in  E, f'(x) is then a function, namely, a linear transformation
+For every x \in E, f'(x) is then a function, namely, a linear transformation
 of R" into R™. But f’ is also a function: f’ maps E into L(R", R™).
 
 (c) A glance at (17) shows that f is continuous at any point at which f is
@@ -11059,7 +11059,7 @@ IfAeL(R" R")and f x \in  R", then
 (19) A(X) = A.
 Note that x appears on the left side of (19), but not on the right. Both
 
-sides of (19)are members of L(R", R"), whereas Ax  \in  R".
+sides of (19)are members of L(R", R"), whereas Ax \in R".
 The proof of (19)is a triviality, since
 
 (20) A(x +h)- Ax=Ah,
@@ -11069,7 +11069,7 @@ he R" In (17), r(h) = 0.
 We now extend the chain rule (Theorem 5.5) to the present situation.
 
 9.15 Theorem Suppose Eis an open set in R", f maps E into R", { is dzfferentiable
-at Xo  \in  E, gc maps an open set containing f(E )into R*, and g is differentiable at
+at Xo \in E, gc maps an open set containing f(E )into R*, and g is differentiable at
 f(Xo). Then the mapping F of E into R* dejined by
 
 F(x) = gf (x)
@@ -11083,7 +11083,7 @@ Proof Puty, =f(Xg), A = (Xo), B =g'(Yo), and define
 uth) = (xo +h) - [(xo) - Ah,
 v(k) =g(yo + k) - 8(Yo) - Bk,
 
-for all he R" and k  \in  R™ for which f(x, + &) and g(y, + k) are defined.
+for all he R" and k \in R™ for which f(x, + &) and g(y, + k) are defined.
 Then
 
 (22) |u(h)| = g(h)|h|, [v(K)| = n(k)|Kk]|,
@@ -11143,7 +11143,7 @@ derivatives exist at x, and they determine the linear transformation f'(x)
 completely:
 
 9.17 Theorem Suppose f maps an open set E = R" into R", andf is dzfferentiable
-at a point x  \in  E. Then the partial derivatives (D,;f;)(x) exist, and
+at a point x \in E. Then the partial derivatives (D,;f;)(x) exist, and
 
 a7 £/(x)e; = So, fu Ain).
 
@@ -11200,7 +11200,7 @@ The chain rule asserts then that
 (2) gO =romONa (a<t<b).
 FUNCTIONS OF SEVERAL VARIABLES 217
 
-Since y'(t)e L(R', R") and f'(y(t))  \in  L(R", R'), (32) defines g(t) as a linear
+Since y'(t)e L(R', R") and f'(y(t)) \in L(R", R'), (32) defines g(t) as a linear
 operator on R!. This agrees with the fact that g maps (a, b) into R*. However,
 g'(t) can also be regarded as a real number. (This was discussed in Sec. 9.10.)
 This number can be computed in terms of the partial derivatives of f and the
@@ -11208,7 +11208,7 @@ derivatives of the components of y, as we shall now see.
 
 With respect to the standard basis {e;, ..., e,} of R", [y'(c)] is the n by 1
 matrix (a “column matrix”) which has 7; (c) in the ith row, where y,, ..., y, are
-the components of y. Forevery x  \in  E, [f'(x)] is the 1 by n matrix (a “row matrix”)
+the components of y. Forevery x \in E, [f'(x)] is the 1 by n matrix (a “row matrix”)
 which has (D;f)(x) in the jth column. Hence [c'(c)] is the 1 by | matrix whose
 only entry is the real number
 
@@ -11230,7 +11230,7 @@ Since
 (36) g®) = (NEW) -y'(a),
 
 the scalar product of the vectors (Vf)(y(c)) and y'(c).
-Let us now fix an x  \in  E, let u  \in  R" be a unit vector (that is, |u| = 1), and
+Let us now fix an x \in E, let u \in R" be a unit vector (that is, |u| = 1), and
 specialize y so that
 
 (37) y(t) =X + tu (- oo <t< 0).
@@ -11267,7 +11267,7 @@ Some of these ideas will play a role in the following theorem.
 tiable in E, and there is a real number M such that
 
 fl < M
-for every x  \in  E. Then
+for every x \in E. Then
 £6) - fa)| < Mb - a
 forallac E, be E.
 Proof Fix ae E, be E. Define
@@ -11285,7 +11285,7 @@ for all re [0,1]. By Theorem 5.19,
 lg(1) - gO) < M[b _ al.
 But g(0) = f(a) and g(1) = f(b). This completes the proof.
 
-Corollary If, in addition, £'(x) = 0 for all x  \in  E, then f is constant.
+Corollary If, in addition, £'(x) = 0 for all x \in E, then f is constant.
 
 Proof To prove this, note that the hypotheses of the theorem hold now
 with M =0.
@@ -11295,21 +11295,21 @@ FUNCTIONS OF SEVERAL VARIABLES 219
 said to be continuously differentiable in E if f' is a continuous mapping of E
 into L(R", R™).
 
-More explicitly, it is required that to every x  \in  E and to every &c >0
+More explicitly, it is required that to every x \in E and to every &c >0
 corresponds a 6 > 0 such that
 
 If'y) -'x)ll<e
 
 ifyeFand |x -y|<d.
-If this is so, we also say that f is a %'-mapping, or that f  \in  c'(E).
+If this is so, we also say that f is a %'-mapping, or that f \in c'(E).
 
 9.21 Theorem Suppose f maps an open set E = R" into R™. Then fe %'(E)
 andonly if thepartial derivatives D; f; exist and are continuous on Efor 1 <i<m,
 I<j<n
 
-Proof Assume first that f  \in   \in '(E). By (27),
+Proof Assume first that f \in  \in '(E). By (27),
 (D;f)(x) = (f'(x)e) * u;
-for all i, j, and for all x  \in  E. Hence
+for all i, j, and for all x \in E. Hence
 (Dif)y) = (Df)x) ={f'(y) -T'(X)]e;} . u,
 and since |u| = |e;| =1, it follows that
 (D3) = (DIX < |H() - 1 (x)]e|
@@ -11364,10 +11364,10 @@ and if there is a number c < I such that
 
 (43) d(e(x), o(»)) <c d(x, y)
 
-for all x, y  \in  X, then c is said to be a contraction of X into X.
+for all x, y \in X, then c is said to be a contraction of X into X.
 
 9.23 Theorem If X is a complete metric space, and if a is a contraction of X
-into X, then there exists one and only one x  \in  X such that c(x) = x.
+into X, then there exists one and only one x \in X such that c(x) = x.
 
 In other words, c has a unique fixed point. The uniqueness is a triviality,
 for if a(x) = x and a(¥) = y, then (43) gives d(x, y)< c d(x, y), which can only
@@ -11376,7 +11376,7 @@ happen when d(x, y) =0.
 The existence of a fixed point of c is the essential part of the theorem.
 The proof actually furnishes a constructive method for locating the fixed point.
 
-Proof Pick xq  \in  X arbitrarily, and define {x,) recursively, by setting
+Proof Pick xq \in X arbitrarily, and define {x,) recursively, by setting
 (44) X41 = a(x,) n=0,1,2,...).
 Choose c < I so that (43)holds. For n> I we then have
 dX 41, Xp) = d(a(X,), 9(x,-1)) < cd(x,, X,- 1).
@@ -11410,7 +11410,7 @@ differentiable mapping f is invertible in a neighborhood of any point x at which
 the linear transformation f'(x)is invertible :
 
 9.24 Theorem Suppose [ is a  \in '-mapping of an open set E = R" into R", f(a)
-is invertible for some a  \in  E. and b = f(a). Then
+is invertible for some a \in E. and b = f(a). Then
 
 (a) there exist open sets Uand Vin R" such that a \in  U, be V, { is one-to-
 oneon U, and {(U)=V ;
@@ -11456,29 +11456,29 @@ that
 
 loll <3 (xel).
 Hence
-[p(x1) = a(x3)] <x; = xy (xy, x,  \in  UV),
+[p(x1) = a(x3)] <x; = xy (xy, x, \in UV),
 
 by Theorem 9.19. It follows that c has at most one fixed point in U, so
 
-that f(x) = y for at most one x  \in  U.
+that f(x) = y for at most one x \in U.
 Thus fis | - 1 in U.
 
 Next, put V={f(U), and pick yo \in V. Then y, =f(x;) for some
-Xo  \in  U. Let B be an open ball with center at Xo and radius r > 0, so small
+Xo \in U. Let B be an open ball with center at Xo and radius r > 0, so small
 that its closure B liesin U. We will show that y e Vwhenever | y - yo | < Ar.
 This proves, of course, that Vis open.
 
 Fix y. |y - ¥o| < Ar. With c as in (48),
 _ . RP
 [a(X0) = Xo| = [47'(Y = yo) < 47" [lAr =3-
-If x  \in  B, it therefore follows from (50) that
+If x \in B, it therefore follows from (50) that
 [p(x) = Xo| < [a(x) = a(x0)| + [9(X0) - Xo|
 
 <llx-x| +s
 = |x =x <r;
 2 0
 
-hence a(x)  \in  B. Note that (50)holds if x;  \in  B. Xx, = B.
+hence a(x) \in B. Note that (50)holds if x; \in B. Xx, = B.
 Thus c is a contraction of B into B. Being a closed subset of R".
 B is complete. Theorem 9.23 implies therefore that c has a fixed point
 x  \in B. For this x, f(x)=y. Thus yef(B)cf(U)= V.
@@ -11517,7 +11517,7 @@ This completes the proof.
 
 Remark. The full force of the assumption that f \in   \in '(E) was only used
 in the last paragraph of the preceding proof. Everything else, down to Eq. (52),
-was derived from the existence of f(x) for x  \in  E, the invertibility of f'(a), and
+was derived from the existence of f(x) for x \in E, the invertibility of f'(a), and
 the continuity off" at just the point a. In this connection, we refer to the article
 by A. Nijenhuis in Amer. Math. Monthly, vol. 81, 1974, pp. 969-980.
 
@@ -11525,12 +11525,12 @@ The following is an immediate consequence of part (a) of the inverse
 function theorem.
 
 9.25 Theorem Iff is a  \in ’-mapping d an open set E c R" into R" and if f'(x)
-is invertiblefor every x  \in  E, then f(W) is an open subset d R"for every open set
+is invertiblefor every x \in E, then f(W) is an open subset d R"for every open set
 W cE.
 
 In other words, f is an open mapping of E into R".
 
-The hypotheses made in this theorem ensure that each point x  \in  E has a
+The hypotheses made in this theorem ensure that each point x \in E has a
 neighborhood in which f is 1-1. This may be expressed by saying that f is
 locally one-to-one in E. But f need not be 1-1 in E under these circumstances.
 For an example, see Exercise 17.
@@ -11551,7 +11551,7 @@ proof makes stronguse of the fact that continuously differentiable transformatio
 behave locally very much like their derivatives. Accordingly, we first prove
 Theorem 9.27, the linear version of Theorem 9.28.
 
-9.26 Notation If x =(x,,...,X,) \in R" and y=(y,,..., Yu)  \in  R", let us write
+9.26 Notation If x =(x,,...,X,) \in R" and y=(y,,..., Yu) \in R", let us write
 (x,y) for the point (or vector)
 
 (X15 ves Xps Vis oes Ym) ERP
@@ -11559,17 +11559,17 @@ Theorem 9.27, the linear version of Theorem 9.28.
 In what follows, the first entry in (x, y) or in a similar symbol will always be a
 vector in R", the second will be a vector in R™.
 
-Every A  \in  L(R"*™, R") can be split into two linear transformations A, and
+Every A \in L(R"*™, R") can be split into two linear transformations A, and
 A,, defined by
 
 (53) A h=AMh,0), Ak=A0k)
-for any he R", k  \in  R". Then A,  \in e L(R"),A,  \in  L(R", R"), and
+for any he R", k \in R". Then A,  \in e L(R"),A, \in L(R", R"), and
 (4) AM, K) =A. h + 4k
 
 The linear version of the implicit function theorem is now almost obvious.
 
 9.27 Theorem If Ae L(R"™™, R")and if A, is invertible, then there corresponds
-to every k  \in  R" a unique h  \in  R" such that Ath, k)=0.
+to every k \in R" a unique h \in R" such that Ath, k)=0.
 This h can be computed from k by the formula
 
 (55) h=-(4,)"'4,k
@@ -11648,7 +11648,7 @@ A(h, 0) = 0, and Theorem 9.27 implies that h = 0. It follows that F'(a, b)
 is 1-1; hence it is invertible (Theorem 9.5).
 
 The inverse function theorem can therefore be applied to F. It shows
-that there exist open sets UU and Vin R"*™, with (a, b) \in  U, (0, b)  \in  V, such
+that there exist open sets UU and Vin R"*™, with (a, b) \in  U, (0, b) \in V, such
 that F is a 1-1 mapping of U onto V.
 
 We let W be the set of all ye R™ such that (0,y) eV. Note that
@@ -11656,7 +11656,7 @@ be W.
 
 It is clear that Wis open since V is open.
 
-If ye W, then (0, y) = F(x, y) for some (x, y)  \in  U. By (60),f(x,y) =0
+If ye W, then (0, y) = F(x, y) for some (x, y) \in U. By (60),f(x,y) =0
 for this x.
 
 Suppose, with the same y, that (x, y)e U and f(x’, y) =0. Then
@@ -11666,17 +11666,17 @@ Fx',y) = (f(x,y), y) = (f(x,y), ¥) = F(x, y).
 Since F is 1-1 in U, it follows that x' = x.
 This proves the first part of the theorem.
 
-For the second part, define g(y), for y  \in  W, so that (g(y), y)  \in  U and
+For the second part, define g(y), for y \in W, so that (g(y), y) \in U and
 (57) holds. Then
 
 Fe), y)=0,y) (eW)
 
-If G is the mapping of V onto U that inverts F, then G  \in  4’, by the inverse
+If G is the mapping of V onto U that inverts F, then G \in 4’, by the inverse
 function theorem, and (61) gives
 
  \in ). 9) =G0,y) (yew)
 
-Since G  \in   \in ’, (62) shows that ge 4’.
+Since G \in  \in ’, (62) shows that ge 4’.
 Finally, to compute g'(b), put (g(y), y) = ©(y). Then
 
 Yk Ek Kk) (EW ker.
@@ -11690,7 +11690,7 @@ AD'(b) =0.
 It now follows from (64), (63), and (54), that
 Ag (bk + 4,k = A(g (bk, k) = AD'(b)k = 0
 
-for every k  \in  R™. Thus
+for every k \in R™. Thus
 
 Ag'(b) + 4,=0.
 FUNCTIONS OF SEVERAL VARIABLES 227
@@ -11778,8 +11778,8 @@ mapping F near a point x is similar to that of the linear transformation F(x).
 
 Before stating it, we need a few more facts about linear transformations.
 
-9.30 Definitions Suppose X and Y are vector spaces, and A  \in  L(X, Y), as in
-Definition 9.6. The null space of A, A (A), is the set of all x  \in  X at which Ax = 0.
+9.30 Definitions Suppose X and Y are vector spaces, and A \in L(X, Y), as in
+Definition 9.6. The null space of A, A (A), is the set of all x \in X at which Ax = 0.
 It is clear that #'(4) is a vector space in X.
 
 Likewise, the range of A, (A), is a vector space in Y.
@@ -11792,44 +11792,44 @@ rank is n. This follows from Theorem 9.5.
 If Ae L(X, Y)and A hasrank O, then Ax =Ofor all xe A, hence A (4) = X.
 In this connection, see Exercise 25.
 
-9.31 Projections Let X be a vector space. An operator P  \in  L(X) is said to be
+9.31 Projections Let X be a vector space. An operator P \in L(X) is said to be
 a projection in X if P? =P.
 
-More explicitly, the requirement is that P(Px) = Px for every x  \in  X. In
+More explicitly, the requirement is that P(Px) = Px for every x \in X. In
 other words, P fixes every vector in its range Z(P).
 
 Here are some elementary properties of projections:
 
-(a) If Pis a projection in X, then every x  \in  X has a unique representation
+(a) If Pis a projection in X, then every x \in X has a unique representation
 of the form
 
 X=X; +X;
 
-where x,  \in  R(P), x,  \in  /'(P).
+where x, \in R(P), x, \in /'(P).
 
 To obtain the representation, put x; = Px, Xx, =x - Xx;. Then
 Px, = Px - Px, = Px - P>x =0. As regards the uniqueness, apply P to
-the equation x =x, + X,. Since X;  \in  #(P), Px, = X,; since Px, = 0, it
+the equation x =x, + X,. Since X; \in #(P), Px, = X,; since Px, = 0, it
 follows that x, = Px.
 (b) If X is a finite-dimensional vector space and if X, is a vector space in
 X, then there is a projection Pin X with #(P) = X,.
 
 FUNCTIONS OF SEVERAL VARIABLES 229
 
-If X, contains only 0, this is trivial: put Px =0 for all x  \in  X.
+If X, contains only 0, this is trivial: put Px =0 for all x \in X.
 Assume dim X, =k > 0. By Theorem 9.3, X has then a basis
 {uy,...,u,} such that {u,, ..., w} is a basis of X,. Define
 
 P(cyuy + + + cu) =cjuy + 0 + cu
 
 for arbitrary scalars cy, ..., c,.
-Then Px =x for every x  \in  X{, and X; = Z(P).
+Then Px =x for every x \in X{, and X; = Z(P).
 Note that {u, ,,, ..., u,} is a basis of #/(P). Note also that there are
 
 infinitely many projections in X, with range Xi, if 0 < dim X, < dim X.
 
 9.32 Theorem Suppose m, n, r are nonnegatioe integers, m > r, n>r, Fis a
-%'-mapping of an open set E c R" into R™, and ¥'(X) has rank r for every x  \in  E.
+%'-mapping of an open set E c R" into R™, and ¥'(X) has rank r for every x \in E.
 Fixae E, put A =F'(a), let Y, be the range of A, and let P be a projection
 in R™ whose range is Y,. Let Y, be the null space of P.
 Then there are open sets U and V in R", witha e \in  U, U < E, and there is a
@@ -11845,7 +11845,7 @@ Proof If r = 0, Theorem 9.19 shows that F(x) is constant in a neighbor-
 hood U of a, and (66) holds trivially, with V = U, H(X) = x, c(0) = F(a).
 
 From now on we assume r >0. Since dim Y; =r, Y; has a basis
-{¥1,..., ¥.}. Choosez,  \in  R"so that Az; =y,;(I <i <r), and define a linear
+{¥1,..., ¥.}. Choosez, \in R"so that Az; =y,;(I <i <r), and define a linear
 mapping S of Y; into R" by setting
 
 (67) Sey + +eay)=cz + +z,
@@ -11858,9 +11858,9 @@ Define a mapping G of E into R" by setting
 
 Since F(a) = A, differentiation of (69) shows that G'(a) = I, the identity
 operator on R". By the inverse function theorem, there are open sets UU
-and Vin R", with a  \in  U. such that G is a 1-1 mapping of U onto V whose
+and Vin R", with a \in U. such that G is a 1-1 mapping of U onto V whose
 inverse His also of class c”. Moreover, by shrinking U and V, if necessary,
-we can arrange it so that Vis convex and H'(x) is invertible for every x  \in  V.
+we can arrange it so that Vis convex and H'(x) is invertible for every x \in V.
 230 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 (70)
@@ -11884,7 +11884,7 @@ we can arrange it so that Vis convex and H'(x) is invertible for every x  \in  V
 Note that ASPA = A, since PA =A and (68) holds. Therefore (69)
 gives
 AG(x) = PF(x) (xe E).
-In particular, (70) holds for x  \in  U. If we replace x by H(x), we obtain
+In particular, (70) holds for x \in U. If we replace x by H(x), we obtain
 PFH(x)) = Ax  (x£V).
 Define
 U(x) = FH(x)) - Ax xeV).
@@ -11905,7 +11905,7 @@ P(x) = Y(xz)
 
 if x, eV, x, eV, Ax; = Ax,.
 Put ®(x) = F(H(x)), for xe V. Since H'(x) has rank » for every
-x  \in  V, and F'(x) has rank r for every x  \in  U, it follows that
+x \in V, and F'(x) has rank r for every x \in U, it follows that
 
 rank a'(x) = rank F(H(x))H'(x) =r (xe V).
 Fix x e V. Let M be the range of (x). Then Mc R™. dim M =r.
@@ -11921,7 +11921,7 @@ now that we have proved the following:
 
 If xe Vand Ah =0, then Y'(x)h = 0.
 
-We can now prove (74). Suppose x;  \in  V, x, V. Ax, = Ax,. Put
+We can now prove (74). Suppose x; \in V, x, V. Ax, = Ax,. Put
 h =x, - x, and define
 
 g(t) =y(x, + th) O<t<).
@@ -11930,9 +11930,9 @@ gt) =y' (x; +thh=0 O<t<gl),
 FUNCTIONS OF SEVERAL VARIABLES 231
 
 so that g(1) = g(0). But g(1) = ¥(x,) and g(0) = (x). This proves (74).
-By (74), y(x) depends only on Ax, for x  \in  V. Hence (73) defines c
-unambiguously in A(V). It only remains to be proved that c  \in   \in ".
-Fix yo  \in  A(V), fix xq  \in  V so that Ax, =Y,. Since V is open, Yo has
+By (74), y(x) depends only on Ax, for x \in V. Hence (73) defines c
+unambiguously in A(V). It only remains to be proved that c \in  \in ".
+Fix yo \in A(V), fix xq \in V so that Ax, =Y,. Since V is open, Yo has
 a neighborhood Win Yj such that the vector
 
 79 X =Xq + SY - Yo)
@@ -11941,12 +11941,12 @@ AX =AXg +Y-Yo=YV.
 Thus (73) and (79) give
 (80) Py) =¥(xo - Sy, + 8y) (ye W).
 
-This formula shows that c  \in   \in ’ in W, hence in A(V), since y, was chosen
+This formula shows that c \in  \in ’ in W, hence in A(V), since y, was chosen
 arbitrarily in A(V).
 The proof is now complete.
 
 Here is what the theorem tells us about the geometry of the mapping F.
-If y e F(U) then y = F(H(x)) for some x  \in  V, and (66) shows that Py = Ax.
+If y e F(U) then y = F(H(x)) for some x \in V, and (66) shows that Py = Ax.
 Therefore
 
 an y=Py+o(Py) (yeFU).
@@ -12105,7 +12105,7 @@ depend on the basis which is used to construct the matrix. It is thus meaningful
 to speak of the determinant of a linear operator, without having any basis in mind.
 
 9.38 Jacobians 1ff maps an open set E = R"into R", and iff is differen-
-tiable at a point x  \in  E, the determinant of the linear operator f'(x) is called
+tiable at a point x \in E, the determinant of the linear operator f'(x) is called
 the Jacobian o ffat x. In symbols,
 
 93) Je(x) =det f(x).
@@ -12192,7 +12192,7 @@ Proof Put A =(D,f)(a,b). Choose c>0. If Q is a rectangle as in
 Theorem 9.40, and if h and k are sufficiently small, we have
 
 [A - (Dy, fx, p)| <e
-for all (x,y)  \in  Q. Thus
+for all (x,y) \in Q. Thus
 
 by (95). Fix h, and let k = 0. Since D,f exists in E, the last inequality
 
@@ -12245,7 +12245,7 @@ Dejine
 b
 (100) FO = [ox 1)dux)  (c<r<d),
 
-Then (D, a)  \in  A(x), f'(s)exists, and
+Then (D, a) \in A(x), f'(s)exists, and
 b
 (101) f(s) = | (D; o)(x, 5) d(x).
 
@@ -12363,13 +12363,13 @@ the span of Sis a vector space.
 
 Prove also that A-? is linear and invertible.
 
-. Assume A  \in  L(X, Y) and Ax = 0 only when x = 0. Prove that A is then 1-1.
+. Assume A \in L(X, Y) and Ax = 0 only when x = 0. Prove that A is then 1-1.
 
 . Prove (as asserted in Sec. 9.30) that null spaces and ranges of linear transforma-
 
 tions are vector spaces.
 
-. Prove that to every A  \in  L(R", R') corresponds a unique y  \in  R" such that Ax =X .y.
+. Prove that to every A \in L(R", R') corresponds a unique y \in R" such that Ax =X .y.
 
 Prove also that A |= ly].
 Hint: Under certain conditions, equality holds in the Schwarz inequality.
@@ -12393,14 +12393,14 @@ Hint: Proceed as in the proof of Theorem 9.21.
 
 . Suppose that f is a differentiable real function in an open set E < R", and that f
 
-has a local maximum at a point x  \in  E. Prove that f(x) = 0.
+has a local maximum at a point x \in E. Prove that f(x) = 0.
 
 . If f is a differentiable mapping of a connected open set E< R" into R", and if
 
-f’(x) = 0 for every x  \in  E, prove that f is constant in E.
+f’(x) = 0 for every x \in E, prove that f is constant in E.
 
 [ff is a real function defined in a convex open set E = R", such that (D, f)}(x)=0
-for every x  \in  E, prove that f(x) depends only on Xz, ..., X,,.
+for every x \in E, prove that f(x) depends only on Xz, ..., X,,.
 
 Show that the convexity of E can be replaced by a weaker condition, but
 that some condition is required. For example, if # -2 and E is shaped like a
@@ -12424,12 +12424,12 @@ f3(s,t) = asin s.
 15.
 
 Describe the range K of f. (It is a certain compact subset of R*.)
-(a) Show that there are exactly 4 points p  \in  K such that
+(a) Show that there are exactly 4 points p \in K such that
 
 (VE (p)) =0.
 
 Find these points.
-(b) Determine the set of all q  \in  Ksuch that
+(b) Determine the set of all q \in Ksuch that
 
 (Vf) (a) =0.
 
@@ -12456,9 +12456,9 @@ fx, y) = pr if (x, y) # (0, 0).
 exists, and that its absolute value is at most 1.
 (c) Let vv be a differentiable mapping of R' into R? (in other words, y is a differ-
 entiable curve in R?), with (0) =(0, 0) and y’(0)|> 0. Put g(r) = f((c)) and
-prove that g is differentiable for every t  \in  R*.
+prove that g is differentiable for every t \in R*.
 
-If y  \in  6’, prove that g  \in   \in ".
+If y \in 6’, prove that g \in  \in ".
 (d) In spite of this, prove that f is not differentiable at (0, 0).
 
 Hint: Formula (40) fails.
@@ -12470,7 +12470,7 @@ Define £(0, 0) = 0, and put
 
 fx, y) =x? 4+ y* - 2x2
 if (x,y) # (0, 0).
-(a) Prove, for all (x,y)  \in  R?, that
+(a) Prove, for all (x,y) \in R?, that
 4xty? <(x* + y?)2.
 
 Conclude that f is continuous.
@@ -12551,7 +12551,7 @@ exactly one local maximum and one local minimum in R2.
 
 28.
 
-(b) Let S be the set of all (x, y)  \in  R? at which f(x,y) =0. Find those points of
+(b) Let S be the set of all (x, y) \in R? at which f(x,y) =0. Find those points of
 S that have no neighborhoods in which the equation f(x, y) = 0 can be solved for
 y in terms of x (or for X in terms of y). Describe S as precisely as you can.
 Give a similar discussion for
@@ -12572,7 +12572,7 @@ x2 -y? xy
 
 Hx = 705 Six =570
 Compute the rank of f(x,y), and find the range off.
-Suppose A  \in  L(R", R™), let r be the rank of A.
+Suppose A \in L(R", R™), let r be the rank of A.
 (a) Define S as in the proof of Theorem 9.32. Show that SA is a projection in R"
 whose null space is A (4) and whose range is #(S). Hint: By (68), SASA = SA.
 (b) Use (a) to show that
@@ -12615,7 +12615,7 @@ SO #[" (Dig)x, 0) dx.
 
 Let E be an open set in R", The classes  \in ’(E) and  \in ”(E) are defined in the text.
 By induction, ¥¥(E) can be defined as follows, for all positive integers k: To say
-that f  \in   \in '¥(E) means that the partial derivatives D, f, ..., D.f belong to  \in “ =X E).
+that f \in  \in '¥(E) means that the partial derivatives D, f, ..., D.f belong to  \in “ =X E).
 
 Assume f \in a“(E). and show (by repeated application of Theorem 9.41)
 that the kth-order derivative
@@ -12626,16 +12626,16 @@ is unchanged if the subscripts /y, ..., Ix are permuted.
 For instance, if # > 3, then
 
 Dyz13f= Dain f
-for every f  \in  §“.
+for every f \in §“.
 
-Let f  \in  c™(E), where E is an open subset of R". Fix a  \in  E, and suppose x  \in  R"
+Let f \in c™(E), where E is an open subset of R". Fix a \in E, and suppose x \in R"
 is so close to 0 that the points
 
 p(t) =a-+ tx
 lie in E whenever 0 <t <1. Define
 h(t) = f(p(t))
 
-for all c  \in  R* for which p(t)  \in  E.
+for all c \in R* for which p(t) \in E.
 (a) For 1 <<k <<m, show (by repeated application of the chain rule) that
 
 AOE) = (Diy ot, HPO) Xi, ex.
@@ -12683,7 +12683,7 @@ s,! oS!
 Here the summation extends over all ordered n-tuples (sy, ..., S.) such that each
 si is a nonnegative integer, and 5, +... +5, <m - 1.
 
-Suppose £  \in %® in some neighborhood of a point a  \in  R?, the gradient off is 0
+Suppose £  \in %® in some neighborhood of a point a \in R?, the gradient off is 0
 at a, but not all second-order derivatives off are 0 at a. Show how one can then
 determine from the Taylor polynomial off at a (of degree 2) whether f has a local
 maximum, or a local minimum, or neither, at the point a.
@@ -12735,19 +12735,19 @@ and L'(f) for the result obtained by carrying out the k integrations in some
 other order.
 
 10.2 Theorem For every fe  \in (I¥), L(f) = L'(f).
-Proof If i(x) = hy(x,) *- I(x), where /;  \in  6([a;, b)]), then
+Proof If i(x) = hy(x,) *- I(x), where /; \in 6([a;, b)]), then
 
 Lh) = nr h(x) dx; = L'(h).
 
 If «7 is the set of all finite sums of such functions #4, it follows that L(g) =
-L'(g) for all g  \in  o. Also, &f is an algebra of functions on I* to which the
+L'(g) for all g \in o. Also, &f is an algebra of functions on I* to which the
 Stone-Weierstrass theorem applies.
 
 k
-Put V =] (b; - a). If fe  \in (I") and & > 0, there exists g  \in  & such
+Put V =] (b; - a). If fe  \in (I") and & > 0, there exists g \in & such
 1
 
-that [If - g| < &/V, where |f| is defined as max |f(x)| (x  \in  I¥). Then
+that [If - g| < &/V, where |f| is defined as max |f(x)| (x \in I¥). Then
 |L(f-9)| <e& |[L'(f-g)| <e, and since
 
 LN -LN=LS=-g9+L(g~-1),
@@ -12756,7 +12756,7 @@ we conclude that |L(f) - L'(f)| <2e.
 In this connection, Exercise 2 is relevant.
 
 10.3 Definition The support of a (real or complex) function f on R* is the
-closure of the set of all points x  \in  R* at which f(x) #0. If fis a continuous
+closure of the set of all points x \in R* at which f(x) #0. If fis a continuous
 INTEGRATION OF DIFFERENTIAL FORMS 247
 
 function with compact support, let I* be any k-cell which contains the support
@@ -12806,7 +12806,7 @@ not exceed d. Since 0 < c < 1, it follows that
 where | f]|| has the same meaning as in the proof of Theorem 10.2, and F;_,,
 fx-1 are as in Definition 10.1.
 As 6 - 0, (7) exhibits f,_; as a uniform limit of a sequence of continuous
-functions. Thus f,_,  \in   \in (I*""), and the further integrations present no problem.
+functions. Thus f,_, \in  \in (I*""), and the further integrations present no problem.
 This proves the existence of the integral (4). Moreover, (7) shows that
 
 (8) | [Foo dx - I F(x) dx| <5|f].
@@ -12835,7 +12835,7 @@ then we call G primitive. A primitive mapping is thus one that changes at most
 one coordinate. Note that (9) can also be written in the form
 (10) G(x) =x + [g(x) - x, ley.
 
-If g is differentiable at some point a  \in  E, so is G. The matrix [o;;] of the
+If g is differentiable at some point a \in E, so is G. The matrix [o;;] of the
 operator G'(a) has
 
 an (D1g)a), ..., (Dp g)a), ..., (Dn g)a)
@@ -12866,7 +12866,7 @@ defined by Py x = 0 and
 for | <m <n. Thus P, is the projection whose range and null space are
 spanned by {e,, ..., e,} and {e,., ..., e,}, respectively.
 
-10.7 Theorem Suppose F is a  \in '-mapping of an open set E = R" into R", 0  \in  E,
+10.7 Theorem Suppose F is a  \in '-mapping of an open set E = R" into R", 0 \in E,
 F(0) = 0, and F'(0) is invertible.
 Then there is a neighborhood of 0 in R" in which a representation
 
@@ -12881,7 +12881,7 @@ and flips.
 
 Proof Put F=F,. Assume 1 <m<n-1, and make the following
 induction hypothesis (which evidently holds for m = 1):
-V,, is a neighborhood of 0, F,,  \in   \in '(V,,) ,F,.(0) = 0, F, (0) is invertible,
+V,, is a neighborhood of 0, F,, \in  \in '(V,,) ,F,.(0) = 0, F, (0) is invertible,
 
 and
 17) Pp iF, (x)=P,_ 1x (x \in V,).
@@ -12910,7 +12910,7 @@ Define F,,,, by
 
 an Foi) =B,F,cG'(y) (YE Vins)
 
-Then FF,  \in  4’ (Vist), Fuie:1(0)=0, and F, (0) is invertible (by
+Then FF, \in 4’ (Vist), Fuie:1(0)=0, and F, (0) is invertible (by
 the chain rule). Also, for xe U,,
 
 (22) P,F, (G(x) =P,B,F,(x)
@@ -12939,7 +12939,7 @@ INTEGRATION OF DIFFERENTIAL FORMS 251
 
 PARTITIONS OF UNITY
 10.8 Theorem Suppose K is a compact subset of R", and {V,} is an open cover
-of K. Then there exist functions yy, ..., ys  \in   \in (R") such that
+of K. Then there exist functions yy, ..., ys \in  \in (R") such that
 
 (a) 0<y,<1for1<i<s;
 
@@ -12958,7 +12958,7 @@ Each yf has its support in some V,.
 The point of (25) is that it furnishes a representation of f as a sum of
 continuous functions yf with ‘small’ supports.
 
-Proof Associate with each x  \in  K an index a(x) so that x  \in  V,,. Thea
+Proof Associate with each x \in K an index a(x) so that x \in V,,. Thea
 there are open balls B(x) and W(x), centered at x, with
 
 (26) B(X) © W(X) = W(X) & Vag -
@@ -12979,11 +12979,11 @@ yields (29) with i + 1 in place of i. It follows that
 
 5
 
-(0) bh Yix)=1- IT [1 - ix] (x  \in  R™).
+(0) bh Yix)=1- IT [1 - ix] (x \in R™).
 
 i=1 i=1
 
-If xe K, then x  \in  B(x;) for some /, hence c,(x) = 1, and the product in
+If xe K, then x \in B(x;) for some /, hence c,(x) = 1, and the product in
 (30) is 0. This proves (c).
 252 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
@@ -12995,7 +12995,7 @@ support, although this is too restrictive for many applications. This is illustr
 by Exercises 9 to 13.
 
 10.9 Theorem Suppose T is a 1-1  \in '-mapping of an open set E - R* into R*
-such that Jx(x) # 0 for all x  \in  E. If fis a continuous function on R* whose support
+such that Jx(x) # 0 for all x \in E. If fis a continuous function on R* whose support
 is compact and lies in T(E), then
 
 an [ J0dy=] FT)IH00)] dx.
@@ -13041,14 +13041,14 @@ Jp(Q(x)) g(x) = det P'(Q(x)) det Q'(x)
 
 by the multiplication theorem for determinants and the chain rule. Thus
 the theorem is also true for S.
-Each point a  \in  E has a neighborhood U < E in which
+Each point a \in E has a neighborhood U < E in which
 
 (33) Tx) =T(a) + By "+" Buy Gro Gyoy 2 2 Gy (x -a),
 
 where G; and B; are as in Theorem 10.7. Setting V = T(U), it follows
 that (31) holds if the support of flies in VV. Thus:
 
-Each point y  \in  T(E) lies in an open set V, = T(E) such that (31) holds
+Each point y \in T(E) lies in an open set V, = T(E) such that (31) holds
 for all continuous functions whose support lies in V,.
 
 Now let f be a continuous function with compact support K = T(E).
@@ -13286,7 +13286,7 @@ introduction of the standard presentation of a k-form.
 1
 
 is the standard presentation of a k-form w in an open set Ec R". If w =0 in E,
-then b(x) = 0 for every increasing k-index I and for every x  \in  E.
+then b(x) = 0 for every increasing k-index I and for every x \in E.
 
 Note that the analogous statement would be false for sums such as (34),
 since, for example,
@@ -13418,7 +13418,7 @@ A 0-form of class c’ in E is just a real function fe c'(E), and we define
 
 (59) df = 3 (Df) dx.
 
-If w = Zb (x) dx; is the standard presentation of a k-form w, and b;  \in  c'(E)
+If w = Zb (x) dx; is the standard presentation of a k-form w, and b; \in c'(E)
 for each increasing k-index I, then we define
 
 (60) do = (db;) A dx;.
@@ -13463,7 +13463,7 @@ special case
 
 w= fdx,, A=gdx,
 
-where f, g  \in  c'(E), dx; is a basic k-form, and dx, is a basic m-form. [If
+where f, g \in c'(E), dx; is a basic k-form, and dx, is a basic m-form. [If
 k or m or both are 0, simply omit dx; or dx; in (64); the proof that follows
 is unaffected by this.] Then
 
@@ -13557,7 +13557,7 @@ Ifdyr=dy, An Ady, then (dy) =dt; A+ Ad
 10.20 shows that
 (70) d((dy)r) = 0.
 
-(This is where the assumption 7  \in  c” is used.)
+(This is where the assumption 7 \in c” is used.)
 Assume now that w = fdy,;. Then
 
 or = fr(x) (dy)
@@ -13693,7 +13693,7 @@ ment is that
 
 (73) f(x) = (0) + Ax
 
-for some 4  \in  L(X, Y).
+for some 4 \in L(X, Y).
 
 An affine mapping of R¥ into R" is thus determined if we know (0) and
 f(e;) for 1 <i < k; as usual, {e,, ..., c} is the standard basis of R*.
@@ -13720,7 +13720,7 @@ an 00) =po, o(e)=p; (forl=<i<k),
 and that
 (78) o(u) = py + Au (ue QY
 
-where 4  \in  L(R¥, R") and Ae; =p; - p, for 1 <i <k.
+where 4 \in L(R¥, R") and Ae; =p; - p, for 1 <i <k.
 INTEGRATION OF DIFFERENTIAL FORMS 267
 
 We call o oriented to emphasize that the ordering of the vertices po, ..., Px
@@ -14027,7 +14027,7 @@ o=1[0,e,..., el
 
 Thus o is the oriented affine k-simplex with parameter domain Q* which
 is defined by the identity mapping. Since ® is also defined on QF (see
-Definition 10.30) and ®  \in  %”, there is an open set E = R* which contains
+Definition 10.30) and ® \in %”, there is an open set E = R* which contains
 Q%, and there is a ¥"-mapping T of E into V such that ® = T-o. By
 Theorems 10.25 and 10.22(c), the left side of (92) is equal to
 
@@ -14075,7 +14075,7 @@ where
 T,=00,e,..., \in _1, \in i1y.-.s \in l
 fori=1,..., k. Put
 
-To=1[ \in , \in 1, ..., \in  1,  \in  iq... el
+To=1[ \in , \in 1, ..., \in  1, \in iq... el
 
 Note that 7, is obtained from [e,, ...,  \in ] by r - 1 successive interchanges
 of e, and its left neighbors. Thus
@@ -14146,11 +14146,11 @@ For example, a 1-form
 
 (104) w=) f{x)dx;,
 i=1
-with f;  \in  c'(E) for some open set E < R", is closed if and only if the
+with f; \in c'(E) for some open set E < R", is closed if and only if the
 equations
 (105) (D; f(x) = (Di f))(x)
 
-hold for all i, jin {1, ..., n} and for all x  \in  E.
+hold for all i, jin {1, ..., n} and for all x \in E.
 276 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 Note that (105) is a “pointwise” condition; it does not involve any
@@ -14160,7 +14160,7 @@ On the other hand, to show that w is exact in E, one has to prove
 the existence of a form A, defined in E, such that dA = w. This amounts
 to solving a system of partial differential equations, not just locally, but
 in all of E. For example, to show that (104) is exact in a set E, one has
-to find a function (or 0-form) g  \in  c’(E) such that
+to find a function (or 0-form) g \in c’(E) such that
 
 (106) (D;g)x)=f(x) (XeE 1<i<n).
 Of course, (105) is a necessary condition for the solvability of (106).
@@ -14264,7 +14264,7 @@ Then there exists an Fe  \in '(E) such that
 Proof Write x = (x/, x,, x"), where
 X = (xp, ony Xoo) X= (Xpagy ees Xp)
 (When p =1, x’ is absent; when p =n, x" is absent.) Let VV be the
-set of all (x, x,)  \in  R? such that (x, x,, x")  \in  E for some x". Being a
+set of all (x, x,) \in R? such that (x, x,, x") \in E for some x". Being a
 projection of E, Vis a convex open set in R?. Since E is convex and (116)
 
 holds, f(x) does not depend on x". Hence there is a function c, with
@@ -14280,7 +14280,7 @@ c
 If p> 1, let U be the set of all x"e RP~! such that (x, x,)e V for
 some x,. Then U is a convex open set in RP™! and there is a function
 
-a  \in   \in '(U) such that (x, a(x’))  \in  V for every x’  \in  U; in other words, the
+a \in  \in '(U) such that (x, a(x’)) \in V for every x’ \in U; in other words, the
 graph of « lies in V (Exercise 29). Define
 
 Foo ="
@@ -14303,20 +14303,20 @@ Proof For p=1,...,n, let Y, denote the set of all k-forms w, of class
 I
 does not involve dx, ,, ..., dx,. In other words, I < {l, ..., p} if f(x) # 0
 
-for some x  \in  E.
+for some x \in E.
 INTEGRATION OF DIFFERENTIAL FORMS 279
 
 We shall proceed by induction on p.
 
 Assume first that we ¥;. Then w=f(x)dx,. Since dw =0,
-(D;f)(x) =0for1 <j <n, xeE. By Theorem 10.38 there is an F  \in  c'(E)
+(D;f)(x) =0for1 <j <n, xeE. By Theorem 10.38 there is an F \in c'(E)
 such that D,F = fand D;F=0 for 1 <j<n. Thus
 
 dF = (D,F)(x) dx, = f(x) dx, = 0.
 
 Now we take p > 1 and make the following induction hypothesis:
 Every closed k-form that belongs to Y,_, is exact in E.
-Choose w  \in  Y, so that dw = 0. By (118),
+Choose w \in Y, so that dw = 0. By (118),
 
 (119) ) 3 Dif) dx; A dx; = do = 0,
 
@@ -14330,8 +14330,8 @@ We now gather those terms in (118) that contain dx, and rewrite w
 in the form
 (121) w=o+y fx)dx; Adx,,
 Io
-where a  \in  Y,_,, each I, is an increasing (k - 1)-indexin {I,...,p - 1},
-and I = (I,, p). By (120), Theorem 10.38 furnishes functions F;  \in  c'(E)
+where a \in Y,_,, each I, is an increasing (k - 1)-indexin {I,...,p - 1},
+and I = (I,, p). By (120), Theorem 10.38 furnishes functions F; \in c'(E)
 such that
 (122) D,Fy=f;, D;F,=0 (p<j<n).
 Put
@@ -14488,7 +14488,7 @@ In particular, when f= 1, (126) defines the volume of ®. We already saw
 a special case of this in (36).
 The usual notation for dV, is dA.
 
-10.45 Green’s theorem Suppose E is an open set in R*, a  \in  c'(E), f  \in  c'(E),
+10.45 Green’s theorem Suppose E is an open set in R*, a \in c'(E), f \in c'(E),
 and Q is a closed subset of E, with positively oriented boundary 0Q, as described
 in Sec. 10.31. Then
 
@@ -14511,7 +14511,7 @@ With « = 0, 8 = x, a similar formula is obtained. Example 10.12(b) con-
 tains a special case of this.
 
 10.46 Area elements in R® Let ® be a 2-surface in R, of class ¥’, with pa-
-rameter domain D = R%. Associate with each point (u, v)  \in  D the vector
+rameter domain D = R%. Associate with each point (u, v) \in D the vector
 
 Lng) day) dy)
 
@@ -14634,7 +14634,7 @@ to the 2-chain c¥. (The relevant Jacobians are 0.) Thus ® is simply the 2-surf
 obtained by setting + = a in (141), with parameter domain D the square defined
 by0<u<2m 0<v<2nm
 
-According to (129) and (141), the normal to ® at (4, v)  \in  D is thus the
+According to (129) and (141), the normal to ® at (4, v) \in D is thus the
 vector
 
 N(u, v) = a(b + a sin u)n(u, v)
@@ -14716,7 +14716,7 @@ au, v) au, v) au, v)l
 YD
 Now let n=n(u, v) be the unit vector in the direction of N(u, v). [If
 
-N(u, v) = 0 for some (u, v)  \in  D, take n(u, v) = e,.] Then N= |N|n, and there-
+N(u, v) = 0 for some (u, v) \in D, take n(u, v) = e,.] Then N= |N|n, and there-
 fore the last integral becomes
 
 [ F(®(u, v)) * n(u, v)|N(u, v)| du dv.
@@ -14775,7 +14775,7 @@ Prove that | f is independent of the order in which the k integrations are
 carried out.
 Hint: Approximate f by functions that are continuous on R* and whose
 supports are in H, as was done in Example 10.4.
-2. Fori=1,2,3,..., let c,  \in   \in (R") have support in (27!,2'~", such that fe, =1.
+2. Fori=1,2,3,..., let c, \in  \in (R") have support in (27!,2'~", such that fe, =1.
 Put
 
 f5,3) = 2 [90 = peri)
@@ -14800,7 +14800,7 @@ F(x) =F (0)G,° G,_; 0" 0 G(x).
 of any two primitive mappings, in any neighborhood of the origin. (This shows
 that the flips B; cannot be omitted from the statement of Theorem 10.7.)
 
-4. For (x, y)  \in  R?, define
+4. For (x, y) \in R?, define
 
 F(x, y) = (e* cosy - 1, e* sin y).
 Prove that F = G, o G,, where
@@ -14855,7 +14855,7 @@ x =rcosf, y=rsinf.
 Show that 7 maps this rectangle onto the closed disc D with center at (0, 0) and
 
 radius a, that 7 is one-to-one in the interior of the rectangle, and that Jr(r, 6) =r.
-If f  \in   \in (D), prove the formula for integration in polar coordinates:
+If f \in  \in (D), prove the formula for integration in polar coordinates:
 
 ra pan
 [RL ydxdy = J I (T(r, O)r dr db.
@@ -14882,8 +14882,8 @@ over Q, use Theorem 10.9 to convert the integral to one over the strip, and deri
 formula (96) of Chap. 8 in this way.
 (For this application, Theorem 10.9 has to be extended so as to cover certain
 improper integrals. Provide this extension.)
-Let I* be the set of all u= (uy, ..., uw)  \in  R* with 0 <u; <1 for all i; let Q* be the
-set of all x = (xy, ..., xx)  \in  R* with x, >0, =x; <1. (I* is the unit cube; Q* is
+Let I* be the set of all u= (uy, ..., uw) \in R* with 0 <u; <1 for all i; let Q* be the
+set of all x = (xy, ..., xx) \in R* with x, >0, =x; <1. (I* is the unit cube; Q* is
 the standard simplex in R*.) Define x = 7T(u) by
 X1 =U
 x2 = (1 - uu,
@@ -15108,7 +15108,7 @@ Hint: Consider the 3-surface ¥ given by
 
 W(t, u,v) = [1 - t+ tf(u, v)] = (u, v),
 
-where (4, v)  \in  E,0 <1 <1. For fixed v, the mapping (1, u) > W(t, u, v) is a 2-sur-
+where (4, v) \in E,0 <1 <1. For fixed v, the mapping (1, u) > W(t, u, v) is a 2-sur-
 23.
 
 INTEGRATION OF DIFFERENTIAL FORMS 295
@@ -15138,7 +15138,7 @@ Show that the two integrals of A are equal, by using part (d) of Exercise 21, an
 noting that z/r is the same at Z(u, v) as at Qu, v).
 
 (9) Is { exact in the complement of every line through the origin?
-Fix n. Define r= (x} + +++ + x})V/? for 1 <k <n, let E, be the set of all x  \in  R"
+Fix n. Define r= (x} + +++ + x})V/? for 1 <k <n, let E, be the set of all x \in R"
 at which r, > 0, and let w, be the (k - 1)-form defined in E, by
 
 k
@@ -15177,7 +15177,7 @@ of the other assertions of Exercises 21 and 22 to w,, for arbitrary n.
 
 Let w =Xai(x) dx; be a 1-form of class ¥” in a convex open set E < R". Assume
 dw = 0 and prove that w is exact in E, by completing the following outline:
-Fix p  \in  E. Define
+Fix p \in E. Define
 
 f= wo «ch.
 
@@ -15188,7 +15188,7 @@ n 1
 SO =f = 300 -x) [ all = 0x + ty) de
 = 0
 
-for x  \in  E, y  \in  E. Hence (D;f)(x) = a(x).
+for x \in E, y \in E. Hence (D;f)(x) = a(x).
 
 Assume that w is a 1-form in an open set E = R" such that
 
@@ -15215,7 +15215,7 @@ z y
 a3 =[ fx yds -[ fixed
 c b
 9:5, 3,2) = - [ fil, v5) ds,
-for (x, y,z)  \in  E. Prove that dA= w in E.
+for (x, y,z) \in E. Prove that dA= w in E.
 
 Evaluate these integrals when w = { and thus find the form A that occurs in
 part (e) of Exercise 22.
@@ -15252,7 +15252,7 @@ x3 Bs ofa - asf
 ~ IN|.
 
 Also, verify Eq. (137).
-Let E < R? be open, suppose g  \in   \in "(E), h c  \in ”(E), and consider the vector field
+Let E < R? be open, suppose g \in  \in "(E), h c  \in ”(E), and consider the vector field
 F=gVh.
 (a) Prove that
 V-F=gV*+ (Sg) (Yh)
@@ -15287,7 +15287,7 @@ a on
 Take g = h, and conclude that # = 0 in Q if A = 0 on 2Q.
 (d) Show that Green’s identities are also valid in R2.
 
-Fix 8,0 <8 <1. Let Dbethesetofall (6, t)  \in  R*suchthat0 <0 <m, -8 <r<8.
+Fix 8,0 <8 <1. Let Dbethesetofall (6, t) \in R*suchthat0 <0 <m, -8 <r<8.
 Let ®a be the 2-surface in R?, with parameter domain D, given by
 
 x = (1 - tsin 6) cos 20
@@ -15363,11 +15363,11 @@ the Bibliography.
 SET FUNCTIONS
 
 If 4 and B are any two sets, we write A - B for the set of all elements x such
-that x  \in  A, x c B. The notation 4 - B does not imply that B = 4. We denote
+that x \in A, x c B. The notation 4 - B does not imply that B = 4. We denote
 the empty set by 0, and say that 4 and B are disjoint if An B=0.
 THE LEBESGUE THEORY 301
 
-11.1 Definition A family # of sets is called a ring if A  \in  # and B  \in  Z implies
+11.1 Definition A family # of sets is called a ring if A \in # and B \in Z implies
 (1) AU Be, A-BeA.
 Since A "B= A - (A - B), we also have A n Be Z if # is a ring.
 A ring 2 is called a g-ring if
@@ -15383,7 +15383,7 @@ we also have
 if Z is a o-ring.
 
 11.2 Definition We say that c is a set function defined on Z if c assigns to
-every A  \in  # a number c(A) of the extended real number system. c is additive
+every A \in # a number c(A) of the extended real number system. c is additive
 if A n B=0 implies
 
 3) c(4 © B) = §(4) + c(B),
@@ -15418,7 +15418,7 @@ monotonic.
 ©) $(4 - B) = cp(4) - c(B)
 if Bc 4, and |(cB)| < + ©.
 
-11.3 Theorem Suppose c is countably additive on a ring R. Suppose A,  \in  R
+11.3 Theorem Suppose c is countably additive on a ring R. Suppose A, \in R
 n=1,23,..),A4,cA,c Ay, A \in eR, and
 
 A= U4.
@@ -15458,7 +15458,7 @@ We let & denote the family of all elementary subsets of RP”.
 At this point, the following properties should be verified:
 (12) c&is a ring, but not a o-ring.
 (13) If A  \in &, then A is the union of a finite number of disjoint intervals.
-(14) If A  \in  & m(A) is well defined by (11); that is, if two different decompo-
+(14) If A \in & m(A) is well defined by (11); that is, if two different decompo-
 sitions of A into disjoint intervals are used, each gives rise to the same
 value of m(A).
 (15) m is additive on &.
@@ -15466,8 +15466,8 @@ value of m(A).
 Note that if p = 1, 2, 3, then m is length, area, and volume, respectively.
 
 11.5 Definition A nonnegative additive set function c defined on & is said to
-be regular if the following is true: To every A  \in  & and to every c > 0 there
-exist sets F  \in  &, G  \in  & such that Fis closed, G is open, F< 4 = G, and
+be regular if the following is true: To every A \in & and to every c > 0 there
+exist sets F \in &, G \in & such that Fis closed, G is open, F< 4 = G, and
 
 (16) dG) -e < P(A) < o(F) +e.
 
@@ -15514,7 +15514,7 @@ if E, c E,.
 
 11.8 Theorem
 
-(a) For every A  \in  &, p*(A4) = u(A).
+(a) For every A \in &, p*(A4) = u(A).
 (b) IfE=|JE,, then
 1
 
@@ -15570,10 +15570,10 @@ We write 4, > 4 if
 lim d(A4, 4,) =0.
 
 If there is a sequence {4,} of elementary sets such that 4, » A, we say
-that A is finitely y-measurable and write 4  \in  Mp(p).
+that A is finitely y-measurable and write 4 \in Mp(p).
 
 If A is the union of a countable collection of finitely y-measurable sets,
-we say that A4 is u-measurable and write 4  \in  M(w).
+we say that A4 is u-measurable and write 4 \in M(w).
 
 S(A, B) is the so-called “symmetric difference” of 4 and B. We shall see
 that d(A4, B) is essentially a distance function.
@@ -15641,7 +15641,7 @@ u*(A4) <d(4, B) + u*(B).
 Since p*(B) is finite, it follows that
 u*(A4) - p(B) < d(4, B).
 
-Proof of Theorem 11.10 Suppose A  \in  Mp(u), B  \in  M(x). Choose {4,},
+Proof of Theorem 11.10 Suppose A \in Mp(u), B \in M(x). Choose {4,},
 {B,} such that 4, \in c&. B, \in &, A, > A, B,-> B. Then (29) and (30) show
 
 that
@@ -15664,9 +15664,9 @@ If An B=0, then u*(4 n B) =0.
 
 It follows that p* is additive on M p(n).
 
-Now let 4  \in  M(u). Then A can be represented as the union of a
+Now let 4 \in M(u). Then A can be represented as the union of a
 countable collection of disjoint sets of Me(u). For if A=|)A, with
-A;  \in  Mp(pn), write A; = A, and
+A; \in Mp(pn), write A; = A, and
 
 A,=(A{v- vd) -Auvud yy) (=234..).
 Then
@@ -15695,9 +15695,9 @@ that
 
 di, BY =u [) 4)= 3 wd) =0
 
-as n- co. Hence B,- A; and since B,  \in  My(p), it is easily seen that
+as n- co. Hence B,- A; and since B, \in My(p), it is easily seen that
 Ae Me(w).
-We have thus shown that 4  \in  Mp(u) if 4  \in  M(u) and p*(4) < + oo.
+We have thus shown that 4 \in Mp(u) if 4 \in M(u) and p*(4) < + oo.
 It is now clear that p* is countably additive on M(u). For if
 
 A=J4,,
@@ -15706,7 +15706,7 @@ where {4,} is a sequence of disjoint sets of M(x), we have shown that (38)
 holds if u*(A4,) < + oo for every n, and in the other case (38) is trivial.
 
 Finally, we have to show that M(u) is a o-ring. If 4, e Mw), n=1,
-2,3, ..., itis clear that U A,  \in  M(u) (Theorem 2.12). Suppose A  \in  M(p),
+2,3, ..., itis clear that U A, \in M(u) (Theorem 2.12). Suppose A \in M(p),
 Be M(u), and
 
 0 Ee
@@ -15717,10 +15717,10 @@ Ed
 Il
 -
 
-where A4,, B,  \in  Me(p). Then the identity
+where A4,, B, \in Me(p). Then the identity
 A,nB=|J (4,0 B)
 i=1
-shows that 4, Nn B  \in  M(y); and since
+shows that 4, Nn B \in M(y); and since
 
 p*(A4, NB) < p*(4,) < + oo,
 
@@ -15740,7 +15740,7 @@ THE LEBESGUE THEORY 309
 
 (40)
 
-(a) If Ais open, then 4  \in  M(1). For every open set in RP? is the union
+(a) If Ais open, then 4 \in M(1). For every open set in RP? is the union
 of a countable collection of open intervals. To see this, it is sufficient to
 construct a countable base whose members are open intervals.
 
@@ -15759,7 +15759,7 @@ complements.
 number of operations, starting from open sets, each operation consisting
 in taking unions, intersections, or complements. The collection # of all
 Borel sets in R? is a o-ring; in fact, it is the smallest o-ring which contains
-all open sets. By Remark (a), Ee M(p) if E  \in  A.
+all open sets. By Remark (a), Ee M(p) if E \in A.
 
 (d) If A e M(w), there exist Borel sets F and G such that Fc 4 = G,
 and
@@ -15768,7 +15768,7 @@ WG - A) = (A - F)=0.
 
 This follows from (b) if we take c = 1/n and let n - oo.
 
-Since A = Fu (4 - F), we see that every 4  \in  M(y) is the union of a
+Since A = Fu (4 - F), we see that every 4 \in M(y) is the union of a
 Borel set and a set of measure zero.
 
 The Borel sets are y-measurable for every pu. But the sets of measure
@@ -15795,7 +15795,7 @@ exists a o-ring M of subsets of X (which are called measurable sets) and a non-
 negative countably additive set function u (which is called a measure), defined
 on M.
 
-If, in addition, X  \in  9M, then X is said to be a measurable space.
+If, in addition, X \in 9M, then X is said to be a measurable space.
 
 For instance, we can take X = RP, MM the collection of all Lebesgue-
 measurable subsets of R?, and u Lebesgue measure.
@@ -15861,7 +15861,7 @@ Proof
 
 xf] <a} ={x|f(x) <a} nn {x|f(x) > - a}.
 
-11.17 Theorem Let {f,} be a sequence of measurable functions. For x  \in  X, put
+11.17 Theorem Let {f,} be a sequence of measurable functions. For x \in X, put
 
 gx) =supf(x) (n=1,2,3,..),
 h(x) = lim sup f(x).
@@ -15903,10 +15903,10 @@ I={(uv)|a,<u<b,, c,<v<dp}
 Since
 {x|a, <f(x) <b} = {x|f(x) > a} n {x|f(x) < bs}
 is measurable, it follows that the set
-{x| (f(x), g(x)  \in  I} = {x]a, < f(x) < by} Nn {x|c, < g(x) < d,}
+{x| (f(x), g(x) \in I} = {x]a, < f(x) < by} Nn {x|c, < g(x) < d,}
 
 is measurable. Hence the same is true of
-{x| h(x) > a} = {x|(f(x), g(x)  \in  G,}
+{x| h(x) > a} = {x|(f(x), g(x) \in G,}
 = J &1( 0. ax) e 1)
 
 Summing up, we may say that all ordinary operations of analysis, includ-
@@ -15956,7 +15956,7 @@ It is of interest that every function can be approximated by simple
 functions:
 
 11.20 Theorem Let f be a real function on X. There exists a sequence {s,} of
-simple functions such that s,(x) - f(x) as n = co, for every x  \in  X. If f is measur-
+simple functions such that s,(x) - f(x) as n = co, for every x \in X. If f is measur-
 able, {s,} may be chosen to be a sequence of measurable functions. If f > 0, {s,}
 may be chosen to be a monotonically increasing sequence.
 
@@ -15988,7 +15988,7 @@ u as the Lebesgue measure m.
 1) sa) = 3 Kp) (xeX,e>0)
 i=1
 
-is measurable, and suppose E  \in  MM. We define
+is measurable, and suppose E \in MM. We define
 
 (52) Ig(s) = Xz c;u(E N Ey).
 If f is measurable and nonnegative, we define
@@ -16032,10 +16032,10 @@ cases it is desirable to deal with the more general situation.
 fe #(u) onE.
 (b) Ifa<f(x)<bforxekE, and u(E) < +00, then
 au(E) < I fdu < bu(E).
-(c) Iffand ge Lu) on E, and if f(x) < g(x) for x  \in  E, then
+(c) Iffand ge Lu) on E, and if f(x) < g(x) for x \in E, then
 | fdu< | g du.
 E E
-d) Iffe (un) on E, then cf  \in  L(u) on E, for every finite constant c, and
+d) Iffe (un) on E, then cf \in L(u) on E, for every finite constant c, and
 [ ofdu=c| fd.
 E E
 (e) If w(E)=0, and f is measurable, then
@@ -16044,7 +16044,7 @@ E
 (f) IffeP(p)onE, AM, and 4 c E, then fe £(u) on A.
 11.24 Theorem
 
-(a) Suppose f is measurable and nonnegative on X. For A  \in  IR, define
+(a) Suppose f is measurable and nonnegative on X. For A \in IR, define
 
 57 P(A) = [ Sdn
 316 PRINCIPLES OF MATHEMATICAL ANALYSIS
@@ -16056,7 +16056,7 @@ E
 (60)
 
 Then c is countably additive on IN.
-(b) The same conclusion holds if f  \in  ¥(u) on X.
+(b) The same conclusion holds if f \in ¥(u) on X.
 
 Proof It is clear that (b) follows from (a) if we write f=f" -f~ and
 
@@ -16130,8 +16130,8 @@ YA vA
 
 provided the integrals exist, for every measurable subset 4 of E.
 
-If a property P holds for every x  \in  E - A, and if u(4) = 0, it is customary
-to say that P holds for almost all x  \in  E, or that P holds almost everywhere on
+If a property P holds for every x \in E - A, and if u(4) = 0, it is customary
+to say that P holds for almost all x \in E, or that P holds almost everywhere on
 E. (This concept of “almost everywhere” depends of course on the particular
 
 _measure under consideration. In the literature, unless something is said to the
@@ -16141,7 +16141,7 @@ If fe £(u) on E, it is clear that f(x) must be finite almost everywhere on E.
 In most cases we therefore do not lose any generality if we assume the given
 functions to be finite-valued from the outset.
 
-11.26 Theorem If fe ¥(u) on E, then |f|  \in  £(u) on E, and
+11.26 Theorem If fe ¥(u) on E, then |f| \in £(u) on E, and
 
 (63) J rau] < [171 an.
 318 PRINCIPLES OF MATHEMATICAL ANALYSIS
@@ -16151,7 +16151,7 @@ By Theorem 11.24,
 
 [Aftdu=[ ft dust | (fl du=] fdas] f~du< +e,
 
-so that |f|  \in  (un). Since f< |f| and -f < |f], we see that
+so that |f| \in (un). Since f< |f| and -f < |f], we see that
 
 [ fan < [ fl du, - [sau < | fl de,
 and (63) follows.
@@ -16162,15 +16162,15 @@ nonabsolutely convergent integrals, and in the treatment of some problems it is
 essential to do so. But these integrals lack some of the most useful properties
 of the Lebesgue integral and play a somewhat less important role in analysis.
 
-11.27 Theorem Suppose f is measurable on E, |f| <g, and g  \in  ¥(u) on E.
-Then f  \in  £(u) on E.
+11.27 Theorem Suppose f is measurable on E, |f| <g, and g \in ¥(u) on E.
+Then f \in £(u) on E.
 
 Proof We have f* <gandf™ <g.
 
-11.28 Lebesgue’s monotone convergence theorem Suppose E  \in  IM. Let {f,} be
+11.28 Lebesgue’s monotone convergence theorem Suppose E \in IM. Let {f,} be
 a sequence of measurable functions such that
 
-(64) 0 <fi(x) <fo(x) <cve (x  \in  E).
+(64) 0 <fi(x) <fo(x) <cve (x \in E).
 Let f be defined by
 
 (65) fix) > f(x)  (xeE)
@@ -16265,7 +16265,7 @@ Ei E; v Ei
 and (73) follows by adding these four equations.
 We are now in a position to reformulate Theorem 11.28 for series.
 
-11.30 Theorem Suppose E  \in  M. If{f,} is a sequence of nonnegative measurable
+11.30 Theorem Suppose E \in M. If{f,} is a sequence of nonnegative measurable
 functions and
 
 (76) fx) = IAC (xe E),
@@ -16285,7 +16285,7 @@ YE n-w E
 THE LEBESGUE THEORY 321
 
 Strict inequality may hold in (77). An example is given in Exercise 5.
-Proof Forn=1,23,...and x  \in  E, put
+Proof Forn=1,23,...and x \in E, put
 gux) =inff(x) (=n).
 
 Then g, is measurable on E, and
@@ -16299,12 +16299,12 @@ By (78), (80), and Theorem 11.28,
 (81) [nd] rau
 so that (77) follows from (79) and (81).
 
-11.32 Lebesgue’s dominated convergence theorem Suppose E  \in  IM. Let {f,} be
+11.32 Lebesgue’s dominated convergence theorem Suppose E \in IM. Let {f,} be
 a sequence of measurable functions such that
 
 (82) Six) = f(x)  (xeE)
 
-as n - oo. If there exists a function g  \in  ¥(u) on E, such that
+as n - oo. If there exists a function g \in ¥(u) on E, such that
 (83) fix) <9(x) (1=1,2,3,...,x \in E),
 then
 
@@ -16316,7 +16316,7 @@ Because of (83), {f,} is said to be dominated by g, and we talk about
 dominated convergence. By Remark 11.25, the conclusion is the same if (82)
 holds almost everywhere on E.
 
-Proof First, (83) and Theorem 11.27 imply that f,  \in  L(x) and fe L(u)
+Proof First, (83) and Theorem 11.27 imply that f, \in L(x) and fe L(u)
 on E.
 Since f, + g > 0, Fatou’s theorem shows that
 
@@ -16423,7 +16423,7 @@ notation introduced in Definition 6.1. Then
 LP. f) = [Lidx, UP. f) = [Uydx,
 and
 L(x) <L(x)< + <f(x) << Ux) < U(x)
-for all x  \in  [a, b], since P,,, refines P,. By (90), there exist
+for all x \in [a, b], since P,,, refines P,. By (90), there exist
 L(x) = lim L(x), U(x) = Jim U(x).
 
 Observe that L and U are bounded measurable functions on [a, 5],
@@ -16446,7 +16446,7 @@ lower Riemann integrals are equal, hence if and only if
 
 (94) [Ldx = [Uadx;
 since L < U, (94) happens if and only if L(x) = U(x) for almost all
-x  \in  [a, b] (Exercise 1).
+x \in [a, b] (Exercise 1).
 In that case, (92) implies that
 
 (95) L(x) =f(x) = U(x)
@@ -16471,7 +16471,7 @@ Ya
 
 then F'(x) = f(x) almost everywhere on [a, b].
 Conversely, if F is differentiable at every point of [a, b] (“almost every-
-where” is not good enough here!) and if F'  \in  & on [a, b], then
+where” is not good enough here!) and if F' \in & on [a, b], then
 
 Fo) - Fa) =[ F()  (asx<b).
 
@@ -16492,7 +16492,7 @@ If = (u? + v2)?
 Theorem 11.18 shows that |f| is measurable for every complex measurable f.
 Suppose u is a measure on X, E is a measurable subset of X, and fis a
 
-complex function on X. We say that f  \in  #(u) on E provided that fis measurable
+complex function on X. We say that f \in #(u) on E provided that fis measurable
 and
 
 ©7) [If du < +0,
@@ -16502,7 +16502,7 @@ and we define
 YE YE E
 
 if (97) holds. Since |u| < |f|, |v] <|f], and |f] < |u| + |v], it is clear that
-(97) holds if and only if u  \in  # (i) and v  \in  & (1) on E.
+(97) holds if and only if u \in # (i) and v \in & (1) on E.
 
 Theorems 11.23(a). (d), (e), (f), 11.24(b), 11.26, 11.27, 11.29, and 11.32
 can now be extended to Lebesgue integrals of complex functions. The proofs
@@ -16541,7 +16541,7 @@ phrase “on X”’ from now on) we define
 i=] raf”
 
 and call |f|| the #?(x) norm of f.
-11.35 Theorem Suppose fe L*(u) and g  \in  L*(u). Then fg  \in  L(u), and
+11.35 Theorem Suppose fe L*(u) and g \in L*(u). Then fg \in L(u), and
 
 (98) [fol di <1f1 1g
 
@@ -16552,7 +16552,7 @@ series and for Riemann integrals. It follows from the inequality
 X X
 which holds for every real A.
 
-11.36 Theorem If fe L*(u) and g  \in  L*(u), then f + g  \in  L*(u), and
+11.36 Theorem If fe L*(u) and g \in L*(u), then f + g \in L*(u), and
 
 17+ gl < If1l + lal.
 Proof The Schwarz inequality shows that
@@ -16616,7 +16616,7 @@ orthonormal set of functions on a measurable space X if
 
 (n =m).
 
-In particular, we must have c,  \in  £3(u). If fe £*(u) and if
+In particular, we must have c, \in £3(u). If fe £*(u) and if
 
 = [ fade (n=1,23,..),
 X
@@ -16691,7 +16691,7 @@ k=1,23,..., such that
 1
 I foie = Soe <x (k=123..)
 
-Choose a function g  \in  #?(u). By the Schwarz inequality,
+Choose a function g \in #?(u). By the Schwarz inequality,
 
 [Non = on.) die < "51
 Ix
@@ -16723,7 +16723,7 @@ Juicer) = Jai),
 
 we see that the equation
 Sx) = lim Jn(X)
-defines f(x) for almost all x  \in  X, and it does not matter how we define
+defines f(x) for almost all x \in X, and it does not matter how we define
 f(x) at the remaining points of X.
 We shall now show that this function f has the desired properties.
 
@@ -16732,7 +16732,7 @@ nm, > N, Fatou’s theorem shows that
 
 If = full lim inf Lf, = fu <
 
-Thus f - f,,  \in  £*(u), and since f = (f - f,,) + f,,, We see that fe L*(n).
+Thus f - f,, \in £*(u), and since f = (f - f,,) + f,,, We see that fe L*(n).
 Also, since c is arbitrary,
 
 Jim If = full =0.
@@ -16755,7 +16755,7 @@ Proof Forn>m,
 [15 = 8mll® = [emer [2+ + leal?,
 
 so that {s,} is a Cauchy sequence in £?(u). By Theorem 11.42, there is
-a function f  \in  £?(u) such that
+a function f \in £?(u) such that
 
 lim || f-s,| =0.
 
@@ -16798,7 +16798,7 @@ X n=1
 Proof By the Bessel inequality, X|c,|? converges. Putting
 Sp = C19; +0 + Cus,
 
-the Riesz-Fischer theorem shows that there is a function g  \in  #?(y) such
+the Riesz-Fischer theorem shows that there is a function g \in #?(y) such
 that
 
 (108) g~ ICL
@@ -16840,7 +16840,7 @@ almost everywhere on E.
 3. If {f,} is a sequence of measurable functions, prove that the set of points x at
 which { f,(x)} converges is measurable.
 
-4. If fe L(p) on E and g is bounded and measurable on E, then fg  \in  Z(u) on E.
+4. If fe L(p) on E and g is bounded and measurable on E, then fg \in Z(u) on E.
 5. Put
 
 0 0<x<}),
@@ -16888,7 +16888,7 @@ this is false. For instance, if
 f(x) = TT
 
 then fe #2 on R', but fc .¥ on R'.
-11. If £, g  \in  L (pn) on X, define the distance between f and g by
+11. If £, g \in L (pn) on X, define the distance between f and g by
 
 [, |f-gl du.
 
@@ -16926,7 +16926,7 @@ regular and which cannot be extended to a countably additive set function on a
 o-ring.
 
 16. Suppose {n,} is an increasing sequence of positive integers and E is the set of all
-x  \in  (-m, m) at which {sin nsx} converges. Prove that m(E)=0. Hint: For every
+x \in (-m, m) at which {sin nsx} converges. Prove that m(E)=0. Hint: For every
 A<E,
 
 [ sin mx dx - 0,
@@ -16936,8 +16936,8 @@ and
 2[ Ginn dx = [ (1 cos 2x) dx md) ask.
 
 17. Suppose E < (-m, wm), m(E) > 0,8 > 0. Use the Bessel inequality to prove that
-there are at most finitely many integers » such that sin nx > 6 for all x  \in  E.
-18. Suppose fe L*(p), g  \in  L*(n). Prove that
+there are at most finitely many integers » such that sin nx > 6 for all x \in E.
+18. Suppose fe L*(p), g \in L*(n). Prove that
 
 [aan] = [1717 du [101 du
 
