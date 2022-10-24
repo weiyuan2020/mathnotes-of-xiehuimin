@@ -38,7 +38,7 @@
 
 
 \usepackage{amsmath}
-% \usepackage{amsthm} % amsthm 与 ntheorem 冲突
+\usepackage{amsthm} % amsthm 与 ntheorem 冲突
 \usepackage{amssymb}
 \usepackage{hyperref} % \url
 \usepackage{graphicx} % \includegraphics
@@ -47,37 +47,39 @@
 \usepackage{enumerate} % 罗列专用宏包
 \usepackage{fancybox} % 使用盒子
  
-\usepackage{ntheorem} % 调整定理格式
+% \usepackage{ntheorem} % 调整定理格式
 
 % \newtheorem{example}{例}
 
 % https://jingyan.baidu.com/article/09ea3ede21248cc0afde3944.html
 % \newtheorem{thm}{Theorem}[section] % 如果不采用章节号做前缀， 则不用[section]
 
-% \theoremstyle{plain} % default
-\theorembodyfont{\upshape} %正体
+
+% \theorembodyfont{\upshape} %正体
 % \theorembodyfont{\itshape} %斜体
 % 定理类环境默认的字体为斜体，可以通过 \theorembodyfont 来设置字体，其中 \upshape 为正体，\itshape 为斜体。\theorembodyfont 必须放在 newthorem 的上方。
+
+% \theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{lemma}[theorem]{Lemma}    % theorem 和 lemma 环境是 plain 样式
+% \theoremstyle{definition}
+% \newtheorem{example}{Example}[section]     % example 环境是 definition 样式
+
+\theoremstyle{plain} % default
 \newtheorem{thm}{Theorem}[chapter] % 如果不采用章节号做前缀， 则不用[section]
-\newtheorem{myDefinition}[thm]{Definition} % 这句定义使得 defn 环境和 thm 共享编号
 \newtheorem{myLemma}[thm]{Lemma}% 这句定义使得 lem 环境和 thm 共享编号
+\newtheorem{myAxiom}[thm]{Axiom}
+
+\theoremstyle{definition} % definition
+\newtheorem{myDefinition}[thm]{Definition} % 这句定义使得 defn 环境和 thm 共享编号
 \newtheorem{myExample}[thm]{Example}% 这句定义使得 example 环境和thm 共享编号
 \newtheorem{myRemark}[thm]{Remark}
-\newtheorem{myAxiom}[thm]{Axiom}
 \newtheorem{myProposition}[thm]{Proposition}
+\newtheorem{myNotation}[thm]{Notation}
 
-\newtheorem*{proof}{proof}
+%  amsthm 与 ntheorem 冲突, 注释amsthm 后没有proof环境，因此需要自己定义一个新的
+% \newtheorem*{proof}{proof}
 
-% 自定义proof 环境
-% proof 环境的原始定义是这样的：
-% \newenvironment{proof}[1][\proofname]{\par
-%   \pushQED{\qed}%
-%   \normalfont \topsep6\p@\@plus6\p@\relax
-%   \trivlist
-%   \item[\hskip\labelsep
-%         \itshape
-%     #1\@addpunct{.}]\ignorespaces
-% }{\popQED\endtrivlist\@endpefalse}
 
 % 我的笔记环境
 \newcommand{\mybox}[1]{
@@ -93,5 +95,5 @@
 \begin{document}
     \maketitle
     \mainmatter
-    \input{chap01.tex}
+    \input{chap/chap01.tex}
 \end{document}

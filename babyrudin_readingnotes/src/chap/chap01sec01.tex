@@ -1,0 +1,105 @@
+
+\section{Introduction}
+First we use $\sqrt{2}$ to construct real number system from integer and rational numbers.
+
+% 1.1 Example
+\begin{myExample}\label{Example:1.1}
+\begin{equation}\label{eq:1-001}
+    p^2=2
+\end{equation}
+$p$ is not a rational number.
+\end{myExample}
+
+\begin{proof}
+% Proof: 
+(反证法) 假设 $p$ 是有理数,  $\exists m,n \in \mathbf{N}$, s.t. $p=m/n$. $\gcd (m,n) = 1$.
+Then \ref{eq:1-001}
+\begin{equation}\label{eq:1-002}
+    m^2 = 2n^2.
+\end{equation}
+
+$m$ is even, $m = 2k$.
+那么有 $(2k)^2 = 2n^2$, $2k^2 = n^2$, $k$ is even, $\gcd (m,n)=2\neq 1$,
+contrary to our choice of $m$ and $n$. Hence p can't be a rational number.
+\end{proof}
+
+After proving $\sqrt{2}$ isn't a rational number, rudin use $\sqrt{2}$ to divide the rationals
+在证明 $\sqrt{2}$ 不是有理数后, 使用 $\sqrt{2}$ 将有理数集分成两部分.  引出了分划的概念? 
+\begin{align*}
+    A = \{p|p^2<2\}\\
+    B = \{p|p^2>2\}
+\end{align*}
+
+$A$ \emph{contains no largest number},\\
+$B$ \emph{contains no smallest number}.\\
+$\forall p\in A$, $\exists q\in A$, s.t. $p<q$,\\
+$\forall p\in B$, $\exists q\in B$, s.t. $p>q$,\\
+$\forall p>0$
+\begin{equation}\label{eq:1-003}
+    q = p-\frac{p^2-2}{p+2} = \frac{2p+2}{p+2}
+\end{equation}
+
+Then 
+\begin{equation}
+    \label{eq:1-004}
+    q^2 - 2 = \frac{2(p^2-2)}{(p+2)^2}
+\end{equation}
+
+If $p\in A$, $p^2<2$. \ref{eq:1-003} shows that $q>p$, \ref{eq:1-004} shows that $q^2<2$, $q\in A$.
+If $p\in B$, $p^2>2$. \ref{eq:1-003} shows that $q<p$, \ref{eq:1-004} shows that $q^2>2$, $q\in B$.
+
+
+\begin{myRemark}\label{Remark:1.2}
+The purpose of the above discussion has been to show that the rational number system has certain gaps, 
+in spite of the fact that between any two rationals there is another: If $r<s$ then $r<(r+s)/2<s$.
+The real number system fills these gaps.
+This is the principal reason for the fundamental role which it plays in analysis.
+\end{myRemark}
+
+\mybox{
+% mynotes:
+有理数的稠密性与实数的连续性. 在分析中, 考察极限等需要的是数系的连续性, 因此需要先建立实数系. 
+事实上, 我们是先有微积分, 后有实数理论的. 
+三次数学危机：
+无理数, 微积分基础, 集合论
+实数理论是极限的基础. 
+}
+
+In order to elucidate its structure, as well as that of the complex numbers, 
+we start with a brief discussion of the genral concepts of \emph{ordered set} and \emph{field}.
+
+
+\mybox{
+% mynotes：
+rudin引入复数的方法非常怪, 对初学者非常不友好, 过于抽象了. 
+想起一个法国笑话, 问小学生$2+3$等于几, 回答 $2+3=3+2$ 加法是一个交换群（Abel 群）...
+} 
+
+Here is some of the standard set-theoretic terminology taht will be used throughout this book.
+
+\mybox{接下来引入一些集合论的定义}
+
+\begin{myDefinition}\label{myDefinition:1.3}
+% 1.3 myDefinition
+If $A$ is any set (whose elements\footnote{这里elements还没定义, 笑啦} may be numbers or any other objects\footnote{object指代什么? 我个人认为集合理解的难点在于集合的集合. 这一点可以引出罗素悖论}), we write $x\in A$ to indicate that $x$ is a member (or an element) of $A$.
+
+If $x$ is not a member of $A$, we write: $x\notin A$.
+
+\emph{empty set} $\varnothing$ contains no element, If a set has at least one element, it is called \emph{nonempty}.
+
+$A,B$ are sets, $\forall x\in A$, $x\in B$, we say that $A$ is a \emph{subset} of $B$, $A\subset B$ or $B\supset A$. If $\exists x\in B$, $x\notin A$, A is a \emph{proper subset} of $B$, $A \subsetneqq B$.
+Note that $A\subset A$ for every set $A$.
+
+(Bernstein) If $A\subset B$ and $B\subset A$, we write $A = B$. Otherwise $A\neq B$.
+\end{myDefinition}
+
+\mybox{% mynotes:
+这条性质在证明集合相等时很常用
+}
+
+\begin{myDefinition}\label{myDefinition:1.4}
+% 1.4 myDefinition
+Throughout Chap. 1, the set of all rational numbers will be denoted by $\mathbb{Q}$.
+\end{myDefinition}
+
+有理数集$\mathbb{Q}$
