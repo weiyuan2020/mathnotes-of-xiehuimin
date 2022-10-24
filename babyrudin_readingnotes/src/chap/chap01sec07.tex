@@ -1,0 +1,46 @@
+\section{Euclidean space}
+欧式空间
+
+\begin{myDefinition}\label{myDefinition:coordinates}
+    % 1.36 Definitions
+    For each positive integer $k$, let $\mathbb{R}^k$ be the set of all ordered k-tuples
+    \begin{equation*}
+        \mathbf{k} = \left(x_1,x_2,\dots,x_k\right),
+    \end{equation*}
+    where $x_1,x_2,\dots,x_k$ are real numbers, called the \textbf{coordinates} of $\mathbf{x}$. The elements of
+    $\mathbb{R}^k$ are called points, or vectors, especially when $k > 1$. We shall denote vectors
+    by boldfaced letters. 
+    If $\mathbf{y} = \left(y_1,y_2,\dots,y_k\right)$ and if $\alpha$ is a real number, put
+    \begin{align*}
+        \mathbf{x} + \mathbf{y} &= \left(x_1+y_1,x_2+y_2,\dots,x_k+y_k\right),\\
+        \alpha\mathbf{x}  = \left(\alpha x_1,\alpha x_2,\dots,\alpha x_k\right)
+    \end{align*}
+    so that $\mathbf{x} +\mathbf{y} \in \mathbb{R}^k$ and $\alpha\mathbf{x} \in \mathbb{R}^k$. This defines addition of vectors, as well as multiplication of a vector by a real number (a scalar). These two operations satisfy the commutative, associative, and distributive laws (the proof is trivial, in view of the analogous laws for the real numbers) and make $\mathbb{R}^k$ into a vector space over the \emph{real field}. The zero element of $\mathbb{R}^k$ (sometimes called the origin or the null vector) is the point $\mathbf{0}$, all of whose coordinates are $0$.
+
+    We also define the so-called ``inner product'' (or scalar product) of $\mathbf{x}$ and $\mathbf{y}$ by
+    \begin{equation*}
+        \mathbf{x}\cdot\mathbf{y} = \sum_{j=1}^{k}x_j y_j
+    \end{equation*}
+    and the norm of $\mathbf{x}$ by
+    \begin{equation*}
+        |x| = (x\cdot x)^{1/2} = \left( \sum_{1}^{k} x_j^2 \right)^{1/2}.
+    \end{equation*}
+
+    The structure now defined (the vector space $\mathbb{R}^k$ with the above inner product and norm) is called euclidean $k$-space.
+\end{myDefinition}
+
+\begin{thm}\label{thm:1.37vector}
+    Suppose $\mathbf{x}, \mathbf{y}, \mathbf{z}\in\mathbb{R}^k$, and $\alpha$ is real. Then
+
+(a) $| \mathbf{x}| \geq 0$;
+
+(b) $| \mathbf{x}| = 0$ if and only if $\mathbf{x} =0$;
+
+(c) $| \alpha \mathbf{x}| = | \alpha||x|$
+
+a |x-y| <|x[lyl;
+a x+y <x +1yl;
+Of) |x-z|<|x-y|+]|y-z|.
+\end{thm}
+
+
