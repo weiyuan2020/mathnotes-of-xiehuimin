@@ -66,6 +66,88 @@ $0 < \lambda <1$, we have
     & = r.
 \end{align*}
 
-
 The same proof applies to closed balls. It is also easy to see that $k$-cells are convex.
 % 32 PRINCIPLES OF MATHEMATICAL ANALYSIS
+
+\mybox{这里给出了 开区间, 闭区间, 半开区间以及凸集 convex 的定义}
+
+\begin{myDefinition}\label{myDefinition:2.18 important}
+    Definition Let $X$ be a metric space. All points and sets mentioned below are understood to be elements and subsets of $X$.
+
+    (a) A \emph{neighborhood} of $p$ is a set $N_r(p)$ consisting of all $q$ such that $d(p, q) < r$,for some $r > 0$. The number $r$ is called the \emph{radius} of $N_r(p)$.
+
+    (b) A point $p$ is a \emph{limit point} of the set $E$ if \emph{every} neighborhood of $p$ contains a point $q \neq p$ such that $q \in E$.
+    
+    (c) If $p \in E$ and $p$ is not a limit point of $E$, then $p$ is called an \emph{isolated point} of $E$.
+    
+    (d) $E$ is \emph{closed} if every limit point of $E$ is a point of $E$.
+    
+    (e) A point $p$ is an \emph{interior} point of $E$ if there is a neighborhood $N$ of $p$ such that $N \subset E$.
+    
+    (f) $E$ is \emph{open} if every point of $E$ is an interior point of $E$.
+    
+    (g) The \emph{complement} of $E$ (denoted by $E^c$)is the set of all points $p \in X$
+    such that $p \not\in E$.
+    
+    (h) $E$ is \emph{perfect} if $E$ is closed and if every point of $E$ is a limit point
+    of $E$.
+    
+    (i) $E$ is \emph{bounded} if there is a real number $M$ and a point $q \in X$ such that $d(p,q)< M$ for all $p \in E$.
+    
+    (j) $E$ is \emph{dense} in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
+\end{myDefinition}
+
+Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\mathbb{R}^2$ neighborhoods are interiors of circles.
+
+\begin{thm}\label{thm:2.19 neighbhood is open}
+    Every neighborhood is un open set.
+\end{thm}
+
+\begin{thm}\label{thm:2.20}
+    If $p$ is a limit point of a set $E$, then every neighborhood of $p$ contains infinitely many points of $E$.
+\end{thm}
+
+\begin{myCorollary}
+    A finite point set has no limit points.
+\end{myCorollary}
+
+\begin{myExample}
+    Let us consider the following subsets of $\mathbb{R}^2$:
+
+(a) The set of all complex $z$ such that $|z| < 1$.
+
+(b) The set of all complex $z$ such that $|z| \leq 1$.
+
+(c) A nonempty finite set.
+
+(d) The set of all integers.
+
+(e) The set consisting of the numbers $1/n(n=1,2,3,...)$. Let us note that this set $E$ has a limit point (namely, $z =0$) but that no point of $E$ is a limit point of $E$; we wish to stress the difference between having a limit point and containing one.
+
+(f) The set of all complex numbers (that is, $\mathbb{R}^2$).
+
+(g) The segment $(a,b)$.
+\end{myExample}
+
+Let us note that (d),(e),(g)can be regarded also as subsets of R'.
+Some properties of these sets are tabulated below:
+
+
+\begin{table}[htbp]
+    \begin{center}
+    \begin{tabular}{lcccc}
+        & Closed & Open & Perfect & Bounded \\
+    (a) & No     & Yes  & No      & Yes     \\
+    (b) & Yes    & No   & Yes     & Yes     \\
+    (c) & Yes    & No   & No      & Yes     \\
+    (d) & Yes    & No   & No      & No      \\
+    (e) & No     & No   & No      & Yes     \\
+    (f) & Yes    & Yes  & Yes     & No      \\
+    (g) & No     &      & No      & Yes    
+    \end{tabular}
+    \end{center}
+\end{table}
+
+In (g), we left the second entry blank. The reason is that the segment $(a,b)$ is not open if we regard it as a subset of $\mathbb{R}^2$, but it is an open subset of $\mathbb{R}^1$.
+
+\mybox{根据定义, 复数集既是闭集又是开集...}
