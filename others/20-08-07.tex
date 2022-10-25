@@ -108,12 +108,12 @@
 	
 	在$ n $对括号的排列中，假设最后一个括号和第$ i $个左括号匹配。则在第$ i $个左括号之前，一定已经匹配上了$ (i-1) $对左括号。如下图，因此，此种情况的数量为$ f(i-1)*f(n-i-1) $。$ (1\leq i\leq n) $最后一个右括号可以$ 1 \sim n $个左括号匹配共n种情况。
 	
-	\begin{figure} [h]
-		\centering
-		\includegraphics[width=0.7\linewidth]{pic/catalan_proof-001}
-		\caption{catalan number - proof}
-		\label{fig:catalanproof-001}
-	\end{figure}
+	% \begin{figure} [h]
+	% 	\centering
+	% 	\includegraphics[width=0.7\linewidth]{pic/catalan_proof-001}
+	% 	\caption{catalan number - proof}
+	% 	\label{fig:catalanproof-001}
+	% \end{figure}
 	
 	
 %	\[
@@ -360,12 +360,12 @@ $ \because $
 		mf(a) \le  f(a)G(a) \le Mf(a)\\	
 		mf(b) \le  \int_{a}^{b} f(x)g(x) \text{d}x \le Mf(b)\\	
 	\end{gather}
-\begin{equation}
-	\begin{gather}
-		\text{when} f(b)=0,    &f(x)\equiv 0, \forall \zeta \in [a,b], \text{等式恒成立}\\
-		\text{when} f(b)\neq0, &m\le \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{f(b)}\le M\\
-	\end{gather}
-\end{equation}
+% \begin{equation}
+% 	\begin{gather}
+% 		\text{when} f(b)=0,    &f(x)\equiv 0, \forall \zeta \in [a,b], \text{等式恒成立}\\
+% 		\text{when} f(b)\neq0, &m\le \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{f(b)}\le M\\
+% 	\end{gather}
+% \end{equation}
 	From the Intermediate Value Theorem, $ \exists \zeta \in [a,b] s.t. G(\zeta) = \frac{\int_{a}^{b}f(x)g(x)\text{d}x}{f(b)} $\\
 	then we have
 	\begin{gather}
