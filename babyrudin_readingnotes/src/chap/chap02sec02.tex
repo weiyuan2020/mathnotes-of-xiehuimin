@@ -13,3 +13,59 @@
 \end{myDefinition}
 对称性，正定性，三角不等式。
 
+\begin{myExample}
+    the distance of the euclidean space $\mathbb{R}^k$ is defined by
+    \begin{equation}\label{eq:2.19 distance in eulidean space}
+        d(\mathbf{x}, \mathbf{y}) = |\mathbf{x} - \mathbf{y}|
+        \qquad (\mathbf{x}, \mathbf{y}\in \mathbb{R}^k)
+    \end{equation}
+\end{myExample}
+
+It's important to observe that every subset $Y$ of metric space $X$ is a metric space in its own right, with the same distance function. For it is clear that if conditions (a) to (c) of Definition \ref{myDefinition:2.15} hold for $p, q, r \in X$, they also hold if we restrict $p, q, r$ to lie in $Y$.
+
+Thus every subset of a euclidean space is a metric space. Other examples
+are the spaces $l(K)$ and $L^2 (\mu)$, 
+% $\mathscr{l} (K)$ and $\mathscr{l}^2 (\mu)$
+% \footnote{使用 mathescr 命令输入英文花体字(报错,改用 mathcal)
+% Ralph Smith’s Formal Script Font (rsfs): Use the “mathrsfs” package.
+% usepackage{mathrsfs}
+% ...
+% \mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+% }
+, which are discussed in Chaps. 7 and 11, respectively.
+
+\begin{myDefinition}\label{myDefinition:2.17 segment}
+% 2.17 Definition 
+By the \emph{segment} $(a, b)$ we mean the set of all real numbers $x$
+such that $a < x <b$.
+
+By the \emph{interval} $[a. b]$ we mean the set of all real numbers $x$ such that $a \leq x \leq b$
+
+Occasionally we shall also encounter ``half-open intervals'' $[a, b)$ and $(a, b]$; the first consists of all $x$ such that $a \leq x < b$, the second of all $x$ such that $a < x \leq b$
+\end{myDefinition}
+
+If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\mathbb{R}^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \emph{$k$-cell}.\\
+Thus a $1$-cell is an interval, a $2$-cell is a rectangle, etc.
+
+If $\mathbf{x}\in \mathbb{R}^k$ and $r > 0$. the \emph{open (or closed) ball} $B$ with center at $\mathbf{x}$ and radius $r$ is defined to be the set of all $\mathbf{y} \in \mathbb{R}^k$ such that $|\mathbf{y} - \mathbf{x}| <r$ (or $|\mathbf{y} - \mathbf{x}| \leq r$).
+
+We call a set $E \subset \mathbb{R}^k$ \emph{convex} if
+
+\begin{equation*}
+    \lambda\mathbf{x} + (1 - \lambda)\mathbf{y} \in E
+\end{equation*}
+
+whenever $\mathbf{x} \in E$, $\mathbf{y} \in E$, and $0 < \lambda < 1$.
+
+For example, \emph{balls are convex}. For if |y -x| <r, |z-x| <r, and
+$0 < \lambda <1$, we have
+\begin{align*}
+    |\lambda \mathbf{y} + (1-\lambda) \mathbf{z} - \mathbf{x}|
+    & = |\lambda (\mathbf{y} - \mathbf{x}) + (1 - \lambda)(\mathbf{z} - \mathbf{x})\\
+    & \leq \lambda |\mathbf{y} - \mathbf{x}| + (1 - \lambda)|\mathbf{z} - \mathbf{x}| < \lambda r + (1 - \lambda)r\\
+    & = r.
+\end{align*}
+
+
+The same proof applies to closed balls. It is also easy to see that $k$-cells are convex.
+% 32 PRINCIPLES OF MATHEMATICAL ANALYSIS
