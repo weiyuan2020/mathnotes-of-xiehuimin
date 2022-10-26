@@ -151,3 +151,73 @@ Some properties of these sets are tabulated below:
 In (g), we left the second entry blank. The reason is that the segment $(a,b)$ is not open if we regard it as a subset of $\mathbb{R}^2$, but it is an open subset of $\mathbb{R}^1$.
 
 \mybox{根据定义, 复数集既是闭集又是开集...}
+
+\begin{thm}\label{thm:2.22}
+    Let $\{E_\alpha\}$ be a (finite or infinite) collection of sets $E_\alpha$. Then
+    \begin{equation}
+        \left(\bigcup_{\alpha} E_{\alpha} \right)^c = \bigcap_{\alpha}( E_{\alpha}^c )
+    \end{equation}
+\end{thm}
+
+\begin{thm}
+    A set $E$ is open if and only if its complement is closed.
+\end{thm}
+
+\begin{proof}
+    % Proof 
+    First, suppose $E^c$ is closed. Choose $x \in E$. Then $x \not\in E^c$, and $x$ is not a limit point of $E^c$. Hence there exists a neighborhood $N$ of $x$ such that $E^c \cap N$ is empty, that is, $N \subset E$. Thus $x$ is an interior point of $E$, and $E$ is open.
+    
+    Next, suppose $E$ is open. Let $x$ be a limit point of $E^c$. Then every neighborhood of $x$ contains a point of $E^c$, so that $x$ is not an interior point of $E$. Since $E$ is open, this means that $x \in E^c$. It follows that $E$ is closed.
+\end{proof}
+
+\begin{myCorollary}
+    A set $F$ is closed if and only if its complement is open.
+\end{myCorollary}
+
+\mybox{这里使用新的定义得到的开集与闭集保持了原有的性质: 开集的补集是闭集, 闭集的补集是开集}
+
+\begin{thm}
+    (a) For any collection $\{G_\alpha\}$ of open sets,  $\cup_\alpha G_\alpha$ is open.
+
+    (b) For any collection $\{F_\alpha\}$ of closed sets, $\cap_\alpha F_\alpha$ is closed.
+
+    (c) For anyfinite collection $G_1, ..., G_n$ of open sets, $\cap_{i=1}^n G_i$ is open.
+
+    (d) For anyfinite collection $F_1, ..., F_n$ of closed sets, $\cup_{i=1}^n F_i$ is closed.
+\end{thm}
+
+\begin{myExample}
+    \begin{equation*}
+        G_n = \left(-\frac{1}{n}, \frac{1}{n} \; (n=1,2,3,\dots). \right)
+    \end{equation*}
+    $G = \cap_{n=1}^\infty G_n$
+\end{myExample}
+
+\begin{myDefinition}
+    If $X$ is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the closure of $E$ is the set $\bar{E}=E \cup E'$.
+\end{myDefinition}
+
+\begin{thm}
+    If $X$ is a metric space and $E \subset X$, then
+    
+    (a) $E$ is closed,
+    
+    (b) $E = \bar{E}$ if and only if $E$ is closed,
+    
+    (c) $E \subset F$ for every closed set $F \subset X$ such that $E \subset F$.
+\end{thm}
+By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
+
+\begin{thm}
+    Let $E$ be a nonempty set of real numbers which is bounded above.     Let $y = \sup E$. Then $y \in \bar{E}$. Hence $y \in E$ if $E$ is closed.
+\end{thm}
+
+\begin{myRemark}
+    Suppose $E \subset Y \subset X$, where $X$ is a metric space. To say that $E$ is an open subset of $X$ means that to each point $p \in E$ there is associated a positive number $r$ such that the conditions $d(p,q) < r$ , $g \in X$ imply that $q \in E$. But we have already observed (Sec. 2.16) that $Y$ is also a metric space, so that our definitions may equally well be made within $Y$. To be quite explicit, let us say that $E$ is \emph{open relative} to $Y$ if to each $p \in E$ there is associated an $r > 0$ such that $q \in E$ whenever $d(p,q) <r$ and $g \in Y$. Example 2.21(g) showed that a set 
+    % 36 PRINCIPLES OF MATHEMATICAL ANALYSIS 
+    may be open relative to $Y$ without being an open subset of $X$. However, there is a simple relation between these concepts, which we now state.
+\end{myRemark}
+
+\begin{thm}
+    Suppose $Y \subset X$. A subset $E$ of $Y$ is open relative to $Y$ if and only if $E = Y \cap G$ for some open subset $G$ of $X$.
+\end{thm}
