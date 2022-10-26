@@ -1,0 +1,149 @@
+% chap02sec03
+\section{Compact sets}
+
+\begin{myDefinition}
+    \label{myDefinition:2.31 open cover}
+    By an \emph{open cover} of a set $E$ in a metric space $X$ we mean a collection $\{G_{\alpha}\}$ of open subsets of $X$ such that $E \subset \cup_{\alpha} G_{\alpha}$.
+\end{myDefinition}
+
+\begin{myDefinition}
+    \label{myDefinition:2.32 compact set}
+    A subset $K$ of a metric space $X$ is said to be \emph{compact} if every open cover of $K$ contains a \emph{finite} subcover.
+\end{myDefinition}
+
+More explicitly, the requirement is that if $\{G_{\alpha}\}$ is an open cover of $K$, then there are finitely many indices $\alpha_1, ..., \alpha_n$ such that
+\begin{equation*}
+    K \subset G_{\alpha_{1}} \cup \cdots \cup G_{\alpha_{n}}.
+\end{equation*}
+
+The notion of compactness is of great importance in analysis, especially
+in connection with continuity (Chap. 4).
+
+It is clear that every finite set is compact. The existence of a large class of infinite compact sets in $\mathbb{R}^k$ will follow from Theorem 2.41.
+
+We observed earlier (in Sec. 2.29) that if $E \subset Y \subset X$, then $E$ may be open relative to $Y$ without being open relative to $X$. The property of being open thus depends on the space in which $E$ is embedded. The same is true of the property of being closed.
+
+Compactness, however, behaves better, as we shall now see. To formulate the next theorem, let us say, temporarily, that $K$ is compact relative to $X$ if the requirements of Definition 2.32 are met.
+% BASIC TOPOLOGY 37
+
+\begin{thm}
+    \label{thm:2.33 compact relative}
+    Suppose $K \subset Y \subset X$. Then $K$ is compact relative to $X$ if and only if $K$ is compact relative to $Y$.
+\end{thm}
+
+\begin{proof}
+    % Proof 
+    Suppose $K$ is compact relative to $X$, and let $\{V_\alpha\}$ be a collection of sets, open relative to $Y$, such that $K \subset \cup_\alpha V_\alpha$ theorem 2.30, there are sets $G_\alpha$, open relative to $X$, such that $V_\alpha = Y \cap G_\alpha$, for all $\alpha$; and since $K$ is compact relative to $X$, we have
+    \begin{equation}\label{eq:2.22}
+        K \subset G_{\alpha_{1}} \cup \cdots \cup G_{\alpha_{n}}.
+    \end{equation}
+    for some choice of finitely many indices $\alpha_1 ..., \alpha_n$. Since $K \subset Y$, \ref{eq:2.22} implies
+    \begin{equation}\label{eq:2.23}
+        K \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}.
+    \end{equation}
+    This proves that $K$ is compact relative to $Y$.
+    
+    Conversely, suppose $K$ is compact relative to $Y$, let $G_\alpha$ be a collection of open subsets of $X$ which covers $K$, and put $V_\alpha = Y \cap G_\alpha$. Then \ref{eq:2.23} will hold for some choice of $\alpha_1, ...,\alpha_n$; and since $V_\alpha = G_\alpha$, \ref{eq:2.23} implies \ref{eq:2.22}.
+    
+    This completes the proof.
+\end{proof}
+
+\begin{thm}
+    \label{thm:2.34}
+    Compact subsets of metric spaces are closed.
+\end{thm}
+
+% Proof Let K be a compact subset of a metric space X. We shall prove
+% that the complement of K is an open subset of X.
+
+% Suppose pe X, pc K. If ge K, let V, and W, be neighborhoods of p
+% and g, respectively, of radius less than 4d(p, q) [see Definition 2.18(a)].
+% Since K is compact, there are finitely many points gy, ..., g, in K such that
+
+% KecW, vuuWw, =W
+
+% If V=V, n:-nV,, then Vis a neighborhood of p which does not
+% intersect W. Hence V < Kc, so that p is an interior point of K°. The
+% theorem follows.
+
+\begin{thm}\label{thm:2.34 compact-close}
+    Closed subsets of compact sets are compact.
+\end{thm}
+
+% Proof Suppose F< K c X, Fis closed (relative to X), and K is compact.
+% Let {V,} be an open cover of F. If Fcis adjoined to {V,}, we obtain an
+% 38 PRINCIPLES OF MATHEMATICAL ANALYSIS
+
+% open cover Q of K. Since K is compact, there is a finite subcollection ®
+% of Q which covers XK, and hence F. If Fcis a member of ®, we may remove
+% it from ® and still retain an open cover of F. We have thus shown that a
+% finite subcollection of {V,} covers F.
+
+% Corollary 
+\begin{myCorollary}
+    If $F$ is closed and $K$ is compact, then $F \cap K$ is compact.
+\end{myCorollary}
+
+
+% Proof Theorems 2.24(b) and 2.34 show that Fn K is closed; since
+% Fn Kc K, Theorem 2.35 shows that Fn K is compact.
+
+\begin{thm}
+    % 2.36 Theorem
+    If $\{K_\alpha\}$ is a collection of compact subsets of a metric space $X$ such that the intersection of every finite subcollection of $\{K_\alpha\}$ is nonempty, then $\cap K_\alpha$ is nonempty.    
+\end{thm}
+
+% Proof F ix a member K, of {K,} and put G, = K. Assume that no point
+% of K; belongs to every K,. Then the sets G, form an open cover of Kj;
+% and since K, is compact, there are finitely many indices a, ..., a, such
+% that K; « G,, U *** U G,,. But this means that
+% \begin{equation*}
+%     K_1 \cap
+%     K_{\alpha_1} \cap
+%     \dots \cap
+%     K_{\alpha_n}
+% \end{equation*}
+% is empty, in contradiction to our hypothesis.
+
+\begin{myCorollary}
+    % Corollary 
+    If $\{K_\alpha\}$ is a sequence of nonempty compact sets such that $K_n \supset K_{n+1} (n=1,2,3,...)$, then $\cap_1^\infty K_n$ is not empty.
+\end{myCorollary}
+
+\begin{thm}
+    % 2.37 Theorem 
+    If $E$ is an infinite subset of a compact set $K$, then $E$ has a limit point in $K$.
+\end{thm}
+
+\begin{thm}
+    % 2.38 Theorem 
+    If $\{I_n\}$ is a sequence of intervals in $\mathbb{R}^1$, such that $I_n \supset I_{n+1}, (n=1,2,3,...)$, then $\cap_1^\infty I_n$ is not empty.
+\end{thm}
+
+\begin{thm}\label{thm:2.39}
+    Let $k$ be a positive integer. If ${I_n}$ is a sequence of $k$-cells such that $I_n \supset I_{n+1}, (n=1,2,3,...)$, then $\cap_1^\infty I_n$ is not empty.
+\end{thm}
+
+\begin{thm}\label{thm:2.40}
+    Every $k$-cell is compact.
+\end{thm}
+
+\begin{thm}\label{thm:2.41}
+    If a set $E$ in $\mathbb{R}^k$ has one of the following three properties, then it has the other two:
+
+(a) $E$ is closed and bounded.
+
+(b) $E$ is compact.
+
+(c) Every infinite subset of $E$ has a limit point in $E$.
+\end{thm}
+
+\begin{thm}\label{thm:2.42 Weierstrass}
+    Every bounded infinite subset of $\mathbb{R}^k$ has a limit point in $\mathbb{R}^k$.
+\end{thm}
+
+\begin{proof}
+    Being bounded, the set $E$ in question is a subset of a $k$-cell $I\subset \mathbb{R}^k$.
+    By Theorem 2.40, $I$ is compact, 
+    and so $E$ has a limit point in $I$, by Theorem 2.37.
+\end{proof}
