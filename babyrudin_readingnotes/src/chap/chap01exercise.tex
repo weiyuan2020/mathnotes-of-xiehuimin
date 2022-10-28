@@ -3,4 +3,90 @@
 
 Unless the contrary is explicitly stated, all numbers that are mentioned in these exercises are understood to be real.
 
-1.
+\begin{myExercise}
+    $r \in \mathbb{Q}$, $r \neq 0$, $x \not\in \mathbb{Q}$, $x \in \mathbb{R}$
+    $r+x, rx$ $\not\in \mathbb{Q}, \in \mathbb{R}$
+\end{myExercise}
+
+\begin{mySolve}
+if $r+x \in \mathbb{Q}$, there exists $m, n \in \mathbb{N}, n \neq 0$, s.t. $r+x = \frac{m}{n}$.
+$\because r\in \mathbb{Q}$, $r = \frac{p}{q}, p,q \in \mathbb{N}, q \neq 0$.
+\begin{align*}
+    r + x &= \frac{m}{n}\\
+    \frac{p}{q} + x &= \frac{m}{n}
+\end{align*}
+\begin{equation*}
+    x = \frac{m}{n} - \frac{p}{q} = \frac{mq-np}{nq}
+\end{equation*}
+then $x \in \mathbb{Q}$ contradict to the supposion that $x \not\in \mathbb{Q}$
+
+If $rx \in \mathbb{Q}$, then $rx = \frac{m}{n}, m,n\in \mathbb{N}$, $x = \frac{qm}{pn} \in \mathbb{Q}$, contradictory!
+\end{mySolve}
+
+
+
+\begin{myExercise}
+   prove that there is no rational number whose square is $12$. 
+\end{myExercise}
+
+\begin{mySolve}
+    If $\left(p/q\right)^2 = 12$, $p^2/q^2 = 12$. $p$ must be even, $p = 2m$.
+    $(2m)^2/q^2 = 12$, $m^2/q^2=3$. 
+    $3$ is a prime number, $m = 3n$, $(3n)^2/q^2 = 3$, $3n^2 = q^2$, $q$ have a factor $3$,
+    $\gcd(p,q) = \gcd(m,q) = \gcd(n,q) = 3 \neq 1$, contradict to the fact that $p,q$ are coprime.
+\end{mySolve}
+
+\begin{myExercise}
+    Prove Proposition \ref{Proposition:1.15}.
+\end{myExercise}
+
+\begin{mySolve}
+    (a) $x \neq 0$, $xy \neq xz$. $x \neq 0$, $\exists 1/x$, $1/x\cdot x = 1$.
+    \begin{align*}
+        y & = \left(\frac{1}{}x \cdot x\right) y = \frac{1}{x}(xy)\\
+        &=\frac{1}{x}(xz) = \left(\frac{1}{}x \cdot x\right) z = z.
+    \end{align*}
+
+    (b) $x \neq 0$, $xy = x$ then $y = 1$.\\
+    Let $z = 1$ in (a).
+
+    (c) $x \neq 0$, $xy = 1$ then $y = 1/x$.\\
+    Let $z = 1/x$ in (a).
+
+    (d) $x \neq 0$, $1/(1/x) = x$.\\
+    $x\cdot \frac{1}{x} = 1$, $\frac{1}{x} \cdot \frac{1}{\frac{1}{x}} = 1$.
+    then $x\cdot \frac{1}{x} = \frac{1}{x} \cdot \frac{1}{\frac{1}{x}}$.
+    so $1/(1/x) = x$.
+\end{mySolve}
+
+\begin{myExercise}
+    $E = \varnothing$, $E$ 为有序的非空子集.
+    $\alpha$ 是 $E$ 的下界
+    $\beta$ 是 $E$ 的上界
+    Prove that $\alpha \leq \beta$.
+\end{myExercise}
+
+\begin{mySolve}
+   $\forall x\in E$, $\alpha \leq x$, $x\leq \beta$.
+   $\alpha \leq x \leq \beta$, $\alpha \leq \beta$.
+\end{mySolve}
+
+\begin{myExercise}
+    $A$ 为 $\mathbb{R}$ 的非空子集, $A$ 有下界
+    \begin{equation*}
+        -A = \{-x|x\in A\}
+    \end{equation*}
+    Prove that $\inf A = -\sup (-A)$
+\end{myExercise}
+
+\begin{mySolve}(rudin)
+    $\beta = \inf A$, $\alpha = \sup (-A)$.
+
+    (1) $\beta < -\alpha$, $\exists x\in A$, $\beta \leq x < \alpha$, $-x > \alpha$. 矛盾.
+    
+    (2) $\beta > -\alpha$, $\exists x\in A$, $\alpha \geq -x > -\beta$, $x < \beta$. 矛盾.
+
+    $\therefore \beta = -\alpha$.
+\end{mySolve}
+
+
