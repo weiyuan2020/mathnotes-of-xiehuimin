@@ -90,3 +90,161 @@ If $rx \in \mathbb{Q}$, then $rx = \frac{m}{n}, m,n\in \mathbb{N}$, $x = \frac{q
 \end{mySolve}
 
 
+% % 
+% EXERCISES
+
+% Unless the contrary is explicitly stated, all numbers that are mentioned in these exer-
+% cises are understood to be real.
+
+% 1. If ris rational (r# 0) and x is irrational, prove that r + x and rx are irrational.
+% 22
+
+% 2,
+
+% Ww
+
+% PRINCIPLES OF MATHEMATICAL ANALYSIS
+
+% . Prove that there is no rational number whose square is 12.
+
+% . Prove Proposition 1.15.
+
+% . Let E be a nonempty subset of an ordered set; suppose « is a lower bound of E
+% and B is an upper bound of E. Prove that « <p.
+
+% 5. Let A be a nonempty set of real numbers which is bounded below. Let -A4 be
+
+% 10
+
+% the set of all numbers - x, where x \in 4. Prove that
+% inf 4 = -sup(- A).
+
+\begin{myExercise}
+    Fix $b>1$,\\
+    (a) If $m, n, p, q$ are integers, $n > 0, q > 0$, and $r = m/n = p/q$, prove that
+    \begin{equation*}
+        \left(b^m\right)^{1/n} = 
+        \left(b^p\right)^{1/q}
+    \end{equation*}
+    Hence it makes sense to define $b^r = \left(b^m\right)^{1/n}$.\\
+    (b) Prove that $b^{r+s} = b^r b^s$ if $r$ and $s$ are rational.\\
+    (c) If $x$ is real, define $B(x)$ to be the set of all numbers $b^t$, where $t$ is rational and
+    $t \leq x$. Prove that
+    \begin{equation*}
+        b^r = \sup B(r)
+    \end{equation*}
+    when $r$ is rational. Hence it makes sense to define
+    \begin{equation*}
+        b^x = \sup B(x)
+    \end{equation*}
+    for every real $x$.
+    (d) Prove that $b^{x+y} = b^x b^y$ for all real $x$ and $y$.
+\end{myExercise}
+
+\begin{myExercise}
+    Fix $b>1, y>0$, and prove that there is a unique real $x$ such that $b^x =y$, by
+    completing the following outline. (This $x$ is called the logarithm of $y$ to the base $b$.)\\
+    (a) For any positive integer $n$, $b^n - 1 \geq n(b- 1)$.\\
+    (b) Hence $b- 1 \geq n(b^{1/n}- 1)$.\\
+    (c) If $t>1$ and $n> (b-1)/(t- 1)$, then $b^{1/n} < t$.\\
+    (d) If $w$ is such that $b^w < y$, then $b^{w+(1/n)} < y$ for sufficiently large $n$; to see this,
+    apply part (c) with $t =y \cdot b^{-w}$.\\    
+    (e) If $b^w > y$, then $b^{w-(1/n)} > y$ for sufficiently large $n$.\\    
+    (f) Let $A$ be the set of all $w$ such that $b^w < y$, and show that $x = \sup A$ satisfies $b^x =y$.\\    
+    (g) Prove that this $x$ is unique.    
+\end{myExercise}
+
+\begin{myExercise}
+    Prove that no order can be defined in the complex field that turns it into an ordered field. \\
+    Hint: $-1$ is a square.
+\end{myExercise}
+
+\begin{myExercise}
+    Suppose $z=a+ bi$, $w=c+di$. Define $z<w$ if $a<c$, and also if $a=c$ but
+    $b < d$. Prove that this turns the set of all complex numbers into an ordered set.
+    (This type of order relation is called a \emph{dictionary order}, or \emph{lexicographic order}, for
+    obvious reasons.) Does this ordered set have the least-upper-bound property?
+\end{myExercise}
+
+\begin{myExercise}    
+    Suppose $z = a + bi$, $w =u + iv$, and
+    \begin{equation*}
+        a = \left(\frac{|w|+u}{2}\right)^{1/2},\qquad
+        b = \left(\frac{|w|-u}{2}\right)^{1/2}.
+    \end{equation*}
+    Prove that $z^2 = w$ if $v \geq 0$ and that $(\bar{z})^2 = w$ if $v \leq 0$. Conclude that every complex
+    number (with one exception!) has two complex square roots.
+\end{myExercise}
+
+\begin{myExercise}
+    If $z$ is a complex number, prove that there exists an $r \geq 0$ and a complex number
+    $w$ with $|w| = 1$ such that $z =rw$. Are $w$ and $r$ always uniquely determined by $z$?
+\end{myExercise}
+
+\begin{myExercise}
+    If $z_1 ,..., z_n$ are complex, prove that
+    \begin{equation*}
+        |z_1 + z_2 ...+ z_n| \leq 
+        |z_1| + |z_2| ...+ |z_n|.
+    \end{equation*}
+\end{myExercise}
+
+\begin{myExercise}
+    If $x, y$ are complex, prove that
+    \begin{equation*}
+        ||x|-|y|| \leq |x-y|.
+    \end{equation*}
+\end{myExercise}
+
+\begin{myExercise}
+    If $z$ is a complex number such that $|z| = 1$, that is, such that $z\bar{z} = 1$, compute
+    \begin{equation*}
+        |1+z|^2 + |1-z|^2
+    \end{equation*}
+\end{myExercise}
+
+\begin{myExercise}
+    Under what conditions does equality hold in the Schwarz inequality?
+\end{myExercise}
+
+\begin{myExercise}
+    Suppose $k \geq 3$, $\mathbf{x}, \mathbf{y} \in \mathbb{R}^k$, $|\mathbf{x} - \mathbf{y}| =d>0$, and $r >0$. Prove:\\
+    (a) If $2r > d$, there are infinitely many $\mathbf{z} \in \mathbb{R}^k$ such that
+    \begin{equation*}
+        |z-x| =|z-y| =r.
+    \end{equation*}
+    (b) If $2r = d$, there is exactly one such $\mathbf{z}$,\\
+    (c) If $2r < d$, there is no such $\mathbf{z}$.\\
+    How must these statements be modified if $k$ is $2$ or $1$?
+\end{myExercise}
+
+\begin{myExercise}
+    Prove that
+    \begin{equation*}
+        |\mathbf{x} + \mathbf{y}|^2 + 
+        |\mathbf{x} - \mathbf{y}|^2 =
+        2|\mathbf{x}|^2 + 2|\mathbf{y}|^2
+    \end{equation*}
+    if $\mathbf{x} \in \mathbb{R}^k$ and $\mathbf{y} \in \mathbb{R}^k$. Interpret this geometrically, as a statement about parallelograms.
+\end{myExercise}
+
+\begin{myExercise}
+    If $k >2$ and $\mathbf{x}\in \mathbb{R}^k$, prove that there exists $\mathbf{y} \in \mathbb{R}^k$ such that $\mathbf{y} \neq 0$ but $\mathbf{x}\cdot\mathbf{y} =0$.
+    Is this also true if $k =1$?
+\end{myExercise}
+
+\begin{myExercise}
+    Suppose $\mathbf{a} \in \mathbb{R}^k$, $\mathbf{b} \in\mathbb{R}^k$. Find $\mathbf{c} \in \mathbb{R}^k$ and $r > 0$ such that
+    \begin{equation*}
+        |\mathbf{x} - \mathbf{a}| = 2|\mathbf{x} - \mathbf{b}|
+    \end{equation*}
+    if and only if $|\mathbf{x} - \mathbf{a}| = r$.
+    (Solution: $3\mathbf{c} =4\mathbf{b}-\mathbf{a}$, $3r =2|\mathbf{b}-\mathbf{a}|$.)
+\end{myExercise}
+
+\begin{myExercise}
+    With reference to the Appendix, suppose that property (III) were omitted from the
+    definition of a cut. Keep the same definitions of order and addition. Show that
+    the resulting ordered set has the least-upper-bound property, that addition satisfies
+    axioms (A1) to (A4) (with a slightly different zero-element!) but that (A5) fails.
+\end{myExercise}
