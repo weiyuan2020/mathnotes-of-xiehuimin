@@ -54,15 +54,22 @@
 \theoremstyle{plain} % default
 \newtheorem{thm}{Theorem}[chapter] % 如果不采用章节号做前缀， 则不用[section]
 \newtheorem{myLemma}[thm]{Lemma}
+\newtheorem{mynewthm}{Theorem}[section] % 如果不采用章节号做前缀， 则不用[section]
+
 \theoremstyle{definition} % definition
+
 \newtheorem{myDefinition}[thm]{Definition}
 \newtheorem{myExample}[thm]{Example}
 \newtheorem{myRemark}[thm]{Remark}
 \newtheorem{myProposition}[thm]{Proposition}
 \newtheorem{myNotation}[thm]{Notation}
+
 \newtheorem*{myCorollary}{Corollary}
 \newtheorem{mySolve}{Solve}
+
 \newtheorem{myExercise}{Exercise}[chapter]
+% \theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
 
 % 我的笔记环境
 \newcommand{\mybox}[1]{

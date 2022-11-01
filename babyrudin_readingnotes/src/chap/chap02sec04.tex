@@ -1,0 +1,89 @@
+% chap02sec04
+\section{Perfect sets}
+
+
+% 243 Theorem 
+\begin{thm}\label{thm:2.43 uncountable}
+    Let $P$ be a nonempty perfect set in $\mathbb{R}^k$. Then P is uncountable.    
+\end{thm}
+
+% % Proof 
+% Since P has limit points, P must be infinite. Suppose P is count-
+% able, and denote the points of P by x,, X,, X3,.... We shall construct a
+% sequence {V, ,of neighborhoods, as follows.
+
+% Let ¥, be any neighborhood of x,. If ¥; consists of all y \in R* such
+% that |y - x, | <r, the closure V; of V, is the set of all ye R*such that
+% ly -x| <r.
+
+% Suppose V, has been constructed, so that V, nn P is not empty. Since
+% every point of P is a limit point of P, there is a neighborhood V, ,, such
+% that () Vo, = V,, (ii) x, c V,.1, (ii) V,+, nP is not empty. By (iii),
+% V, +1 satisfies our induction hypothesis, and the construction can proceed.
+
+% Put K, = V, n P. Since V, is closed and bounded, V, is compact.
+% Since x, c K,,,, no point of P lies in NT K,, Since K, < P, this implies
+% that (\¥ K, js empty. But each K, is nonempty, by (iii), and K, » K,,,,
+% by (i); this contradicts the Corollary to Theorem 2. 36.
+
+\begin{myCorollary}
+	% Corollary 
+	Every interval $[a, b] (a <b)$ is uncountable. In particular, the set
+	all real numbers is uncountable.
+\end{myCorollary}
+
+
+\begin{myDefinition}
+	% 2.44 
+	\textbf{The Cantor set} The set which we are now going to construct shows
+	that there exist perfect sets in R! which contain no segment.
+\end{myDefinition}
+
+Let $E_0$ be the interval $[0, 1]$. Remove the segment $(\frac{1}{3}, \frac{2}{3})$, and let $E_1$ be the union of the intervals
+\begin{equation*}
+    [0, \frac{1}{3}] \quad 
+    [\frac{2}{3}, 1]
+\end{equation*}
+
+Remove the middle thirds of these intervals, and let $E_2$ be the union of the intervals
+\begin{equation*}
+    [0, \frac{1}{9}] \quad 
+    [\frac{2}{9}, \frac{3}{9}] \quad 
+    [\frac{6}{9}, \frac{7}{9}] \quad 
+    [\frac{8}{9}, 1]
+\end{equation*}
+
+Continuing in this way, we obtain a sequence of compact sets $E_n$, such that
+
+(a) $E_1 \supset E_2 \supset E_3 \supset \dots$;
+
+(b) $E_n$ is the union of $2^n$ intervals, each of length $3^{-n}$.
+
+The set
+\begin{equation*}
+    P = \bigcap_{n=1}^{\infty} E_n
+\end{equation*}
+
+is called the \emph{Cantor set}. $P$ is clearly compact, and Theorem \ref{thm:2.36} shows that $P$ is not empty.
+% 42 PRINCIPLES OF MATHEMATICAL ANALYSIS
+
+No segment of the form
+\begin{equation}
+    \left(
+        \frac{3k+1}{3^m},
+        \frac{3k+2}{3^m}
+    \right)
+\end{equation}
+where $k$ and $m$ are positive integers, has a point in common with $P$. Since every segment $(\alpha, \beta)$ contains a segment of the form (24), if
+\begin{equation*}
+    3^{-m} < \frac{\beta - \alpha}{6},
+\end{equation*}
+$P$ contains no segment.
+
+To show that $P$ is perfect, it is enough to show that $P$ contains no isolated point. Let $x \in P$, and let S be any segment containing $x$. Let $I_n$ be that interval of $E_n$ which contains $x$. Choose n large enough, so that $I_n \subset S$. Let $x_n$ be an endpoint of $I_n$, such that $x_n \neq x$.
+
+It follows from the construction of $P$ that $x_n \in P$. Hence $x$ is a limit point of $P$, and $P$ is perfect.
+
+One of the most interesting properties of the Cantor set is that it provides
+us with an example of an uncountable set of measure zero (the concept of
+measure will be discussed in Chap. 11).
