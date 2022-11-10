@@ -1,5 +1,5 @@
 \section{Metric space}
-\begin{myDefinition}\label{myDefinition:2.15 metric space}
+\begin{myDef}\label{myDef:2.15 metric space}
     set $X$ metric space\\
     $p\in X$, $p$ point.
 
@@ -10,7 +10,7 @@
     b. $d(p,q) = d(q,p)$.
 
     c. $d(p,q) \leq d(p,r) + d(r,q)$, $\forall r\in X$
-\end{myDefinition}
+\end{myDef}
 对称性，正定性，三角不等式。
 
 \begin{myExample}
@@ -21,7 +21,7 @@
     \end{equation}
 \end{myExample}
 
-It's important to observe that every subset $Y$ of metric space $X$ is a metric space in its own right, with the same distance function. For it is clear that if conditions (a) to (c) of Definition \ref{myDefinition:2.15 metric space} hold for $p, q, r \in X$, they also hold if we restrict $p, q, r$ to lie in $Y$.
+It's important to observe that every subset $Y$ of metric space $X$ is a metric space in its own right, with the same distance function. For it is clear that if conditions (a) to (c) of Definition \ref{myDef:2.15 metric space} hold for $p, q, r \in X$, they also hold if we restrict $p, q, r$ to lie in $Y$.
 
 Thus every subset of a euclidean space is a metric space. Other examples
 are the spaces $l(K)$ and $L^2 (\mu)$, 
@@ -34,7 +34,7 @@ are the spaces $l(K)$ and $L^2 (\mu)$,
 % }
 , which are discussed in Chaps. 7 and 11, respectively.
 
-\begin{myDefinition}\label{myDefinition:2.17 segment}
+\begin{myDef}\label{myDef:2.17 segment}
 % 2.17 Definition 
 By the \emph{segment} $(a, b)$ we mean the set of all real numbers $x$
 such that $a < x <b$.
@@ -42,7 +42,7 @@ such that $a < x <b$.
 By the \emph{interval} $[a. b]$ we mean the set of all real numbers $x$ such that $a \leq x \leq b$
 
 Occasionally we shall also encounter ``half-open intervals'' $[a, b)$ and $(a, b]$; the first consists of all $x$ such that $a \leq x < b$, the second of all $x$ such that $a < x \leq b$
-\end{myDefinition}
+\end{myDef}
 
 If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\mathbb{R}^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \emph{$k$-cell}.\\
 Thus a $1$-cell is an interval, a $2$-cell is a rectangle, etc.
@@ -71,7 +71,7 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
 
 \mybox{这里给出了 开区间, 闭区间, 半开区间以及凸集 convex 的定义}
 
-\begin{myDefinition}\label{myDefinition:2.18 important}
+\begin{myDef}\label{myDef:2.18 important}
     Definition Let $X$ be a metric space. All points and sets mentioned below are understood to be elements and subsets of $X$.
 
     (a) A \emph{neighborhood} of $p$ is a set $N_r(p)$ consisting of all $q$ such that $d(p, q) < r$,for some $r > 0$. The number $r$ is called the \emph{radius} of $N_r(p)$.
@@ -95,7 +95,7 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
     (i) $E$ is \emph{bounded} if there is a real number $M$ and a point $q \in X$ such that $d(p,q)< M$ for all $p \in E$.
     
     (j) $E$ is \emph{dense} in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
-\end{myDefinition}
+\end{myDef}
 
 Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\mathbb{R}^2$ neighborhoods are interiors of circles.
 
@@ -205,9 +205,9 @@ In (g), we left the second entry blank. The reason is that the segment $(a,b)$ i
     Thus the intersection of an infinite collection of open sets need not be open. Similarly, the union of an infinite collection of closed sets need not be closed.
 \end{myExample}
 
-\begin{myDefinition}\label{myDefinition:2..26 closure}
+\begin{myDef}\label{myDef:2..26 closure}
     If $X$ is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the \emph{closure} of $E$ is the set $\bar{E}=E \cup E'$.
-\end{myDefinition}
+\end{myDef}
 
 \begin{thm}
     If $X$ is a metric space and $E \subset X$, then

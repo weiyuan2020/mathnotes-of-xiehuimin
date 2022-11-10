@@ -3,7 +3,7 @@
 
 \mybox{rudin 引入复数定义的方法很奇怪, 使用复数的代数定义直接引入（天上掉下来的定义）。理解起来比较困难, 我觉得使用几何方法引入复数更为合理且直观, rudin 这里对初学者不太友好}
 
-\begin{myDefinition}\label{myDefinition:complexnumber1.24}
+\begin{myDef}\label{myDef:complexnumber1.24}
     % 1.24 Definition 
     A complex number is an ordered pair $(a, b)$ of real numbers.
 "Ordered" means that $(a, b)$ and $(b, a)$ are regarded as distinct if $a \neq b$.
@@ -16,7 +16,7 @@ define
     x+y &= (a+c, b+d),\\
     xy  &= (ac - bd, ad + bc).
 \end{align*}
-\end{myDefinition}
+\end{myDef}
 
 \begin{thm}\label{thm:complexnumberisfield}
     % 1.25 'Theorem 
@@ -36,9 +36,9 @@ The proof is trivial.
 
 show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 
-\begin{myDefinition}\label{myDefinition:image_number}
+\begin{myDef}\label{myDef:image_number}
     $i=(0,1)$    
-\end{myDefinition}
+\end{myDef}
 
 \begin{thm}\label{thm:sqartrootofminus1}
     % 1.28 Theorem
@@ -63,13 +63,13 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
     \end{align*}
 \end{proof}
 
-\begin{myDefinition}\label{myDefinition:conjugate}
+\begin{myDef}\label{myDef:conjugate}
     $a,b\in \mathbb{R}$, $z=a+bi$,the complex number $\bar{z}=a-bi$ is called the conjugate of $z$. the numbers $a$ and $b$ are the real part and imaginary part of $z$. respectively.
     \begin{equation*}
         a=\Re(z), \quad
         b=\Im(z)
     \end{equation*}
-\end{myDefinition}
+\end{myDef}
 
 \begin{thm}\label{thm:complexProperty}
     % 1.31 Theorem
@@ -86,9 +86,9 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 Proof (a), (b),and (c)are quite trivial. To prove (d), write $z = a + bi$,
 and note that $z\bar{z} = a^2 + b^2$.
 
-\begin{myDefinition}\label{myDefinition:complex_absolutevalue}
+\begin{myDef}\label{myDef:complex_absolutevalue}
     If $z$ is a complex number, its absolute value $|z|$ is the nonnegative square root of $z\bar{z}$; that is, $|z| = (z\bar{z})^{1/2}$.
-\end{myDefinition}
+\end{myDef}
 The existence (and uniqueness) of $|z|$ follows from Theorem \ref{thm:1.21} and
 part (d) of Theorem \ref{thm:complexProperty}.
 

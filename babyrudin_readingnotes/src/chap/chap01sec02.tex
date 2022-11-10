@@ -2,8 +2,8 @@
 \section{Ordered sets}
 有序集
 
-\begin{myDefinition}\label{myDefinition:1.5}
-    % 1.5 myDefinition
+\begin{myDef}\label{myDef:1.5}
+    % 1.5 myDef
 Let $S$ be a set. An \emph{order} on $S$ is a relation, denoted by $<$, with the following two properties:
 
 (i) If $x\in S$ and $y\in S$ then one and only one of the statements
@@ -30,7 +30,7 @@ $x$ precedes $y$.
 
 $x\leq y$ indicates taht $x<y$ or $x=y$, without specofying which of these two is to hold.
 In other words, $x\leq y$ is the negation of $x>y$.
-\end{myDefinition}
+\end{myDef}
 
 
 \mybox{
@@ -40,10 +40,10 @@ In other words, $x\leq y$ is the negation of $x>y$.
 
 建立偏序关系后, 可以使用不等式进行分析. 在后续根据极限定义计算时, 需要大量使用不等式分析数列和函数的极限计算结果. }
 
-\begin{myDefinition}\label{myDefinition:1.6}
-% 1.6 myDefinition
+\begin{myDef}\label{myDef:1.6}
+% 1.6 myDef
 An \emph{ordered set} is a set $S$ in which an order is defined.
-\end{myDefinition}
+\end{myDef}
 
 For Example, $\mathbb{Q}$ is an ordered set if $r<s$ is defined to mean that $s-r$ is a positive rational number.
 
@@ -51,17 +51,17 @@ For Example, $\mathbb{Q}$ is an ordered set if $r<s$ is defined to mean that $s-
     存在偏序关系的集合称为有序集
 $\mathbb{Q}, \mathbb{R}$ 均是有序集, 但$\mathbb{C}$ 不是有序集. }
 
-\begin{myDefinition}\label{myDefinition:1.7}
-% 1.7 myDefinition (bounded above)
+\begin{myDef}\label{myDef:1.7}
+% 1.7 myDef (bounded above)
 Suppose $S$ is an ordered set, and $E \subset S$. If there exists a
 $\beta \in S$ such that $x \leq \beta$ for every $x \in E$, we say that $E$ is \emph{bounded above}, and call
 $\beta$ an \emph{upper bound} of $E$.
 
 Lower bounds are defined in the same way (with $\geq$ in place of $\leq$).
-\end{myDefinition}
+\end{myDef}
 
-\begin{myDefinition}\label{myDefinition:1.8}
-% 1.8 myDefinition (least upper bound)
+\begin{myDef}\label{myDef:1.8}
+% 1.8 myDef (least upper bound)
 Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above.
 Suppose there exists an $a\alpha \in S$ with the following properties:
 
@@ -82,7 +82,7 @@ is defined in the same manner: The statement
 
 means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound
 of $E$.
-\end{myDefinition}
+\end{myDef}
 \mybox{从上界引出最小上界, 没有直接定义最大下界, 而是使用对称定义引出. 
 从最小上界引出的最小上界性质更为常用. Dedekind分划}
 
@@ -109,15 +109,15 @@ of $E$.
     (c) $E = \{1/n | n = 1,2,3,...\}$. Then $\sup E = 1$, which is in $E$, and $\inf E = 0$, which is not in $E$.
 \end{myExample}
 
-\begin{myDefinition}\label{myDefinition:1.10}
-% 1.10 myDefinition 
+\begin{myDef}\label{myDef:1.10}
+% 1.10 myDef 
 {\color{red}{least-upper-bound property}}
 
 An ordered set $S$ is said to have the \emph{least-upper-bound property}
 if the following is true:
 
 If $E \subset S$, $E$ is not empty, and $E$ is bounded above, then $\sup E$ exists in $S$.
-\end{myDefinition}
+\end{myDef}
 
 Example \ref{Example:1.9}(a) shows that $\mathbb{Q}$ does not have the least-upper-bound property.
 
@@ -145,7 +145,7 @@ see that \emph{every} $x \in B$ \emph{is an upper bound of} $L$. Thus $L$ is bou
 Our hypothesis about $S$ implies therefore that $L$ has a supremum in $S$;
 call it $\alpha$.
 
-If $\gamma <\alpha$ then (see Definition \ref{myDefinition:1.8}) $\gamma$ is not an upper bound of $L$,
+If $\gamma <\alpha$ then (see Definition \ref{myDef:1.8}) $\gamma$ is not an upper bound of $L$,
 hence $\gamma \not\in B$. It follows that $\alpha \leq x$ for every $x \in B$. Thus $\alpha \in L$.
 
 If $\alpha < \beta$ then $\beta \not\in L$, since $\alpha$ is an upper bound of $L$.
@@ -180,7 +180,7 @@ $\forall x\in B$, $x$ 为 $L$ 的上界. $L\subset S$.
 $S$ 有最小上界性质,
 $\therefore \exists \alpha\in S$, $\alpha = \sup L$.
 
-$\forall \gamma <\alpha$ 由 $\alpha = \sup L$ 的定义 (\ref{myDefinition:1.8})
+$\forall \gamma <\alpha$ 由 $\alpha = \sup L$ 的定义 (\ref{myDef:1.8})
 $\gamma$ 不是 $L$ 的上界.
 
 $\forall x \in B$, $x$ 为 $L$ 的上界, $x \geq \alpha$. $\therefore \alpha \in L$.
