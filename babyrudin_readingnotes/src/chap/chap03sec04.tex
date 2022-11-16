@@ -29,3 +29,45 @@ It should be noted that we now use the symbol $rightarrow$ (introduced in Defini
         \limsup_{n \rightarrow \infty} s_n = s^{*},\quad \liminf_{n \rightarrow \infty} s_n = s_{*}.        
     \end{equation*}
 \end{myDef}
+
+\begin{thm}
+    \label{thm:3.17}
+    Let $\sequence{s_n}$  be a sequence of real numbers. Let $E$ and $s^*$ have the same meaning as in Definition 3.16. Then $s*$ has the following two properties:
+
+    (a) $s^* \in E$.
+
+    (b) If $x > s^*$, there is an integer $N$ such that $n > N$ implies $s_n < x$.
+
+    Moreover, $s^*$ is the only number with the properties (a) and (b).
+\end{thm}
+
+Of course, an analogous result is true for $s_*$.
+
+\begin{myExample}    
+(a) Let $\sequence{s_n}$  be a sequence containing all rationals. Then every real number is a subsequential limit, and
+\begin{equation*}
+    \limsup_{n\rightarrow\infty} = +\infty,\quad
+    \liminf_{n\rightarrow\infty} = -\infty.
+\end{equation*}
+
+(b) Let $s_n=(-1^n)/[1 + (1/n)]$. Then
+\begin{equation*}
+    \limsup_{n\rightarrow\infty} = 1,\quad
+    \liminf_{n\rightarrow\infty} = -1.
+\end{equation*}
+
+(c) For a real-valued sequence $\sequence{s_n}$, $\lim_{n \to \infty} s_n = s$ if and only if
+\begin{equation*}
+    \limsup_{n\rightarrow\infty} = 
+    \liminf_{n\rightarrow\infty} = s.
+\end{equation*}
+\end{myExample}
+
+\begin{thm}
+    \label{thm:3.19}
+    If $s_n \leq t_n$ for $n \geq N$ , where $N$ is fixed, then
+    \begin{align*}
+        \liminf_{n \rightarrow \infty} s_n \leq \liminf_{n \rightarrow \infty} t_n,\\
+        \limsup_{n \rightarrow \infty} s_n \leq \limsup_{n \rightarrow \infty} t_n.
+    \end{align*}
+\end{thm}
