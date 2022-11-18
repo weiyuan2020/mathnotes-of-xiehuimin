@@ -4,7 +4,7 @@ First we use $\sqrt{2}$ to construct real number system from integer and rationa
 
 % 1.1 Example
 \begin{myExample}\label{Example:1.1}
-\begin{equation}\label{eq:1-001}
+\begin{equation}\label{eq:1.1}
     p^2=2
 \end{equation}
 $p$ is not a rational number.
@@ -13,8 +13,8 @@ $p$ is not a rational number.
 \begin{proof}
 % Proof: 
 (反证法) 假设 $p$ 是有理数,  $\exists m,n \in \mathbf{N}$, s.t. $p=m/n$. $\gcd (m,n) = 1$.
-Then \ref{eq:1-001}
-\begin{equation}\label{eq:1-002}
+Then \ref{eq:1.1}
+\begin{equation}\label{eq:1.2}
     m^2 = 2n^2.
 \end{equation}
 
@@ -34,18 +34,18 @@ $B$ \emph{contains no smallest number}.\\
 $\forall p\in A$, $\exists q\in A$, s.t. $p<q$,\\
 $\forall p\in B$, $\exists q\in B$, s.t. $p>q$,\\
 $\forall p>0$
-\begin{equation}\label{eq:1-003}
+\begin{equation}\label{eq:1.3}
     q = p-\frac{p^2-2}{p+2} = \frac{2p+2}{p+2}
 \end{equation}
 
 Then 
 \begin{equation}
-    \label{eq:1-004}
+    \label{eq:1.4}
     q^2 - 2 = \frac{2(p^2-2)}{(p+2)^2}
 \end{equation}
 
-If $p\in A$, $p^2<2$. \ref{eq:1-003} shows that $q>p$, \ref{eq:1-004} shows that $q^2<2$, $q\in A$.
-If $p\in B$, $p^2>2$. \ref{eq:1-003} shows that $q<p$, \ref{eq:1-004} shows that $q^2>2$, $q\in B$.
+If $p\in A$, $p^2<2$. \ref{eq:1.3} shows that $q>p$, \ref{eq:1.4} shows that $q^2<2$, $q\in A$.
+If $p\in B$, $p^2>2$. \ref{eq:1.3} shows that $q<p$, \ref{eq:1.4} shows that $q^2>2$, $q\in B$.
 
 
 \begin{myRemark}\label{Remark:1.2}
