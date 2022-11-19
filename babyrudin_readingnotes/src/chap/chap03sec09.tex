@@ -25,7 +25,7 @@ Note: The knowledge that $\lim a_{n+1}/a_n = 1$ implies nothing about the conver
 The series $\sum 1/n$ and $\sum 1/n^2$ demonstrate this.
 
 \begin{myExample}
-    \label{3.35}
+    \label{example:3.35}
     (a) Consider the series
     \begin{equation*}
         \frac{1}{2} 
@@ -72,3 +72,68 @@ The series $\sum 1/n$ and $\sum 1/n^2$ demonstrate this.
         \lim_{n \to \infty} \sqrt[n]{a_n} = \frac{1}{2}.
     \end{equation*}
 \end{myExample}
+
+\begin{myRemark}
+    The ratio test is frequently easier to apply than the root test, since it is usually easier to compute ratios than nth roots. 
+    However, the root test has wider scope. More precisely: 
+    Whenever the ratio test shows convergence, the root test does too;
+    whenever the root test is inconclusive, the ratio test is too. 
+    This is a consequence of Theorem 3.37, and is illustrated by the above examples.
+
+    Neither of the two tests is subtle with regard to divergence. Both deduce divergence from the fact that $a_n$ does not tend to zero as $n \rightarrow \infty$.
+\end{myRemark}
+
+\begin{thm}
+    \label{thm:3.37}
+    For any sequence $\sequence{c_n}$ of positive numbers,
+    \begin{align*}
+        \liminf_{n \to \infty} \frac{c_{n+1}}{c_n} &\leq 
+        \liminf_{n \to \infty} \sqrt[n]{c_n}, \\
+        \limsup_{n \to \infty} \sqrt[n]{c_n} &\leq
+        \limsup_{n \to \infty} \frac{c_{n+1}}{c_n}. \\
+    \end{align*} 
+\end{thm}
+
+\begin{proof}
+    We shall prove the second inequality;
+    the proof of the first is quite similar.
+    Put
+    \begin{equation*}
+        \alpha = \limsup_{n \to \infty} \frac{c_{n+1}}{c_n}.
+    \end{equation*}
+    If $\alpha = +\infty$ , there is nothing to prove.
+    If $\alpha$ is finite , choose $\beta > \alpha$ .
+    There is an integer $N$ such that
+    \begin{equation*}
+        \frac{c_{n+1}}{c_n} \leq \beta
+    \end{equation*}
+    for $n \geq N$. In particular, for any $p > 0$ ,
+    \begin{equation*}
+        c_{N+k+1} \leq \beta c_{N+k} \quad
+        (k=0,1,\dots,p-1).
+    \end{equation*} 
+    Multiplying these inequalities, we obtain
+    \begin{equation*}
+        c_{N+p} \leq \beta^p c_N,
+    \end{equation*}
+    or
+    \begin{equation*}
+        c_n \leq c_N \beta^{-N}\cdot \beta^n \quad (n \geq N).
+    \end{equation*}
+    Hence
+    \begin{equation*}
+        \sqrt[n]{c_n} \leq
+        \sqrt[n]{c_N \beta^{-N}}\cdot \beta,
+    \end{equation*}
+    so that
+    \begin{equation}
+        \label{eq:3.18}
+        \limsup_{n \to \infty} \sqrt[n]{c_n} \leq \beta,
+    \end{equation}
+    by Theorem \ref{thm:3.20 some sequences occur frequently}(b).
+    Since (\ref{eq:3.18}) is true for every $\beta > \alpha$, we have
+    \begin{equation*}
+        \limsup_{n \to \infty} 
+        \sqrt[n]{c_n} \leq \alpha.
+    \end{equation*}
+\end{proof}
