@@ -43,8 +43,8 @@ Then $\sum a_n b_n$ converges.
     Given $\varepsilon > 0$, there is an integer $N$ such that $b_N \leq (\varepsilon/2M)$. For $N \leq p \leq q$, we have
     \begin{align*}
         \left|\sum_{n=p}^{q} a_n b_n\right|
-        &= \left| \sum_{n=p}^{q-1} A_n (b_n - b_{n+1}) + A_q b_q - A_{p-1} b_p \right|
-        &\leq M \left| \sum_{n=p}^{q-1} (b_n - b_{n+1}) + b_q + b_p \right|
+        &= \left| \sum_{n=p}^{q-1} A_n (b_n - b_{n+1}) + A_q b_q - A_{p-1} b_p \right|\\
+        &\leq M \left| \sum_{n=p}^{q-1} (b_n - b_{n+1}) + b_q + b_p \right|\\
         &= 2 M b_p \leq 2 M b_N \leq \varepsilon.
     \end{align*}
     Convergence now follows from the Cauchy criterion.
