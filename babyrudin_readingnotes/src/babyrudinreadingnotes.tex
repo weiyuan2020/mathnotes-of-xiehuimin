@@ -78,6 +78,17 @@
     \fbox{\parbox{120mm}{mynotes:\\#1}}
     \vskip 2.5mm
 }
+\newcommand{\myproof}[1]{\begin{proof}#1\end{proof}}
+\newcommand{\mycommand}[2]{\begin{#1}#2\end{#1}}
+\newcommand{\mythm}[1]{\mycommand{thm}{#1}}
+\newcommand{\mymyDef}[1]{\mycommand{myDef}{#1}}
+\newcommand{\mymyExample}[1]{\mycommand{myExample}{#1}}
+\newcommand{\mymyRemark}[1]{\mycommand{myRemark}{#1}}
+\newcommand{\mymyProposition}[1]{\mycommand{myProposition}{#1}}
+\newcommand{\mymyNotation}[1]{\mycommand{myNotation}{#1}}
+\newcommand{\mymyCorollary}[1]{\mycommand{myCorollary}{#1}}
+\newcommand{\mymySolve}[1]{\mycommand{mySolve}{#1}}
+\newcommand{\mymyExercise}[1]{\mycommand{myExercise}{#1}}
 
 %New Commands
 
@@ -90,6 +101,7 @@
 \newcommand{\Q}{{\protect\mathbb Q}}
 \newcommand{\Z}{{\protect\mathbb Z}}
 \newcommand{\sequence}[1]{\protect\{#1\}}
+\newcommand{\mybinom}[2]{\protect \binom{#1}{#2}}
 
 \title{baby-rudin reading notes}
 \author{weiyuan}

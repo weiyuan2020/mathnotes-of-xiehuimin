@@ -103,7 +103,8 @@ Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\math
     Every neighborhood is un open set.
 \end{thm}
 
-\begin{thm}\label{thm:2.20}
+\begin{thm}
+    \label{thm:2.20}
     If $p$ is a limit point of a set $E$, then every neighborhood of $p$ contains infinitely many points of $E$.
 \end{thm}
 
@@ -112,6 +113,7 @@ Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\math
 \end{myCorollary}
 
 \begin{myExample}
+    \label{myExample:2.21}
     Let us consider the following subsets of $\mathbb{R}^2$:
 
 (a) The set of all complex $z$ such that $|z| < 1$.
@@ -152,14 +154,16 @@ In (g), we left the second entry blank. The reason is that the segment $(a,b)$ i
 
 \mybox{根据定义, 复数集既是闭集又是开集...}
 
-\begin{thm}\label{thm:2.22}
+\begin{thm}
+    \label{thm:2.22}
     Let $\{E_\alpha\}$ be a (finite or infinite) collection of sets $E_\alpha$. Then
     \begin{equation}
         \left(\bigcup_{\alpha} E_{\alpha} \right)^c = \bigcap_{\alpha}( E_{\alpha}^c )
     \end{equation}
 \end{thm}
 
-\begin{thm}\label{thm:2.23}
+\begin{thm}
+    \label{thm:2.23}
     A set $E$ is open if and only if its complement is closed.
 \end{thm}
 
@@ -176,7 +180,8 @@ In (g), we left the second entry blank. The reason is that the segment $(a,b)$ i
 
 \mybox{这里使用新的定义得到的开集与闭集保持了原有的性质: 开集的补集是闭集, 闭集的补集是开集}
 
-\begin{thm}\label{thm:2.24}
+\begin{thm}
+    \label{thm:2.24}
     (a) For any collection $\{G_\alpha\}$ of open sets,  $\cup_\alpha G_\alpha$ is open.
 
     (b) For any collection $\{F_\alpha\}$ of closed sets, $\cap_\alpha F_\alpha$ is closed.
@@ -205,11 +210,13 @@ In (g), we left the second entry blank. The reason is that the segment $(a,b)$ i
     Thus the intersection of an infinite collection of open sets need not be open. Similarly, the union of an infinite collection of closed sets need not be closed.
 \end{myExample}
 
-\begin{myDef}\label{myDef:2.26 closure}
+\begin{myDef}
+    \label{myDef:2.26 closure}
     If $X$ is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the \emph{closure} of $E$ is the set $\bar{E}=E \cup E'$.
 \end{myDef}
 
 \begin{thm}
+    \label{thm:2.27}
     If $X$ is a metric space and $E \subset X$, then
     
     (a) $E$ is closed,
@@ -221,6 +228,7 @@ In (g), we left the second entry blank. The reason is that the segment $(a,b)$ i
 By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
 
 \begin{thm}
+    \label{thm:2.28}
     Let $E$ be a nonempty set of real numbers which is bounded above.     Let $y = \sup E$. Then $y \in \bar{E}$. Hence $y \in E$ if $E$ is closed.
 \end{thm}
 
@@ -233,5 +241,6 @@ By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
 \end{myRemark}
 
 \begin{thm}
+    \label{thm:2.30}
     Suppose $Y \subset X$. A subset $E$ of $Y$ is open relative to $Y$ if and only if $E = Y \cap G$ for some open subset $G$ of $X$.
 \end{thm}
