@@ -50,6 +50,8 @@
 \usepackage{xcolor} % 使用颜色 color
 % \usepackage{amsfonts}  % 
 \usepackage{mathrsfs}  % 花体字 mathscr
+\usepackage{enumerate}  % 计数器
+
 
 \theoremstyle{plain} % default
 \newtheorem{thm}{Theorem}[chapter] % 如果不采用章节号做前缀， 则不用[section]
@@ -109,6 +111,7 @@
 
 \begin{document}
     \maketitle
+    \tableofcontents
     \mainmatter
     \input{chap/chap01.tex}
     \input{chap/chap02.tex}
