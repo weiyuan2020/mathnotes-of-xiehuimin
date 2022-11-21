@@ -29,30 +29,24 @@ $\{p_n\}$ is said to be bounded if its range is bounded.
 As examples, consider the following sequences of complex numbers
 (that is, $X = \mathbb{R}^2$):
 
-(a) If $s_n=1/n$, then $\lim_{n \to \infty} s_n = 0$; the range is infinite, and the sequence is bounded.
-
-(b) If $s_n=n^2$ the sequence $\{s_n\}$ is unbounded, is divergent, and has
-infinite range.
-
-(c) If $s_n = 1+[(- 1)^n/n]$, the sequence $\{s_n\}$ converges to $1$, is bounded, and has infinite range.
-
-(d) If $s_n =i^n$ the sequence $\{s_n\}$ is divergent, is bounded, and has finite range.
-
-(e) If $s_n = 1(n=1,2,3,...)$, then $\{s_n\}$ converges to $1$, is bounded, and has finite range.
+\begin{enumerate}[(a)]
+    \item If $s_n=1/n$, then $\lim_{n \to \infty} s_n = 0$; the range is infinite, and the sequence is bounded.
+    \item If $s_n=n^2$ the sequence $\{s_n\}$ is unbounded, is divergent, and has infinite range.
+    \item If $s_n = 1+[(- 1)^n/n]$, the sequence $\{s_n\}$ converges to $1$, is bounded, and has infinite range.
+    \item If $s_n =i^n$ the sequence $\{s_n\}$ is divergent, is bounded, and has finite range.
+    \item If $s_n = 1(n=1,2,3,...)$, then $\{s_n\}$ converges to $1$, is bounded, and has finite range.
+\end{enumerate}
 
 % We now summarize some important properties of convergent sequences in metric spaces.
 
 \begin{thm}\label{thm:3.2 convergence sequence in metric space}
     Let$\{p_n\}$ be a sequence in a metric space $X$.
-
-(a) $\{p_n\}$ converges to $p \in X$ if and only if every neighborhood of $p$ contains $p_n$ for all but finitely many $n$.
-
-(b) If $p\in X$, $p^\prime \in X$, and if $\{p_n\}$ converges to $p$ and to $p'$, then $p^\prime =p$.
-
-(c) If $\{p_n\}$ converges, then $\{p_n\}$ is bounded.
-
-(d) If $E \subset X$ and if $p$ is a limit point of $E$, then there is a sequence$\{p_n\}$ in $E$ such that $p = \lim_{n \to \infty} p_n$.
-
+    \begin{enumerate}[(a)]
+        \item $\{p_n\}$ converges to $p \in X$ if and only if every neighborhood of $p$ contains $p_n$ for all but finitely many $n$.
+        \item If $p\in X$, $p^\prime \in X$, and if $\{p_n\}$ converges to $p$ and to $p'$, then $p^\prime =p$.
+        \item If $\{p_n\}$ converges, then $\{p_n\}$ is bounded.
+        \item If $E \subset X$ and if $p$ is a limit point of $E$, then there is a sequence$\{p_n\}$ in $E$ such that $p = \lim_{n \to \infty} p_n$.
+    \end{enumerate}
 \end{thm}
 
 \begin{proof}
@@ -64,19 +58,16 @@ infinite range.
     $\lim_{n \to \infty} s_n = s$,
     $\lim_{n \to \infty} t_n = t$.
     Then
-
-    (a) $\lim_{n \to \infty} (s_n + t_n) = s + t$;
-
-    (b) $\lim_{n \to \infty} c s_n = cs$,
-        $\lim_{n \to \infty} (c + s_n) = c + s$,
-        for any number $c$;
-    
-    (c) $\lim_{n \to \infty} s_n t_n = st$;
-
-    (d) $\lim_{n \to \infty} \frac{1}{s_n} = \frac{1}{s}$, provided $s_n \neq 0(n = 1,2,3,\dots)$, and $s \neq 0$.
+    \begin{enumerate}[(a)]
+        \item $\lim_{n \to \infty} (s_n + t_n) = s + t$;
+        \item $\lim_{n \to \infty} c s_n = cs$, $\lim_{n \to \infty} (c + s_n) = c + s$, for any number $c$;
+        \item $\lim_{n \to \infty} s_n t_n = st$;
+        \item $\lim_{n \to \infty} \frac{1}{s_n} = \frac{1}{s}$, provided $s_n \neq 0(n = 1,2,3,\dots)$, and $s \neq 0$.
+    \end{enumerate}
 \end{thm}
 
-\begin{thm}\label{thm:3.4}
+\begin{thm} As:\\
+    \label{thm:3.4}
     (a) Suppose $\mathbf{x}_n \in R^k (n = 1,2,3,\dots)$ and
     \begin{equation*}
         \mathbf{x_n} = (

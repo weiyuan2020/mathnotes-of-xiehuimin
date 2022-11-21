@@ -69,7 +69,10 @@ $0 < \lambda <1$, we have
 The same proof applies to closed balls. It is also easy to see that $k$-cells are convex.
 % 32 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
-\mybox{这里给出了 开区间, 闭区间, 半开区间以及凸集 convex 的定义}
+\mybox{这里给出了 开区间, 闭区间, 半开区间以及凸集 convex 的定义
+
+凸性 Jensen 不等式.
+}
 
 \begin{myDef}\label{myDef:2.18 important}
     Definition Let $X$ be a metric space. All points and sets mentioned below are understood to be elements and subsets of $X$.
@@ -98,6 +101,16 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
 \end{myDef}
 
 Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\mathbb{R}^2$ neighborhoods are interiors of circles.
+
+\mybox{
+    neighbhoods 邻域, \\
+    limit point 极限点, 
+    isolated point 孤立点, 
+    interior point 内点. \\
+    closed set 闭集, open set 开集, closure set 补集.\\
+    perfect set 完全集, complete set 完备集, 
+    dense 稠密 (有理数集 $\mathbb{Q}$ 是稠密的, 与之对应 实数集 $\R{}$ 是连续的.)
+}
 
 \begin{thm}\label{thm:2.19 neighbhood is open}
     Every neighborhood is un open set.
@@ -218,12 +231,11 @@ In (g), we left the second entry blank. The reason is that the segment $(a,b)$ i
 \begin{thm}
     \label{thm:2.27}
     If $X$ is a metric space and $E \subset X$, then
-    
-    (a) $E$ is closed,
-    
-    (b) $E = \bar{E}$ if and only if $E$ is closed,
-    
-    (c) $E \subset F$ for every closed set $F \subset X$ such that $E \subset F$.
+    \begin{enumerate}[(a)]
+        \item $E$ is closed,
+        \item $E = \bar{E}$ if and only if $E$ is closed,
+        \item $E \subset F$ for every closed set $F \subset X$ such that $E \subset F$.
+    \end{enumerate}
 \end{thm}
 By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
 
@@ -235,7 +247,7 @@ By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
 \begin{myRemark}
     Suppose $E \subset Y \subset X$, where $X$ is a metric space. To say that $E$ is an open subset of $X$ means that to each point $p \in E$ there is associated a positive number $r$ such that the conditions $d(p,q) < r$ , $g \in X$ imply that $q \in E$. But we have already observed (Sec. 2.16) that $Y$ is also a metric space, so that our definitions may equally well be made within $Y$. To be quite explicit, let us say that 
     
-    $E$ is \emph{open relative} to $Y$ if to each $p \in E$ there is associated an $r > 0$ such that $q \in E$ whenever $d(p,q) <r$ and $g \in Y$. 
+    $E$ is \emph{open relative to $Y$}\footnote{关于Y是开的} if to each $p \in E$ there is associated an $r > 0$ such that $q \in E$ whenever $d(p,q) <r$ and $g \in Y$. 
     
     Example 2.21(g) showed that a set may be open relative to $Y$ without being an open subset of $X$. However, there is a simple relation between these concepts, which we now state.
 \end{myRemark}

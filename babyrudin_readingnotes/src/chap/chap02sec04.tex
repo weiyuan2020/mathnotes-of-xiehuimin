@@ -36,21 +36,43 @@
 \begin{myDef}
 	% 2.44 
 	\textbf{The Cantor set} The set which we are now going to construct shows
-	that there exist perfect sets in R! which contain no segment.
+	that there exist perfect sets in $\R{1}$ which contain no segment.
 \end{myDef}
+
+\mybox{
+    Cantor 构建的一个经典例子, $\R{1}$ 中的一个无处稠密的完备集
+
+    康托三分集中有无穷多个点，所有的点处于非均匀分布状态。此点集具有自相似性，其局部与整体是相似的，所以是一个分形系统。
+
+    康托三分集具有
+    \begin{enumerate}[(1)]
+        \item 自相似性；
+        \item 精细结构；
+        \item 无穷操作或迭代过程；
+    \end{enumerate}
+
+    康托尔集P具有的性质：
+    \begin{enumerate} [1]
+        \item P是完备集;
+        \item P没有内点;
+        \item P的基数为$c$;
+        \item P是不可数集;
+    \end{enumerate}
+    康托尔集是一个基数为$c$的疏朗完备集。
+}
 
 Let $E_0$ be the interval $[0, 1]$. Remove the segment $(\frac{1}{3}, \frac{2}{3})$, and let $E_1$ be the union of the intervals
 \begin{equation*}
-    [0, \frac{1}{3}] \quad 
-    [\frac{2}{3}, 1]
+    \left[0, \frac{1}{3}\right] \quad 
+    \left[\frac{2}{3}, 1\right]
 \end{equation*}
 
 Remove the middle thirds of these intervals, and let $E_2$ be the union of the intervals
 \begin{equation*}
-    [0, \frac{1}{9}] \quad 
-    [\frac{2}{9}, \frac{3}{9}] \quad 
-    [\frac{6}{9}, \frac{7}{9}] \quad 
-    [\frac{8}{9}, 1]
+    \left[0, \frac{1}{9}\right] \quad 
+    \left[\frac{2}{9}, \frac{3}{9}\right] \quad 
+    \left[\frac{6}{9}, \frac{7}{9}\right] \quad 
+    \left[\frac{8}{9}, 1\right]
 \end{equation*}
 
 Continuing in this way, we obtain a sequence of compact sets $E_n$, such that
