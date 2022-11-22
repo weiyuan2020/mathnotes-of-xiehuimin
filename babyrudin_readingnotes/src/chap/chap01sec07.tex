@@ -1,5 +1,5 @@
 \section{Euclidean space}
-欧式空间
+\mybox{欧式空间}
 
 \begin{myDef}
     \label{myDef:1.36 coordinates}
@@ -32,21 +32,17 @@
 
 \begin{thm}\label{thm:1.37 vector}
     Suppose $\mathbf{x}, \mathbf{y}, \mathbf{z}\in\mathbb{R}^k$, and $\alpha$ is real. Then
-
-(a) $| \mathbf{x}| \geq 0$;
-
-(b) $| \mathbf{x}| = 0$ if and only if $\mathbf{x} =0$;
-
-(c) $| \alpha \mathbf{x}| = | \alpha||x|$
-
-(d) $|\mathbf{x}\cdot\mathbf{y}| \leq  |\mathbf{x}| | \mathbf{y}|$;
-
-(e) $|\mathbf{x}+\mathbf{y}| \leq | \mathbf{x} | + | \mathbf{y}|$;
-
-(f) $|\mathbf{x}-\mathbf{z}| \leq |\mathbf{x}-\mathbf{y}| + |\mathbf{y}-\mathbf{z}|$.
+    \begin{enumerate}[(a)]
+        \item $| \mathbf{x}| \geq 0$;
+        \item $| \mathbf{x}| = 0$ if and only if $\mathbf{x} =0$;
+        \item $| \alpha \mathbf{x}| = | \alpha||x|$
+        \item $|\mathbf{x}\cdot\mathbf{y}| \leq  |\mathbf{x}| | \mathbf{y}|$;
+        \item $|\mathbf{x}+\mathbf{y}| \leq | \mathbf{x} | + | \mathbf{y}|$;
+        \item $|\mathbf{x}-\mathbf{z}| \leq |\mathbf{x}-\mathbf{y}| + |\mathbf{y}-\mathbf{z}|$.
+    \end{enumerate}
 \end{thm}
 
-(f) 为欧式空间中的三角不等式。
+\mybox{(f) 为欧式空间中的三角不等式。}
 
 \begin{proof}
     Proof (a), (b), and (c) are obvious, and (d) is an immediate consequence of the Schwarz inequality\ref{thm:1.35 schwarz_inequality}. By (d) we have 
@@ -57,11 +53,13 @@
         &\leq |\mathbf{x}|^2 + 2|\mathbf{x}||\mathbf{y}| + |\mathbf{y}|^2\\
         &= \left(|\mathbf{x}| + |\mathbf{y}|\right)^2.
     \end{align*}
-    so that (e) is proved. Finally, (f) follows from (e) if we replace $\mathbf{x}$ by $\mathbf{x}-\mathbf{y}$ and $\mathbf{y}$ by $\mathbf{y}-\mathbf{z}$.
+    so that (e) is proved. Finally, 
+    (f) follows from (e) if we 
+    replace $\mathbf{x}$ by $\mathbf{x}-\mathbf{y}$ 
+    and $\mathbf{y}$ by $\mathbf{y}-\mathbf{z}$.
 \end{proof}
 
 \begin{myRemark}\label{myRemark:1.38}
-    % 1.38 Remarks 
     Theorem \ref{thm:1.37 vector} (a), (b), and (f) will allow us (see Chap. 2) to
     regard $\mathbb{R}^k$ as a metric space.
     

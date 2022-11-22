@@ -1,34 +1,39 @@
 
 \section{Ordered sets}
-有序集
+\mybox{有序集}
 
 \begin{myDef}\label{myDef:1.5}
     % 1.5 myDef
 Let $S$ be a set. An \emph{order} on $S$ is a relation, denoted by $<$, with the following two properties:
 
-(i) If $x\in S$ and $y\in S$ then one and only one of the statements
-\begin{equation*}
-    x<y, \quad
-    x=y, \quad
-    y<x
-\end{equation*}
+\begin{asparaenum}[(i)]
+    \item If $x\in S$ and $y\in S$ then one and only one of the statements
+    \begin{equation*}
+        x<y, \quad
+        x=y, \quad
+        y<x
+    \end{equation*}
+    is true.    
+    \item If $x,y,z\in S$, if $x<y$ and $y<z$, then $x<z$.
+\end{asparaenum}
+
 The statement $x<y$ may be read as 
 $x$ is less than $y$, or 
 $x$ is smaller than $y$, or
 $x$ precedes $y$.
 (It's often convenient to write $y>x$ in place of $x<y$)
 (less-great, smaller-bigger, precedes-succeeds)
-% form wiki,
-% The relationship x precedes y is written $x ≺ y$. The relation x precedes or is equal to y is written x ≼ y.
-% The relationship x succeeds (or follows) y is written x ≻ y. The relation x succeeds or is equal to y is written x ≽ y.
-% ≺ \prec 
-% ≼ \preccurlyeq 
-% ≻ \succ 
-% ≽ \succcurlyeq  
 
-(ii) If $x,y,z\in S$, if $x<y$ and $y<z$, then $x<z$.
+\mybox{form wiki,
+The relationship x precedes y is written $x ≺ y$. The relation x precedes or is equal to y is written x ≼ y.
+The relationship x succeeds (or follows) y is written x ≻ y. The relation x succeeds or is equal to y is written x ≽ y.
+≺ $\backslash$ prec 
+≼ $\backslash$ preccurlyeq 
+≻ $\backslash$ succ 
+≽ $\backslash$ succcurlyeq  }
 
-$x\leq y$ indicates taht $x<y$ or $x=y$, without specofying which of these two is to hold.
+$x\leq y$ indicates that $x<y$ or $x=y$, 
+without specifying which of these two is to hold.
 In other words, $x\leq y$ is the negation of $x>y$.
 \end{myDef}
 
@@ -38,7 +43,9 @@ In other words, $x\leq y$ is the negation of $x>y$.
 1. 三歧性,
 2. 传递性.
 
-建立偏序关系后, 可以使用不等式进行分析. 在后续根据极限定义计算时, 需要大量使用不等式分析数列和函数的极限计算结果. }
+建立偏序关系后, 可以使用不等式进行分析. 
+在后续根据极限定义计算时, 
+需要大量使用不等式分析数列和函数的极限计算结果. }
 
 \begin{myDef}\label{myDef:1.6}
 % 1.6 myDef
@@ -65,8 +72,10 @@ Lower bounds are defined in the same way (with $\geq$ in place of $\leq$).
 Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above.
 Suppose there exists an $a\alpha \in S$ with the following properties:
 
-(i) $\alpha$ is an upper bound of $E$.
-(ii) If $\gamma <\alpha$ then $\gamma$ is not an upper bound of $E$.
+\begin{enumerate}[(i)]
+    \item $\alpha$ is an upper bound of $E$.
+    \item If $\gamma <\alpha$ then $\gamma$ is not an upper bound of $E$.
+\end{enumerate}
 
 Then $\alpha$ is called the \emph{least upper bound} of $E$ [that there is at most one such
 $\alpha$ is clear from (ii)] or the \emph{supremum} of $E$, and we write
@@ -86,27 +95,27 @@ of $E$.
 \mybox{从上界引出最小上界, 没有直接定义最大下界, 而是使用对称定义引出. 
 从最小上界引出的最小上界性质更为常用. Dedekind分划}
 
-\begin{myExample}\label{Example:1.9}
-    % 1.9 Example
-(a) Consider the set $A, B$
-    \begin{equation*}
-        A = \{p|p^2 < 2\},\quad
-        B = \{p|p^2 > 2\}.
-    \end{equation*}
-    $A$ has no least upper bound in $\mathbb{Q}$.
-    $B$ has no great lower bound in $\mathbb{Q}$.
-    
-    (b) If $\alpha = \sup E$ exists, $\alpha$ may be or may not be a member of $E$.
-    \begin{align*}
-        E_1 = \{r |r\in Q, r < 0\}\\
-        E_2 = \{r |r\in Q, r \leq 0\}
-    \end{align*}
-    \begin{equation*}
-        \sup E_1 = \sup E_2 = 0,
-    \end{equation*}
-    and $0\not\in E_1$, $0\in E_2$.
-    
-    (c) $E = \{1/n | n = 1,2,3,...\}$. Then $\sup E = 1$, which is in $E$, and $\inf E = 0$, which is not in $E$.
+\begin{myExample}
+    \label{Example:1.9}
+    \begin{asparaenum}[(a)]
+        \item Consider the set $A, B$
+        \begin{equation*}
+            A = \{p|p^2 < 2\},\quad
+            B = \{p|p^2 > 2\}.
+        \end{equation*}
+        $A$ has no least upper bound in $\mathbb{Q}$.
+        $B$ has no great lower bound in $\mathbb{Q}$.    
+        \item If $\alpha = \sup E$ exists, $\alpha$ may be or may not be a member of $E$.
+        \begin{align*}
+            E_1 = \{r |r\in Q, r < 0\}\\
+            E_2 = \{r |r\in Q, r \leq 0\}
+        \end{align*}
+        \begin{equation*}
+            \sup E_1 = \sup E_2 = 0,
+        \end{equation*}
+        and $0\not\in E_1$, $0\in E_2$.
+        \item $E = \{1/n | n = 1,2,3,...\}$. Then $\sup E = 1$, which is in $E$, and $\inf E = 0$, which is not in $E$.
+    \end{asparaenum}
 \end{myExample}
 
 \begin{myDef}\label{myDef:1.10}

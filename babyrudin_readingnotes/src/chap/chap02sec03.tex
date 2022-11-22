@@ -210,33 +210,44 @@ is empty, in contradiction to our hypothesis.
     Every $k$-cell is compact.
 \end{thm}
 
-% \myproof{
-%     Let I be a k-cell, consisting of all points x = (x1, ..• , xk) such
-% that a1 ~x1 ~ b1 (1 ~j ~ k). Put
-% 1/2
-% •
-% Then I x - y I ~ b, if x e /, y e I.
-% Suppose, to get a contradiction, that there exists an open cover {Ga}
-% of I which contains no finite subcover of /. Put c1 = (a1 + b1)(2. The
-% intervals [a1 , c1] and [c1 , b1] then determine 2k k-cells Qi whose union is I.
-% At least one of these sets Qi, call it / 1, cannot be covered by any finite
-% subcollection of {Ga} (otherwise I could be so covered). We next subdivide
-% I1 and continue the process. We obtain a sequence {In} with the following
-% properties:
-% (a)
-% I=> 11 => 12 => /3 => · • • ;
-% (b)
-% In is not covered by any finite subcollection of {Ga};
-% (c) ifxe/nandye/n, then lx-yl ~2-nb.
-% By (a) and Theorem 2.39, there is a point x* which lies in every In.
-% For some tx, x* e Ga.
-% Since Ga is open, there exists r > 0 such that
-% I y - x* I < r implies that ye Ga. If n is so large that 2-nb < r (there is
-% such an n, for otherwise 2n ~ b/r for all positive integers n, which is
-% absurd since R is archimedean), then ( c) implies that In c Ga, which con-
-% tradicts (b).
-% This completes the proof.
-% }
+\myproof{
+    Let $I$ be a $k$-cell, 
+    consisting of all points $\mathbf{x} = (x_1, \dots, x_k)$
+    such that $a_j \leq x_j \leq  b_j (1 \leq j \leq k)$. 
+    Put
+    \begin{equation*}
+        \delta = 
+        \left\{ \sum_{1}^{k} (b_j - a_j)^2 \right\}^{1/2}
+    \end{equation*} 
+    Then $ \left| \mathbf{x-y} \right| \leq \delta$, if $x \in I, y \in I$.
+    
+    Suppose, to get a contradiction, 
+    that there exists an open cover $\sequence{G_\alpha}$ of $I$ 
+    which contains no finite subcover of $I$. 
+    Put $c_j = (a_j + b_j)/2$. 
+    The intervals $[a_j , c_j]$ and $[c_j , b_j]$ 
+    then determine $2^k$ $k$-cells $Q_i$ whose union is $I$.
+    At least one of these sets $Q_i$, call it $I_1$, 
+    cannot be covered by any finite subcollection of $\sequence{G_\alpha}$ 
+    (otherwise $I$ could be so covered). 
+    We next subdivide $I_1$ and continue the process. 
+    We obtain a sequence $\sequence{I_n}$ with the following properties:
+    \begin{enumerate}[(a)]
+        \item $I \supset I_1 \supset I_2 \supset I_3 \supset \dots$;
+        \item $I_n$ is not covered by any finite subcollection of $\sequence{G_\alpha}$;
+        \item if $\mathbf{x} \in I_n$ and $\mathbf{y} \in I_n$ , then $\left| \mathbf{x-y} \right| \leq 2^{-n}\delta$.
+    \end{enumerate}
+    
+    By (a) and Theorem \ref{thm:2.39}, there is a point $\mathbf{x}^*$ which lies in every $I_n$. 
+    For some $\alpha$, $\mathbf{x}^* \in G_\alpha$. 
+    Since $G_\alpha$ is open, there exists $r > 0$ such that 
+    $\left| \mathbf{y-x}^* \right| < r$ implies that $\mathbf{y} \in G_\alpha$. 
+    If $n$ is so large that $2^{-n}\delta < r$ 
+    (there is such an $n$, for otherwise $2^n \leq \delta/r$ for all positive integers $n$, which is absurd since $\R{}$ is archimedean),
+    then (c) implies that $I_n \subset G_\alpha$, which contradicts (b).
+    
+    This completes the proof.
+}
 
 The equivalence of (a) and (b) in the next theorem is known as the Heine-Borel theorem.
 
@@ -274,14 +285,14 @@ The equivalence of (a) and (b) in the next theorem is known as the Heine-Borel t
     and $S$ has no other limit point in $\R{k}$. 
     For if $\mathbf{y} \in \R{k}$, $\mathbf{y} \neq \mathbf{x}_0$ , then
     \begin{align*}
-        \left| \mathbf{x}_n \neq \mathbf{y} \right| 
+        \left| \mathbf{x}_n - \mathbf{y} \right| 
         &\geq
-        \left| \mathbf{x}_0 \neq \mathbf{y} \right| -
-        \left| \mathbf{x}_n \neq \mathbf{x}_n \right| \\
+        \left| \mathbf{x}_0 - \mathbf{y} \right| -
+        \left| \mathbf{x}_n - \mathbf{x}_n \right| \\
         &\geq 
-        \left| \mathbf{x}_0 \neq \mathbf{y} \right| - \frac{1}{n}
+        \left| \mathbf{x}_0 - \mathbf{y} \right| - \frac{1}{n}
         \geq \frac{1}{2}
-        \left| \mathbf{x}_0 \neq \mathbf{y} \right|
+        \left| \mathbf{x}_0 - \mathbf{y} \right|
     \end{align*} 
     for all but finitely many $n$; 
     this shows that $\mathbf{y}$ is not a limit point of $S$ (Theorem \ref{thm:2.20}).

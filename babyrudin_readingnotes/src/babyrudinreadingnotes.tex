@@ -45,12 +45,14 @@
 \usepackage{amssymb}
 \usepackage{hyperref} % \url
 \usepackage{graphicx} % \includegraphics
-\usepackage{enumerate} % 罗列专用宏包
 \usepackage{fancybox} % 使用盒子
 \usepackage{xcolor} % 使用颜色 color
 % \usepackage{amsfonts}  % 
 \usepackage{mathrsfs}  % 花体字 mathscr
+
 \usepackage{enumerate}  % 计数器
+\usepackage{paralist}  % 计数器 允许行间公式
+
 
 
 \theoremstyle{plain} % default
@@ -77,7 +79,7 @@
 \newcommand{\mybox}[1]{
     % \fbox{mynotes:\\#1}
     \vskip 2.5mm
-    \fbox{\parbox{120mm}{mynotes:\\#1}}
+    \fbox{\parbox{135mm}{mynotes:\\#1}}
     \vskip 2.5mm
 }
 \newcommand{\myproof}[1]{\begin{proof}#1\end{proof}}
