@@ -78,7 +78,7 @@ This is a very useful characterization of continuity.
 This follows from the theorem, since a set is closed if and only if its complement is open, and since $f^{-1}(E^c) = [f^{-1}(E)]^c$ for every $E \subset Y$.
 
 We now turn to complex-valued and vector-valued functions, and to
-functions defined on subsets of $\R{k}$.
+functions defined on subsets of $\R^{k}$.
 
 \begin{thm}
     \label{thm:4.9}
@@ -94,18 +94,18 @@ functions defined on subsets of $\R{k}$.
 
 \begin{thm}
     \label{thm:4.10}
-    (a) Let $f_1, \dots , f_k$ be real functions on a metric space $X$, and let $\mathbf{f}$ be the mapping of $X$ into $\R{k}$ defined by
+    (a) Let $f_1, \dots , f_k$ be real functions on a metric space $X$, and let $\mathbf{f}$ be the mapping of $X$ into $\R^{k}$ defined by
     \begin{equation}
         \label{eq:4.7}
         \mathbf{f}(x) = (f_1(x), ... ,f_k(x)) \quad    (x \in  X);
     \end{equation}
     then $\mathbf{f}$ is continuous if and only if each of the functions $f_1, ... , f_k$ is continuous.
 
-    (b) If $\mathbf{f}$ and $\mathbf{g}$ are continuous mappings of $X$ into $\R{k}$, 
+    (b) If $\mathbf{f}$ and $\mathbf{g}$ are continuous mappings of $X$ into $\R^{k}$, 
     then $\mathbf{f + g}$ and $\mathbf{f \cdot g}$ are continuous on $X$.
 \end{thm}
 The functions $f_1, ... , f_k$ are called the \emph{components} of $\mathbf{f}$. 
-Note that $\mathbf{f + g}$ is a mapping into $\R{k}$, whereas $\mathbf{f \cdot g}$ is a \emph{real} function on $X$.
+Note that $\mathbf{f + g}$ is a mapping into $\R^{k}$, whereas $\mathbf{f \cdot g}$ is a \emph{real} function on $X$.
 \begin{proof}
     Part (a) follows from the inequalities
     \begin{equation*}
@@ -122,7 +122,7 @@ Note that $\mathbf{f + g}$ is a mapping into $\R{k}$, whereas $\mathbf{f \cdot g
     \label{myExample:4.11}
     \begin{equation}
         \phi_i (\mathbf{x}) = x_i 
-        \quad (\mathbf{x} \in \R{k})
+        \quad (\mathbf{x} \in \R^{k})
     \end{equation}
 
     \begin{equation}
@@ -138,7 +138,7 @@ Note that $\mathbf{f + g}$ is a mapping into $\R{k}$, whereas $\mathbf{f \cdot g
         x_{2}^{n_2}
         \dots
         x_{k}^{n_k}
-        \quad (\mathbf{x} \in \R{k})
+        \quad (\mathbf{x} \in \R^{k})
     \end{equation}
 
     \begin{equation}
@@ -147,7 +147,7 @@ Note that $\mathbf{f + g}$ is a mapping into $\R{k}$, whereas $\mathbf{f \cdot g
             \left| \mathbf{y} \right|  
         \right| \leq
         \left| \mathbf{x-y} \right| 
-        \quad (\mathbf{x,y} \in \R{k})
+        \quad (\mathbf{x,y} \in \R^{k})
     \end{equation}
 \end{myExample}
 

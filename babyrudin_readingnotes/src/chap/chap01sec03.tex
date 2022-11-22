@@ -1,9 +1,12 @@
 
 \section{Fields}
-\mybox{域, 交换除环 <$\mathbb{R},+,\times$> 
-<$\mathbb{R},+$>, <$\mathbb{R}\backslash\{0\},\times$>
-都是交换群, 且满足分配律. 
-则 <$\mathbb{R},+,\times$> 是域. }
+\mybox{
+    域, 交换除环 <$\R,+,\times$> 
+    <$\R,+$>, <$\R\backslash\{0\},\times$>
+    都是交换群, 且满足分配律. 
+
+    则 <$\R,+,\times$> 是域. 
+}
 
 \begin{myDef}\label{myDef:1.12}
 % Axiom % 公理
@@ -45,8 +48,14 @@ holds for all $x, y, z \in F$.
     \label{myRemark:1.13}
     \begin{enumerate}[(a)]
         \item Our usual writes (in any filed) $x-y = x+(-y)$, $x/y=x\cdot (1/y)$.
-        \item The field axioms clearly hold in $\mathbb{Q}$, the set of all rational numbers, if addition and multiplication have their customary meaning. Thus $\mathbb{Q}$ is a field.
-        \item Although it is not our purpose to study fields (or any other algebraic structures) in detail, it is worthwhile to prove that some familiar properties of $\mathbb{Q}$ are consequences of the field axioms; once we do this, we will \underline{not need to do it} again for the real numbers and for the complex numbers.
+        \item The field axioms clearly hold in $\Q $, 
+        the set of all rational numbers, 
+        if addition and multiplication have their customary meaning. 
+        Thus $\Q $ is a field.
+        \item Although it is not our purpose to study fields 
+        (or any other algebraic structures) in detail, 
+        it is worthwhile to prove that some familiar properties of $\Q $ are consequences of the field axioms; 
+        once we do this, we will \underline{not need to do it} again for the real numbers and for the complex numbers.
     \end{enumerate}
 \end{myRemark}
  
@@ -69,16 +78,28 @@ holds for all $x, y, z \in F$.
     \end{enumerate}
 \end{myProposition}
 
-Statement (a) is a cancellation law. Note that (b) asserts the uniqueness
-of the element whose existence is assumed in (A4), and that (c) does the same
-for (A5).
+Statement (a) is a cancellation law. 
+Note that (b) asserts the uniqueness of the element 
+whose existence is assumed in (A4), 
+and that (c) does the same for (A5).
 
 \mybox{
     what is the difference between axiom and proposition?
 
-    An axiom is a proposition regarded as self-evidently true without proof. The word "axiom" is a slightly archaic synonym for postulate. Compare conjecture or hypothesis, both of which connote apparently true but not self-evident statements.
-    A proposition is a mathematical statement such as "3 is greater than 4," "an infinite set exists," or "7 is prime." An axiom is a proposition that is assumed to be true. With sufficient information, mathematical logic can often categorize a proposition as true or false, although there are various exceptions (e.g., "This statement is false").
-\url{https://www.nutritionmodels.com/terminology.html}}
+    An axiom is a proposition regarded as self-evidently true without proof. 
+    The word "axiom" is a slightly archaic synonym for postulate. 
+    Compare conjecture or hypothesis, 
+    both of which connote apparently true but not self-evident statements.
+    
+    A proposition is a mathematical statement such as "3 is greater than 4," "an infinite set exists," or "7 is prime." 
+    
+    An axiom is a proposition that is assumed to be true. 
+    With sufficient information, m
+    athematical logic can often categorize a proposition as true or false, 
+    although there are various exceptions 
+    (e.g., "This statement is false").
+    
+    \url{https://www.nutritionmodels.com/terminology.html}}
 
 
 \begin{proof}
@@ -89,8 +110,8 @@ for (A5).
         &=-x+(x+z)=(-x+x)+z=0+z=z
     \end{align*}
 
-    This proves (a). Take $z = 0$ in (a) to obtain (b). Take $z= -x$ in (a) to
-    obtain (c).
+    This proves (a). Take $z = 0$ in (a) to obtain (b). 
+    Take $z= -x$ in (a) to obtain (c).
     Since $-x + x = 0$, (c) (with $-x$ in place of $x$) gives (d).
 \end{proof}
 
@@ -112,7 +133,7 @@ for (A5).
     \end{enumerate}
 \end{myProposition}
 
-The proof is so similar to that of Proposition 1.14 that we omit it.
+The proof is so similar to that of Proposition \ref{myProposition:1.14} that we omit it.
 
 
 \begin{proof}
@@ -122,9 +143,9 @@ The proof is so similar to that of Proposition 1.14 that we omit it.
             y&=1\cdot y=\left(\frac{1}{x}\cdot x\right)y =\frac{1}{x}\left( xy \right)\\
             &=\frac{1}{x}(xz) =\left(\frac{1}{x}x\right)z = z
         \end{align*}
-        \item (a)取  $z=1$. $y=z=1$.
-        \item (a)取  $z=\frac{1}{x}$. $y=z=\frac{1}{x}$.
-        \item (c)取  $x=\frac{1}{x'}$. $y=1/(1/x')$.
+        \item (a)Let $z=1$. $y=z=1$.
+        \item (a)Let $z=\frac{1}{x}$. $y=z=\frac{1}{x}$.
+        \item (c)Let $x=\frac{1}{x'}$. $y=1/(1/x')$.
     \end{asparaenum}
 \end{proof}
 
@@ -156,7 +177,8 @@ The proof is so similar to that of Proposition 1.14 that we omit it.
         (-x)y +xy=(-x+x)y=0y=0,
     \end{equation*}
 
-    combined with \ref{myProposition:1.14}(c); the other half of (c) is proved in the same way.\\
+    combined with \ref{myProposition:1.14}(c); 
+    the other half of (c) is proved in the same way.\\
     Finally,
     \begin{equation*}
         (-x)(-y)=-[x(-y)]=-[-(xy)]=xy
@@ -166,8 +188,8 @@ The proof is so similar to that of Proposition 1.14 that we omit it.
 
 \begin{myDef}
     \label{myDef:1.17}
-    An ordered field is a field $F$ which is also an ordered set, such
-    that
+    An ordered field is a field $F$ which is also an ordered set, 
+    such that
     \begin{enumerate}[(i)]
         \item $x+y<x+z$ if $x,y,z\in F$ and $y<z$,
         \item $xy>0$ if $x\in F$, $y\in F$, $x>0$, and $y>0$.
@@ -178,16 +200,17 @@ If $x > 0$, we call $x$ positive;
 
 if $x < 0$, $x$ is negative.
 
-For example, $\mathbb{Q}$ is an ordered field.
+For example, $\Q $ is an ordered field.
 
 All the familiar rules for working with inequalities apply in every ordered
-field: Multiplication by positive [negative] quantities preserves [reverses] inequalities, no square is negative, etc. The following proposition lists some of
-these.
+field: 
+Multiplication by positive [negative] quantities preserves [reverses] inequalities, no square is negative, etc. 
+The following proposition lists some of these.
 
 \mybox{
     有序域$F$也是有序集, 
-    由于有理数域 $\mathbb{Q}$, 实数域 $\R{}$ 都是有序域, 
-    这里使用有理数域 $\mathbb{Q}$ 证明的有序集的性质也可以直接用于实数域 $\R{}$.}
+    由于有理数域 $\Q $, 实数域 $\R$ 都是有序域, 
+    这里使用有理数域 $\Q $ 证明的有序集的性质也可以直接用于实数域 $\R$.}
 
 \begin{myProposition}
     \label{myProposition:1.18}
@@ -202,14 +225,15 @@ these.
 \end{myProposition}
 
 \begin{proof}
-    (a) $x>0$, $-x<0$. 
+    \begin{asparaenum}[(a)]
+    \item $x>0$, $-x<0$. 
     \begin{align*}
         x   &> 0=(x+-x)\\
         x+0 &> x+(-x)\\
         (-x)&<0
     \end{align*}
 
-    (b) $x>0$, $y<z$, $xy<xz$.
+    \item $x>0$, $y<z$, $xy<xz$.
     \begin{align*}
         y<z, z-y&>y-y=0\\
         x(z-y)&>0\\
@@ -217,7 +241,7 @@ these.
         xz&>xy
     \end{align*}
 
-    (c)
+    \item
     \begin{align*}
         (z-y) &>y-y=0\\
         x<0,(-x)>0.\quad (-x)(z-y)&>0 \\
@@ -225,16 +249,19 @@ these.
         xz<xy    
     \end{align*}
 
-    (d)
+    \item
     \begin{align*}
         x>0  && x^2    >0  \\
         x<0  &&(-x)^2 >0, (-x)^2 = -[x(-x)] = -(-(x\cdot x)) =x^2, x^2>0
     \end{align*}
     $\because 1^2=1$, $1>0$.
 
-    (e)
-    If $y>0$ and $v \leq 0$, then $yv \leq 0$. But $y \cdot (1/y)=1>0$. Hence $1/y > 0$.
-    Likewise, $1/x > 0$. If we multiply both sides of the inequality $x <y$ by
+    \item
+    If $y>0$ and $v \leq 0$, then $yv \leq 0$. 
+    But $y \cdot (1/y)=1>0$. Hence $1/y > 0$.
+    Likewise, $1/x > 0$. 
+    If we multiply both sides of the inequality $x <y$ by
     the positive quantity $(1/x)(1/y)$, we obtain $1/y <1/x$.
+    \end{asparaenum}
 \end{proof}
 

@@ -12,10 +12,10 @@
 \mybox{对称性，正定性，三角不等式。}
 
 \begin{myExample}
-    the distance of the euclidean space $\mathbb{R}^k$ is defined by
+    the distance of the euclidean space $\R^k$ is defined by
     \begin{equation}\label{eq:2.19}
         d(\mathbf{x}, \mathbf{y}) = |\mathbf{x} - \mathbf{y}|
-        \qquad (\mathbf{x}, \mathbf{y}\in \mathbb{R}^k)
+        \qquad (\mathbf{x}, \mathbf{y}\in \R^k)
     \end{equation}
 \end{myExample}
 
@@ -45,12 +45,12 @@ By the \emph{interval} $[a. b]$ we mean the set of all real numbers $x$ such tha
 Occasionally we shall also encounter ``half-open intervals'' $[a, b)$ and $(a, b]$; the first consists of all $x$ such that $a \leq x < b$, the second of all $x$ such that $a < x \leq b$
 \end{myDef}
 
-If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\mathbb{R}^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \emph{$k$-cell}.\\
+If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\R^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \emph{$k$-cell}.\\
 Thus a $1$-cell is an interval, a $2$-cell is a rectangle, etc.
 
-If $\mathbf{x}\in \mathbb{R}^k$ and $r > 0$. the \emph{open (or closed) ball} $B$ with center at $\mathbf{x}$ and radius $r$ is defined to be the set of all $\mathbf{y} \in \mathbb{R}^k$ such that $|\mathbf{y} - \mathbf{x}| <r$ (or $|\mathbf{y} - \mathbf{x}| \leq r$).
+If $\mathbf{x}\in \R^k$ and $r > 0$. the \emph{open (or closed) ball} $B$ with center at $\mathbf{x}$ and radius $r$ is defined to be the set of all $\mathbf{y} \in \R^k$ such that $|\mathbf{y} - \mathbf{x}| <r$ (or $|\mathbf{y} - \mathbf{x}| \leq r$).
 
-We call a set $E \subset \mathbb{R}^k$ \emph{convex} if
+We call a set $E \subset \R^k$ \emph{convex} if
 
 \begin{equation*}
     \lambda\mathbf{x} + (1 - \lambda)\mathbf{y} \in E
@@ -91,7 +91,7 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
     \end{enumerate}
 \end{myDef}
 
-Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\mathbb{R}^2$ neighborhoods are interiors of circles.
+Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighborhoods are interiors of circles.
 
 \mybox{
     neighbhoods 邻域, \\
@@ -100,7 +100,7 @@ Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\math
     interior point 内点. \\
     closed set 闭集, open set 开集, closure set 补集.\\
     perfect set 完全集, complete set 完备集, 
-    dense 稠密 (有理数集 $\mathbb{Q}$ 是稠密的, 与之对应 实数集 $\R{}$ 是连续的.)
+    dense 稠密 (有理数集 $\Q $ 是稠密的, 与之对应 实数集 $\R$ 是连续的.)
 }
 
 \begin{thm}
@@ -151,19 +151,19 @@ Let us note that in $\mathbb{R}^1$ neighborhoods are segments, whereas in $\math
 
 \begin{myExample}
     \label{myExample:2.21}
-    Let us consider the following subsets of $\R{2}$:
+    Let us consider the following subsets of $\R^{2}$:
     \begin{enumerate}[(a)]
         \item The set of all complex $z$ such that $|z| < 1$.
         \item The set of all complex $z$ such that $|z| \leq 1$.
         \item A nonempty finite set.
         \item The set of all integers.
         \item The set consisting of the numbers $1/n(n=1,2,3,...)$. Let us note that this set $E$ has a limit point (namely, $z =0$) but that no point of $E$ is a limit point of $E$; we wish to stress the difference between having a limit point and containing one.
-        \item The set of all complex numbers (that is, $\R{2}$).
+        \item The set of all complex numbers (that is, $\R^{2}$).
         \item The segment $(a,b)$.
     \end{enumerate}
 \end{myExample}
 
-Let us note that (d),(e),(g)can be regarded also as subsets of $\R{1}$.
+Let us note that (d),(e),(g)can be regarded also as subsets of $\R^{1}$.
 Some properties of these sets are tabulated below:
 
 \begin{center}
@@ -181,8 +181,8 @@ Some properties of these sets are tabulated below:
 
 In (g), we left the second entry blank. 
 The reason is that the segment $(a,b)$ is not open 
-if we regard it as a subset of $\mathbb{R}^2$, 
-but it is an open subset of $\mathbb{R}^1$.
+if we regard it as a subset of $\R^2$, 
+but it is an open subset of $\R^1$.
 
 \mybox{根据定义, 复数集既是闭集又是开集...}
 
@@ -265,7 +265,7 @@ but it is an open subset of $\mathbb{R}^1$.
         G_n = \left(-\frac{1}{n}, \frac{1}{n} \; (n=1,2,3,\dots). \right)
     \end{equation*}
     $G = \cap_{n=1}^\infty G_n$
-    Then $G$ consists of a single point (namely, $x = 0$) and is therefore not an open subset of $\mathbb{R}$.
+    Then $G$ consists of a single point (namely, $x = 0$) and is therefore not an open subset of $\R$.
     
     Thus the intersection of an infinite collection of open sets need not be open. Similarly, the union of an infinite collection of closed sets need not be closed.
 \end{myExample}

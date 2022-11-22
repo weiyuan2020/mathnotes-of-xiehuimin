@@ -1,14 +1,14 @@
 % chap01appendix.tex
 \section*{appendix}
-Theorem \ref{thm:1.19} will be proved in this appendix by constructing $\mathbb{R}$ from $\mathbb{Q}$. 
+Theorem \ref{thm:1.19} will be proved in this appendix by constructing $\R$ from $\Q $. 
 We shall divide the construction into several steps.
 
 \textbf{Step 1} 
-The members of $\mathbb{R}$ will be certain subsets of $\mathbb{Q}$, called \emph{cuts}. 
-A cut is, by definition, any set $\alpha \subset \mathbb{Q}$ with the following three properties.
+The members of $\R$ will be certain subsets of $\Q $, called \emph{cuts}. 
+A cut is, by definition, any set $\alpha \subset \Q $ with the following three properties.
 \begin{enumerate}[(I)]
-    \item $\alpha$ is not empty, and $\alpha \neq \mathbb{Q}$.
-    \item If $p\in \alpha$,$q \in \mathbb{Q}$, and $q <p$, then $q \in \alpha$.
+    \item $\alpha$ is not empty, and $\alpha \neq \Q $.
+    \item If $p\in \alpha$,$q \in \Q $, and $q <p$, then $q \in \alpha$.
     \item If $p \in \alpha$, then $p <r$ for some $r\in \alpha$.
 \end{enumerate}
 
@@ -41,19 +41,19 @@ If $\alpha < \beta$ and $\beta < \gamma$ it is clear that $\alpha < \gamma$. (A 
 \end{equation*}
 can hold for any pair $\alpha, \beta$. To show that at least one holds, assume that the first two fail. Then $\alpha$ is not a subset of $\beta$. Hence there is a $p \in \alpha$ with $p \not\in \beta$. If $q \in \beta$, it follows that $q <p$ (since $p \not\in \beta$), hence $q \in \alpha$, by (II). Thus $\beta \subset \alpha$. Since $\beta \neq \alpha$, we conclude: $\beta < \alpha$.
 
-Thus $\mathbb{R}$ is now an ordered set.
+Thus $\R$ is now an ordered set.
 
 \mybox{利用集合关系定义的偏序关系具有传递性和三歧性}
 
 \textbf{Step 3}
-The ordered set $\mathbb{R}$ has the least-upper-bound property.
+The ordered set $\R$ has the least-upper-bound property.
 
-To prove this, let $A$ be a nonempty subset of $\mathbb{R}$, and assume that $\beta \in \mathbb{R}$ is an upper bound of $A$. Define $\gamma$ to be the union of all $\alpha \in A$. In other words, $p\in \gamma$ if and only if $p \in \alpha$ for some $\alpha \in A$. We shall prove that $\gamma \in \mathbb{R}$ and that $\gamma = \sup A$.
+To prove this, let $A$ be a nonempty subset of $\R$, and assume that $\beta \in \R$ is an upper bound of $A$. Define $\gamma$ to be the union of all $\alpha \in A$. In other words, $p\in \gamma$ if and only if $p \in \alpha$ for some $\alpha \in A$. We shall prove that $\gamma \in \R$ and that $\gamma = \sup A$.
 
-Since $A$ is not empty, there exists an $a_0 \in A$. This a is not empty. Since $\alpha_0 \in \gamma$, $\gamma$ is not empty. Next, $\gamma \subset \beta$ (since $\alpha \subset \beta$ for every $\alpha \in A$), and therefore $\gamma \neq \mathbb{Q}$. Thus $\gamma$ satisfies property (I). To prove (II) and (III), pick $p \in \gamma$. Then $p \in \alpha_1$ for some $\alpha_1 \in A$. If $q <p$, then $q \in \alpha_1$, hence $q \in \gamma$; this proves (II). If $r \in \alpha_1$ is so chosen that $r > p$, we see that $r\in \gamma$ (since $\alpha_1 \subset \gamma$), and therefore $\gamma$
+Since $A$ is not empty, there exists an $a_0 \in A$. This a is not empty. Since $\alpha_0 \in \gamma$, $\gamma$ is not empty. Next, $\gamma \subset \beta$ (since $\alpha \subset \beta$ for every $\alpha \in A$), and therefore $\gamma \neq \Q $. Thus $\gamma$ satisfies property (I). To prove (II) and (III), pick $p \in \gamma$. Then $p \in \alpha_1$ for some $\alpha_1 \in A$. If $q <p$, then $q \in \alpha_1$, hence $q \in \gamma$; this proves (II). If $r \in \alpha_1$ is so chosen that $r > p$, we see that $r\in \gamma$ (since $\alpha_1 \subset \gamma$), and therefore $\gamma$
 satisfies (III).
 
-Thus $\gamma \in \mathbb{R}$.
+Thus $\gamma \in \R$.
 
 It is clear that $\alpha \leq \gamma$ for every $\alpha \in A$.
 
@@ -65,31 +65,31 @@ This gives the desired result: $\gamma = \sup A$.
 \mybox{这里分划之间所用的 $\in$ 让我很费解, 上文对分划的定义是集合, 那么应该用子集形式而不是元素形式来描述偏序关系. 分划是不是集合的一个元素? 
 查询原始pdf文件发现确实是子集形式描述的!}
 
-\textbf{Step 4} If $\alpha \in \mathbb{R}$ and $\beta \in \mathbb{R}$ we define $\alpha + \beta$ to be the set of all sums $r + s$, where
+\textbf{Step 4} If $\alpha \in \R$ and $\beta \in \R$ we define $\alpha + \beta$ to be the set of all sums $r + s$, where
 $r \in \alpha$ and $s \in \beta$.
 
 We define $0^*$ to be the set of all negative rational numbers. It is clear that $0^*$ is a cut. We verify that the axioms for addition (see Definition \ref{myDef:1.12}) hold in
-$\mathbb{R}$, with $0^*$ playing the role of $0$.
+$\R$, with $0^*$ playing the role of $0$.
 
-\textbf{Step 5} Having proved that the addition defined in Step 4 satisfies Axioms (A) of Definition \ref{myDef:1.12}, it follows that Proposition \ref{myProposition:1.14} is valid in $\mathbb{R}$, and we can
+\textbf{Step 5} Having proved that the addition defined in Step 4 satisfies Axioms (A) of Definition \ref{myDef:1.12}, it follows that Proposition \ref{myProposition:1.14} is valid in $\R$, and we can
 prove one of the requirements of Definition \ref{myDef:1.17}:
 
-If $\alpha, \beta, \gamma \in \mathbb{R}$ and $\beta < \gamma$, then $\alpha + \beta < \alpha + \gamma$.
+If $\alpha, \beta, \gamma \in \R$ and $\beta < \gamma$, then $\alpha + \beta < \alpha + \gamma$.
 
-Indeed, it is obvious from the definition of $+$ in $\mathbb{R}$ that $\alpha + \beta \subset \alpha + \gamma$; if we had $\alpha + \beta = \alpha + \gamma$, the cancellation law (Proposition \ref{myProposition:1.14}) would imply $\beta = \gamma$.
+Indeed, it is obvious from the definition of $+$ in $\R$ that $\alpha + \beta \subset \alpha + \gamma$; if we had $\alpha + \beta = \alpha + \gamma$, the cancellation law (Proposition \ref{myProposition:1.14}) would imply $\beta = \gamma$.
 
 It also follows that $\alpha > 0^*$ if and only if $-\alpha < 0^*$.
 
-\textbf{Step 6} Multiplication is a little more bothersome than addition in the present context, since products of negative rationals are positive. For this reason we confine ourselves first to $\mathbb{R}^+$, the set of all $\alpha \in \mathbb{R}$ with $\alpha > 0^*$.
+\textbf{Step 6} Multiplication is a little more bothersome than addition in the present context, since products of negative rationals are positive. For this reason we confine ourselves first to $\R^+$, the set of all $\alpha \in \R$ with $\alpha > 0^*$.
 
-If $\alpha \in \mathbb{R}^+$ and $\beta \in \mathbb{R}^+$, we define $\alpha\beta$ to be the set of all $p$ such that $p \leq rs$
+If $\alpha \in \R^+$ and $\beta \in \R^+$, we define $\alpha\beta$ to be the set of all $p$ such that $p \leq rs$
 for some choice of $r \in \alpha$, $s \in \beta$, $r>0$, $s>0$.
 
 We define $1^*$ to be the set of all $q < 1$.
 % 20 PRINCIPLES OF MATHEMATICAL ANALYSIS
 
 
-Then the axioms (M) and (D) of Definition \ref{myDef:1.12} hold, with $\mathbb{R}^+$ in place of $F$, and with $1^*$ in the role of $1$.
+Then the axioms (M) and (D) of Definition \ref{myDef:1.12} hold, with $\R^+$ in place of $F$, and with $1^*$ in the role of $1$.
 
 The proofs are so similar to the ones given in detail in Step 4 that we omit
 them.
@@ -111,14 +111,14 @@ and by setting
 \end{equation*}
 The products on the right were defined in Step 6.
 
-Having proved (in Step 6) that the axioms (M) hold in $\mathbb{R}^+$, it is now
-perfectly simple to prove them in$\mathbb{\mathbb{R}^+}$, by repeated application of the identity $\gamma = -(-\gamma)$ which is part of Proposition \ref{myProposition:1.14}. (See Step 5.)
+Having proved (in Step 6) that the axioms (M) hold in $\R^+$, it is now
+perfectly simple to prove them in$\R^+$, by repeated application of the identity $\gamma = -(-\gamma)$ which is part of Proposition \ref{myProposition:1.14}. (See Step 5.)
 
 The proof of the distributive law
 \begin{equation*}
     \alpha(\beta + \gamma) = \alpha\beta + \alpha\gamma
 \end{equation*}
-breaks into cases. For instance, suppose $\alpha> 0^*$, $\beta <0^*$, $\beta + \gamma > 0^*$ Then $\gamma = (\beta + \gamma) + (- \beta)$, and (since we already know that the distributive law holds in $\mathbb{R}^+$)
+breaks into cases. For instance, suppose $\alpha> 0^*$, $\beta <0^*$, $\beta + \gamma > 0^*$ Then $\gamma = (\beta + \gamma) + (- \beta)$, and (since we already know that the distributive law holds in $\R^+$)
 \begin{equation*}
     \alpha\gamma = \alpha(\beta+\gamma) + \alpha \cdot (-\beta).
 \end{equation*}
@@ -128,13 +128,13 @@ But $\alpha \cdot (-\beta) = -(\alpha\beta)$. Thus
 \end{equation*}
 The other cases are handled in the same way.
 
-We have now completed the proof that $\mathbb{R}$ is an orderedfield with the least-upper-bound property.
+We have now completed the proof that $\R$ is an orderedfield with the least-upper-bound property.
 
 \textbf{Step 8} 
-We associate with each $r\in \mathbb{Q}$ the set $r^*$ 
-which consists of all $p \in \mathbb{Q}$ such that $p < r$. 
+We associate with each $r\in \Q $ the set $r^*$ 
+which consists of all $p \in \Q $ such that $p < r$. 
 It is clear that each $r^*$ is a cut; 
-that is, $r^* \in \mathbb{R}$. 
+that is, $r^* \in \R$. 
 These cuts satisfy the following relations:
 \begin{enumerate}[(a)]
     \item $r^* + s^* = (r+s)^*$,
@@ -162,14 +162,14 @@ If $r^* <s^*$ then there is a $p \in s^*$ such that $p \not\in r^*$ Hence $r < p
 
 This proves (c).
 
-\textbf{Step 9} We saw in Step 8 that the replacement of the rational numbers $r$ by the corresponding ``rational cuts'' $r^* \in \mathbb{R}$ preserves sums, products, and order. This fact may be expressed by saying that the ordered field $\mathbb{Q}$ is isomorphic to the ordered field $\mathbb{Q}^*$ whose elements are the rational cuts. Of course, $r^*$ is by no means the same as $r$, but the properties we are concerned with (arithmetic and order) are the same in the two fields.
+\textbf{Step 9} We saw in Step 8 that the replacement of the rational numbers $r$ by the corresponding ``rational cuts'' $r^* \in \R$ preserves sums, products, and order. This fact may be expressed by saying that the ordered field $\Q $ is isomorphic to the ordered field $\Q ^*$ whose elements are the rational cuts. Of course, $r^*$ is by no means the same as $r$, but the properties we are concerned with (arithmetic and order) are the same in the two fields.
 
-It is this identification of $\mathbb{Q}$ with $\mathbb{Q}^*$ which allows us to regard $\mathbb{Q}$ as a subfield of $\mathbb{R}$.
+It is this identification of $\Q $ with $\Q ^*$ which allows us to regard $\Q $ as a subfield of $\R$.
 
-The second part of Theorem \ref{thm:1.19} is to be understood in terms of this identification. Note that the same phenomenon occurs when the real numbers are regarded as a subfield of the complex field, and it also occurs at a much more elementary level, when the integers are identified with a certain subset of $\mathbb{Q}$.
+The second part of Theorem \ref{thm:1.19} is to be understood in terms of this identification. Note that the same phenomenon occurs when the real numbers are regarded as a subfield of the complex field, and it also occurs at a much more elementary level, when the integers are identified with a certain subset of $\Q $.
 
-It is a fact, which we will not prove here, that any two orderedfields with the least-upper-bound property are isomorphic. The first part of Theorem \ref{thm:1.19} therefore characterizes the real field $\mathbb{R}$ completely.
+It is a fact, which we will not prove here, that any two orderedfields with the least-upper-bound property are isomorphic. The first part of Theorem \ref{thm:1.19} therefore characterizes the real field $\R$ completely.
 
-The books by Landau and Thurston cited in the Bibliography are entirely devoted to number systems. Chapter 1 of Knopp's book contains a more leisurely description of how $\mathbb{R}$ can be obtained from $\mathbb{Q}$. Another construction, in which each real number is defined to be an equivalence class of Cauchy sequences of rational numbers (see Chap. 3), is carried out in Sec. 5 of the book by Hewitt and Stromberg.
+The books by Landau and Thurston cited in the Bibliography are entirely devoted to number systems. Chapter 1 of Knopp's book contains a more leisurely description of how $\R$ can be obtained from $\Q $. Another construction, in which each real number is defined to be an equivalence class of Cauchy sequences of rational numbers (see Chap. 3), is carried out in Sec. 5 of the book by Hewitt and Stromberg.
 
-The cuts in $\mathbb{Q}$ which we used here were invented by Dedekind. The construction of $\mathbb{R}$ from $\mathbb{Q}$ by means of Cauchy sequences is due to Cantor. Both Cantor and Dedekind published their constructions in 1872.
+The cuts in $\Q $ which we used here were invented by Dedekind. The construction of $\R$ from $\Q $ by means of Cauchy sequences is due to Cantor. Both Cantor and Dedekind published their constructions in 1872.

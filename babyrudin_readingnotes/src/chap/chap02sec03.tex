@@ -7,7 +7,7 @@
 
     紧集的任何开覆盖都有有限子覆盖
 
-    在 $\R{n}$中，下面三个条件等价：
+    在 $\R^{n}$中，下面三个条件等价：
     有界闭（bounded and closed）；紧（compact）；列紧（sequentially compact）；
 }
 
@@ -29,7 +29,7 @@ More explicitly, the requirement is that if $\{G_{\alpha}\}$ is an open cover of
 The notion of compactness is of great importance in analysis, especially
 in connection with continuity (Chap. 4).
 
-It is clear that every finite set is compact. The existence of a large class of infinite compact sets in $\mathbb{R}^k$ will follow from Theorem 2.41.
+It is clear that every finite set is compact. The existence of a large class of infinite compact sets in $\R^k$ will follow from Theorem 2.41.
 
 We observed earlier (in Sec. 2.29) that if $E \subset Y \subset X$, then $E$ may be open relative to $Y$ without being open relative to $X$. The property of being open thus depends on the space in which $E$ is embedded. The same is true of the property of being closed.
 
@@ -153,7 +153,7 @@ is empty, in contradiction to our hypothesis.
 
 \begin{thm}
     \label{thm:2.38}
-    If $\{I_n\}$ is a sequence of intervals in $\mathbb{R}^1$, 
+    If $\{I_n\}$ is a sequence of intervals in $\R^1$, 
     such that $I_n \supset I_{n+1}, (n=1,2,3,...)$, 
     then $\cap_1^\infty I_n$ is not empty.
 \end{thm}
@@ -243,7 +243,7 @@ is empty, in contradiction to our hypothesis.
     Since $G_\alpha$ is open, there exists $r > 0$ such that 
     $\left| \mathbf{y-x}^* \right| < r$ implies that $\mathbf{y} \in G_\alpha$. 
     If $n$ is so large that $2^{-n}\delta < r$ 
-    (there is such an $n$, for otherwise $2^n \leq \delta/r$ for all positive integers $n$, which is absurd since $\R{}$ is archimedean),
+    (there is such an $n$, for otherwise $2^n \leq \delta/r$ for all positive integers $n$, which is absurd since $\R$ is archimedean),
     then (c) implies that $I_n \subset G_\alpha$, which contradicts (b).
     
     This completes the proof.
@@ -253,7 +253,7 @@ The equivalence of (a) and (b) in the next theorem is known as the Heine-Borel t
 
 \begin{thm}
     \label{thm:2.41}
-    If a set $E$ in $\mathbb{R}^k$ has one of the following three properties, then it has the other two:
+    If a set $E$ in $\R^k$ has one of the following three properties, then it has the other two:
     \begin{enumerate}[(a)]
         \item $E$ is closed and bounded.
         \item $E$ is compact.
@@ -273,17 +273,17 @@ The equivalence of (a) and (b) in the next theorem is known as the Heine-Borel t
         \quad
         (n = 1, 2, 3, ... ).        
     \end{equation*}
-    The set $S$ consisting of these points $\mathbf{x}_n$ is infinite and clearly has no limit point in $\R{k}$, hence has none in $E$. 
+    The set $S$ consisting of these points $\mathbf{x}_n$ is infinite and clearly has no limit point in $\R^{k}$, hence has none in $E$. 
     Thus (c) implies that $E$ is bounded.
     
-    If $E$ is not closed, then there is a point $\mathbf{x}_0 \in  \R{k}$ which is a limit point of $E$ but not a point of $E$. 
+    If $E$ is not closed, then there is a point $\mathbf{x}_0 \in  \R^{k}$ which is a limit point of $E$ but not a point of $E$. 
     For $n = 1, 2, 3, ... $, there are points $\mathbf{x}_n \in E$ 
     such that $\left| \mathbf{x}_n - \mathbf{x}_0 \right| < 1/n$. 
     Let $S$ be the set of these points $\mathbf{x}_n$. 
     Then $S$ is infinite (otherwise $\left| \mathbf{x}_n - \mathbf{x}_0 \right| $ would have a constant positive value, for infinitely many $n$), 
     $S$ has $\mathbf{x}_0$ as a limit point, 
-    and $S$ has no other limit point in $\R{k}$. 
-    For if $\mathbf{y} \in \R{k}$, $\mathbf{y} \neq \mathbf{x}_0$ , then
+    and $S$ has no other limit point in $\R^{k}$. 
+    For if $\mathbf{y} \in \R^{k}$, $\mathbf{y} \neq \mathbf{x}_0$ , then
     \begin{align*}
         \left| \mathbf{x}_n - \mathbf{y} \right| 
         &\geq
@@ -306,11 +306,11 @@ Examples are furnished by Exercise 16 and by the space $\mathscr{L}^2$ , which i
 
 \begin{thm}(Weierstrass)
     \label{thm:2.42}
-    Every bounded infinite subset of $\mathbb{R}^k$ has a limit point in $\mathbb{R}^k$.
+    Every bounded infinite subset of $\R^k$ has a limit point in $\R^k$.
 \end{thm}
 
 \begin{proof}
-    Being bounded, the set $E$ in question is a subset of a $k$-cell $I\subset \mathbb{R}^k$.
+    Being bounded, the set $E$ in question is a subset of a $k$-cell $I\subset \R^k$.
     By Theorem \ref{thm:2.40}, $I$ is compact, 
     and so $E$ has a limit point in $I$, by Theorem 2.37.
 \end{proof}

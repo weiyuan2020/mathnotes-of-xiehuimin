@@ -1,0 +1,106 @@
+\documentclass[openany,twoside,scheme=chinese,fontset=none]{book}
+\usepackage{ctex}
+\usepackage{geometry}
+\geometry{
+    paperheight=260mm,
+    paperwidth=185mm,
+    top=25mm,
+    bottom=15mm,
+    left=25mm, % 左侧留 5mm 装订线距离
+    right=15mm
+}
+
+\setmainfont{XITS}  % 英文字体， Times 风格
+
+\setCJKmainfont{Source Han Serif SC}[         % 方正书宋_GBK
+    BoldFont=Source Han Serif SC Bold,  % 思源宋体粗体
+    ItalicFont=FZKai-Z03                % 方正楷体_GBK
+    ]
+\setCJKsansfont{Source Han Sans SC}[             % 方正黑体_GBK
+    BoldFont=Source Han Sans SC Bold    % 思源黑体粗体
+    ]
+\setCJKmonofont{FZFangSong-Z02}         % 方正仿宋_GBK
+
+\setCJKfamilyfont{zhsong}{FZShuSong-Z01}
+\setCJKfamilyfont{zhxbs}{Source Han Serif SC Bold}
+\setCJKfamilyfont{zhdbs}{Source Han Serif SC Heavy}
+\setCJKfamilyfont{zhhei}{FZHei-B01}
+\setCJKfamilyfont{zhdh}{Source Han Sans SC Bold}
+\setCJKfamilyfont{zhfs}{FZFangSong-Z02}
+\setCJKfamilyfont{zhkai}{FZKai-Z03}
+
+\newcommand{\songti}{\CJKfamily{zhsong}}
+\newcommand{\xbsong}{\CJKfamily{zhxbs}}
+\newcommand{\dbsong}{\CJKfamily{zhdbs}}
+\newcommand{\heiti}{\CJKfamily{zhhei}}
+\newcommand{\dahei}{\CJKfamily{zhdh}}
+\newcommand{\fangsong}{\CJKfamily{zhfs}}
+\newcommand{\kaishu}{\CJKfamily{zhkai}}
+
+
+\usepackage{amsmath}
+\usepackage{amsthm} % amsthm 与 ntheorem 冲突
+\usepackage{amssymb}
+\usepackage{hyperref} % \url
+\usepackage{graphicx} % \includegraphics
+\usepackage{fancybox} % 使用盒子
+\usepackage{xcolor} % 使用颜色 color
+% \usepackage{amsfonts}  % 
+\usepackage{mathrsfs}  % 花体字 mathscr
+
+\usepackage{enumerate}  % 计数器
+\usepackage{paralist}  % 计数器 允许行间公式
+
+
+
+\theoremstyle{plain} % default
+\newtheorem{thm}{Theorem}[chapter] % 如果不采用章节号做前缀， 则不用[section]
+\newtheorem{myLemma}[thm]{Lemma}
+\newtheorem{mynewthm}{Theorem}[section] % 如果不采用章节号做前缀， 则不用[section]
+
+\theoremstyle{definition} % definition
+
+\newtheorem{myDef}[thm]{Definition}
+\newtheorem{myExample}[thm]{Example}
+\newtheorem{myRemark}[thm]{Remark}
+\newtheorem{myProposition}[thm]{Proposition}
+\newtheorem{myNotation}[thm]{Notation}
+
+\newtheorem*{myCorollary}{Corollary}
+\newtheorem{mySolve}{Solve}
+
+\newtheorem{myExercise}{Exercise}[chapter]
+% \theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+% 我的笔记环境
+\newcommand{\mybox}[1]{
+    % \fbox{mynotes:\\#1}
+    \vskip 2.5mm
+    \fbox{\parbox{135mm}{mynotes:\\#1}}
+    \vskip 2.5mm
+}
+\newcommand{\myproof}[1]{\begin{proof}#1\end{proof}}
+\newcommand{\mycommand}[2]{\begin{#1}#2\end{#1}}
+\newcommand{\mythm}[1]{\mycommand{thm}{#1}}
+\newcommand{\mymyDef}[1]{\mycommand{myDef}{#1}}
+\newcommand{\mymyExample}[1]{\mycommand{myExample}{#1}}
+\newcommand{\mymyRemark}[1]{\mycommand{myRemark}{#1}}
+\newcommand{\mymyProposition}[1]{\mycommand{myProposition}{#1}}
+\newcommand{\mymyNotation}[1]{\mycommand{myNotation}{#1}}
+\newcommand{\mymyCorollary}[1]{\mycommand{myCorollary}{#1}}
+\newcommand{\mymySolve}[1]{\mycommand{mySolve}{#1}}
+\newcommand{\mymyExercise}[1]{\mycommand{myExercise}{#1}}
+
+%New Commands
+
+%Special Symbols
+
+\newcommand{\R}{{\protect\mathbb R}}
+\newcommand{\Cc}{{\protect\mathbb C}}
+\newcommand{\K}{{\protect\mathbb K}}
+\newcommand{\N}{{\protect\mathbb N}}
+\newcommand{\Q}{{\protect\mathbb Q}}
+\newcommand{\Z}{{\protect\mathbb Z}}
+\newcommand{\sequence}[1]{\protect\{#1\}}
+\newcommand{\mybinom}[2]{\protect \binom{#1}{#2}}

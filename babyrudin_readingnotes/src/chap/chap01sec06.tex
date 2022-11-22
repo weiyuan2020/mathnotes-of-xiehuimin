@@ -1,31 +1,47 @@
 
 \section{The complex field}
 
-\mybox{rudin 引入复数定义的方法很奇怪, 使用复数的代数定义直接引入（天上掉下来的定义）。理解起来比较困难, 我觉得使用几何方法引入复数更为合理且直观, rudin 这里对初学者不太友好}
+\mybox{
+    rudin 引入复数定义的方法很奇怪, 
+    使用复数的代数定义直接引入(天上掉下来的定义).
+    理解起来比较困难.
 
-\begin{myDef}\label{myDef:1.24}
-    % 1.24 Definition 
+    我觉得使用几何方法引入复数更为合理且直观, 
+    rudin 这里对初学者不太友好.
+}
+
+\begin{myDef}
+    \label{myDef:1.24}
     A complex number is an ordered pair $(a, b)$ of real numbers.
-"Ordered" means that $(a, b)$ and $(b, a)$ are regarded as distinct if $a \neq b$.
+    "Ordered" means that $(a, b)$ and $(b, a)$ are regarded as distinct if $a \neq b$.
 
-Let$x = (a, b)$, $y = (c,d)$ be two complex numbers. We write $x =y$ if and
-only if $a =c$ and $b=d$. (Note that this definition is not entirely superfluous;
-think of equality of rational numbers, represented as quotients of integers.) We
-define
-\begin{align*}
-    x+y &= (a+c, b+d),\\
-    xy  &= (ac - bd, ad + bc).
-\end{align*}
+    Let$x = (a, b)$, $y = (c,d)$ be two complex numbers. 
+    We write $x =y$ if and only if $a =c$ and $b=d$. 
+    (Note that this definition is not entirely superfluous;
+    think of equality of rational numbers, 
+    represented as quotients of integers.) 
+    We define
+    \begin{align*}
+        x+y &= (a + c, b + d),\\
+        xy  &= (ac - bd, ad + bc).
+    \end{align*}
 \end{myDef}
 
-\begin{thm}\label{thm:1.25}
-    % 1.25 'Theorem 
-    These definitions of addition and multiplication turn the \emph{set} of all complex numbers into a field, with $(0, 0)$ and $(1, 0)$ in the role $0$ and $1$.
+\begin{thm}
+    \label{thm:1.25}
+    These definitions of addition and multiplication 
+    turn the \emph{set} of all complex numbers into a field, 
+    with $(0, 0)$ and $(1, 0)$ in the role $0$ and $1$.
 \end{thm}
 
-proof (A1)--(A5), (M1)--(M5) and (D), then we can prove that $\mathbb{C}$ is a field.
+\mybox{
+    proof (A1)--(A5), (M1)--(M5) and (D), 
 
-\begin{thm}\label{thm:1.26}
+    then we can prove that $\mathbb{C}$ is a field.
+}
+
+\begin{thm}
+    \label{thm:1.26}
     For any real numbers $a$ and $b$ we have
     \begin{equation*}
         (a,0)+ (b,0) = (a+ b,0),\quad
@@ -36,12 +52,13 @@ The proof is trivial.
 
 show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 
-\begin{myDef}\label{myDef:1.27}
+\begin{myDef}
+    \label{myDef:1.27}
     $i=(0,1)$    
 \end{myDef}
 
-\begin{thm}\label{thm:1.28}
-    % 1.28 Theorem
+\begin{thm}
+    \label{thm:1.28}
     $i^2=-1$
 \end{thm}
 
@@ -51,7 +68,8 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
     \end{equation*}
 \end{proof}
 
-\begin{thm}\label{thm:1.29}
+\begin{thm}
+    \label{thm:1.29}
     If $a$ and $b$ are real, then $(a,b) =a + bi$.
 \end{thm}
 
@@ -63,8 +81,12 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
     \end{align*}
 \end{proof}
 
-\begin{myDef}\label{myDef:1.30}
-    $a,b\in \mathbb{R}$, $z=a+bi$,the complex number $\bar{z}=a-bi$ is called the conjugate of $z$. the numbers $a$ and $b$ are the real part and imaginary part of $z$. respectively.
+\begin{myDef}
+    \label{myDef:1.30}
+    $a,b\in \R$, $z = a + bi$,
+    the complex number $\bar{z} = a  -bi$ is called the conjugate of $z$.
+    the numbers $a$ and $b$ are the real part and imaginary part of $z$.
+    respectively.
     \begin{equation*}
         a=\Re(z), \quad
         b=\Im(z)
@@ -73,7 +95,6 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 
 \begin{thm}
     \label{thm:1.31}
-    % 1.31 Theorem
     If $z$ and $w$ are complex, then
     \begin{enumerate}[(a)]
         \item $\bar{z+w}=\bar{z}+\bar{w}$,
@@ -91,12 +112,14 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 
 \begin{myDef}
     \label{myDef:1.32}
-    If $z$ is a complex number, its absolute value $|z|$ is the nonnegative square root of $z\bar{z}$; that is, $|z| = (z\bar{z})^{1/2}$.
+    If $z$ is a complex number, 
+    its absolute value $|z|$ is the nonnegative square root of $z\bar{z}$; 
+    that is, $|z| = (z\bar{z})^{1/2}$.
 \end{myDef}
-The existence (and uniqueness) of $|z|$ follows from Theorem \ref{thm:1.21} and
-part (d) of Theorem \ref{thm:1.31}.
+The existence (and uniqueness) of $|z|$ follows from Theorem \ref{thm:1.21} and part (d) of Theorem \ref{thm:1.31}.
 
-Note that when $x$ is real, then $\bar{x} = x$, hence $|x| = \sqrt{x^2}$. Thus $|x| = x$
+Note that when $x$ is real, then $\bar{x} = x$, 
+hence $|x| = \sqrt{x^2}$. Thus $|x| = x$
 if $x>0$, $|x| = -x$ if $x <0$.
 
 \begin{thm}
@@ -133,7 +156,7 @@ if $x>0$, $|x| = -x$ if $x <0$.
 \end{thm}
 
 \myproof{
-    在正式证明之前, 先回忆 $\mathbb{R}$ 中的施瓦茨不等式是怎么证明的.
+    在正式证明之前, 先回忆 $\R$ 中的施瓦茨不等式是怎么证明的.
     let $A = \sum a_j^2$, $B = \sum b_j^2$, $C = \sum a_j b_j$.
     \begin{equation*}
         \sum (a_j+\lambda b_j)^2 = 
@@ -168,15 +191,32 @@ if $x>0$, $|x| = -x$ if $x <0$.
     我的想法
     \begin{align*}
         \sum (a_j + \lambda \bar{b_j})(\bar{a_j} + \lambda b_j)
-        &=\sum(a_j\bar{a_j}+\lambda(\bar{a_j}b_j+a_j\bar{b_j})+\lambda^2 b_j\bar{b_j})\\
-        &=\sum(a_j\bar{a_j}+\lambda 2\Re(a_j\bar{b_j}) +\lambda^2 b_j\bar{b_j})
+        &=\sum(
+            a_j\bar{a_j}
+            + \lambda(\bar{a_j}b_j+a_j\bar{b_j})
+            + \lambda^2 b_j\bar{b_j}
+            )\\
+        &= A + \lambda (C + \bar{C}) + \lambda^{2} B
     \end{align*}
-    由韦达定理, $\Delta \leq 0$, $\Delta = (2\sum\Re(a_j\bar{b_j}))^2-4\sum a_j\bar{a_j}\sum b_j\bar{b_j}$, 
+    由韦达定理, $\Delta \leq 0$, 
+    % $\Delta = (\sum\Re(a_j\bar{b_j}))^2-4\sum a_j\bar{a_j}\sum b_j\bar{b_j}$, 
+    $\Delta = (C + \bar{C})^2-4AB \leq 0$, 
     (这里推出的结论比原始结论弱？为什么？)
-}
-% 由于 $\left( \sum\Re(a_j\bar{b_j}) \right)^2 = $
-% \begin{align*}
-%     \left( \sum\Re(a_j\bar{b_j}) \right)^2 &\leq \sum a_j\bar{a_j}\sum b_j\bar{b_j}\\
-%     \left| \left( \sum a_j \bar{b_j} \right)\right|^2
+
+    $A = \sum \left| a_j \right|^2 $,
+    $B = \sum \left| b_j \right|^2 $,
+    $C = \sum a_j \bar{b}_j$.
+    \begin{align*}
+        \left| C \right|^2 
+        &= C \cdot \bar{C}\\
+        &= \left( \sum a_j \bar{b}_j \right) 
+        \overline{\left( \sum a_j \bar{b}_j \right)}.\\
+        &= \left( \sum a_j \bar{b}_j \right) 
+        \left( \sum \overline{a_j \bar{b}_j} \right).\\
+        &= \left( \sum a_j \bar{b}_j \right) 
+        \left( \sum \bar{a}_j {b}_j \right).
+    \end{align*}
+
+    可不可以用 $C^2 + \bar{C}^2 \geq 2 C \bar{C}$?
     
-% \end{align*}
+}
