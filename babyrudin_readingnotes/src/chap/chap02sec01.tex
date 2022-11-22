@@ -160,7 +160,7 @@ No uncountable set ca be a subset of a countable set.
         P = \bigcap_{\alpha\in A} E_\alpha
     \end{equation}
     \begin{equation}\label{eq:2.6 intersection finite}
-        S = \bigcap_{m=1}^n E_m = E_1 \bigcap E_2 \bigcap \cdots \bigcap E_n.
+        S = \bigcap_{m=1}^n E_m = E_1 \cap E_2 \cap \cdots \cap E_n.
     \end{equation}
     \begin{equation}\label{eq:2.7 intersection countable}
         S = \bigcap_{m=1}^{\infty} E_m.
@@ -179,38 +179,38 @@ No uncountable set ca be a subset of a countable set.
 
 The commutative and associative laws are trivial:
 \begin{align}
-        A \bigcup B &= B \bigcup A; &
-        A \bigcap B &= B \bigcap A \label{eq:2.8 commutative} \\
-        \left(A \bigcup B\right) \bigcup C &= A \bigcup \left(B \bigcup C\right); &
-        \left(A \bigcap B\right) \bigcap C &= A \bigcap \left(B \bigcap C\right);\label{eq:2.9 distributive}
+        A \cup B &= B \cup A; &
+        A \cap B &= B \cap A \label{eq:2.8 commutative} \\
+        \left(A \cup B\right) \cup C &= A \cup \left(B \cup C\right); &
+        \left(A \cap B\right) \cap C &= A \cap \left(B \cap C\right);\label{eq:2.9 distributive}
 \end{align}
 
 Thus the omission of parentheses in \ref{eq:2.3 union finite2} and \ref{eq:2.6 intersection finite} is justified.
 
 The distributive law also holds:
 \begin{equation}\label{eq:2.10 distributive law}
-    A \bigcap \left( B \bigcup C\right) = 
-    \left(A \bigcap B\right) \bigcup \left(A \bigcap C\right).
+    A \cap \left( B \cup C\right) = 
+    \left(A \cap B\right) \cup \left(A \cap C\right).
 \end{equation}
 To prove this, let the left and right members of \ref{eq:2.10 distributive law} be denoted by $E$ and $F$, respectively.
 
-Suppose $x \in E$. Then $x \in A$ and $x \in B \bigcup C$, that is, $x \in B$ or$ x \in C$ (possibly both). Hence $x \in A\bigcap B$ or $x \in A\bigcap C$, so that $x \in F$. Thus $E \subset F$.
+Suppose $x \in E$. Then $x \in A$ and $x \in B \cup C$, that is, $x \in B$ or$ x \in C$ (possibly both). Hence $x \in A\cap B$ or $x \in A\cap C$, so that $x \in F$. Thus $E \subset F$.
 
-Next, suppose $x \in F$. Then $x \in A\bigcap B$ or $x \in A\bigcap C$. That is, $x \in A$, and $x \in B\bigcup C$. Hence $x \in A\bigcap \left(B \bigcup C\right)$, so that $F \subset E$.
+Next, suppose $x \in F$. Then $x \in A\cap B$ or $x \in A\cap C$. That is, $x \in A$, and $x \in B\cup C$. Hence $x \in A\cap \left(B \cup C\right)$, so that $F \subset E$.
 
 It follows that $E = F$.
 
 We list a few more relations which are easily verified:
 
 \begin{align}
-    A \subset A \bigcup B, \label{eq:2.11}\\
-    A \bigcap B \subset B, \label{eq:2.12}
+    A \subset A \cup B, \label{eq:2.11}\\
+    A \cap B \subset B, \label{eq:2.12}
 \end{align}
 
 If $0$ denotes the empty set, then\footnote{现在一般使用 $\varnothing$ 指代空集}
 \begin{equation}
     \begin{array}{cc}
-        A \bigcup 0 = A, & A \bigcap 0 = 0.
+        A \cup 0 = A, & A \cap 0 = 0.
     \end{array}
 \end{equation}
 If $A \subset B$, then

@@ -108,7 +108,7 @@ Compactness, however, behaves better, as we shall now see. To formulate the next
 \myproof{
     Theorems \ref{thm:2.24}(b) and \ref{thm:2.34} show that $F \cap K$ is closed; 
     since $F \cap K \subset K$, 
-    Theorem \ref{thm:2.35} shows that $F \cap K$ is compact.
+    Theorem \ref{thm:2.35 compact-close} shows that $F \cap K$ is compact.
 }
 
 \begin{thm}
@@ -250,40 +250,56 @@ The equivalence of (a) and (b) in the next theorem is known as the Heine-Borel t
     \end{enumerate}
 \end{thm}
 
-% \myproof{
-%     If (a) holds, then E c / for some k-cell /, and (b) follows from
-% Theorems 2.40 and 2.35. Theorem 2.37 shows that (b) implies (c). It
-% remains to be shown that (c) implies (a).
-% If E is not bounded, then E contains points Xn with
-% (n = 1, 2, 3, ... ).
-% The set S consisting of these points xn is infinite and clearly has no limit
-% point in Rk, hence has none in E. Thus (c) implies that Eis bounded.
-% If E is not closed, then there is a point x 0 e Rk which is a limit point
-% of E but not a point of E. For n = 1, 2, 3, ... , there are points xn e E
-% such that I xn -
-% x0 I < 1/n. Let S be the set of these points xn. Then Sis
-% infinite ( otherwise I xn - x0 I would have a constant positive value, for
-% infinitely many n), S has x0 as a limit point, and S has no other limit
-% point in Rk. For if ye Rk, y "::/: x0 , then
-% I Xn - Y I ~ I Xo - Y I - I Xn -
-% Xo I
-% 1
-% 1
-% ~ I Xo -
-% YI -
-% ~ ~ 2 I Xo - Y I
-% for all but finitely many n; this shows that y is not a limit point of S
-% (Theorem 2.20).
-% Thus S has no limit point in E; hence E must be closed if (c) holds.
-% }
+\myproof{
+    If (a) holds, then $E \subset I$ for some $k$-cell $I$, 
+    and (b) follows from Theorems \ref{thm:2.40} and \ref{thm:2.35 compact-close}. 
+    Theorem \ref{thm:2.37} shows that (b) implies (c). 
+    It remains to be shown that (c) implies (a).
 
-\begin{thm}
+    If $E$ is not bounded, then $E$ contains points $\mathbf{x}_n$ with
+    \begin{equation*}
+        \left| \mathbf{x}_n \right| > n
+        \quad
+        (n = 1, 2, 3, ... ).        
+    \end{equation*}
+    The set $S$ consisting of these points $\mathbf{x}_n$ is infinite and clearly has no limit point in $\R{k}$, hence has none in $E$. 
+    Thus (c) implies that $E$ is bounded.
+    
+    If $E$ is not closed, then there is a point $\mathbf{x}_0 \in  \R{k}$ which is a limit point of $E$ but not a point of $E$. 
+    For $n = 1, 2, 3, ... $, there are points $\mathbf{x}_n \in E$ 
+    such that $\left| \mathbf{x}_n - \mathbf{x}_0 \right| < 1/n$. 
+    Let $S$ be the set of these points $\mathbf{x}_n$. 
+    Then $S$ is infinite (otherwise $\left| \mathbf{x}_n - \mathbf{x}_0 \right| $ would have a constant positive value, for infinitely many $n$), 
+    $S$ has $\mathbf{x}_0$ as a limit point, 
+    and $S$ has no other limit point in $\R{k}$. 
+    For if $\mathbf{y} \in \R{k}$, $\mathbf{y} \neq \mathbf{x}_0$ , then
+    \begin{align*}
+        \left| \mathbf{x}_n \neq \mathbf{y} \right| 
+        &\geq
+        \left| \mathbf{x}_0 \neq \mathbf{y} \right| -
+        \left| \mathbf{x}_n \neq \mathbf{x}_n \right| \\
+        &\geq 
+        \left| \mathbf{x}_0 \neq \mathbf{y} \right| - \frac{1}{n}
+        \geq \frac{1}{2}
+        \left| \mathbf{x}_0 \neq \mathbf{y} \right|
+    \end{align*} 
+    for all but finitely many $n$; 
+    this shows that $\mathbf{y}$ is not a limit point of $S$ (Theorem \ref{thm:2.20}).
+
+    Thus $S$ has no limit point in $E$; hence $E$ must be closed if (c) holds.
+}
+
+We should remark, at this point, that (b) and (c) are equivalent in any
+metric space (Exercise 26) but that (a) does not, in general, imply (b) and (c).
+Examples are furnished by Exercise 16 and by the space $\mathscr{L}^2$ , which is discussed in Chap. 11.
+
+\begin{thm}(Weierstrass)
     \label{thm:2.42 Weierstrass}
     Every bounded infinite subset of $\mathbb{R}^k$ has a limit point in $\mathbb{R}^k$.
 \end{thm}
 
 \begin{proof}
     Being bounded, the set $E$ in question is a subset of a $k$-cell $I\subset \mathbb{R}^k$.
-    By Theorem 2.40, $I$ is compact, 
+    By Theorem \ref{thm:2.40}, $I$ is compact, 
     and so $E$ has a limit point in $I$, by Theorem 2.37.
 \end{proof}
