@@ -14,6 +14,7 @@ We shall now study those functions which never decrease
 }
 
 \mythm{
+    \label{thm:4.29}
     Let f be monotonically increasing on $(a, b)$. 
     Then $f(x+)$ and $f(x-)$ exist at every point of $x$ of $(a, b)$. 
     More precisely,
@@ -32,12 +33,21 @@ We shall now study those functions which never decrease
 Analogous results evidently hold for monotonically decreasing functions.
 
 \myproof{
+    By hypothesis, the set of numbers $f(t)$, where $a< t < x$, 
+    is bounded above by the number $f(x)$, 
+    and therefore has a least upper bound which we shall denote by $A$. 
+    Evidently $A \leq f(x)$. We have to show that $A =f(x-)$. 
     
+    Let $\varepsilon > 0$ be given. 
+    It follows from the definition of $A$ 
+    as a least upper bound that there exists $\delta > 0$ 
+    such that $a < x - \delta < x$ and
     \begin{equation}
         \label{eq:4.27}
         A - \varepsilon < f(x - \delta) \leq A.
     \end{equation}
 
+    Since $f$ is monotonic, we have
     \begin{equation}
         \label{eq:4.28}
         f(x-\delta) \leq f(t) \leq A
@@ -45,23 +55,34 @@ Analogous results evidently hold for monotonically decreasing functions.
         (x-\delta < t < x).
     \end{equation}
 
+    Combining (\ref{eq4.27}) and (\ref{eq:4.28}), we see that
+    \begin{equation*}
+        \left| f(t) - A \right| < \varepsilon
+        \quad
+        (x - \delta < t < x).
+    \end{equation*}
+    Hence $f(x-) = A$.
 
+    The second half of (\ref{eq:4.25}) is proved in precisely the same way.
+
+    Next, if $a < x < y < b$, we see from (\ref{eq:4.25}) that
     \begin{equation}
         \label{eq:4.29}
         f(x+) 
         = \inf_{x < t < b} f(t)
         = \inf_{x < t < y} f(t)
     \end{equation}
-
+    The last equality is obtained by applying (\ref{eq:4.25}) to $(a, y)$ in place of $(a, b)$. Similarly,
     \begin{equation}
         \label{eq:4.30}
         f(y-) 
         = \sup_{a < t < y} f(t)
         = \sup_{x < t < y} f(t)
     \end{equation}
+    Comparison of (\ref{eq:4.29}) and (\ref{eq:4.30}) gives (\ref{eq:4.26}).
 }
 
-Corollary: Monotonic functions have no discontinuities of the second kind.
+\textbf{Corollary}: Monotonic functions have no discontinuities of the second kind.
 
 
 This corollary implies that every monotonic function is discontinuous at a countable set of points at most. 
@@ -69,8 +90,11 @@ Instead of appealing to the general theorem whose proof is sketched in Exercise 
 we give here a simple proof which is applicable to monotonic functions.
 
 \mythm{
+    \label{thm:4.30}
     Let $f$ be monotonic on $(a, b)$. 
-    Then the set of points of $(a, b)$ at which $f$ is discontinuous is at most countable.
+    Then the set of points of $(a, b)$ 
+    at which $f$ is discontinuous 
+    is at most countable.
 }
 
 \mymyRemark{
@@ -97,14 +121,14 @@ we give here a simple proof which is applicable to monotonic functions.
     the order in which the terms are arranged is immaterial.
 }
 
-(a) $f$ is monotonically increasing on $(a, b)$;
-
-(b) $f$ is discontinuous at every point of $E$; in fact,
-\begin{equation*}
-    f(x_n+) - f(x_n-) = c_n
-\end{equation*}
-
-(c) $f$ is continuous at every other point of $(a, b)$.
+\begin{asparaenum}[(a)]
+    \item $f$ is monotonically increasing on $(a, b)$;
+    \item $f$ is discontinuous at every point of $E$; in fact,
+    \begin{equation*}
+        f(x_n+) - f(x_n-) = c_n
+    \end{equation*}
+    \item $f$ is continuous at every other point of $(a, b)$.
+\end{asparaenum}
 
 Moreover, it is not hard to see that $f(x-) =f(x)$ at all points of $(a, b)$. 
 If a function satisfies this condition, 

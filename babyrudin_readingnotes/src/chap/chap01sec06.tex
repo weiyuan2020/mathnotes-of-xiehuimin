@@ -3,7 +3,7 @@
 
 \mybox{rudin 引入复数定义的方法很奇怪, 使用复数的代数定义直接引入（天上掉下来的定义）。理解起来比较困难, 我觉得使用几何方法引入复数更为合理且直观, rudin 这里对初学者不太友好}
 
-\begin{myDef}\label{myDef:1.24 complex number}
+\begin{myDef}\label{myDef:1.24}
     % 1.24 Definition 
     A complex number is an ordered pair $(a, b)$ of real numbers.
 "Ordered" means that $(a, b)$ and $(b, a)$ are regarded as distinct if $a \neq b$.
@@ -18,14 +18,14 @@ define
 \end{align*}
 \end{myDef}
 
-\begin{thm}\label{thm:1.25 complex number is field}
+\begin{thm}\label{thm:1.25}
     % 1.25 'Theorem 
     These definitions of addition and multiplication turn the \emph{set} of all complex numbers into a field, with $(0, 0)$ and $(1, 0)$ in the role $0$ and $1$.
 \end{thm}
 
 proof (A1)--(A5), (M1)--(M5) and (D), then we can prove that $\mathbb{C}$ is a field.
 
-\begin{thm}\label{thm:1.26 real in complex}
+\begin{thm}\label{thm:1.26}
     For any real numbers $a$ and $b$ we have
     \begin{equation*}
         (a,0)+ (b,0) = (a+ b,0),\quad
@@ -36,11 +36,11 @@ The proof is trivial.
 
 show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 
-\begin{myDef}\label{myDef:1.27 image_number}
+\begin{myDef}\label{myDef:1.27}
     $i=(0,1)$    
 \end{myDef}
 
-\begin{thm}\label{thm:1.28 square root of minus 1}
+\begin{thm}\label{thm:1.28}
     % 1.28 Theorem
     $i^2=-1$
 \end{thm}
@@ -51,7 +51,7 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
     \end{equation*}
 \end{proof}
 
-\begin{thm}\label{thm:1.29 complex number Transfer}
+\begin{thm}\label{thm:1.29}
     If $a$ and $b$ are real, then $(a,b) =a + bi$.
 \end{thm}
 
@@ -63,7 +63,7 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
     \end{align*}
 \end{proof}
 
-\begin{myDef}\label{myDef:1.30 conjugate}
+\begin{myDef}\label{myDef:1.30}
     $a,b\in \mathbb{R}$, $z=a+bi$,the complex number $\bar{z}=a-bi$ is called the conjugate of $z$. the numbers $a$ and $b$ are the real part and imaginary part of $z$. respectively.
     \begin{equation*}
         a=\Re(z), \quad
@@ -72,7 +72,7 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 \end{myDef}
 
 \begin{thm}
-    \label{thm:1.31 complex Property}
+    \label{thm:1.31}
     % 1.31 Theorem
     If $z$ and $w$ are complex, then
     \begin{enumerate}[(a)]
@@ -90,11 +90,11 @@ show that the notation $(a, b)$ is equivalent to the more customary $a + bi$.
 }
 
 \begin{myDef}
-    \label{myDef:1.32 complex_absolutevalue}
+    \label{myDef:1.32}
     If $z$ is a complex number, its absolute value $|z|$ is the nonnegative square root of $z\bar{z}$; that is, $|z| = (z\bar{z})^{1/2}$.
 \end{myDef}
 The existence (and uniqueness) of $|z|$ follows from Theorem \ref{thm:1.21} and
-part (d) of Theorem \ref{thm:1.31 complex Property}.
+part (d) of Theorem \ref{thm:1.31}.
 
 Note that when $x$ is real, then $\bar{x} = x$, hence $|x| = \sqrt{x^2}$. Thus $|x| = x$
 if $x>0$, $|x| = -x$ if $x <0$.
@@ -113,7 +113,7 @@ if $x>0$, $|x| = -x$ if $x <0$.
 
 
 \begin{myNotation}(Big sum)
-    \label{myNotation:1.34 sum}
+    \label{myNotation:1.34}
     $x_1,x_2,\dots,x_n \in \mathbb{C}$,
     \begin{equation*}
         x_1+x_2+\dots+x_n = \sum_{j=1}^{n} x_j.
@@ -121,7 +121,7 @@ if $x>0$, $|x| = -x$ if $x <0$.
 \end{myNotation}
 
 \begin{thm}(Schwarz Inequality)
-    \label{thm:1.35 schwarz_inequality}
+    \label{thm:1.35}
     If 
     $a_1,\dots,a_n$, 
     $b_1,\dots,b_n$, are complex numbers, then
