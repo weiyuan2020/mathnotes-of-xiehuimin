@@ -4,11 +4,12 @@
     \label{myDef:5.7}
     Let $f$ be a real function defined on a metric space $X$.
     We say that $f$ has a \emph{local maximum} at a point $p \in X$ 
-    if there exists $\delta > 0$ such that $f(q) \leq f(p)$ 
+    if there exists $\delta > 0$ 
+    such that $f(q) \leq f(p)$ 
     for all $q \in X$ with $d(p, q) < \delta$.
 }
-
 Local minima are defined likewise.
+\mybox{极大值与极小值的定义}
 
 Our next theorem is the basis of many applications of differentiation.
 
@@ -19,6 +20,28 @@ Our next theorem is the basis of many applications of differentiation.
     and if $f'(x)$ exists, then $f'(x) = 0$.
 }
 The analogous statement for local minima is of course also true.
+\mybox{极值处可导，则其导数为0}
+\myproof{
+    Choose $\delta$ in accordance with Definition \ref{myDef:5.7}, 
+    so that
+    \begin{equation*}
+        a < x - \delta < x < x + \delta < b.
+    \end{equation*}
+    If $x - \delta < t < x$, then
+    \begin{equation*}
+        \frac{f(t)-f(x)}{t-x} \geq 0,
+    \end{equation*}
+    Letting $t \rightarrow x$, we see that $f'(x) \geq 0$.
+    
+    If $x < t < x + \delta$, then 
+    \begin{equation*}
+        \frac{f(t) -f(x)}{t-x} \leq 0,
+    \end{equation*}
+    which shows that $f'(x) \leq 0$. Hence $f'(x) = 0$.
+}
+\mybox{另一种证明相等的常用方式, 
+除了第一章所述的证明大于小于均不成立外, 
+还可以证明大于等于和小于等于同时成立}
 
 \mythm{
     \label{thm:5.9}
@@ -46,6 +69,7 @@ Note that differentiability is not required at the endpoints.
         h(a) = f(b)g(a) - f(a)g(b) = h(b).
     \end{equation}
     To prove the theorem, we have to show that $h'(x) = 0$ for some $x \in (a, b)$.
+    \mybox{先证明罗尔定理}
 
     If $h$ is constant, this holds for every $x \in (a, b)$.
     If $h(t) > h(a)$ for some $t \in (a, b)$, let $x$ be a point on $[a, b]$ at which $h$ attains its maximum (Theorem \ref{thm:4.16}).
@@ -56,6 +80,7 @@ Note that differentiability is not required at the endpoints.
 
 This theorem is often called a \emph{generalized mean value theorem}; 
 the following special case is usually referred to as ``the'' mean value theorem:
+\myproof{generalized mean value theorem; 广义中值定理}
 
 \mythm{
     \label{thm:5.10} 
@@ -66,7 +91,7 @@ the following special case is usually referred to as ``the'' mean value theorem:
         f(b) - f(a) = (b - a)f'(x).
     \end{equation*}
 }
-
+\mybox{中值定理}
 \myproof{
     Take $g(x) = x$ in Theorem 5.9.
 }
