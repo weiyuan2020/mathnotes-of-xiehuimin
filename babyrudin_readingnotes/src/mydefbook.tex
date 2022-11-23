@@ -51,6 +51,8 @@
 \usepackage{enumerate}  % 计数器
 \usepackage{paralist}  % 计数器 允许行间公式
 
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox} % \DeclareTColorBox
 
 
 \theoremstyle{plain} % default
@@ -76,9 +78,12 @@
 % 我的笔记环境
 \newcommand{\mybox}[1]{
     % \fbox{mynotes:\\#1}
-    \vskip 2.5mm
-    \fbox{\parbox{135mm}{mynotes:\\#1}}
-    \vskip 2.5mm
+    % \vskip 2.5mm
+    % \fbox{\parbox{135mm}{mynotes:\\#1}}
+    % \vskip 2.5mm
+    \begin{tcolorbox}
+        my notes:\\#1
+    \end{tcolorbox}
 }
 \newcommand{\myproof}[1]{\begin{proof}#1\end{proof}}
 \newcommand{\mycommand}[2]{\begin{#1}#2\end{#1}}
