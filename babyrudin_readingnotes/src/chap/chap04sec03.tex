@@ -1,18 +1,18 @@
 % chap04sec03
 
 \section{Continuity and compactness}
-
+\mybox{连续性与紧致性}
 \begin{myDef}
     \label{myDef:4.13}
     A mapping $\mathbf{f}$ of a set $E$ into $\R^{k}$ is said to be \emph{bounded} 
     if there is a real number $M$ such that $\left| f(x) \right| \leq M$ for all $x \in E$.
 \end{myDef}
-
+\mybox{映射有界 代表其定义域上所有点的映射组成的集合有界.}
 \begin{thm}
     \label{thm:4.14}
     Suppose $f$ is a continuous mapping of a compact metric space $X$ into a metric space $Y$. Then $f(X)$ is compact.
 \end{thm}
-
+\mybox{$f$为紧度量空间 $X$ 到度量空间 $Y$ 的连续映射, $f(X)$是紧的}
 \myproof{
     Let $\sequence{V_\alpha}$ be an open cover of $f(X)$. Since $f$ is continuous, 
     Theorem \ref{thm:4.8} shows that each of the sets $f^{-1}(V_{\alpha})$ is open. 
@@ -63,7 +63,7 @@ The result is particularly important when $f$ is real:
     Then there exist points $p, q \in X$ 
     such that $f(p) = M$ and $f(q) = m$.
 }
-
+\mybox{1-1映射  逆映射}
 The notation in (\ref{eq:4.14}) means that 
 $M$ is the least upper bound of the set of all numbers $f(p)$, 
 where $p$ ranges over $X$, 

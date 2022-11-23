@@ -7,7 +7,7 @@
 
     紧集的任何开覆盖都有有限子覆盖
 
-    在 $\R^{n}$中，下面三个条件等价：
+    在 $\R^{n}$中, 下面三个条件等价：
     有界闭（bounded and closed）；紧（compact）；列紧（sequentially compact）；
 }
 
@@ -20,6 +20,7 @@
     \label{myDef:2.32}
     A subset $K$ of a metric space $X$ is said to be \emph{compact} if every open cover of $K$ contains a \emph{finite} subcover.
 \end{myDef}
+\mybox{紧集的介绍从开覆盖开始, 紧集的每个开覆盖包含一个有限子覆盖.}
 
 More explicitly, the requirement is that if $\{G_{\alpha}\}$ is an open cover of $K$, then there are finitely many indices $\alpha_1, ..., \alpha_n$ such that
 \begin{equation*}
@@ -40,6 +41,15 @@ Compactness, however, behaves better, as we shall now see. To formulate the next
     \label{thm:2.33}
     Suppose $K \subset Y \subset X$. Then $K$ is compact relative to $X$ if and only if $K$ is compact relative to $Y$.
 \end{thm}
+
+By virtue of this theorem we are able, in many situations, 
+to regard compact sets as metric spaces in their own right, 
+without paying any attention to any embedding space. 
+In particular, although it makes little sense to talk of \emph{open} spaces, 
+or of \emph{closed} spaces 
+(every metric space $X$ is an open subset of itself,
+and is a closed subset of itself), 
+it does make sense to talk of \emph{compact} metric spaces.
 
 \begin{proof}
     % Proof 
@@ -87,6 +97,7 @@ Compactness, however, behaves better, as we shall now see. To formulate the next
     \label{thm:2.35}
     Closed subsets of compact sets are compact.
 \end{thm}
+\mybox{紧集的闭子集仍是紧集}
 
 \myproof{
     Suppose $F \subset K \subset X$, 
@@ -308,7 +319,7 @@ Examples are furnished by Exercise 16 and by the space $\mathscr{L}^2$ , which i
     \label{thm:2.42}
     Every bounded infinite subset of $\R^k$ has a limit point in $\R^k$.
 \end{thm}
-
+\mybox{魏尔斯特拉斯定理 $\R^k$的有界无限子集 在$\R^k$ 中必有一极限点}
 \begin{proof}
     Being bounded, the set $E$ in question is a subset of a $k$-cell $I\subset \R^k$.
     By Theorem \ref{thm:2.40}, $I$ is compact, 

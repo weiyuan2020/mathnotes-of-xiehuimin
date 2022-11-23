@@ -1,6 +1,6 @@
 % chap03sec10
 \section{Power series}
-
+\mybox{幂级数}
 \begin{myDef}
     \label{myDef:3.38}
     Given a sequence $\sequence{c_n}$ of complex numbers, the series
@@ -32,7 +32,7 @@ The behavior on the circle of convergence is much more varied and cannot be desc
     ) 
     Then $\sum c_n z^n$ converges of $|z| < R$, and diverges if $|z| > R$.
 \end{thm}
-
+\mybox{$z$取值使幂级数收敛的范围称为收敛域, $R$为收敛半径. }
 \begin{proof}
     Put $a_n = c_n z^n$,
     and apply the root test:
@@ -46,20 +46,18 @@ Note: $R$ is called the radius of convergence of $\sum c_n z^n$.
 
 
 \begin{myExample}
-    (a) The series $\sum n^n z^n$ has $R = 0$.
-
-    (b) The series $\sum z^n / n!$ has $R = +\infty$.
+    \begin{asparaenum}[(a)]
+    \item The series $\sum n^n z^n$ has $R = 0$.
+    \item The series $\sum z^n / n!$ has $R = +\infty$.
     (In this case the ratio test is easier to apply than the root test.)
-
-    (c) The series $\sum z^n$ has $R = 1$.
+    \item The series $\sum z^n$ has $R = 1$.
     If $|z| = 1$, the series diverges, since $\sequence{z^n}$ does not tend to $0$ as $n \rightarrow \infty $.
-
-    (d) The series $\sum z^n / n$ has $R = 1$.
+    \item The series $\sum z^n / n$ has $R = 1$.
     It diverges if $z = 1$. It converges for all other $z$ with $|z|=1$.
     % (The last assertion will be proved in Theorem \ref{thm:3.44})
     (The last assertion will be proved in Theorem 3.44)
-
-    (e) The series $\sum z^n / n^2$ has $R = 1$.
+    \item The series $\sum z^n / n^2$ has $R = 1$.
     It converges for all $z$ with $z = 1$,
     by the comparison test, since $|z^n/n^2| = 1/n^2$.
+    \end{asparaenum}
 \end{myExample}

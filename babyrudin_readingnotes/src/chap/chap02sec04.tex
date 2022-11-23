@@ -1,40 +1,54 @@
 % chap02sec04
 \section{Perfect sets}
-
+\mybox{perfect set 完全集 区别于 complete set 完备集}
 
 % 243 Theorem 
 \begin{thm}\label{thm:2.43}
     Let $P$ be a nonempty perfect set in $\R^k$. Then P is uncountable.    
 \end{thm}
+\myproof{
+    Since $P$ has limit points, $P$ must be infinite. 
+    Suppose $P$ is countable, and denote the points of $P$ by $\mathbf{x}_{1}, \mathbf{x}_{2}, \mathbf{x}_{3},\dots$. 
+    We shall construct a sequence $\sequence{V_n}$ of neighborhoods, as follows.
+    
+    Let $V_{1}$, be any neighborhood of $\mathbf{x}_1$. 
+    If $V_{1}$ consists of all $\mathbf{y} \in \R^k$ 
+    such that $\left| \mathbf{y} - \mathbf{x}_1 \right| < r$, 
+    the closure $\bar{V}_{1}$ of $V_1$ is the set of all $\mathbf{y} \in \R^k$ 
+    such that $\left| \mathbf{y} - \mathbf{x}_1 \right| \leq r$.
 
-% % Proof 
-% Since P has limit points, P must be infinite. Suppose P is count-
-% able, and denote the points of P by x,, X,, X3,.... We shall construct a
-% sequence {V, ,of neighborhoods, as follows.
-
-% Let ¥, be any neighborhood of x,. If ¥; consists of all y \in R* such
-% that |y - x, | <r, the closure V; of V, is the set of all ye R*such that
-% ly -x| <r.
-
-% Suppose V, has been constructed, so that V, nn P is not empty. Since
-% every point of P is a limit point of P, there is a neighborhood V, ,, such
-% that () Vo, = V,, (ii) x, c V,.1, (ii) V,+, nP is not empty. By (iii),
-% V, +1 satisfies our induction hypothesis, and the construction can proceed.
-
-% Put K, = V, n P. Since V, is closed and bounded, V, is compact.
-% Since x, c K,,,, no point of P lies in NT K,, Since K, < P, this implies
-% that (\¥ K, js empty. But each K, is nonempty, by (iii), and K, » K,,,,
-% by (i); this contradicts the Corollary to Theorem 2. 36.
+    Suppose $V_n$ has been constructed, 
+    so that $V_n \cap P$ is not empty. 
+    Since every point of $P$ is a limit point of $P$, 
+    there is a neighborhood $V_{n+1}$ such that 
+    \begin{inparaenum}[(i)]
+        \item $\bar{V}_{n+1} \subset V_n$,
+        \item $x_n \not\in \bar{V}_{n+1}$,
+        \item $V_{n+1} \cap P$ is not empty. 
+    \end{inparaenum}
+    By (iii), $V_{n+1}$ satisfies our induction hypothesis, 
+    and the construction can proceed.
+    
+    Put $K_n = \bar{V}_n \cap P$. 
+    Since $\bar{V}_n$ is closed and bounded, 
+    $\bar{V}_n$ is compact.
+    Since $x_n \not\in K_{n+1}$, 
+    no point of $P$ lies in $\cap_1^{\infty} K_n$.
+    Since $K_n \subset P$, 
+    this implies that $\cap_1^{\infty} K_n$ is empty. 
+    But each $K_n$ is nonempty, 
+    by (iii), and $K_n \supset K_{n+1}$,
+    by (i); this contradicts the Corollary to Theorem \ref{thm:2.36}.
+}
 
 \begin{myCorollary}
-	% Corollary 
 	Every interval $[a, b] (a <b)$ is uncountable. In particular, the set
 	all real numbers is uncountable.
 \end{myCorollary}
 
 
 \begin{myDef}
-	% 2.44 
+    \label{myDef:2.44}
 	\textbf{The Cantor set} The set which we are now going to construct shows
 	that there exist perfect sets in $\R^{1}$ which contain no segment.
 \end{myDef}
