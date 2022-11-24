@@ -99,5 +99,194 @@
         \label{eq:6.7}
         \int_{a}^{b} f \d \alpha
     \end{equation}
+    or sometimes by 
+    \begin{equation}
+        \label{eq:6.8}
+        \int_{a}^{b} f(x) \d \alpha (x).
+    \end{equation}
+    This is the \emph{Riemann-Stieltjes integral} 
+    ( or simply the \emph{Stieltjes integral}) of $f$ 
+    with respect to $\alpha$, over $[a, b]$.
+
+    If (\ref{6.7}) exists, i.e., 
+    if (\ref{6.5}) and (\ref{6.6}) are equal, 
+    we say that $f$ is integrable with respect to $\alpha$, 
+    in the Riemann sense, and write $f \in \mathscr{R}(\alpha)$.
+    
+    By taking $\alpha(x) = x$, 
+    the Riemann integral is seen to be a special case of
+    the Riemann-Stieltjes integral. 
+    Let us mention explicitly, however, that in the
+    general case $\alpha$ need not even be continuous.
+
+    A few words should be said about the notation. 
+    We prefer (\ref{eq:6.7}) to (\ref{eq:6.8}), since
+    the letter $x$ which appears in (\ref{eq:6.8}) 
+    adds nothing to the content of (\ref{eq:6.7}). 
+    It is immaterial which letter we use to represent the so-called 
+    ``variable of integration.''
+    For instance, (\ref{eq:6.8}) is the same as
+    \begin{equation*}
+        \int_{a}^{b} f(y) \d \alpha (y).
+    \end{equation*}
+    The integral depends on $f$, $\alpha$, $a$ and $b$, 
+    but not on the variable of integration, 
+    which may as well be omitted.
+
+    The role played by the variable of integration is quite analogous to that
+    of the index of summation: 
+    \begin{equation*}
+        \sum_{i=1}^{n} c_i , \quad
+        \sum_{k=1}^{n} c_k 
+    \end{equation*}
+    The two symbols mean the same thing. 
+    since each means $c_1 + c_2 + \cdots + c_n$.
+    
+    Of course, no harm is done by inserting the variable of integration, 
+    and in many cases it is actually convenient to do so.
+    
+    We shall now investigate the existence of the integral (\ref{eq:6.7}). 
+    Without saying so every time, 
+    $f$ will be assumed real and bounded, 
+    and $\alpha$ monotonically increasing on $[a, b]$; 
+    and, when there can be no misunderstanding, 
+    we shall write $\int$ in place of $\int_{a}^{b}$.
 \end{myDef}
 
+\begin{myDef}
+    \label{myDef:6.3}
+    We say that the partition $P^*$ is a \emph{refinement} of $P$ 
+    if $P^* \supset P$
+    (that is, if every point of $P$ is a point of $P^*$). 
+    Given two partitions, $P_1$ and $P_2$ ,
+    we say that $P^*$ is their common refinement if $P^* = P_1 \cup P_2$ .
+\end{myDef}
+\mybox{refinement 加细，细分}
+
+\begin{thm}
+    \label{thm:6.4}
+    If $P^*$ is a refinement of $P$. then
+    \begin{equation}
+        \label{eq:6.9}
+        L(P,   f, \alpha) \leq 
+        L(P^*, f, \alpha) 
+    \end{equation}
+    and 
+    \begin{equation}
+        \label{eq:6.10}
+        U(P^*, f, \alpha) \leq 
+        U(P,   f, \alpha) .
+    \end{equation}
+\end{thm}
+\mybox{加细使得不等式范围变小, 结果更接近真实积分值.}
+% need proof
+
+\begin{thm}
+    \label{thm:6.5}
+    $\underline{\int_{a}^{b}} f \d \alpha \leq
+    \overline{\int_{a}^{b}} f \d \alpha .$
+\end{thm}
+\begin{proof}
+    Let $P^*$ be the common refinement of two partitions $P_1$ and $P_2$.
+    By Theorem \ref{thm:6.4},
+    \begin{equation*}
+        L(P_1, f, \alpha) \leq
+        L(P^*, f, \alpha) \leq
+        U(P^*, f, \alpha) \leq
+        U(P_2, f, \alpha) .
+    \end{equation*}
+    Hence 
+    \begin{equation}
+        \label{eq:6.11}
+        L(P_1, f, \alpha) \leq
+        U(P_2, f, \alpha) .
+    \end{equation}
+    If $P_2$ is fixed and the sup is taken over all $P_1$,
+    (\ref{eq:6.11}) gives
+    \begin{equation}
+        \label{eq:6.12}
+        \underline{\int} f \d \alpha \leq
+        U(P_2, f, \alpha) .
+    \end{equation}
+    The theorem follows by taking the inf over all $P_2$ in (\ref{eq:6.12})
+\end{proof}
+
+\begin{thm}
+    \label{thm:6.6}
+    $f \in \mathscr{R} (\alpha)$ on $[a, b]$ if and only if 
+    for every $\varepsilon > 0$ there exists a partition $P$
+    such that
+    \begin{equation}
+        \label{eq:6.13}
+        U(P, f, \alpha) -
+        L(P, f, \alpha) < \varepsilon.
+    \end{equation}
+\end{thm}
+% need proof
+
+\begin{proof}
+    For every $P$ we have 
+    \begin{equation*}
+        L(P, f, \alpha)  \leq
+        \underline{\int} f \d \alpha \leq
+        \overline{\int}  f \d \alpha \leq
+        U(P, f, \alpha) .
+    \end{equation*}
+    Thus (\ref{eq:6.13}) implies 
+    \begin{equation*}
+        0 \leq
+        \underline{\int} f \d \alpha \leq
+        \overline{\int}  f \d \alpha \leq
+        \varepsilon .
+    \end{equation*}
+    Hence, if (\ref{eq:6.13}) can be satisfied for every $\varepsilon >0$,
+    we have 
+    \begin{equation*}
+        \underline{\int} f \d \alpha =
+        \overline{\int}  f \d \alpha 
+    \end{equation*}
+    that is, $f \in \mathscr{R}(\alpha)$.
+
+    Conversely, suppose $f \in \mathscr{R}(\alpha)$, and let $\varepsilon > 0$,
+    Then there exist partition $P_1$ and $P_2$ such that
+    \begin{align}
+        \label{eq:6.14}
+        U(P_2, f, \alpha) - \int f \d \alpha &< \frac{\varepsilon}{2}, \\
+        \label{eq:6.15}
+        \int f \d \alpha - L(P_1, f, \alpha) &< \frac{\varepsilon}{2}.
+    \end{align}
+    We choose $P$ to be the common refinement of $P_1$ and $P_2$ 
+    Then Theorem \ref{thm:6.4}, together with (\ref{eq:6.14}) and (\ref{eq:6.15}),
+    shows that
+
+    so that (\ref{eq:6.13}) holds for this partition $P$.
+\end{proof}
+
+Theorem \ref{thm:6.6} furnishes a convenient criterion for integrability. 
+Before we apply it, we state some closely related facts.
+
+\begin{thm}
+    \label{thm:6.7}
+    \begin{asparaenum}[(a)]
+        \item If (\ref{eq:6.13}) holds for some $P$ and some $\varepsilon$,
+        then (\ref{eq:6.13}) holds (with the same $\varepsilon$) 
+        for every refinement of $P$.
+        \item If (\ref{eq:6.13}) holds for $P = \{x_0, ...,x_n\}$ and 
+        if $s_i, t_i$ are arbitrary points in $[x_{i-1}, x_i]$, then 
+        \begin{equation*}
+            \sum_{i=1}^{n} \left| f(s_i) - f(t_i) \right| \Delta \alpha_i < \varepsilon.
+        \end{equation*}
+        \item If (\ref{eq:6.13}) and the hypotheses of (b) hold, then 
+        \begin{equation*}
+            \left| \sum_{i=1}^{n}f(t_i)\Delta \alpha_i - \int_{a}^{b} f \d \alpha \right| 
+            < \varepsilon.
+        \end{equation*}
+    \end{asparaenum}
+\end{thm}
+% need proof
+
+\begin{thm}
+    \label{thm:6.8}
+    If $f$ is continuous on $[a, b]$ then $f \in \mathscr{R}(\alpha)$ on $[a, b]$.
+\end{thm}
+% need proof
