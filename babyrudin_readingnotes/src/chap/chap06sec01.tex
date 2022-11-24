@@ -179,7 +179,38 @@
     \end{equation}
 \end{thm}
 \mybox{加细使得不等式范围变小, 结果更接近真实积分值.}
-% need proof
+\begin{proof}
+    To prove (\ref{eq:6.9}), 
+    suppose first that $P^*$ contains just one point more than $P$. 
+    Let this extra point be $x^*$, 
+    and suppose $x_{i-1} < x^{*} < x_{i}$, 
+    where $x_{i-1}$ and $x_{i}$, are two consecutive points of $P$. 
+    Put
+    \begin{align*}
+        w_1 &= \inf f(x) \quad (x_{i-1} \leq x \leq x^{*}) \\
+        w_2 &= \inf f(x) \quad (x^{*} \leq x \leq x_{i})        
+    \end{align*} 
+    Clearly $w_1 \geq m_i$ and $w_2 \geq m_i$, 
+    where, as before,
+    \begin{equation*}
+        m_i = \inf f(x) \quad (x_{i-1} \leq x \leq x_{i})
+    \end{equation*}
+    Hence
+    \begin{align*}
+        L(P^*,f, \alpha ) - L(P,f, \alpha )
+        &= w_1[\alpha (x^*) - \alpha (x_{i-1})] 
+         + w_2[\alpha (x_i) - \alpha (x^*)] 
+         - m_i[\alpha (x_i) - \alpha (x_{i-1})] \\
+        &= (w_1 - m_i)[\alpha (x^*) - \alpha (x_{i-1})] 
+         + (w_2 - m_i)[\alpha (x_i) - \alpha (x*)] \geq 0.
+    \end{align*}
+    
+    If $P^*$ contains $k$ points more than $P$, 
+    we repeat this reasoning $k$ times, 
+    and arrive at (\ref{eq:6.9}). 
+    The proof of (\ref{eq:6.10}) is analogous.
+\end{proof}
+
 
 \begin{thm}
     \label{thm:6.5}
@@ -222,7 +253,6 @@
         L(P, f, \alpha) < \varepsilon.
     \end{equation}
 \end{thm}
-% need proof
 
 \begin{proof}
     For every $P$ we have 
@@ -283,10 +313,114 @@ Before we apply it, we state some closely related facts.
         \end{equation*}
     \end{asparaenum}
 \end{thm}
-% need proof
+
+\begin{proof}
+    Theorem \ref{thm:6.4} implies (a). 
+    Under the assumptions made in (b),
+    both $f(s_i)$ and $f(t_i)$ lie in $[m_i, M_i]$, 
+    so that $\left| f(s_i) - f(t_i) \right| \leq M_i - m_i$. 
+    Thus
+    \begin{equation*}
+        \sum_{i=1}^{n} \left| f(s_i) - f(t_i) \right| \Delta \alpha_i \leq
+        U(P, f, \alpha) -
+        L(P, f, \alpha).
+    \end{equation*}
+    which proves (b). 
+    The obvious inequalities
+    \begin{equation*}
+        L(P, f, \alpha) \leq
+        \sum f(t_i) \Delta \alpha_i \leq
+        U(P, f, \alpha)
+    \end{equation*}
+    and
+    \begin{equation*}
+        L(P, f, \alpha) \leq
+        \int f \d \alpha \leq
+        U(P, f, \alpha)
+    \end{equation*}
+    prove (c).
+\end{proof}
 
 \begin{thm}
     \label{thm:6.8}
     If $f$ is continuous on $[a, b]$ then $f \in \mathscr{R}(\alpha)$ on $[a, b]$.
 \end{thm}
-% need proof
+
+\begin{proof}
+    Let $\varepsilon > 0$ be given.
+    Choose $\eta > 0$ so that 
+    \begin{equation*}
+        [\alpha(b) - \alpha(a)]\eta < \varepsilon.
+    \end{equation*}
+    Since $f$ is uniformly continuous on $[a, b]$ (Theorem \ref{thm:4.19}).
+    there exists a $\delta > 0$ such that 
+    \begin{equation}
+        \label{eq:6.16}
+        \left| f(x) - f(t) \right| < \eta
+    \end{equation}
+    if $x \in [a, b]$, $t \in [a, b]$, and $\left| x-t \right| < \delta$.
+
+    If $P$ is any partition of $[a, b]$ 
+    such that $\Delta x_i < \delta$ for all $i$,
+    then (\ref{eq:6.16}) implies that 
+    \begin{equation}
+        \label{eq:6.17}
+        M_i - m_i \leq \eta 
+        \quad
+        (i = 1,\dots,n)
+    \end{equation}
+    \mybox{原书这里写错了，不是 $i-1,...,n$}
+    and therefore 
+    \begin{align*}
+        U(P, f, \alpha) - L(P, f, \alpha)
+        &= \sum_{i=1}^{n} \left( M_i - m_i \right) \Delta \alpha_i \\
+        \leq \eta \sum_{i=1}^{n} \Delta \alpha_i 
+        &= \eta \left[ \alpha (b) - \alpha (a) \right] < \varepsilon.
+    \end{align*}
+    By Theorem \ref{thm:6.6}, $f \in \mathscr{R}(\alpha)$.
+\end{proof}
+
+\begin{thm}
+    \label{thm:6.9}
+    If $f$ is monotonic on $[a, b]$,
+    and if $\alpha$ is continuous on $[a, b]$,
+    then $f \in \mathscr{R}(\alpha)$.
+    (We still assume, of course, that $\alpha$ is monotonic.)
+\end{thm}
+% todo add proof
+
+\begin{thm}
+    \label{thm:6.10}
+    Suppose $f$ is bounded on $[a, b]$, 
+    $f$ has only finitely many points of discontinuity on $[a, b]$, 
+    and $\alpha$ is continuous at every point 
+    at which $f$ is discontinuous. 
+    Then $f \in \mathscr{R}(\alpha)$.
+\end{thm}
+% todo add proof
+
+\begin{thm}
+    \label{thm:6.11}
+    Suppose $f \in \mathscr{R}(\alpha)$ on $[a, b]$, $m \leq f \leq M$, 
+    $\phi$ is continuous on $[m, M]$, 
+    and $h(x) = \phi(f(x))$ on $[a, b]$. 
+    Then $h \in \mathscr{R}(\alpha)$ on $[a, b]$.
+\end{thm}
+% todo add proof
+
+% \begin{proof}
+%     \begin{equation}
+%         \label{eq:6.18}
+%         U(P, f, \alpha) -
+%         L(P, f, \alpha) < \delta^2.
+%     \end{equation}
+%     \begin{equation}
+%         \delta \sum_{i \in B} \Delta \leq
+%         \sum_{i \in B} \left( M_i - m_i \right) \Delta \alpha_i
+%         < \delta^2.
+%     \end{equation}
+% \end{proof}
+
+\emph{Remark: } This theorem suggests the question: 
+Just what functions are Riemann-integrable?
+The answer is given by Theorem 11.33(b).
