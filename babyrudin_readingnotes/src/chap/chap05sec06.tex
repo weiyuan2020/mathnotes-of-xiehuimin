@@ -1,7 +1,8 @@
 % chap05sec06
 \section{Taylor's theorem}
 
-\mythm{
+\begin{thm}
+    \label{thm:5.15}
     Suppose $f$ is a real function on $[a, b]$, 
     $n$ is a positive integer,
     $f^{(n-1)}$ is continuous on $[a, b]$,
@@ -19,12 +20,13 @@
         P(\beta)
         + \frac{f^{(n)}(x)}{n!}\left( \beta - \alpha \right)^n.
     \end{equation}
-}
+\end{thm}
+
 For $n = 1$, this is just the mean value theorem. 
 In general, the theorem shows that $f$ can be approximated by a polynomial of degree $n - 1$, 
 and that (\ref{eq:5.24}) allows us to estimate the error, 
 if we know bounds on $\left| f^{(n)}(X) \right| $.
-\myproof{
+\begin{proof}
     Let $M$ be the number defined by
     \begin{equation}
         \label{eq:5.25}
@@ -61,4 +63,4 @@ if we know bounds on $\left| f^{(n)}(X) \right| $.
     After $n$ steps we arrive at the conclusion that 
     $g^{(n)}(x_n) = 0$ for some $x_n$ between $\alpha$ and $x_{n-1}$, 
     that is, between $\alpha$ and $\beta$.
-}
+\end{proof}

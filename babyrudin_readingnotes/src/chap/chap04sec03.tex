@@ -13,7 +13,7 @@
     Suppose $f$ is a continuous mapping of a compact metric space $X$ into a metric space $Y$. Then $f(X)$ is compact.
 \end{thm}
 \mybox{$f$为紧度量空间 $X$ 到度量空间 $Y$ 的连续映射, $f(X)$是紧的}
-\myproof{
+\begin{proof}
     Let $\sequence{V_\alpha}$ be an open cover of $f(X)$. Since $f$ is continuous, 
     Theorem \ref{thm:4.8} shows that each of the sets $f^{-1}(V_{\alpha})$ is open. 
     Since $X$ is compact, there are finitely many indices, say $\alpha_1,  , \alpha_n$, such that
@@ -35,24 +35,24 @@
     \end{equation}
     
     This completes the proof
-}
+\end{proof}
 
 Note: We have used the relation $f(f^{- 1}(E)) \subset E$, valid for $E \subset Y$. 
 If $E \subset X$, then $f^{- 1}(f(E)) \supset E$; equality need not hold in either case.
 
 We shall now deduce some consequences of Theorem \ref{thm:4.14}
 
-\mythm{
+\begin{thm}
     \label{thm:4.15}
     If $\mathbf{f}$ is a continuous mapping of a compact metric space $X$ into $\R^{k}$, 
     then $\mathbf{f}(X)$ is closed and bounded. 
     Thus, $\mathbf{f}$ is bounded.
-}
+\end{thm}
 
 This follows from Theorem \ref{thm:2.41}. 
 The result is particularly important when $f$ is real:
 
-\mythm{
+\begin{thm}
     \label{thm:4.16}
     Suppose $f$ is a continuous real function on a compact metric space $X$, and
     \begin{equation}
@@ -62,7 +62,8 @@ The result is particularly important when $f$ is real:
     \end{equation}
     Then there exist points $p, q \in X$ 
     such that $f(p) = M$ and $f(q) = m$.
-}
+\end{thm}
+
 The notation in (\ref{eq:4.14}) means that 
 $M$ is the least upper bound of the set of all numbers $f(p)$, 
 where $p$ ranges over $X$, 
@@ -73,7 +74,7 @@ The conclusion may also be stated as follows:
 in $X$ such that $f(q) \leq f(x) \leq f(p)$ for all $x \in X$;} 
 that is, $f$ attains its maximum (at $p$) and its minimum (at $q$).
 
-\myproof{
+\begin{proof}
     By Theorem \ref{thm:4.15}, 
     $f(X)$ is a closed and bounded set of real numbers; 
     hence $f(X)$ contains
@@ -82,9 +83,9 @@ that is, $f$ attains its maximum (at $p$) and its minimum (at $q$).
         m = \inf f(X).        
     \end{equation*}
     By Theorem \ref{thm:2.28}
-}
+\end{proof}
 
-\mythm{
+\begin{thm}
     \label{thm:4.17}
     Suppose $f$ is a continuous 1-1 mapping of a compact metric space $X$ onto a metric space $Y$. 
     Then the inverse mapping 1-1 defined on $Y$ by 
@@ -93,10 +94,10 @@ that is, $f$ attains its maximum (at $p$) and its minimum (at $q$).
         (x \in X)
     \end{equation*}
     is a continuous mapping of $Y$ onto $X$.
-}
+\end{thm}
 \mybox{1-1映射---逆映射}
 
-\mymyDef{
+\begin{myDef}
     \label{myDef:4.18}
     Let $f$ be a mapping of a metric space $X$ into a metric space $Y$.
     We say that $f$ is \emph{uniformly continuous} on $X$ 
@@ -107,7 +108,7 @@ that is, $f$ attains its maximum (at $p$) and its minimum (at $q$).
         d_Y(f(p),f(q)) < \varepsilon
     \end{equation}
     for all $p$ and $q$ in $X$ for which $d_X(p, q) < \delta$.
-}
+\end{myDef}
 \mybox{一致连续}
 Let us consider the differences between the concepts of continuity and of
 uniform continuity. 
@@ -126,13 +127,13 @@ to find \emph{one} number $\delta > 0$ which will do for \emph{all} points $p$ o
 Evidently, every uniformly continuous function is continuous. 
 That the two concepts are equivalent on compact sets follows from the next theorem. 
 
-\mythm{
+\begin{thm}
     \label{thm:4.19}
     Let $f$ be a continuous mapping of a compact metric space $X$ into a metric space $Y$. 
     Then $f$ is uniformly continuous on $X$.
-}
+\end{thm}
 
-\myproof{
+\begin{proof}
     Let $\varepsilon > 0$ be given.
     Since $f$ is continuous, we can associate to each point $p \in X$ a positive number $\phi(p)$ such that 
     \begin{equation}
@@ -187,27 +188,24 @@ That the two concepts are equivalent on compact sets follows from the next theor
         \varepsilon .
     \end{equation*}
     This complete the proof.
-}
+\end{proof}
 
 An alternative proof is sketched in Exercise 10.
 
 We now proceed to show that compactness is essential in the hypotheses
 of Theorems \ref{thm:4.14}, \ref{thm:4.15}, \ref{thm:4.16}, and \ref{thm:4.19}.
 
-\mythm{
+\begin{thm}
     \label{thm:4.20}
     Let $E$ be a noncompact set in $\R^{1}$ Then
-
-    (a) there exists a continuous function on $E$ which is not bounded, 
-    
-    (b) there exists a continuous and bounded function on $E$ which has no maximum.
-
-    If, in addition, $E$ is bounded, then 
-    
-    (c) there exists a continuous function on $E$ which is not uniformly continuous.
-}
-
-\myproof{
+    \begin{enumerate}[(a)]
+    \item there exists a continuous function on $E$ which is not bounded,     
+    \item there exists a continuous and bounded function on $E$ which has no maximum.\\
+    If, in addition, $E$ is bounded, then     
+    \item there exists a continuous function on $E$ which is not uniformly continuous.
+    \end{enumerate}
+\end{thm}
+\begin{proof}
     Suppose first that $E$ is bounded, 
     so that there exists a limit point $x_0$ of $E$ 
     which is not a point of $E$. 
@@ -261,14 +259,16 @@ of Theorems \ref{thm:4.14}, \ref{thm:4.15}, \ref{thm:4.16}, and \ref{thm:4.19}.
     For, let $E$ be the set of all integers. 
     Then every function defined on $E$ is uniformly continuous on $E$. 
     To see this, we need merely take $\delta < 1$ in Definition \ref{myDef:4.18}.
-}
+\end{proof}
 
 We conclude this section by showing that compactness is also essential in
 Theorem \ref{thm:4.17}.
 
-\mymyExample{
+
+\begin{myExample}
     Let $X$ be the half-open interval $[0, 2\pi)$ on the real line, 
-    and let $f$ be the mapping of $X$ onto the circle $Y$ consisting of all points whose distance from the origin is $1$, given by
+    and let $f$ be the mapping of $X$ onto the circle $Y$ consisting of all points 
+    whose distance from the origin is $1$, given by
     \begin{equation}
         \label{eq:4.24}
         f(t) = (\cos t, \sin t)
@@ -279,7 +279,10 @@ Theorem \ref{thm:4.17}.
     as well as their periodicity properties, will be established in Chap. 8. 
     These results show that $f$ is a continuous 1-1 mapping of $X$ onto $Y$.
     
-    However, the inverse mapping (which exists, since $f$ is one-to-one and onto) fails to be continuous at the point $(1, 0) = \mathbf{f}(0)$. 
+    However, the inverse mapping 
+    (which exists, since $f$ is one-to-one and onto) 
+    fails to be continuous at the point $(1, 0) = \mathbf{f}(0)$. 
     Of course, $X$ is not compact in this example. 
-    (It may be of interest to observe that $\mathbf{f}^{-1}$ fails to be continuous in spite of the fact that $Y$ \emph{is} compact!)
-}
+    (It may be of interest to observe that 
+    $\mathbf{f}^{-1}$ fails to be continuous in spite of the fact that $Y$ \emph{is} compact!)
+\end{myExample}

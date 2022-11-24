@@ -3,7 +3,8 @@
 \mybox{洛必达法则}
 The following theorem is frequently useful in the evaluation of limits.
 
-\mythm{
+\begin{thm}
+    \label{thm:5.13}
     Suppose $f$ and $g$ are real and differentiable in $(a, b)$, 
     and $g'(x) \neq 0$ for all $x \in (a, b)$, 
     where $-\infty \leq a < b \leq + \infty$. 
@@ -33,17 +34,17 @@ The following theorem is frequently useful in the evaluation of limits.
         \frac{f(x)}{g(x)} \rightarrow A
         \text{ as } x \rightarrow a.
     \end{equation}
-}
+\end{thm}
 The analogous statement is of course also true if $x \rightarrow b$, 
 or if $g(x) \rightarrow -\infty $ in (\ref{eq:5.15}). 
 Let us note that we now use the limit concept in the extended sense of
 Definition \ref{myDef:4.33}.
 \mybox{对洛必达法则的证明 
 分两种情况讨论
-1. 分子分母同时趋于0. 
-2. 分母趋于无穷大
+1. 分子分母同时趋于0, 
+2. 分母趋于无穷大.
 }
-\myproof{
+\begin{proof}
     We first consider the case in which $- \infty \leq A < + \infty$.
     Choose a real number $q$ such that $A < q$, 
     and then choose $r$ such that $A < r < q$.
@@ -107,5 +108,5 @@ Definition \ref{myDef:4.33}.
         (a < x < c_3).
     \end{equation}
     and (\ref{eq:5.16}) follows from these two statements.
-}
+\end{proof}
 \mybox{没看明白 需要复习}

@@ -108,7 +108,7 @@ Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighbo
     \label{thm:2.19}
     Every neighborhood is un open set.
 \end{thm}
-\myproof{
+\begin{proof}
     Consider a neighborhood $E = N_r(p)$, 
     and let $q$ be any point of $E$.
     Then there is a positive real number $h$ such that
@@ -121,14 +121,14 @@ Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighbo
     \end{equation*}
     so that $s \in E$. 
     Thus $q$ is an interior point of $E$.
-}
+\end{proof}
 
 \begin{thm}
     \label{thm:2.20}
     If $p$ is a limit point of a set $E$, then every neighborhood of $p$ contains infinitely many points of $E$.
 \end{thm}
 
-\myproof{
+\begin{proof}
     Suppose there is a neighborhood $N$ of $p$ 
     which contains only a finite number of points of $E$. 
     Let $q_1, ... , q_n$ be those points of $N \cap E$,
@@ -144,7 +144,7 @@ Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighbo
     The neighborhood $N_r(p)$ contains no point $q$ of $E$ such that $q \neq p$,
     so that $p$ is not a limit point of $E$. 
     This contradiction establishes the theorem.
-}
+\end{proof}
 
 \begin{myCorollary}
     A finite point set has no limit points.
@@ -196,7 +196,7 @@ but it is an open subset of $\R^1$.
     \end{equation}
 \end{thm}
 
-\myproof{
+\begin{proof}
     Let $A$ and $B$ be the left and right members of (\ref{eq:2.20}). 
     If $x \in A$, then $X \not\in \cup_\alpha E_\alpha$, 
     hence $x \not\in E_\alpha$ for any $\alpha$, 
@@ -211,7 +211,7 @@ but it is an open subset of $\R^1$.
     Thus $B \subset A$.
 
     It follows that $A = B$.
-}
+\end{proof}
 
 \begin{thm}
     \label{thm:2.23}
@@ -241,7 +241,7 @@ but it is an open subset of $\R^1$.
     \end{enumerate}
 \end{thm}
 
-\myproof{
+\begin{proof}
     Put 
 
     By Theorem \ref{thm:2.22}
@@ -250,7 +250,7 @@ but it is an open subset of $\R^1$.
         \left( \bigcap_\alpha F_\alpha \right)^c = 
         \bigcup_\alpha \left( F_\alpha^c \right),
     \end{equation}
-}
+\end{proof}
 
 \mybox{
     无限开集的并仍是开集, 有限开集的交仍是开集
@@ -286,13 +286,13 @@ but it is an open subset of $\R^1$.
     \end{enumerate}
 \end{thm}
 By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
-\myproof{
+\begin{proof}
     \begin{enumerate}[(a)]
         \item If $p \in X$ and $p \not\in \bar{E}$ then $p$ is neither a point of $E$ nor a limit point of $E$. Hence $p$ has a neighborhood which does not intersect $E$. The complement of $E$ is therefore open. Hence $E$ is closed.
         \item If $E = \bar{E}$, (a) implies that $E$ is closed. If $E$is closed, then $E' \subset E$ [by Definitions \ref{myDef:2.18}(d) and \ref{myDef:2.26}], hence $\bar{E} = E$.
         \item If $F$ is closed and $F \supset E$, then $F \supset F'$, hence $F \supset E'$. Thus $F \supset \bar{E}$.
     \end{enumerate}
-}
+\end{proof}
 
 
 \begin{thm}
@@ -300,14 +300,14 @@ By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
     Let $E$ be a nonempty set of real numbers which is bounded above.     Let $y = \sup E$. Then $y \in \bar{E}$. Hence $y \in E$ if $E$ is closed.
 \end{thm}
 Compare this with the examples in Sec. 1.9.
-\myproof{
+\begin{proof}
     If $y \in E$ then $y \in \bar{E}$. 
     Assume $y \not\in E$. 
     For every $h > 0$ there exists then a point $x \in E$ 
     such that $y - h < x < y$, 
     for otherwise $y - h$ would be an upper bound of $E$. 
     Thus $y$ is a limit point of $E$. Hence $y \in \bar{E}$.
-}
+\end{proof}
 
 \begin{myRemark}
     Suppose $E \subset Y \subset X$, where $X$ is a metric space. To say that $E$ is an open subset of $X$ means that to each point $p \in E$ there is associated a positive number $r$ such that the conditions $d(p,q) < r$ , $g \in X$ imply that $q \in E$. But we have already observed (Sec. 2.16) that $Y$ is also a metric space, so that our definitions may equally well be made within $Y$. To be quite explicit, let us say that 
@@ -322,7 +322,7 @@ Compare this with the examples in Sec. 1.9.
     \label{thm:2.30}
     Suppose $Y \subset X$. A subset $E$ of $Y$ is open relative to $Y$ if and only if $E = Y \cap G$ for some open subset $G$ of $X$.
 \end{thm}
-\myproof{
+\begin{proof}
     Suppose $E$ is open relative to $Y$. 
     To each $p \in E$ there is a positive number $r_P$ 
     such that the conditions $d(p, q) < r_P$, 
@@ -346,4 +346,4 @@ Compare this with the examples in Sec. 1.9.
     every $p \in E$ has a neighborhood $V_P \subset G$. 
     Then $V_P \cap Y \subset E$, 
     so that $E$ is open relative to $Y$.
-}
+\end{proof}

@@ -85,18 +85,20 @@
         my notes:\\#1
     \end{tcolorbox}
 }
-\newcommand{\myproof}[1]{\begin{proof}#1\end{proof}}
-\newcommand{\mycommand}[2]{\begin{#1}#2\end{#1}}
-\newcommand{\mythm}[1]{\mycommand{thm}{#1}}
-\newcommand{\mymyDef}[1]{\mycommand{myDef}{#1}}
-\newcommand{\mymyExample}[1]{\mycommand{myExample}{#1}}
-\newcommand{\mymyRemark}[1]{\mycommand{myRemark}{#1}}
-\newcommand{\mymyProposition}[1]{\mycommand{myProposition}{#1}}
-\newcommand{\mymyNotation}[1]{\mycommand{myNotation}{#1}}
-\newcommand{\mymyCorollary}[1]{\mycommand{myCorollary}{#1}}
-\newcommand{\mymyExercise}[1]{\mycommand{myExercise}{#1}}
+% 使用这种方式输入命令，反向查找错误困难，因此放弃
+% \newcommand{\myproof}[1]{\begin{proof}#1\end{proof}}
+% \newcommand{\mycommand}[2]{\begin{#1}#2\end{#1}}
+% \newcommand{\mythm}[1]{\mycommand{thm}{#1}}
+% \newcommand{\mymyDef}[1]{\mycommand{myDef}{#1}}
+% \newcommand{\mymyExample}[1]{\mycommand{myExample}{#1}}
+% \newcommand{\mymyRemark}[1]{\mycommand{myRemark}{#1}}
+% \newcommand{\mymyProposition}[1]{\mycommand{myProposition}{#1}}
+% \newcommand{\mymyNotation}[1]{\mycommand{myNotation}{#1}}
+% \newcommand{\mymyCorollary}[1]{\mycommand{myCorollary}{#1}}
+% \newcommand{\mymyExercise}[1]{\mycommand{myExercise}{#1}}
 
-\newcommand{\mySolve}[1]{\textbf{\color{blue} Solve: }{#1}}
+% \newcommand{\mySolve}[1]{\textbf{\color{blue} Solve: }{#1}}
+\newcommand{\mySolve}{\textbf{\color{blue} Solve: }}
 
 
 %New Commands
@@ -111,3 +113,9 @@
 \newcommand{\Z}{{\protect\mathbb Z}}
 \newcommand{\sequence}[1]{\protect\{#1\}}
 \newcommand{\mybinom}[2]{\protect \binom{#1}{#2}}
+
+% \def\dif{\mathop{}\!\mathrm{d}} % 微分符号
+\def\dif{\mathop{}\hphantom{\mskip-\thinmuskip}\mathrm{d}}%
+\let\daccent\d
+\let\d\relax
+\newcommand\d{\ifmmode\dif\else\expandafter\daccent\fi}

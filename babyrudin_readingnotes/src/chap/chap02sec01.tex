@@ -248,7 +248,7 @@ If $A \subset B$, then
     $S$ is countable.
 }
 
-\myproof{
+\begin{proof}
     Let every set $E_n$ be arranged in a sequence $\sequence{x_{nk}}$, 
     $k = 1,2,3,\dots$,
     and consider the infinite array
@@ -282,7 +282,7 @@ If $A \subset B$, then
     which shows that $S$ is at most countable (Theorem \ref{thm:2.8}). 
     Since $E_1 \subset S$, and $E_1$ is infinite, 
     $S$ is infinite, and thus countable.
-}
+\end{proof}
 
 \begin{myCorollary}
     Suppose $A$ is at most countable, and, for every $\alpha \in A, B$, is at most countable. Put
@@ -299,7 +299,7 @@ For $T$ is equivalent to a subset of \ref{eq:2.15}.
     Theorem Let $A$ be a countable set, and let $B_n$ be the set of all $n$-tuples $(a_1, ...,a_n)$, where $a_k \in  A (k=1,...,n)$, and the elements $a_1, ...,a_n$ need not be distinct. Then $B_n$ is countable.
 \end{thm}
 
-\myproof{
+\begin{proof}
     That $B_1$ is countable is evident, since $B_1 = A$. 
     Suppose $B_{n-1}$ is countable $(n = 2, 3, 4, ... )$. 
     The elements of $B_n$ are of the from
@@ -313,19 +313,19 @@ For $T$ is equivalent to a subset of \ref{eq:2.15}.
     Thus $B_n$ is the union of a countable set of countable sets. 
     By Theorem \ref{thm:2.12}, Bn is countable.
 The theorem follows by induction.
-}
+\end{proof}
 
 \begin{myCorollary}
     The set of all rational numbers is countable.
 \end{myCorollary}
 
-\myproof{
+\begin{proof}
     We apply Theorem \ref{thm:2.13}, 
     with $n = 2$, noting that every rational $r$ is of the form $b / a$, 
     where $a$ and $b$ are integers. 
     The set of pairs $(a, b)$, 
     and therefore the set of fractions $b / a$, is countable.
-}
+\end{proof}
 
 In fact, even the set of all algebraic numbers is countable (see Exercise 2).
 
@@ -338,7 +338,7 @@ theorem.
 
 The elements of $A$ are sequences like $1, 0, 0, 1, 0, 1, 1, 1, ... .$
 
-\myproof{
+\begin{proof}
     Let $E$ be a countable subset of $A$, 
     and let $E$ consist of the sequences $s_1, s_2 , s_3 , ...$. 
     We construct a sequences as follows. 
@@ -351,7 +351,7 @@ The elements of $A$ are sequences like $1, 0, 0, 1, 0, 1, 1, 1, ... .$
     every countable subset of $A$ is a proper subset of $A$. 
     It follows that $A$ is uncountable 
     (for otherwise $A$ would be a proper subset of $A$, which is absurd).
-}
+\end{proof}
 
 The idea of the above proof was first used by Cantor, 
 and is called Cantor's diagonal process; 

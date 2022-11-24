@@ -1,7 +1,7 @@
 % chap05sec07
 \section{Differentiation of vector-valued functions}
 
-\mymyRemark{
+\begin{myRemark}
     Definition \ref{myDef:5.1} applies without any change to complex functions $f$ defined on $[a, b]$, 
     and Theorems \ref{thm:5.2} and \ref{thm:5.3}, as well as their proofs, remain valid. 
     If  $f_1$ and $f_2$ are the real and imaginary parts of $f$, 
@@ -16,7 +16,7 @@
         f'(x) = f'_1(x) + i f'_2(x);
     \end{equation}
     also, $f$ is differentiable at $x$ if and only if both $f_1$ and $f_2$ are differentiable at $x$.
-}
+\end{myRemark}
 
 Passing to vector-valued functions in general, 
 i.e., to functions $\mathbf{f}$ which map $[a, b]$ into some $\R^k$, 
@@ -48,7 +48,7 @@ When we turn to the mean value theorem, however, and to one of its
 consequences, namely, L'Hospital's rule, the situation changes. 
 The next two examples will show that each of these. results fails to be true for complex-valued functions.
 
-\mymyExample{
+\begin{myExample}
     Define, for real $x$,
     \begin{equation}
         \label{eq:5.32}
@@ -67,9 +67,9 @@ The next two examples will show that each of these. results fails to be true for
     so that $\left| f'(x) \right| = 1$ for all real $x$.
 
     Thus Theorem \ref{thm:5.10} fails to hold in this case.
-}
+\end{myExample}
 
-\mymyExample{
+\begin{myExample}
     On the segment $(0, 1)$, define $f(x) = x$ and 
     \begin{equation}
         g(x) - x + x^2 e^{i/x^2}.
@@ -118,10 +118,11 @@ The next two examples will show that each of these. results fails to be true for
         \left| f(b) - f(a) \right| \leq
         (b-a) \sup_{a < x < b} \left| f'(x) \right| .
     \end{equation}
-}
+\end{myExample}
 \mybox{这里洛必达法则为什么失效了？是因为 $x=0$ 是奇点吗？}
 
-\mythm{
+
+\begin{thm}
     \label{thm:5.19}
     Suppose $\mathbf{f}$ is a  continuous mapping of $[a, b]$ into $\R^k$ 
     and $\mathbf{f}$ is differentiable in $(a, b)$. 
@@ -130,10 +131,11 @@ The next two examples will show that each of these. results fails to be true for
         \left| \mathbf{f}(b) - \mathbf{f}(a) \right| \leq
         (b-a) \left| \mathbf{f}'(x) \right| .
     \end{equation*}
-}
+\end{thm}
+
 
 V. P. Havin translated the second edition of this book into Russian and added this proof to the original one.
-\myproof{
+\begin{proof}
     Put $\mathbf{z} = \mathbf{f}(b) - \mathbf{f}(a)$, and define
     \begin{equation*}
         \phi( t ) = \mathbf{z} \cdot \mathbf{f}( t)
@@ -162,4 +164,4 @@ V. P. Havin translated the second edition of this book into Russian and added th
         \leq ( b - a) \left| \mathbf{z} \right| \left| \mathbf{f}'(x) \right| .
     \end{equation*}
     Hence $\left| \mathbf{z} \right| \leq (b - a) \left| f'(x) \right|$, which is the desired conclusion.
-}
+\end{proof}

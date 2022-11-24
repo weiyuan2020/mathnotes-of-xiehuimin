@@ -1,7 +1,7 @@
 % chap05sec01
 \section{The derivative of a real function}
 \mybox{实函数的导数}
-\mymyDef{
+\begin{myDef}
     \label{myDef:5.1}
     Let $f$ be defined (and real-valued) on $[a, b]$. 
     For any $x \in [a, b]$ form the quotient
@@ -36,22 +36,22 @@
     If $f$ is defined on a segment $(a, b)$ and if $a < x < b$, 
     then $f'(x)$ is defined by (\ref{eq:5.1}) and (\ref{eq:5.2}), as above. 
     But $f'(a)$ and $f'(b)$ are not defined in this case.
-}
+\end{myDef}
 
-\mythm{
+\begin{thm}
     \label{thm:5.2}
     Let $f$ be defined on $[a, b]$. 
     If $f$ is differentiable at a point $x \in [a, b]$,
     then $f$ is continuous at $x$.
-}
+\end{thm}
 \mybox{可导必连续，连续不一定可导}
-\myproof{
+\begin{proof}
     As $t \rightarrow x$, we have, by Theorem \ref{thm:4.4}
     \begin{equation*}
         f(t) - f(x) = \frac{f(t)-f(x)}{t-x}\cdot (t-x)
         \rightarrow f'(x)\cdot 0 = 0.
     \end{equation*}
-}
+\end{proof}
 The converse of this theorem is not true. 
 It is easy to construct continuous functions 
 which fail to be differentiable at isolated points. 
@@ -59,7 +59,7 @@ In Chap. 7 we shall even become acquainted with a function
 which is continuous on the whole line 
 without being differentiable at any point!
 
-\mythm{
+\begin{thm}
     \label{thm:5.3}
     Suppose $f$ and $g$ are defined on $[a, b]$ and are differentiable at a point $x \in [a, b]$. 
     Then $f + g$, $fg$, and $f/g$ are differentiable at $x$, and
@@ -69,9 +69,8 @@ without being differentiable at any point!
         \item $\left( \cfrac{f}{g} \right)'(x) = \cfrac{g(x)f'(x) - g'(x)f(x)}{g^{2}(x)}$.
     \end{enumerate}
     In (c), we assume of course that $g(x) \neq 0$.
-}
-
-\myproof{
+\end{thm}
+\begin{proof}
     (a) is clear, by Theorem \ref{thm:4.4}. Let $h = fg$. Then 
     \begin{equation*}
         h(t) - h(x) = 
@@ -90,9 +89,9 @@ without being differentiable at any point!
         \right].
     \end{equation*}
     Letting $t \rightarrow x$, and applying Theorem \ref{thm:4.4} and \ref{thm:5.2}, we obtain (c).
-}
+\end{proof}
 
-\mymyExample{
+\begin{myExample}
     The derivative of any constant is clearly zero. 
     If $f$ is defined by $f(x) = x$, then $f'(x) = 1$. 
     Repeated application of (b) and (c) then shows that $x^n$ is differentiable, 
@@ -101,14 +100,14 @@ without being differentiable at any point!
     Thus every polynomial is differentiable, 
     and so is every rational function, 
     except at the points where the denominator is zero.
+\end{myExample}
 
-}
 The following theorem is known as the ``chain rule'' for differentiation. 
 It deals with differentiation of composite functions 
 and is probably the most important theorem about derivatives. 
 We shall meet more general versions of it in Chap. 9.
 \mybox{链导法则 by Leibniz}
-\mythm{
+\begin{thm}
     \label{thm:5.5}
     Suppose $f$ is continuous on $[a, b]$,
     $f'(x)$ exists at some point $x \in [a, b]$, 
@@ -124,9 +123,9 @@ We shall meet more general versions of it in Chap. 9.
         \label{eq:5.3}
         h'(x) = g'(f(x))f'(x).
     \end{equation}
-}
+\end{thm}
 
-\myproof{
+\begin{proof}
     Let $y = f(x)$. By the definition of the derivative, we have
     \begin{equation}
         \label{eq:5.4}
@@ -155,63 +154,63 @@ We shall meet more general versions of it in Chap. 9.
     \end{equation}
     Letting $t \rightarrow x$, we see that $s \rightarrow y$, 
     by the continuity of $f$, so that the right side of (\ref{eq:5.6}) ends to $g'(y)f'(x)$, which gives (\ref{eq:5.3}).
-}
+\end{proof}
 
-\mymyExample{
+\begin{myExample}
     \begin{asparaenum}[(a)]
-    \item 
-    \begin{equation}
-        \label{eq:5.7}
-        f(x) = 
-        \begin{array}{lc}
-            x\sin \frac{1}{x} & (x \neq 0),\\
-            0 & (x = 0).
-        \end{array}
-    \end{equation}
+        \item 
+        \begin{equation}
+            \label{eq:5.7}
+            f(x) = 
+            \begin{array}{lc}
+                x\sin \frac{1}{x} & (x \neq 0),\\
+                0 & (x = 0).
+            \end{array}
+        \end{equation}
+        
+        apply Theorem \ref{thm:5.3} and \ref{thm:5.5} whenever $x \neq 0$,
+        \begin{equation}
+            \label{eq:5.8}
+            f'(x) = \sin \frac{1}{x} - \frac{1}{x} \cos \frac{1}{x}
+            \quad
+            (x \neq 0).
+        \end{equation}
+        At $x = 0$, these theorems do not apply any longer, since $1/x$ is not defined there, and we appeal directly to the definition: for $t \neq 0$,
+        \begin{equation*}
+            \frac{f(t) - f(0)}{t - 0} = \sin \frac{1}{t}.
+        \end{equation*}
+        As $t \rightarrow 0$, this does not tend to any limit, so that $f'(0)$ does not exist.
     
-    apply Theorem \ref{thm:5.3} and \ref{thm:5.5} whenever $x \neq 0$,
-    \begin{equation}
-        \label{eq:5.8}
-        f'(x) = \sin \frac{1}{x} - \frac{1}{x} \cos \frac{1}{x}
-        \quad
-        (x \neq 0).
-    \end{equation}
-    At $x = 0$, these theorems do not apply any longer, since $1/x$ is not defined there, and we appeal directly to the definition: for $t \neq 0$,
-    \begin{equation*}
-        \frac{f(t) - f(0)}{t - 0} = \sin \frac{1}{t}.
-    \end{equation*}
-    As $t \rightarrow 0$, this does not tend to any limit, so that $f'(0)$ does not exist.
-
-    \item 
-    \begin{equation}
-        \label{eq:5.9}
-        f(x) = 
-        \begin{array}{lc}
-            x^2\sin \frac{1}{x} & (x \neq 0),\\
-            0 & (x = 0).
-        \end{array}
-    \end{equation}
-    As above, we obtain 
-    \begin{equation}
-        \label{eq:5.10}
-        f'(x) = 2x \sin \frac{1}{x} - \cos \frac{1}{x}
-        \quad
-        (x \neq 0).
-    \end{equation}
-    At $x = 0$, we appeal to the definition, and obtain 
-    \begin{equation*}
-        \left| \frac{f(t) - f(0)}{t - 0} \right| = 
-        \left| t \sin \frac{1}{t} \right| \leq \left| t \right| 
-        \quad
-        (t \neq 0);
-    \end{equation*}
-    letting $t \rightarrow 0$, we see that 
-    \begin{equation}
-        \label{eq:5.11}
-        f'(0) = 0.
-    \end{equation}
-    Thus $f$ is differentiable at all points $x$,
-    but $f'$ is not a continuous function,
-    since $\cos (1/x)$ in (\ref{eq:5.10}) does not tend to a limit as $x \rightarrow 0$.
-    \end{asparaenum}
-}
+        \item 
+        \begin{equation}
+            \label{eq:5.9}
+            f(x) = 
+            \begin{array}{lc}
+                x^2\sin \frac{1}{x} & (x \neq 0),\\
+                0 & (x = 0).
+            \end{array}
+        \end{equation}
+        As above, we obtain 
+        \begin{equation}
+            \label{eq:5.10}
+            f'(x) = 2x \sin \frac{1}{x} - \cos \frac{1}{x}
+            \quad
+            (x \neq 0).
+        \end{equation}
+        At $x = 0$, we appeal to the definition, and obtain 
+        \begin{equation*}
+            \left| \frac{f(t) - f(0)}{t - 0} \right| = 
+            \left| t \sin \frac{1}{t} \right| \leq \left| t \right| 
+            \quad
+            (t \neq 0);
+        \end{equation*}
+        letting $t \rightarrow 0$, we see that 
+        \begin{equation}
+            \label{eq:5.11}
+            f'(0) = 0.
+        \end{equation}
+        Thus $f$ is differentiable at all points $x$,
+        but $f'$ is not a continuous function,
+        since $\cos (1/x)$ in (\ref{eq:5.10}) does not tend to a limit as $x \rightarrow 0$.
+        \end{asparaenum}
+\end{myExample}
