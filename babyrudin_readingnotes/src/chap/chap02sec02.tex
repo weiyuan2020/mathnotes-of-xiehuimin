@@ -34,6 +34,13 @@ which are discussed in Chaps. 7 and 11, respectively.
     usepackage{mathrsfs}
     ...
     $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+    $\mathscr{abcdefghijklmnopqrstuvwxyz}$
+
+    % $\mathrsfs{abcdefghijklmnopqrstuvwxyz}$
+    $\mathcal{abcdefghijklmnopqrstuvwxyz}$
+    
+    $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 }
 
 \begin{myDef}\label{myDef:2.17}
@@ -146,9 +153,9 @@ Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighbo
     This contradiction establishes the theorem.
 \end{proof}
 
-\begin{myCorollary}
+\begin{myCorollary*}
     A finite point set has no limit points.
-\end{myCorollary}
+\end{myCorollary*}
 
 \begin{myExample}
     \label{myExample:2.21}
@@ -225,9 +232,9 @@ but it is an open subset of $\R^1$.
     Next, suppose $E$ is open. Let $x$ be a limit point of $E^c$. Then every neighborhood of $x$ contains a point of $E^c$, so that $x$ is not an interior point of $E$. Since $E$ is open, this means that $x \in E^c$. It follows that $E$ is closed.
 \end{proof}
 
-\begin{myCorollary}
+\begin{myCorollary*}
     A set $F$ is closed if and only if its complement is open.
-\end{myCorollary}
+\end{myCorollary*}
 
 \mybox{这里使用新的定义得到的开集与闭集保持了原有的性质: 开集的补集是闭集, 闭集的补集是开集}
 
