@@ -1,0 +1,47 @@
+% chap08sec05
+\section{Fourier series}
+\mybox{傅里叶级数}
+\begin{myDef}
+    \label{myDef:8.9}
+    A \emph{trigonomeric polynomial} isa finite sum of the from 
+    \begin{equation}
+        \label{eq:8.59}
+        f(x) = a_0 + \sum_{n=1}^{N}(a_n \cos n x + b_n \sin n x)
+        \quad (x \text{ real}),
+    \end{equation}
+\end{myDef}
+where $a_0,\dots,a_N$, $b_0,\dots,b_N$ are complex numbers.
+On account of the identities (\ref{eq:8.46}),
+(\ref{eq:8.59}) can also be written in the form 
+\begin{equation}
+    \label{eq:8.60}
+    f(x) = \sum_{-N}^{N} c_n e^{inx}
+    \quad (x \text{ real}),
+\end{equation}
+which is more convenient for most purposes.
+It is clear that every trigonometrc polynomial is periodic, with period $2\pi$.
+
+If $n$ is a nonzero integer, $e^{inx}$ is the derivative of $e^{inx}/in$,
+which also has period $2\pi$. Hence
+\begin{equation}
+    \label{eq:8.61}
+    \frac{1}{2\pi}\int_{-\pi}^{\pi}e^{inx} \d x  =
+    \left\{ 
+        \begin{array}{ll}
+            1 & (\text{if } n = 0), \\
+            0 & (\text{if } n = \pm 1, \pm 2, \dots). \\
+        \end{array}
+     \right.
+\end{equation}
+
+% todo add words, p186
+
+\begin{myDef}
+    \label{myDef:8.10}
+    Let $\sequence{\phi_n}$ $(n = 1,2,3,\dots)$ be a sequence of complex functions on $[a,b]$ , such that 
+    \begin{equation}
+        \label{eq:8.64}
+        \int_{a}^{b} \phi_n (x) \overline{\phi_m (x)} \d x
+        \quad (n \neq m).
+    \end{equation}
+\end{myDef}
