@@ -114,6 +114,7 @@
     \end{equation}
     so that a convergent series of continuous functions may have a discontinuous sum.
 \end{myExample}
+\mybox{一个连续函数的收敛级数可能有一个不连续的和}
 
 \begin{myExample}
     For $m = 1,2,3,\dots$, put 
@@ -143,3 +144,80 @@
     We have thus obtained an everywhere discontinuous limit function, which
     is not Riemann-integrable (Exercise 4, Chap. 6).
 \end{myExample}
+\mybox{这个函数的有理数点与无理数点收敛至不同极限
+
+本例为狄利克雷Direchlet函数, 该函数不是黎曼可积的.
+}
+
+\begin{myExample}
+    Let 
+    \begin{equation}
+        \label{eq:7.9}
+        f_n(x) = \frac{\sin nx}{\sqrt{n}}
+        \quad 
+        (x \text{ real}, n = 1,2,3,\dots),
+    \end{equation}
+    and 
+    \begin{equation*}
+        f(x) = \lim_{n \to \infty} f_n (x) = 0.
+    \end{equation*}
+    Then $f'(x) = 0$, and 
+    \begin{equation*}
+        f'_n (x) = \sqrt{n} \cos nx,
+    \end{equation*}
+    so that $\sequence{f'_n}$ does not converge to $f'$.
+    For instance 
+    \begin{equation*}
+        f'_n(0) = \sqrt{n} \rightarrow +\infty
+    \end{equation*}
+    as $n \rightarrow \infty$, whereas $f'(0) = 0$.
+\end{myExample}
+
+\begin{myExample}
+    Let 
+    \begin{equation}
+        \label{eq:7.10}
+        f_n(x) = n^2 x(1-x^2)^n
+        \quad 
+        (0 \leq x \leq 1, n = 1,2,3,\dots).
+    \end{equation}
+    For $0 < x \leq 1$, we have 
+    \begin{equation*}
+        \lim_{n \to \infty} f_n (x) = 0,
+    \end{equation*}
+    by Theorem \ref{thm:3.20}(d). Since $f_n(0) = 0$, we see that
+    \begin{equation}
+        \label{eq:7.11}
+        \lim_{n \to \infty} f_n (x) = 0
+        \quad 
+        (0 \leq x \leq 1).
+    \end{equation}
+    A simple calculation shows that 
+    \begin{equation*}
+        \int_{0}^{1} x(1-x^2)^n \d x = \frac{1}{2n+2}.
+    \end{equation*}
+    Thus, in spite of (\ref{eq:7.11}),
+    \begin{equation*}
+        \int_{0}^{1} f_n(x) \d x = \frac{n^2}{2n+2} \rightarrow +\infty
+    \end{equation*}
+    as $n \rightarrow \infty$.
+
+    If, in (\ref{eq:7.10}), we replace $n^2$ by $n$,
+    (\ref{eq:7.11}) still holds, but we now have 
+    \begin{equation*}
+        \lim_{n \to \infty} \int_{0}^{1} f_n (x) \d x = 
+        \lim_{n \to \infty} \frac{n}{2n+2} = \frac{1}{2},
+    \end{equation*}
+    whereas 
+    \begin{equation*}
+        \int_{0}^{1} \left\{ \lim_{n \to \infty} f_n (x) \right\} \d x = 0.
+    \end{equation*}
+    Thus the limit of the integral need not be equal to the integral of the limit, even if both are finite.
+\end{myExample}
+\mybox{积分的极限不必等于极限的积分}
+After these examples, which show what can go wrong if limit processes
+are interchanged carelessly, 
+we now define a new mode of convergence, 
+stronger than pointwise convergence as defined in Definition {\ref{myDef:7.1}}, 
+which will enable us to arrive at positive results.
+\mybox{由于现有的逐点收敛存在不足, 因此需要提出一种更强的收敛. }
