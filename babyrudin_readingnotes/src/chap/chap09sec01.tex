@@ -275,5 +275,60 @@ Our next theorem utilizes these concepts.
     Thus the coordinates of $A \mathbf{x}$ are $\sum_j a_{ij} c_j$ 
     Note that in (\ref{eq:9.3}) the summation ranges over the first subscript of $a_{11}$ , 
     but that we sum over the second subscript when computing coordinates.
-    % todo pp 219 
+
+    Suppose next that an $m$ by $n$ matrix is given, with real entries $a_{ij}$ . 
+    If $A$ is then defined by (\ref{eq:9.4}), 
+    it is clear that $A \in L(X, Y)$ and that $[A]$ is the given matrix.
+    Thus there is a natural 1-1 correspondence between $L(X, Y)$ and the set of all real $m$ by $n$ matrices. 
+    We emphasize, though, that $[A]$ depends not only on $A$ but also on the choice of bases in $X$ and $Y$. 
+    The same $A$ may give rise to many different matrices if we change bases, and vice versa. 
+    We shall not pursue this observation any further, since we shall usually work with fixed bases. 
+    (Some remarks on this may be found in Sec. 9.37.)
+    If $Z$ is a third vector space, with basis $\{z_1, ... , z_p\}$, 
+    if $A$ is given by (\ref{eq:9.3}), and if 
+    \begin{equation*}
+        B \mathbf{y}_i = \sum_k b_{ki} \mathbf{z}_k, \quad
+        (BA) \mathbf{x}_j = \sum_k c_{kj} \mathbf{z}_k, 
+    \end{equation*}
+    then $A \in L(X, Y)$, $B \in L(Y, Z)$, $BA \in L(X, Z)$, and since
+    \begin{align*}
+        B(A \mathbf{x}_j)
+        &= B \sum_i a_{ij} \mathbf{y}_i 
+        = \sum_i a_{ij} B \mathbf{y}_i \\
+        &= \sum a_{ij} \sum_k b_{ki} \mathbf{z}_k 
+        = \sum_k \left( \sum_i b_{ki} a_{ij} \right) \mathbf{z}_k,
+    \end{align*}
+    the independence of $\{\mathbf{z}_1,...,\mathbf{z}_p\}$ implies that 
+    \begin{equation}
+        \label{eq:9.5}
+        c_{kj} = \sum_i b_{ki} a_{ij}
+        \quad 
+        (1 \leq k \leq p,1 \leq j \leq n).
+    \end{equation}
+    This shows how to compute the $p$ by $n$ matrix $[BA]$ from $[B]$ and $[A]$.
+    If we define the product $[B][A]$ to be $[BA]$ , then (\ref{eq:9.5}) describes the usual rule of matrix multiplication.
+    \mybox{矩阵乘法运算}
+    Finally, suppose $\{\mathbf{x}_1,...,\mathbf{x}_n\}$ and $\{\mathbf{y}_1,...,\mathbf{y}_n\}$ are standard bases of $\R^n$ and $\R^m$, and $A$ is given by (\ref{eq:9.4}).
+    The Schwarz inequality shows that 
+    \begin{equation*}
+        \left| A \mathbf{x} \right|^2 = 
+        \sum_i \left( \sum_j a_{ij} c_j \right)^2 \leq
+        \sum_i \left( \sum_j a_{ij}^2 c_j^2 \right) =
+        \sum_{i, j} a_{ij}^2 \left| \mathbf{x} \right|^2 .
+    \end{equation*}
+    Thus 
+    \begin{equation}
+        \label{eq:9.6}
+        \left\| A \right\| \leq 
+        \left\{ \sum_{i, j} a_{ij}^2 \right\}^{1/2} .
+    \end{equation}
+
+    If we apply (\ref{eq:9.6}) to $B - A$ in place of $A$, 
+    where $A, B \in L(\R^n, \R^m)$, 
+    we see that if the matrix elements $a_{ij}$ are continuous functions of a parameter, then the same is true of $A$. More precisely:
 \end{myDef}
+
+\emph{If $S$ is a metric space, if $\{a_{11}, \dots, a_{mn}\}$ are real continuous functions on $S$,
+and if, for each $p \in S$, $A_P$ is the linear transformation of $\R^n$ into $\R^m$ whose matrix has entries $a_{ij}(p)$, 
+then the mapping $p \rightarrow A_P$ is a continuous mapping of $S$ into
+$L(\R^n, \R^m)$.}
