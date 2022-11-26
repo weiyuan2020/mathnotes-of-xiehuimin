@@ -63,8 +63,8 @@
 \end{myDef}
 \mybox{研究顺序
 
-    $\R^1 \rightarrow \R^1 \Rightarrow $ \\
-    $\R^1 \rightarrow \R^m \Rightarrow $ \\
+    $\R^1 \rightarrow \R^1 \Rightarrow $ 
+    $\R^1 \rightarrow \R^m \Rightarrow $ 
     $\R^n \rightarrow \R^m$
     }
 
@@ -252,6 +252,52 @@ However, if $\mathbf{f}$ is known to be differentiable at a point $\mathbf{x}$, 
 Here, as in Sec. 9.16, $\{\mathbf{e}_1, \dots , \mathbf{e}_n\}$ 
 and $\{\mathbf{u}_1, \dots , \mathbf{u}_m\}$ are the standard bases
 of $\R^n$ and $\R^m$.
+
+% todo add proof
+
+\begin{myExample}
+    % todo
+\end{myExample}
+
+\begin{thm}
+    \label{thm:9.19}
+    Suppose $\mathbf{f}$ maps a convex open set $E \subset \R^n$ into $\R^m$, 
+    $\mathbf{f}$ is differentiable in $E$, 
+    and there is a real number $M$ such that 
+    \begin{equation*}
+        \left\| \mathbf{f'(x)} \right\| \leq M
+    \end{equation*}
+    for every $\mathbf{x} \in E$. Then
+    \begin{equation*}
+        \left| \mathbf{f(b) - f(a)} \right| \leq 
+        M \left| \mathbf{b - a} \right| 
+    \end{equation*}
+    for all $\mathbf{a} \in E, \mathbf{b} \in E$.
+\end{thm}
+
+% todo add proof
+
+\begin{myCorollary*}
+    If, in addition, $\mathbf{f'(x) = 0}$ for all $\mathbf{x} \in E$, 
+    then $\mathbf{f}$ is constant.
+\end{myCorollary*}
+
+\begin{proof}
+    To prove this, note that the hypotheses of the theorem hold now
+    with $M =0$.
+\end{proof}
+
+\begin{myDef}
+    \label{myDef:9.20}
+    \emph{continuously differentiable}
+    % todo
+\end{myDef}
+
+\begin{thm}
+    \label{thm:9.21}
+    Suppose $\mathbf{f}$ maps an open set $E \subset \R^n$ into $\R^m$. Then $\mathbf{f} \in \mathscr{C}'(E)$ 
+    if and only if the partial derivatives $D_j f_i$ exist and are continuous on $E$ for $1 \leq i \leq m$,$1 \leq j \leq n$.
+\end{thm}
 
 % todo add proof
 
