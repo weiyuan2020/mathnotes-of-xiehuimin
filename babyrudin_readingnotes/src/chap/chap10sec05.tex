@@ -1,0 +1,170 @@
+% chap10sec05
+\section{Differential forms}
+
+We shall now develop some of the machinery that is needed for the $n$-dimensional version of the fundamental theorem of calculus which is usually called \emph{Stokes' theorem}. 
+The original form of Stokes' theorem arose in applications of
+vector analysis to electromagnetism and was stated in terms of the curl of a
+vector field. 
+Green's theorem and the divergence theorem are other special cases. 
+These topics are briefly discussed at the end of the chapter.
+\mybox{斯托克斯定理}
+
+It is a curious feature of Stokes' theorem that the only thing that is difficult
+about it is the elaborate structure of definitions that are needed for its statement.
+These definitions concern differential forms, their derivatives, boundaries, and
+orientation. Once these concepts are understood, the statement of the theorem
+is very brief and succinct, and its proof presents little difficulty.
+
+Up to now we have considered derivatives of functions of several variables
+only for functions defined in open sets. This was done to avoid difficulties that
+can occur at boundary points. It will now be convenient, however, to discuss
+differentiable functions on \emph{compact} sets. We therefore adopt the following
+convention:
+
+To say that $\mathbf{f}$ is a $\mathscr{C}'$-mapping (or a $\mathscr{C}''$-mapping) of a compact set
+$D \subset \R^k$ into $\R^n$ means that there is a $\mathscr{C}'$-mapping (or a $\mathscr{C}''$-mapping) $\mathbf{g}$ of
+an open set $W \subset \R^k$ into $\R^n$ such that $D \subset W$ and such that $\mathbf{g(x) = f(x)}$ for all $\mathbf{x} \in D$.
+
+\begin{myDef}
+    \label{myDef:10.10}
+    Suppose $E$ is an open set in $\R^n$. 
+    A $k$-surface in E is a $\mathscr{C}'$-mapping $\Phi$ from a compact set $D \subset \R^k$ into $E$.
+    
+    $D$ is called the \emph{parameter domain} of $\Phi$. 
+    Points of $D$ will be denoted by $\mathbf{u} = (u_1, \dots , u_k)$.
+\end{myDef}
+
+We shall confine ourselves to the simple situation in which $D$ is either a $k$-cell or the $k$-simplex $Q^k$ described in Example 10.4. The reason for this is that we shall have to integrate over $D$, 
+and we have not yet discussed integration over more complicated subsets of $\R^k$. 
+It will be seen that this restriction on $D$ 
+(which will be tacitly made from now on) entails no significant loss of generality in the resulting theory of differential forms.
+
+We stress that $k$-surfaces in $E$ are defined to be \emph{mappings} into $E$, not subsets of $E$. 
+This agrees with our earlier definition of curves (Definition \ref{myDef:6.26}).
+In fact, $1$-surfaces are precisely the same as continuously differentiable curves.
+
+\begin{myDef}
+    \label{myDef:10.11}
+    Suppose $E$ is an open set in $\R^n$. 
+    A \emph{differential form of order} $k \geq 1$ in $E$ 
+    (briefly, a $k$-form in $E$) is a function $\omega$, 
+    symbolically represented by the sum 
+    \begin{equation}
+        \label{eq:10.34}
+        \omega - \sum a_{i_1 \cdots i_k} (\mathbf{x}) 
+        \d x_{i_1} \wedge \cdots \wedge 
+        \d x_{i_k} 
+    \end{equation}
+    (the indices $i_1 , ... , i_k$ range independently from 1 to $n$), which assigns to each $k$-surface $\Phi$ in $E$ a number $\omega(\Phi) = \int_{\Phi} \omega$, 
+    according to the rule
+    \begin{equation}
+        \label{eq:10.35}
+        \int_{\Phi} \omega = 
+        \int_{D} \sum a_{i_1 \cdots i_k} (\mathbf{\Phi(u)}) \frac{\partial (x_{i_1},...,x_{i_k})}{\partial (u_{1},...,u_{k})} \d \mathbf{u} ,
+    \end{equation}
+    where $D$ is the parameter domain of $\Phi$.
+    
+    The functions $a_{i_1 \dots i_k}$ are assumed to be real and continuous in $E$. 
+    If $\phi_1 , ... , \phi_n$ are the components of $\Phi$, the Jacobian in (\ref{eq:10.35}) is the one determined by the mapping
+    \begin{equation*}
+        (u_1,..,u_k) \rightarrow 
+        (\phi_{i_1}(\mathbf{u}),..,\phi_{i_k}(\mathbf{u})) .
+    \end{equation*}
+
+    Note that the right side of (\ref{eq:10.35}) is an integral over $D$, as defined in Definition \ref{myDef:10.1} (or Example 10.4) and that (\ref{eq:10.35}) is the \emph{definition} of the symbol $\int_{\Phi} \omega$.
+    
+    A $k$-form $\omega$ is said to be of class $\mathscr{C}'$ or $\mathscr{C}''$ 
+    if the functions $a_{i_1 \cdots i_k}$ in (\ref{eq:10.34}) are all of class $\mathscr{C}'$ or $\mathscr{C}''$.
+    
+    A 0-form in E is defined to be a continuous function in $E$.
+\end{myDef}
+
+
+\begin{myExample}
+    % todo add examples
+\end{myExample}
+
+\begin{myRemark}
+    \textbf{{\color{blue} Elementary properties}}
+    Let $\omega$, $\omega_1$, $\omega_2$ be $k$-forms in $E$.
+    We write $\omega_1 = \omega_2$ 
+    if and only if $\omega_1(\Phi) = \omega_2(\Phi)$
+    for every $k$-surface $\Phi$ in $E$.
+    If $c$ is a real number, 
+    then $c\omega$ is the $k$-form defined by 
+    \begin{equation}
+        \label{eq:10.37}
+        \int_{\Phi} c\omega = 
+        c\int_{\Phi} \omega ,
+    \end{equation}
+    and $\omega = \omega_1 + \omega_2$ means that 
+    \begin{equation}
+        \label{eq:10.38}
+        \int_{\Phi} \omega = 
+        \int_{\Phi} \omega_1 + 
+        \int_{\Phi} \omega_2  
+    \end{equation}
+    for every $k$-surface $\Phi$ in $E$.
+    As a special case of (\ref{eq:10.37}), 
+    note that $-\omega$ is defined so that 
+    \begin{equation}
+        \label{eq:10.39}
+        \int_{\Phi} (-\omega) = 
+        -\int_{\Phi} \omega ,
+    \end{equation}
+
+    Consider a $k$-form 
+    \begin{equation}
+        \label{eq:10.40}
+        \omega = a(\mathbf{x}) 
+        \d x_{i_1} 
+        \wedge \cdots \wedge 
+        \d x_{i_k} 
+    \end{equation}
+    and let $\bar{\omega}$ be the $k$-form obtained by interchanging some pair of subscripts in (\ref{eq:10.40})
+    If (\ref{eq:10.35}) and (\ref{eq:10.39}) are combined with the fact that a determinant changes sign if two of its rows are interchanged,
+    we see that 
+    \begin{equation}
+        \label{eq:10.41}
+        \bar{\omega} = -\omega.
+    \end{equation}
+
+    As a special case of this, note that the \ref{anticommutative relation}
+    \begin{equation}
+        \label{eq:10.42}
+        \d x_i \wedge \d x_j = 
+        -\d x_j \wedge \d x_i 
+    \end{equation}
+    holds for all $i$ and $j$.
+    In particular,
+    \begin{equation}
+        \label{eq:10.43}
+        \d x_i \wedge \d x_i = 0
+        \quad (i = 1, \dots, n).
+    \end{equation}
+    \mybox{外微分$\d x \wedge \d y$ 的性质, 
+    与向量外积 $\mathbf{a\times b} = -\mathbf{b\times a}$ 类似}
+
+    More generally, let us return to (\ref{eq:10.40}),
+    and assume that $i_r = i_s$ for some $r \neq s$.
+    If these two subscripts are interchanged,
+    then $\bar{\omega} = \omega$,
+    hence $\omega = 0$, by (\ref{eq:10.41}).
+
+    In other words, \emph{if $\omega$ is given by (\ref{eq:10.40}), 
+    then $\omega = 0$ unless the subscripts $i_1,\dots,i_k$ are all distinct}.
+
+    If $\omega$ is as in (\ref{eq:10.34}), the summands with repeated subscripts can therefore be omitted without changing $\omega$.
+    \mybox{summands means a part of sum 部分和 \url{https://www.dictionary.com/browse/summand}}
+    \mybox{Direct Summand  直和
+
+    Given the direct sum of additive Abelian groups $A \oplus B$, 
+    $A$ and $B$ are called direct summands. 
+    The map $i_1:A \rightarrow A \oplus B$ defined by $i(a)=a \oplus 0$ is called the injection of the first summand, 
+    and the map $p_1:A \oplus B \rightarrow A$ defined by $p_1(a \oplus b)=a$ is called the projection onto the first summand. 
+    Similar maps $i_2,p_2$ are defined for the second summand $B$. }
+
+    It follows that 0 is the only $k$-form in any open subset of $\R^n$, if $k > n$.
+
+    The anticommutativity expressed by (\ref{eq:10.42}) is the reason for the inordinate amount of attention that has to be paid to minus signs when studying differential forms.    
+\end{myRemark}
