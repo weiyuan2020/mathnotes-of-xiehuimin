@@ -168,3 +168,165 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
 
     The anticommutativity expressed by (\ref{eq:10.42}) is the reason for the inordinate amount of attention that has to be paid to minus signs when studying differential forms.    
 \end{myRemark}
+
+\begin{myDef}
+    \textbf{\color{blue} Basic $k$-forms}
+    If $i_1, \dots , i_k$ are integers such that 
+    $1 \leq i_1 < i_2 < \cdots < i_k \leq n$, 
+    and if $I$ is the ordered $k$-tuple $\{i_1, \dots , i_k\}$, 
+    then we call $I$ an increasing $k$-index, 
+    and we use the brief notation
+    \begin{equation}
+        \label{eq:10.44}
+        \d x_I = 
+        \d x_{i_1} \wedge \cdots \wedge
+        \d x_{i_k} .
+    \end{equation}
+    These forms $\d x_I$ are the so-called \emph{basic $k$-forms in} $\R^n$.
+
+    It is not hard to verify that there are precisely $n!/k!(n-k)!$ basic $k$-forms in $\R^k$;
+    we shall make no use of this, however.
+
+    Much more important is the fact that every $k$-form can be represented in terms of basic $k$-forms. 
+    To see this, note that every $k$-tuple $\{j_1 , \dots ,j_k\}$ of distinct integers can be converted to an increasing $k$-index $J$ by a finite number of interchanges of pairs; 
+    each of these amounts to a multiplication by $-1$, as we saw
+    in Sec. 10.13; hence
+    \begin{equation}
+        \label{eq:10.45}
+        \d x_{j_1} \wedge \cdots \wedge
+        \d x_{j_k} = 
+        \varepsilon (j_1, \dots , j_k) \d x_j
+    \end{equation}
+    where $\varepsilon(j_1, ... ,j_k)$ is $1$ or $-1$, depending on the number of interchanges that are needed. 
+    In fact, it is easy to see that
+    \begin{equation}
+        \label{eq:10.46}
+        \varepsilon (j_1, \dots , j_k) =
+        s (j_1, \dots , j_k)
+    \end{equation}
+    where $s$ is as in Definition \ref{myDef:9.33}.
+\end{myDef}
+
+For example,
+\begin{equation*}
+    \d x_1 \wedge
+    \d x_5 \wedge
+    \d x_3 \wedge
+    \d x_2 =
+    - 
+    \d x_1 \wedge
+    \d x_2 \wedge
+    \d x_3 \wedge
+    \d x_5 
+\end{equation*}
+and 
+\begin{equation*}
+    \d x_4 \wedge
+    \d x_2 \wedge
+    \d x_3 =
+    \d x_2 \wedge
+    \d x_3 \wedge
+    \d x_4 .
+\end{equation*}
+
+If every $k$-tuple in (\ref{eq:10.34}) is converted to an increasing $k$-index, then we
+obtain the so-called standard presentation of $\omega$:
+\begin{Beqnarray}
+    \label{eq:10.47}
+    \omega = \sum_{I} b_I (\mathbf{x}) \d x_I .
+\end{Beqnarray}
+
+The summation in (\ref{eq:10.47}) extends over all increasing $k$-indices $I$.
+[Of course, every increasing $k$-index arises from many (from $k!$, to be precise) $k$-tuples. 
+Each $b_I$ in (\ref{eq:10.47}) 
+may thus be a sum of several of the coefficients that occur in (\ref{10.34}).]
+
+For example,
+\begin{equation*}
+    x_1 \d x_2 \wedge \d x_1 - 
+    x_2 \d x_3 \wedge \d x_2 + 
+    x_3 \d x_2 \wedge \d x_3 + 
+        \d x_1 \wedge \d x_2  
+\end{equation*}
+is a 2-form in $\R^3$ whose standard presentation is 
+\begin{equation*}
+    (1-x_1) \d x_1 \wedge \d x_2 
+    (x_2 + x_3) \d x_2 \wedge \d x_3 .
+\end{equation*}
+
+The following uniqueness theorem is one of the main reasons for the
+introduction of the standard presentation of a $k$-form.
+
+\begin{thm}
+    \label{thm:10.15}
+    Suppose 
+    \begin{equation}
+        \label{eq:10.48}
+        \omega = \sum_{I} b_I (\mathbf{x}) \d x_I
+    \end{equation}
+    is the standard presentation of a $k$-form $\omega$ in an open set $E \subset \R^n$. 
+    If $\omega = 0$ in $E$, 
+    then $b_I(\mathbf{x}) = 0$ for every increasing $k$-index $I$ and for every $\mathbf{x} \in E$.
+\end{thm}
+
+Note that the analogous statement would be false for sums such as (\ref{eq:10.34}),
+since, for example,
+\begin{equation*}
+    \d x_1 \wedge \d x_2 +
+    \d x_2 \wedge \d x_1 = 0.
+\end{equation*}
+
+% todo add proof
+
+\begin{myDef}
+    \textbf{\color{blue} Products of basic $k$-forms}
+    Suppose 
+    \begin{equation}
+        \label{eq:10.51}
+        I = \{i_1,...,i_p\},
+        \quad 
+        J = \{j_1,...,j_q\}
+    \end{equation}
+    where $1 \leq i_1 < \cdots < i_p \leq n$ 
+    and $1 \leq j_1 < \cdots < j_q \leq n$ .
+    The \emph{product} of the corresponding basic forms $\d x_I$ and $\d x_J$ in $\R^n$ is a $(p + q)$ form in $\R^n$, denoted by the symbol $\d x_I \wedge \d x_J$, and defined by 
+    \begin{equation}
+        \label{eq:10.52}
+        \d x_I \wedge \d x_J = 
+        \d x_{i_1} \wedge \cdots \wedge
+        \d x_{i_p} \wedge 
+        \d x_{j_1} \wedge \cdots \wedge
+        \d x_{j_q}.
+    \end{equation}
+\end{myDef}
+
+\begin{myDef}
+    \textbf{\color{blue} Multiplication}
+    Suppose $\omega$ and $\lambda$ are $p$- and $q$-forms, respectively, in
+    some open set $E \subset \R^n$, with standard presentations
+    \begin{equation}
+        \label{eq:10.56}
+        \omega = \sum_{I} b_I (\mathbf{x}) \d x_I , \quad 
+        \lambda = \sum_{J} c_J (\mathbf{x}) \d x_J
+    \end{equation}
+    where $I$ abd $J$ range over all increasing $p$-indices and over all increasing $q$-indices
+    taken from the set $\{1, ... , n\}$.
+\end{myDef}
+
+\begin{myDef}
+    \textbf{\color{blue} Differentiation}
+    We shall now define a differentiation operator $\d$ which
+    associates a $(k + 1)$-form $\d \omega$ to each $k$-form $\omega$ of class $\mathscr{C}'$ in some open set $E \in \R^n$.
+
+    A 0-form of class $\mathscr{C}'$ in $E$ is just a real function $f \in \mathscr{C}'(E)$, and we define
+    \begin{equation}
+        \label{eq:10.59}
+        \d f = \sum_{i=1}^{n} (D_i f) (\mathbf{x}) \d x_i .
+    \end{equation}
+    If $\omega = \sum b_I (\mathbf{x}) \d x_I$ is the standard presentation of a $k$-form $\omega$, and $B_I \in \mathscr{C}'(E)$ for each increasing $k$-index $I$, then we define
+    \begin{equation}
+        \label{eq:10.60}
+        \d \omega = \sum_I (\d b_I) \wedge \d x_I .
+    \end{equation}
+\end{myDef}
+
