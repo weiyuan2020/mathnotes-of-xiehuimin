@@ -141,6 +141,7 @@ Parseval theorem
     \begin{align}
         \label{eq:11.100}
         \lim_{n \to \infty} \left\| f - s_n \right\| &= 0, \\
+        \label{eq:11.101}
         \sum_{-\infty}^{\infty} \left| c_n \right|^2 &= 
         \frac{1}{2\pi} \int_{-\pi}^{\pi} \left| f \right|^2 \d x.
     \end{align}
@@ -154,3 +155,83 @@ Parseval theorem
     \end{equation*}
     then $\left\| f \right\| = 0$.
 \end{myCorollary*}
+
+Thus if two functions in $\mathscr{L}^2$ have the same Fourier series, 
+they differ at most on a set of measure zero.
+
+\begin{mydef}
+    \label{mydef:11.41}
+    Let $f$ and $f_n \in \mathscr{L}^2(\mu) (n = 1, 2, 3, ... )$. 
+    We say that $\sequence{f_n}$ converges to $f$ in $\mathscr{L}^2(\mu)$ if $\left\| f_n - f \right\| \rightarrow 0$. 
+    We say that $\sequence{f_n}$ is a Cauchy sequence in $\mathscr{L}^2(\mu)$ if for every $\varepsilon > 0$ there is an integer $N$ such that $n \geq N$, $m \geq N$ implies $\left\| f_n - f_m \right\| \leq \varepsilon$.
+\end{mydef}
+
+\begin{thm}
+    \label{thm:11.42}
+    If $\sequence{f_n}$ is a Cauchy sequence in $\mathscr{L}^2(\mu)$, 
+    then there exists a function $f \in \mathscr{L}^2(\mu)$ 
+    such that $\sequence{f_n}$ converges to.fin $\mathscr{L}^2(\mu)$.
+\end{thm}
+
+This says, in other words, that $\mathscr{L}^2(\mu)$ is a \emph{complete} metric space.
+
+\begin{thm}
+    \label{thm:11.43}
+    \myKeyword{The Riesz-Fischer theorem}
+    Let $\sequence{\phi_n}$ be orthonormal on $X$. 
+    Suppose $\sum \left| c_n \right|^2$ converges, 
+    and put $s_n = c_1 \phi_1 + \cdots + c_n\phi_n$. 
+    Then there exists a function $f \in \mathscr{L}^2(\mu)$
+    such that $\sequence{s_n}$ converges to $f$ in $\mathscr{L}^2(\mu)$, 
+    and such that
+    \begin{equation*}
+        f \sim \sum_{n=1}^{\infty}c_n \phi_n .
+    \end{equation*}
+\end{thm}
+
+\begin{mydef}
+    \label{mydef:11.44}
+    An orthonormal set $\sequence{\phi_n}$ is said to be \emph{complete} if, for $f \in \mathscr{L}^2(\mu)$, the equations
+    \begin{equation*}
+        \int_X f \bar{\phi}_n \d \mu = 0
+        \quad (n = 1,2,3,\dots)
+    \end{equation*}
+    implies that $\left\| f \right\| = 0$.
+\end{mydef}
+
+
+In the Corollary to Theorem \ref{thm:11.40} 
+we deduced the completeness of the
+trigonometric system from the Parseval equation (\ref{11.101}). 
+Conversely, the Parseval
+equation holds for every complete orthonormal set:
+
+\begin{thm}
+    \label{thm:11.45}
+    Let $\sequence{\phi_n}$ be a complete orthonormal set. 
+    If $f \in \mathscr{L}^2(\mu)$ and if
+    \begin{equation}
+        \label{eq:11.106}
+        f \sim \sum_{n=1}^{\infty} c_n \phi_n,
+    \end{equation}
+    then 
+    \begin{equation}
+        \label{eq:11.107}
+        \int_X \left| f \right|^2 \d \mu =
+        \sum_{n=1}^{\infty} \left| c_n \right|^2 .
+    \end{equation}
+\end{thm}
+
+
+Combining Theorems \ref{thm:11.43} and \ref{thm:11.45}, we arrive at the very interesting
+conclusion that every complete orthonormal set induces a 1-1 correspondence
+between the functions $f \in \mathscr{L}^2(\mu)$ 
+(identifying those which are equal almost everywhere)
+on the one hand and the sequences $\sequence{c_n}$ for which $\sum \left| c_n \right|^2$ converges,
+on the other. The representation
+\begin{equation*}
+    f \sim \sum_{n=1}^{\infty} c_n \phi_n ,
+\end{equation*}
+together with the Parseval equation, shows that $\mathscr{L}^2(\mu)$ may be regarded as an
+infinite-dimensional euclidean space (the so-called ``Hilbert space''), in which
+the point $f$ has coordinates $c_n$, and the functions <Pn are the coordinate vectors.
