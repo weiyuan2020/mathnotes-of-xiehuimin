@@ -2,8 +2,8 @@
 
 \section{Continuous functions}
 
-\begin{myDef}
-    \label{myDef:4.5}
+\begin{mydef}
+    \label{def:4.5}
     Suppose $X$ and $Y$ are metric spaces, $E \subset X$, $p \in E$, and $f$ maps $E$ into $Y$. Then $f$ is said to be \emph{continuous at $p$} if for every $\varepsilon > 0$ there exists a $\varepsilon > 0$ such that
     \begin{equation*}
         d_Y (f(x), f(p)) < \varepsilon
@@ -12,20 +12,20 @@
     
     If $f$ is continuous at every point of $E$, then $f$ is said to be \emph{continuous on $E$}.
     
-    It should be noted that $f$ has to be defined at the point $p$ in order to be continuous at $p$. (Compare this with the remark following Definition \ref{myDef:4.1}.)
+    It should be noted that $f$ has to be defined at the point $p$ in order to be continuous at $p$. (Compare this with the remark following Definition \ref{def:4.1}.)
 
     If $p$ is an isolated point of $E$, then our definition implies that every function $f$ which has $E$ as its domain of definition is continuous at $p$. For, no matter which $\varepsilon > 0$ we choose, we can pick $\delta > 0$ so that the only point $x \in  E$ for which $d_X(x,p) <\delta$ is $x = p$; then
     \begin{equation*}
         d_Y(f(x),f(p)) = 0 < \varepsilon.
     \end{equation*}
-\end{myDef}
+\end{mydef}
 
 \begin{thm}
     \label{thm:4.6}
-    In the situation given in Definition \ref{myDef:4.5}, assume also that $p$ is a limit point of $E$. Then $f$ is continuous at $p$ if and only if $\lim_{x \to p}  f(x) = f(p)$.
+    In the situation given in Definition \ref{def:4.5}, assume also that $p$ is a limit point of $E$. Then $f$ is continuous at $p$ if and only if $\lim_{x \to p}  f(x) = f(p)$.
 \end{thm}
 \begin{proof}
-    This is clear if we compare Definitions \ref{myDef:4.1} and \ref{myDef:4.5}.
+    This is clear if we compare Definitions \ref{def:4.1} and \ref{def:4.5}.
 \end{proof}
 
 
@@ -68,7 +68,7 @@ if $d_X(x, p) < \delta$ and $x \in E$. Thus $h$ is continuous at $p$.
     A mapping $f$ of a metric space $X$ into a metric space $Y$ is continuous on $X$ if and only if $f^{-1}(V)$ is open in $X$ for every open set $V$ in $Y$.
 \end{thm}
 
-(Inverse images are defined in Definition \ref{myDef:2.2}.) 
+(Inverse images are defined in Definition \ref{def:2.2}.) 
 This is a very useful characterization of continuity.
 
 \begin{myCorollary*}

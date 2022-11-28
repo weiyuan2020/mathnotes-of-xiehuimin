@@ -25,14 +25,14 @@ To say that $\mathbf{f}$ is a $\mathscr{C}'$-mapping (or a $\mathscr{C}''$-mappi
 $D \subset \R^k$ into $\R^n$ means that there is a $\mathscr{C}'$-mapping (or a $\mathscr{C}''$-mapping) $\mathbf{g}$ of
 an open set $W \subset \R^k$ into $\R^n$ such that $D \subset W$ and such that $\mathbf{g(x) = f(x)}$ for all $\mathbf{x} \in D$.
 
-\begin{myDef}
-    \label{myDef:10.10}
+\begin{mydef}
+    \label{def:10.10}
     Suppose $E$ is an open set in $\R^n$. 
     A $k$-surface in E is a $\mathscr{C}'$-mapping $\Phi$ from a compact set $D \subset \R^k$ into $E$.
     
     $D$ is called the \emph{parameter domain} of $\Phi$. 
     Points of $D$ will be denoted by $\mathbf{u} = (u_1, \dots , u_k)$.
-\end{myDef}
+\end{mydef}
 
 We shall confine ourselves to the simple situation in which $D$ is either a $k$-cell or the $k$-simplex $Q^k$ described in Example 10.4. The reason for this is that we shall have to integrate over $D$, 
 and we have not yet discussed integration over more complicated subsets of $\R^k$. 
@@ -40,11 +40,11 @@ It will be seen that this restriction on $D$
 (which will be tacitly made from now on) entails no significant loss of generality in the resulting theory of differential forms.
 
 We stress that $k$-surfaces in $E$ are defined to be \emph{mappings} into $E$, not subsets of $E$. 
-This agrees with our earlier definition of curves (Definition \ref{myDef:6.26}).
+This agrees with our earlier definition of curves (Definition \ref{def:6.26}).
 In fact, $1$-surfaces are precisely the same as continuously differentiable curves.
 
-\begin{myDef}
-    \label{myDef:10.11}
+\begin{mydef}
+    \label{def:10.11}
     Suppose $E$ is an open set in $\R^n$. 
     A \emph{differential form of order} $k \geq 1$ in $E$ 
     (briefly, a $k$-form in $E$) is a function $\omega$, 
@@ -71,13 +71,13 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
         (\phi_{i_1}(\mathbf{u}),..,\phi_{i_k}(\mathbf{u})) .
     \end{equation*}
 
-    Note that the right side of (\ref{eq:10.35}) is an integral over $D$, as defined in Definition \ref{myDef:10.1} (or Example 10.4) and that (\ref{eq:10.35}) is the \emph{definition} of the symbol $\int_{\Phi} \omega$.
+    Note that the right side of (\ref{eq:10.35}) is an integral over $D$, as defined in Definition \ref{def:10.1} (or Example 10.4) and that (\ref{eq:10.35}) is the \emph{definition} of the symbol $\int_{\Phi} \omega$.
     
     A $k$-form $\omega$ is said to be of class $\mathscr{C}'$ or $\mathscr{C}''$ 
     if the functions $a_{i_1 \cdots i_k}$ in (\ref{eq:10.34}) are all of class $\mathscr{C}'$ or $\mathscr{C}''$.
     
     A 0-form in E is defined to be a continuous function in $E$.
-\end{myDef}
+\end{mydef}
 
 
 \begin{myExample}
@@ -169,7 +169,7 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
     The anticommutativity expressed by (\ref{eq:10.42}) is the reason for the inordinate amount of attention that has to be paid to minus signs when studying differential forms.    
 \end{myRemark}
 
-\begin{myDef}
+\begin{mydef}
     \myKeyword{ Basic $k$-forms}
     If $i_1, \dots , i_k$ are integers such that 
     $1 \leq i_1 < i_2 < \cdots < i_k \leq n$, 
@@ -204,8 +204,8 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
         \varepsilon (j_1, \dots , j_k) =
         s (j_1, \dots , j_k)
     \end{equation}
-    where $s$ is as in Definition \ref{myDef:9.33}.
-\end{myDef}
+    where $s$ is as in Definition \ref{def:9.33}.
+\end{mydef}
 
 For example,
 \begin{equation*}
@@ -278,7 +278,7 @@ since, for example,
 
 % todo add proof
 
-\begin{myDef}
+\begin{mydef}
     \myKeyword{ Products of basic $k$-forms}
     Suppose 
     \begin{equation}
@@ -298,9 +298,9 @@ since, for example,
         \d x_{j_1} \wedge \cdots \wedge
         \d x_{j_q}.
     \end{equation}
-\end{myDef}
+\end{mydef}
 
-\begin{myDef}
+\begin{mydef}
     \myKeyword{ Multiplication}
     Suppose $\omega$ and $\lambda$ are $p$- and $q$-forms, respectively, in
     some open set $E \subset \R^n$, with standard presentations
@@ -311,9 +311,9 @@ since, for example,
     \end{equation}
     where $I$ abd $J$ range over all increasing $p$-indices and over all increasing $q$-indices
     taken from the set $\{1, ... , n\}$.
-\end{myDef}
+\end{mydef}
 
-\begin{myDef}
+\begin{mydef}
     \myKeyword{ Differentiation}
     We shall now define a differentiation operator $\d$ which
     associates a $(k + 1)$-form $\d \omega$ to each $k$-form $\omega$ of class $\mathscr{C}'$ in some open set $E \in \R^n$.
@@ -328,7 +328,7 @@ since, for example,
         \label{eq:10.60}
         \d \omega = \sum_I (\d b_I) \wedge \d x_I .
     \end{equation}
-\end{myDef}
+\end{mydef}
 
 \begin{myExample}
     Suppose $E$ is open in $\R^n$, $f \in \mathscr{C}'(E)$, and $\gamma$ is a continuously differentiable curve in $E$, with domain $[0,1]$. By (\ref{eq:10.59}) and (\ref{eq:10.35}),
@@ -376,7 +376,7 @@ Here $\d ^2 \omega$ means, of course, $\d (\d \omega)$.
 
 % todo add proof
 
-\begin{myDef}
+\begin{mydef}
     \myKeyword{Change of variables}
     Suppose $E$ is an open set in $\R^n$, 
     $T$ is a $\mathscr{C}'$-mapping of $E$ into an open set $V \subset \R^m$, 
@@ -404,14 +404,14 @@ Here $\d ^2 \omega$ means, of course, $\d (\d \omega)$.
     The mapping $T$ transforms $\omega$ into a $k$-form $\omega_T$ in $E$,
     whose definition is 
     \begin{equation}
-        \label{eq:1067}
+        \label{eq:10.67}
         \omega_T = \sum_I b_I ((T(\mathbf{x}))) 
         \d t_{i_1} \wedge \cdots \wedge
         \d t_{i_k} .
     \end{equation}
     in each summand of (\ref{eq:10.67}),
     $I = \{i_1,...,i_k\}$ is an increasing $k$-index.
-\end{myDef}
+\end{mydef}
 
 Our next theorem shows that addition, multiplication, and differentiation
 of forms are defined in such a way that they commute with changes of variables.

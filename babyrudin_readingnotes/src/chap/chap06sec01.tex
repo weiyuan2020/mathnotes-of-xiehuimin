@@ -1,7 +1,7 @@
 % chap06sec01
 \section{Definition and existence of the integral}
-\begin{myDef}
-    \label{myDef:6.1}
+\begin{mydef}
+    \label{def:6.1}
     Let $[a, b]$ be a given interval. 
     By a \emph{partition} $P$ of $[a, b]$ 
     we mean a finite set of points $x_0, x_1, ... , x_n$, where
@@ -64,10 +64,10 @@
     and hence the question of the integrability of $f$, is a more delicate one. 
     Instead of investigating it separately for the Riemann integral,
     we shall immediately consider a more general situation.
-\end{myDef}
+\end{mydef}
 
-\begin{myDef}
-    \label{myDef:6.2}
+\begin{mydef}
+    \label{def:6.2}
     Let $\alpha$ be a monotonically increasing function on $[a, b]$ 
     (since $\alpha (a)$ and $\alpha (b)$ are finite, 
     it follows that $\alpha$ is bounded on $[a, b]$). 
@@ -83,7 +83,7 @@
         U(P, f, \alpha) &= \sum_{i=1}^{n} M_1 \Delta \alpha_i, \\
         L(P, f, \alpha) &= \sum_{i=1}^{n} m_1 \Delta \alpha_i. 
     \end{align*}
-    where $M_1$, $m_1$ have the same meaning as in Definition \ref{myDef:6.1}, 
+    where $M_1$, $m_1$ have the same meaning as in Definition \ref{def:6.1}, 
     and we define
     \begin{align}
         \label{eq:6.5}
@@ -151,16 +151,16 @@
     and $\alpha$ monotonically increasing on $[a, b]$; 
     and, when there can be no misunderstanding, 
     we shall write $\int$ in place of $\int_{a}^{b}$.
-\end{myDef}
+\end{mydef}
 
-\begin{myDef}
-    \label{myDef:6.3}
+\begin{mydef}
+    \label{def:6.3}
     We say that the partition $P^*$ is a \emph{refinement} of $P$ 
     if $P^* \supset P$
     (that is, if every point of $P$ is a point of $P^*$). 
     Given two partitions, $P_1$ and $P_2$ ,
     we say that $P^*$ is their common refinement if $P^* = P_1 \cup P_2$ .
-\end{myDef}
+\end{mydef}
 \mybox{refinement 加细, 细分}
 
 \begin{thm}

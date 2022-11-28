@@ -6,8 +6,8 @@ The algebraic facts presented here extend without change to finite-dimensional v
 However, for our purposes it is quite sufficient to stay within the familiar framework provided by the euclidean spaces.
 \mybox{有限维向量空间}
 
-\begin{myDef}
-    \label{myDef:9.1}
+\begin{mydef}
+    \label{def:9.1}
     \begin{asparaenum}[(a)]
         \item A nonempty set $X \subset \R^n$ is a \emph{vector space} if $\mathbf{x + y} \in X$ and $c \mathbf{x} \in X$ for all $x \in X$, $y \in X$, and for all scalars $c$. 
         \item If $\mathbf{x}_1, ... , \mathbf{x}_k$ $\in \R^n$ and $c_1, ... , c_k$ are scalars, the vector
@@ -48,7 +48,7 @@ However, for our purposes it is quite sufficient to stay within the familiar fra
         the \emph{standard basis} of $\R^n$.
     \end{asparaenum}
 
-\end{myDef}
+\end{mydef}
 
 \mybox{
     部分名词对应汉语
@@ -93,7 +93,7 @@ However, for our purposes it is quite sufficient to stay within the familiar fra
 
 % todo add proof
 
-\begin{myDef}
+\begin{mydef}
     A mapping $A$ of a vector space $X$ into a vector space $Y$ is said to be a \emph{linear transformation} if 
     \begin{equation*}
         A(\mathbf{x}_1 + \mathbf{x}_2) =
@@ -126,7 +126,7 @@ However, for our purposes it is quite sufficient to stay within the familiar fra
     we say that $A$ is \emph{invertible}.
     In this case we can define an operator $A^{-1}$ on $X$ by requiring that $A^{-1}(A \mathbf{x}) = \mathbf{x}$ for all $\mathbf{x} \in X$.
     It is trivial to verify that we then also have $A(A^{-1}\mathbf{x}) = \mathbf{x}$, for all $\mathbf{x} \in X$, and that $A^{-1}$ is linear.
-\end{myDef}
+\end{mydef}
 
 An important fact about linear operators on finite-dimensional vector spaces is that each of the above conditions (i) and (ii) implies the other:
 
@@ -138,8 +138,8 @@ An important fact about linear operators on finite-dimensional vector spaces is 
 
 % todo add proof
 
-\begin{myDef}
-    \label{myDef:9.6}
+\begin{mydef}
+    \label{def:9.6}
     \begin{asparaenum}[(a)]
         \item Let $L(X,Y)$ be the set of all linear transformations of the vector space $X$ into the vector space $Y$. 
         Instead of $L(X, X)$, we shall simply write $L(X)$.
@@ -171,7 +171,7 @@ An important fact about linear operators on finite-dimensional vector spaces is 
         holds for all $\mathbf{x} \in \R^n$. 
         Also, if $\lambda$ is such that $\left| A \left| x \right| \right| \leq \lambda \left| \mathbf{x} \right|$ for all $\mathbf{x} \in \R^n$, then $\left\| A \right\| \leq \lambda$.
     \end{asparaenum}
-\end{myDef}
+\end{mydef}
 
 \mybox{
     norm 范数 \url{https://mathworld.wolfram.com/Norm.html} 
@@ -236,7 +236,7 @@ Our next theorem utilizes these concepts.
 
 % todo add proof
 
-\begin{myDef}
+\begin{mydef}
     \myKeyword{Matrices} 
     Suppose $\{\mathbf{x}_1, \dots , \mathbf{x}_n\}$ 
     and $\{\mathbf{y}_1, \dots , \mathbf{y}_n\}$ are bases if vector spaces $X$ and $Y$, respectively.
@@ -326,7 +326,7 @@ Our next theorem utilizes these concepts.
     If we apply (\ref{eq:9.6}) to $B - A$ in place of $A$, 
     where $A, B \in L(\R^n, \R^m)$, 
     we see that if the matrix elements $a_{ij}$ are continuous functions of a parameter, then the same is true of $A$. More precisely:
-\end{myDef}
+\end{mydef}
 
 \emph{If $S$ is a metric space, if $\{a_{11}, \dots, a_{mn}\}$ are real continuous functions on $S$,
 and if, for each $p \in S$, $A_P$ is the linear transformation of $\R^n$ into $\R^m$ whose matrix has entries $a_{ij}(p)$, 

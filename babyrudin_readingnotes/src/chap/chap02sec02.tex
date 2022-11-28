@@ -1,6 +1,6 @@
 \section{Metric space}
 \mybox{metirc space 度量空间}
-\begin{myDef}\label{myDef:2.15}
+\begin{mydef}\label{def:2.15}
     set $X$ metric space $p\in X$, $p$ point.
 
     $\forall p,q \in X$ associate a real number $d(p,q)$ (distance)
@@ -9,7 +9,7 @@
         \item $d(p,q) = d(q,p)$.
         \item $d(p,q) \leq d(p,r) + d(r,q)$, $\forall r\in X$
     \end{enumerate}
-\end{myDef}
+\end{mydef}
 \mybox{对称性, 正定性, 三角不等式. }
 
 \begin{myExample}
@@ -20,7 +20,7 @@
     \end{equation}
 \end{myExample}
 
-It's important to observe that every subset $Y$ of metric space $X$ is a metric space in its own right, with the same distance function. For it is clear that if conditions (a) to (c) of Definition \ref{myDef:2.15} hold for $p, q, r \in X$, they also hold if we restrict $p, q, r$ to lie in $Y$.
+It's important to observe that every subset $Y$ of metric space $X$ is a metric space in its own right, with the same distance function. For it is clear that if conditions (a) to (c) of Definition \ref{def:2.15} hold for $p, q, r \in X$, they also hold if we restrict $p, q, r$ to lie in $Y$.
 
 Thus every subset of a euclidean space is a metric space. Other examples
 are the spaces $l(K)$ and $L^2 (\mu)$, 
@@ -43,7 +43,7 @@ which are discussed in Chaps. 7 and 11, respectively.
     $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 }
 
-\begin{myDef}\label{myDef:2.17}
+\begin{mydef}\label{def:2.17}
 % 2.17 Definition 
 By the \emph{segment} $(a, b)$ we mean the set of all real numbers $x$
 such that $a < x <b$.
@@ -51,7 +51,7 @@ such that $a < x <b$.
 By the \emph{interval} $[a. b]$ we mean the set of all real numbers $x$ such that $a \leq x \leq b$
 
 Occasionally we shall also encounter ``half-open intervals'' $[a, b)$ and $(a, b]$; the first consists of all $x$ such that $a \leq x < b$, the second of all $x$ such that $a < x \leq b$
-\end{myDef}
+\end{mydef}
 
 If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\R^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \emph{$k$-cell}.\\
 Thus a $1$-cell is an interval, a $2$-cell is a rectangle, etc.
@@ -83,7 +83,7 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
 凸性 Jensen 不等式.
 }
 
-\begin{myDef}\label{myDef:2.18}
+\begin{mydef}\label{def:2.18}
     Definition Let $X$ be a metric space. All points and sets mentioned below are understood to be elements and subsets of $X$.
     \begin{enumerate}[(a)]
         \item A \emph{neighborhood} of $p$ is a set $N_r(p)$ consisting of all $q$ such that $d(p, q) < r$,for some $r > 0$. The number $r$ is called the \emph{radius} of $N_r(p)$.
@@ -97,7 +97,7 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
         \item $E$ is \emph{bounded} if there is a real number $M$ and a point $q \in X$ such that $d(p,q)< M$ for all $p \in E$.
         \item $E$ is \emph{dense} in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
     \end{enumerate}
-\end{myDef}
+\end{mydef}
 
 Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighborhoods are interiors of circles.
 
@@ -278,10 +278,10 @@ but it is an open subset of $\R^1$.
     Thus the intersection of an infinite collection of open sets need not be open. Similarly, the union of an infinite collection of closed sets need not be closed.
 \end{myExample}
 
-\begin{myDef}
-    \label{myDef:2.26}
+\begin{mydef}
+    \label{def:2.26}
     If $X$ is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the \emph{closure} of $E$ is the set $\bar{E}=E \cup E'$.
-\end{myDef}
+\end{mydef}
 
 \begin{thm}
     \label{thm:2.27}
@@ -296,7 +296,7 @@ By (a) and (c), $E$ 1s the smallest closed subset of $X$ that contains $E$.
 \begin{proof}
     \begin{enumerate}[(a)]
         \item If $p \in X$ and $p \not\in \bar{E}$ then $p$ is neither a point of $E$ nor a limit point of $E$. Hence $p$ has a neighborhood which does not intersect $E$. The complement of $E$ is therefore open. Hence $E$ is closed.
-        \item If $E = \bar{E}$, (a) implies that $E$ is closed. If $E$is closed, then $E' \subset E$ [by Definitions \ref{myDef:2.18}(d) and \ref{myDef:2.26}], hence $\bar{E} = E$.
+        \item If $E = \bar{E}$, (a) implies that $E$ is closed. If $E$is closed, then $E' \subset E$ [by Definitions \ref{def:2.18}(d) and \ref{def:2.26}], hence $\bar{E} = E$.
         \item If $F$ is closed and $F \supset E$, then $F \supset F'$, hence $F \supset E'$. Thus $F \supset \bar{E}$.
     \end{enumerate}
 \end{proof}
