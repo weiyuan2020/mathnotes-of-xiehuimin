@@ -1,0 +1,156 @@
+% chap11sec09
+
+\section{Functions of Class $\mathscr{L}^2$}
+
+As an application of the Lebesgue theory, 
+we shall now extend the Parseval theorem 
+(which we proved only for Riemann-integrable functions in Chap. 8)
+and prove the Riesz-Fischer theorem for orthonormal sets of functions.
+
+\begin{mydef}
+    \label{mydef:11.34}
+    Let $X$ be a measurable space. 
+    We say that a complex
+    function $f \in \mathscr{L}^2(\mu)$ on $X$ if $f$ is measurable and if
+    \begin{equation*}
+        \int_X |f|^2 \d \mu < +\infty .
+    \end{equation*}
+    If $\mu$ Lebesgue measure, 
+    we say $f \in \mathscr{L}^2$. 
+    For $f \in \mathscr{L}^2(\mu)$
+    (we shall omit the phrase ``on $X$'' from now on) we define
+    \begin{equation*}
+        \left\| f \right\| =
+        \left\{ \int_X \left| f \right|^2 \d \mu \right\}^{1/2}
+    \end{equation*}
+    and call $\|f\|$ the $\mathscr{L}^2(\mu)$ norm of $f$.
+\end{mydef}
+\mybox{omit 省略}
+
+\begin{thm}
+    \label{thm:11.35}
+    Suppose $ f \in \mathscr{L}^2(\mu)$ 
+    and     $ g \in \mathscr{L}^2(\mu)$. 
+    Then    $fg \in \mathscr{L}  (\mu)$, 
+    and
+    \begin{equation}
+        \label{eq:11.98}
+        \int_X \left| fg \right| \d \mu \leq
+        \left\| f \right\| \left\| g \right\| .
+    \end{equation}
+\end{thm}
+
+This is the Schwarz inequality, 
+which we have already encountered for series and for Riemann integrals. 
+It follows from the inequality 
+\begin{equation*}
+    0 \leq 
+    \int_X \left( | f | + \lambda | g |  \right)^2 \d \mu =
+    \left\| f \right\|^2 + 
+    2 \lambda \int_X | fg | \d \mu + \lambda^2 \left\| g \right\|^2 ,
+\end{equation*}
+which holds for every real $\lambda$.
+
+\begin{thm}
+    \label{thm:11.36}
+    If   $f \in \mathscr{L}^2(\mu)$
+    and  $f \in \mathscr{L}^2(\mu)$,
+    then $f + g \in \mathscr{L}^2(\mu)$,
+    and 
+    \begin{equation*}
+        \left\| f + g \right\| \leq
+        \left\| f \right\| + \left\| g \right\| .
+    \end{equation*}
+\end{thm}
+
+\begin{proof}
+    The Schwarz inequality shows that 
+    \begin{align*}
+        \left\| f + g \right\|^2
+        &= \int |f|^2 + \int f\bar{g} + \int \bar{f}g + \int |g|^2 \\
+        &\leq \|f\|^2 + 2\|f\| \|g\| + \|g\|^2 \\
+        &= \left( \left\| f \right\| + \left\| g \right\| \right)^2 .
+    \end{align*}
+\end{proof}
+
+\begin{myRemark}
+    If we define  the distance between two functions $f$ and $g$ in
+    $\mathscr{L}^2(\mu)$ to be $\left\| f-g \right\|$, 
+    we see that the conditions of Definition \ref{mydef:2.15} are satisfied,
+    except for the fact that $\left\| f-g \right\| = 0$ does not imply that $f(x) = g(x)$ for all $x$,
+    but only for almost all $x$. 
+    Thus, if we identify functions which differ only on a
+    set of measure zero, $\mathscr{L}^2(\mu)$ is a metric space.
+    
+    We now consider $\mathscr{L}^2$ on an interval of the real line, with respect to
+    Lebesgue measure.
+\end{myRemark}
+
+\begin{thm}
+    \label{thm:11.38}
+    The continuous functions form a dense subset of $\mathscr{L}^2$ on $[a, b]$.
+\end{thm}
+
+More explicitly, this means that for any $f \in \mathscr{L}^2$ on $[a, b]$, and any $\varepsilon > 0$,
+there is a function $g$, continuous on $[a, b]$, such that
+\begin{equation*}
+    \left\| f - g \right\| =
+    \left\{ \int_{a}^{b} \left| f - g \right|^2 \d x \right\}^{1/2} <
+    \varepsilon.
+\end{equation*}
+
+
+\begin{mydef}
+    \label{mydef:11.39}
+    We say that a sequence of complex functions $\sequence{\phi_n}$ is an
+    orthonormal set of functions on a measurable space $X$ if 
+    \begin{equation*}
+        \int_X \phi_n \bar{\phi}_m \d \mu = 
+        \left\{
+            \begin{array}{ll}
+                0 & (n \neq m), \\
+                1 & (n =    m). \\
+            \end{array}
+        \right.
+    \end{equation*}
+    In particular, we must have $\phi_n \in \mathscr{L}^2(\mu)$. 
+    If $f \in \mathscr{L}^2(\mu)$ and if
+    \begin{equation*}
+        c_n = \int_X f \bar{\phi}_n \d \mu
+        \quad (n = 1,2,3,\dots),
+    \end{equation*}
+    we write 
+    \begin{equation*}
+        f \sim \sum_{n=1}^{\infty} c_n \phi_n ,
+    \end{equation*}
+    as in Definition \ref{mydef:8.10}.
+\end{mydef}
+
+
+Parseval theorem 
+\begin{thm}
+    \label{thm:11.40}
+    Suppose 
+    \begin{equation}
+        \label{eq:11.99}
+        f(x) \sim \sum_{-\infty}^{\infty} c_n e^{inx} ,
+    \end{equation}
+    where $f in \mathscr{L}^2$ on $[-\pi, \pi]$.
+    Let $s_n$ be the $n$th partial sum of (\ref{eq:11.99}).
+    Then 
+    \begin{align}
+        \label{eq:11.100}
+        \lim_{n \to \infty} \left\| f - s_n \right\| &= 0, \\
+        \sum_{-\infty}^{\infty} \left| c_n \right|^2 &= 
+        \frac{1}{2\pi} \int_{-\pi}^{\pi} \left| f \right|^2 \d x.
+    \end{align}
+\end{thm}
+
+\begin{myCorollary*}
+    If $f \in \mathscr{L}^2$ on $[-\pi, \pi]$, and if 
+    \begin{equation*}
+        \int_{-\pi}^{\pi} f(x) e^{-inx} \d x = 0
+        \quad (n = 0, \pm 1, \pm 2, \dots),
+    \end{equation*}
+    then $\left\| f \right\| = 0$.
+\end{myCorollary*}
