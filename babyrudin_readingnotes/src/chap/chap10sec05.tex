@@ -85,7 +85,7 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
 \end{myExample}
 
 \begin{myRemark}
-    \textbf{{\color{blue} Elementary properties}}
+    \myKeyword{ Elementary properties}
     Let $\omega$, $\omega_1$, $\omega_2$ be $k$-forms in $E$.
     We write $\omega_1 = \omega_2$ 
     if and only if $\omega_1(\Phi) = \omega_2(\Phi)$
@@ -129,7 +129,7 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
         \bar{\omega} = -\omega.
     \end{equation}
 
-    As a special case of this, note that the \ref{anticommutative relation}
+    As a special case of this, note that the \emph{anticommutative relation}
     \begin{equation}
         \label{eq:10.42}
         \d x_i \wedge \d x_j = 
@@ -170,7 +170,7 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
 \end{myRemark}
 
 \begin{myDef}
-    \textbf{\color{blue} Basic $k$-forms}
+    \myKeyword{ Basic $k$-forms}
     If $i_1, \dots , i_k$ are integers such that 
     $1 \leq i_1 < i_2 < \cdots < i_k \leq n$, 
     and if $I$ is the ordered $k$-tuple $\{i_1, \dots , i_k\}$, 
@@ -239,7 +239,7 @@ obtain the so-called standard presentation of $\omega$:
 The summation in (\ref{eq:10.47}) extends over all increasing $k$-indices $I$.
 [Of course, every increasing $k$-index arises from many (from $k!$, to be precise) $k$-tuples. 
 Each $b_I$ in (\ref{eq:10.47}) 
-may thus be a sum of several of the coefficients that occur in (\ref{10.34}).]
+may thus be a sum of several of the coefficients that occur in (\ref{eq:10.34}).]
 
 For example,
 \begin{equation*}
@@ -279,7 +279,7 @@ since, for example,
 % todo add proof
 
 \begin{myDef}
-    \textbf{\color{blue} Products of basic $k$-forms}
+    \myKeyword{ Products of basic $k$-forms}
     Suppose 
     \begin{equation}
         \label{eq:10.51}
@@ -301,7 +301,7 @@ since, for example,
 \end{myDef}
 
 \begin{myDef}
-    \textbf{\color{blue} Multiplication}
+    \myKeyword{ Multiplication}
     Suppose $\omega$ and $\lambda$ are $p$- and $q$-forms, respectively, in
     some open set $E \subset \R^n$, with standard presentations
     \begin{equation}
@@ -314,7 +314,7 @@ since, for example,
 \end{myDef}
 
 \begin{myDef}
-    \textbf{\color{blue} Differentiation}
+    \myKeyword{ Differentiation}
     We shall now define a differentiation operator $\d$ which
     associates a $(k + 1)$-form $\d \omega$ to each $k$-form $\omega$ of class $\mathscr{C}'$ in some open set $E \in \R^n$.
 
@@ -330,3 +330,160 @@ since, for example,
     \end{equation}
 \end{myDef}
 
+\begin{myExample}
+    Suppose $E$ is open in $\R^n$, $f \in \mathscr{C}'(E)$, and $\gamma$ is a continuously differentiable curve in $E$, with domain $[0,1]$. By (\ref{eq:10.59}) and (\ref{eq:10.35}),
+    \begin{equation}
+        \label{eq:10.61}
+        \int_{\gamma} \d f 
+        = \int_{0}^{1} \sum_{i=1}^{n} 
+        (D_i f)(\gamma(t)) \gamma'_i (t)
+        \d t .
+    \end{equation}
+    By the chain rule, the last integrand is $(f \circ \gamma)'(t)$.
+    Hence
+    \begin{equation}
+        \label{eq:10.62}
+        \int_{\gamma} \d f = 
+        f(\gamma(1)) - 
+        f(\gamma(0)) ,
+    \end{equation}
+    and we see that $\int_{\gamma} \d f$ is the same for all $\gamma$ with the same initial point and the same end point, as in (a) of Example 10.12.
+
+    Comparison with Example 10.12(b) shows therefore that the 1-form $x \d y$ is not the derivative of any 0-form $f$.
+    This could also be deduced from part (b) of the following theorem, since 
+    \begin{equation*}
+        \d (x \d y) = \d x \wedge \d y
+    \end{equation*}
+\end{myExample}
+\mybox{integrand 被积函数}
+
+\begin{thm}
+    \label{thm:10.20}
+    \begin{asparaenum}[(a)]
+        \item If $\omega$ and $\lambda$ are $k$- and $m$-forms, respectively, of class $\mathscr{C}'$ in $E$, 
+        then 
+        \begin{equation}
+            \label{eq:10.63}
+            \d (\omega \wedge \lambda) =
+            (\d \omega) \wedge \lambda +
+            (-1)^k \omega \wedge \d \lambda .
+        \end{equation}
+        \item If $\omega$ is of class $\mathscr{C}''$ in $E$, then $\d ^2 \omega = 0$.
+    \end{asparaenum}
+\end{thm}
+
+Here $\d ^2 \omega$ means, of course, $\d (\d \omega)$.
+
+% todo add proof
+
+\begin{myDef}
+    \myKeyword{Change of variables}
+    Suppose $E$ is an open set in $\R^n$, 
+    $T$ is a $\mathscr{C}'$-mapping of $E$ into an open set $V \subset \R^m$, 
+    and $\omega$ is a $k$-form in $V$, whose standard presentation is
+    \begin{equation}
+        \label{eq:10.65}
+        \omega = \sum_{I} b_I (\mathbf{y}) \d y_I.
+    \end{equation}
+
+    (We use $\mathbf{y}$ for points of $V$, $\mathbf{x}$ for points of $E$.)
+
+    Let $t_1,\dots,t_m$ be the components of $T$: If 
+    \begin{equation*}
+        \mathbf{y} = (y_1, \dots, y_m) = T(\mathbf{x})
+    \end{equation*}
+    then $y_i = t_i(\mathbf{x})$.
+    As in (\ref*{eq:10.59}),
+    \begin{equation}
+        \label{eq:10.66}
+        \d t_i = \sum_{j=1}^{n}(D_j t_i)(\mathbf{x}) \d x_j
+        \quad (1 \leq i \leq m).
+    \end{equation}
+    Thus each $\d t_i$ is a 1-form in $E$.
+
+    The mapping $T$ transforms $\omega$ into a $k$-form $\omega_T$ in $E$,
+    whose definition is 
+    \begin{equation}
+        \label{eq:1067}
+        \omega_T = \sum_I b_I ((T(\mathbf{x}))) 
+        \d t_{i_1} \wedge \cdots \wedge
+        \d t_{i_k} .
+    \end{equation}
+    in each summand of (\ref{eq:10.67}),
+    $I = \{i_1,...,i_k\}$ is an increasing $k$-index.
+\end{myDef}
+
+Our next theorem shows that addition, multiplication, and differentiation
+of forms are defined in such a way that they commute with changes of variables.
+
+\begin{thm}
+    \label{thm:10.22}
+    With $E$ and $T$ as in Sec. 10.21, let $\omega$ and $A$ be $k$- and $m$-forms in $V$, respectively. Then
+    \begin{enumerate}[(a)]
+        \item $(\omega + \lambda)_T = \omega_T + \lambda_T$ if $k = m$;
+        \item $(\omega \wedge \lambda)_T = \omega_T \wedge \lambda_T$;
+        \item $\d (\omega_T) = (\d \omega)_T$ 
+        if $\omega$ is of class $\mathscr{C}'$ 
+        and $T$ is of class $\mathscr{C}''$.
+    \end{enumerate}
+\end{thm}
+
+% todo add proof
+
+\begin{thm}
+    \label{thm:10.23}
+    Suppose $T$ is a $\mathscr{C}'$-mapping of an open set $E \subset \R^n$ into an open set $V \subset \R^m$, 
+    $S$ is a $\mathscr{C}'$-mapping of $V$ into an open set $W \subset \R^P$, and $w$ is a $k$-form in $W$, 
+    so that $\omega$ is a $k$-form in $V$ 
+    and both $(\omega_S)_T$ and $\omega_{ST}$ are $k$-forms in $E$, 
+    where $ST$ is defined by $(ST)(\mathbf{x}) = S(T(\mathbf{x}))$. 
+    Then
+    \begin{equation}
+        \label{eq:10.71}
+        (\omega_S)_T = \omega_{ST} .        
+    \end{equation}
+\end{thm}
+
+% todo add proof
+
+\begin{thm}
+    \label{thm:10.24}
+    Suppose $\omega$ is a $k$-form in an open set $E \subset \R^n$, 
+    $\Phi$ is a $k$-surface in $E$, with parameter domain $D \subset \R^k$, 
+    and $\Delta$ is the $k$-surface in $\R^k$, with parameter domain $D$, defined by $\Delta(\mathbf{u}) = \mathbf{u}(\mathbf{u} \in D)$. Then
+    \begin{equation*}
+        \int_{\Phi} \omega = 
+        \int_{\Delta} \omega_{\Phi} .
+    \end{equation*}
+\end{thm}
+
+% todo add proof
+
+\begin{thm}
+    \label{thm:10.25}
+    Suppose $T$ is a $\mathscr{C}'$-mapping of an open set $E \subset \R^n$ into an open set $V \subset \R^m$, 
+    $\Phi$ is a $k$-surface in $E$, 
+    and $\omega$ is a $k$-form in $V$.
+
+    Then 
+    \begin{equation*}
+        \int_{T \Phi} \omega = 
+        \int_{\Phi} \omega_T
+    \end{equation*}
+\end{thm}
+
+\begin{proof}
+    Let $D$ be the parameter domain of $\Phi$ (hence also of $\Phi$) and define $\Delta$ as in Theorem \ref{thm:10.24}.
+
+    Then 
+    \begin{equation*}
+        \int_{T \Phi} \omega = 
+        \int_{\Delta} \omega_{T \Phi} = 
+        \int_{\Delta} (\omega_{T})_{\Phi} = 
+        \int_{\Phi} \omega_{T} .
+    \end{equation*}
+
+    The first of these equalities is Theorem \ref{thm:10.24}, applied to $T\Phi$ in place of $\Phi$. 
+    The second follows from Theorem \ref{thm:10.23}. The third is Theorem \ref{thm:10.24},
+    with $\omega_T$ in place of $\omega$.
+\end{proof}
