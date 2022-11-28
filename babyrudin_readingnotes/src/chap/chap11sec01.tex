@@ -1,0 +1,39 @@
+% chap11sec01
+
+\section{Set functions}
+
+If $A$ and $B$ are any two sets, 
+we write $A - B$ for the set of all elements $x$ such that 
+$x \in A, x \not\in B$. 
+The notation $A - B$ does not imply that $B \subset A$. 
+We denote
+the empty set by 0, 
+and say that $A$ and $B$ are disjoint if $A \cap B = 0$.
+
+
+\begin{myDef}
+    A family $\mathscr{R}$ of sets is called a ring if A e $\mathscr{R}$ and Be $\mathscr{R}$ implies
+    \begin{equation}
+        \label{eq:11.1}
+        A \cup B \in \mathscr{R}, \quad 
+        A - B \in \mathscr{R}.
+    \end{equation}
+    Since $A n B = A - (A - B)$, we also have $A \cap B \in \mathscr{R}$ if $\mathscr{R}$ is a ring.
+
+    A ring $\mathscr{R}$ is called a $\sigma$-\emph{ring} if 
+    \begin{equation}
+        \label{eq:11.2}
+        \bigcup_{n=1}^{\infty} A_n \in \mathscr{R}
+    \end{equation}
+    whenever $A_n \in \mathscr{R} (n = 1,2,3,\dots)$. 
+    Since 
+    \begin{equation*}
+        \bigcap_{n=1}^{\infty} A_n 
+        = A_1 - \bigcup_{n=1}^{\infty} (A_1 - A_n),
+    \end{equation*}
+    we also have 
+    \begin{equation*}
+        \bigcap_{n=1}^{\infty} A_n \in \mathscr{R}
+    \end{equation*}
+    if $\mathscr{R}$ is a $\sigma$-ring.
+\end{myDef}
