@@ -1,6 +1,24 @@
 \documentclass[openany,twoside,scheme=chinese,fontset=none]{book}
 \usepackage{ctex}
 \usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm} % amsthm 与 ntheorem 冲突
+\usepackage{amssymb}
+\usepackage{hyperref} % \url
+\usepackage{graphicx} % \includegraphics
+\usepackage{fancybox} % 使用盒子
+\usepackage{xcolor} % 使用颜色 color
+% \usepackage{amsfonts}  % 
+\usepackage{mathrsfs}  % 花体字 mathscr
+
+\usepackage{enumerate}  % 计数器
+\usepackage{paralist}  % 计数器 允许行间公式
+
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox} % \DeclareTColorBox
+
+
+
 \geometry{
     paperheight=260mm,
     paperwidth=185mm,
@@ -38,22 +56,6 @@
 \newcommand{\kaishu}{\CJKfamily{zhkai}}
 
 
-\usepackage{amsmath}
-\usepackage{amsthm} % amsthm 与 ntheorem 冲突
-\usepackage{amssymb}
-\usepackage{hyperref} % \url
-\usepackage{graphicx} % \includegraphics
-\usepackage{fancybox} % 使用盒子
-\usepackage{xcolor} % 使用颜色 color
-% \usepackage{amsfonts}  % 
-\usepackage{mathrsfs}  % 花体字 mathscr
-
-\usepackage{enumerate}  % 计数器
-\usepackage{paralist}  % 计数器 允许行间公式
-
-\usepackage{tikz,lipsum,lmodern}
-\usepackage[most]{tcolorbox} % \DeclareTColorBox
-
 
 \theoremstyle{plain} % default
 \newtheorem{thm}{Theorem}[chapter] % 如果不采用章节号做前缀,  则不用[section]
@@ -64,7 +66,7 @@
 
 \theoremstyle{definition} % definition
 
-\newtheorem{mydef}[thm]{mydefinition}
+\newtheorem{mydef}[thm]{Definition}
 \newtheorem{myExample}[thm]{Example}
 \newtheorem{myRemark}[thm]{Remark}
 \newtheorem{myProposition}[thm]{Proposition}
@@ -84,7 +86,7 @@
     % \fbox{\parbox{135mm}{mynotes:\\#1}}
     % \vskip 2.5mm
     \begin{tcolorbox}
-        my notes:\\#1
+        my notes:  #1
     \end{tcolorbox}
 }
 % 使用这种方式输入命令, 反向查找错误困难, 因此放弃
@@ -101,8 +103,14 @@
 
 % \newcommand{\mySolve}[1]{\textbf{\color{blue} Solve: }{#1}}
 % \newcommand{\mySolve}{\textbf{\color{blue} Solve: }}
-\newcommand{\myKeyword}[1]{\textbf{\color{blue} {#1} }}
+
 \newcommand{\mySolve}{\myKeyword{Solve}}
+\newcommand{\myKeyword}[1]{\textbf{\color{blue} {#1} }}
+\newcommand{\myKeywordblue}[1]{\emph{\color{blue} {#1} }}
+\newcommand{\myKeywordred}[1]{{\color{red} {#1} }}
+
+
+
 %New Commands
 
 %Special Symbols
@@ -121,3 +129,7 @@
 \let\daccent\d
 \let\d\relax
 \newcommand\d{\ifmmode\dif\else\expandafter\daccent\fi}
+
+
+%% tikz setting
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        

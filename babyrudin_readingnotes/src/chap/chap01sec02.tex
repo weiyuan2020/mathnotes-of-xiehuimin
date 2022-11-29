@@ -3,7 +3,7 @@
 
 \begin{mydef}\label{mydef:1.5}
     Let $S$ be a set. 
-    An \emph{order} on $S$ is a relation, denoted by $<$,
+    An \myKeywordblue{order} on $S$ is a relation, denoted by $<$,
     with the following two properties:
     \begin{asparaenum}[(i)]
         \item If $x\in S$ and $y\in S$ then one and only one of the statements
@@ -23,15 +23,15 @@
     (It's often convenient to write $y>x$ in place of $x<y$)
     (less-great, smaller-bigger, precedes-succeeds)
 
-    \mybox{form wiki,
-    The relationship x precedes y is written $x ≺ y$. 
-    The relation x precedes or is equal to y is written x ≼ y.
-    The relationship x succeeds (or follows) y is written x ≻ y. 
-    The relation x succeeds or is equal to y is written x ≽ y.
-    ≺ $\backslash\text{prec}$ 
-    ≼ $\backslash\text{preccurlyeq}$ 
-    ≻ $\backslash\text{succ}$ 
-    ≽ $\backslash\text{succcurlyeq}$  }
+    \mybox{form wiki,\\
+    The relationship x precedes y is written $x ≺ y$.  \\
+    The relation x precedes or is equal to y is written x ≼ y. \\
+    The relationship x succeeds (or follows) y is written x ≻ y.  \\
+    The relation x succeeds or is equal to y is written x ≽ y. \\
+    ≺ $\backslash\text{prec}$  \\
+    ≼ $\backslash\text{preccurlyeq}$  \\
+    ≻ $\backslash\text{succ}$  \\
+    ≽ $\backslash\text{succcurlyeq}$  } 
 
     $x\leq y$ indicates that $x<y$ or $x=y$, 
     without specifying which of these two is to hold.
@@ -48,9 +48,9 @@
 在后续根据极限定义计算时, 
 需要大量使用不等式分析数列和函数的极限计算结果. }
 
-\begin{mydef}\label{mydef:1.6}
-% 1.6 def
-An \emph{ordered set} is a set $S$ in which an order is defined.
+\begin{mydef}
+    \label{mydef:1.6}
+An \myKeywordblue{ordered set} is a set $S$ in which an order is defined.
 \end{mydef}
 
 For Example, $\Q $ is an ordered set 
@@ -66,8 +66,8 @@ $\Q , \R$ 均是有序集, 但$\mathbb{C}$ 不是有序集. }
     Suppose $S$ is an ordered set, and $E \subset S$. 
     If there exists a $\beta \in S$ 
     such that $x \leq \beta$ for every $x \in E$, 
-    we say that $E$ is \emph{bounded above}, and call
-    $\beta$ an \emph{upper bound} of $E$.
+    we say that $E$ is \myKeywordblue{bounded above}, and call
+    $\beta$ an \myKeywordblue{upper bound} of $E$.
 
     Lower bounds are defined in the same way (with $\geq$ in place of $\leq$).
 \end{mydef}
@@ -82,14 +82,14 @@ $\Q , \R$ 均是有序集, 但$\mathbb{C}$ 不是有序集. }
         \item If $\gamma <\alpha$ then $\gamma$ is not an upper bound of $E$.
     \end{enumerate}
 
-    Then $\alpha$ is called the \emph{least upper bound} of $E$ 
+    Then $\alpha$ is called the \myKeywordblue{least upper bound} of $E$ 
     [that there is at most one such $\alpha$ is clear from (ii)] 
-    or the \emph{supremum} of $E$, and we write
+    or the \myKeywordblue{supremum} of $E$, and we write
     \begin{equation*}
         \alpha = \sup E.
     \end{equation*}
 
-    The \emph{greatest lower bound}, or \emph{infimum}, 
+    The \myKeywordblue{greatest lower bound}, or \myKeywordblue{infimum}, 
     of a set $E$ which is bounded below is defined in the same manner: The statement
     \begin{equation*}
         \alpha = \inf E
@@ -131,7 +131,7 @@ $\Q , \R$ 均是有序集, 但$\mathbb{C}$ 不是有序集. }
 \begin{mydef}
     \label{mydef:1.10}
     {\color{red}{least-upper-bound property}}\\
-    An ordered set $S$ is said to have the \emph{least-upper-bound property} 
+    An ordered set $S$ is said to have the \myKeywordblue{least-upper-bound property} 
     if the following is true:\\
     If $E \subset S$, $E$ is not empty, and $E$ is bounded above, then $\sup E$ exists in $S$.
 \end{mydef}
@@ -163,7 +163,7 @@ also has the greatest-lower-bound property.
     Since $B$ is bounded below, $L$ is not empty. 
     Since $L$ consists of exactly those $y \in S$ 
     which satisfy the inequality $y \leq x$ for every $x \in B$, 
-    we see that \emph{every} $x \in B$ \emph{is an upper bound of} $L$. 
+    we see that \myKeywordblue{every} $x \in B$ \myKeywordblue{is an upper bound of} $L$. 
     Thus $L$ is bounded above.
     Our hypothesis about $S$ implies therefore that 
     $L$ has a supremum in $S$; 
@@ -197,13 +197,38 @@ $\exists \alpha\in S$, $\alpha = \sup L$, and $\alpha = \inf B$.}
 \begin{proof}
     % proof:
     思路 由最小上界 $\rightarrow $ 最大下界
-    \begin{equation*}
-        \begin{array}{ccc}
-            \text{最小上界}  & \rightarrow  &\text{最大下界} \\
-            \downarrow      &               &\uparrow \\
-            L\text{最小上界}  & \rightarrow  &B\text{最大下界} \\
-        \end{array}
-    \end{equation*}
+    % \begin{equation*}
+    %     \begin{array}{ccc}
+    %         \text{最小上界}  & \rightarrow  &\text{最大下界} \\
+    %         \downarrow      &               &\uparrow \\
+    %         L\text{最小上界}  & \rightarrow  &B\text{最大下界} \\
+    %     \end{array}
+    % \end{equation*}
+    \begin{center}
+    % \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+    %Curve Left Arrow [id:dp8431437987703496] 
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (160.1,184.95) .. controls (123.33,185.08) and (93.44,161.75) .. (93.34,132.84) -- (109.04,132.78) .. controls (109.14,161.69) and (139.03,185.02) .. (175.8,184.89) ;\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (175.8,184.89) .. controls (203.1,184.8) and (226.52,171.8) .. (236.73,153.27) -- (241.97,153.26) -- (234.35,132.35) -- (215.8,153.35) -- (221.03,153.33) .. controls (210.82,171.85) and (187.4,184.85) .. (160.1,184.95)(175.8,184.89) -- (160.1,184.95) ;
+    %Right Arrow [id:dp6325803700843252] 
+    \draw   (125.43,112.58) -- (188.43,112.58) -- (188.43,106) -- (230.43,119.15) -- (188.43,132.3) -- (188.43,125.73) -- (125.43,125.73) -- cycle ;
+
+    % Text Node
+    \draw (30,107) node [anchor=north west][inner sep=0.75pt]   [align=left] {最小上界};
+    % Text Node
+    \draw (240,107) node [anchor=north west][inner sep=0.75pt]   [align=left] {最大下界};
+    % Text Node
+    \draw (30,187) node [anchor=north west][inner sep=0.75pt]   [align=left] {L最小上界};
+    % Text Node
+    \draw (240,185) node [anchor=north west][inner sep=0.75pt]   [align=left] {B最大下界};
+
+
+    \end{tikzpicture}
+
+    \end{center}
+
     $L = \{y| y\in S; \forall x\in B, y\leq x\}$
     关于 $L$ 中有没有不在 $S$ 中的元素这一点我还没想明白.
     定理中只是说 $L$ 是 $B$ 的下界组成的. 
