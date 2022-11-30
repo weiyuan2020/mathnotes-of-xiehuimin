@@ -31,7 +31,7 @@ e.g., in point-set topology, where
 \mybox{
 
 \begin{center}
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    \begin{tikzpicture}[x=0.7pt,y=0.7pt,yscale=-1,xscale=1]
     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
     
     %Shape: Axis 2D [id:dp21476035781689284] 
@@ -71,8 +71,43 @@ Therefore, unless indicated otherwise by context, the notation $f(x)$ is taken i
 
 \begin{mydef}
     \label{mydef:2.1}
-    Consider two sets $A$ and $B$, whose elements may be any objects whatsoever, and suppose that with each element $x$ of $A$ there is associated, in some manner, an element of $B$, which we denote by $f(x)$. Then $f$ is said to be a \myKeywordblue{function} from $A$ to $B$ (or a \myKeywordblue{mapping} of $A$ into $B$). The set $A$ is called the \myKeywordblue{domain} of $f$ (we also say fis defined on $A$), and the elements $f(x)$ are called the \myKeywordblue{values} of $f$. The set of all values of $f$ is called the \myKeywordblue{range} of $f$.
+    Consider two sets $A$ and $B$, whose elements may be any objects whatsoever, 
+    and suppose that with each element $x$ of $A$ there is associated, 
+    in some manner, an element of $B$, which we denote by $f(x)$. 
+    Then $f$ is said to be a \myKeywordblue{function} from $A$ to $B$ (or a \myKeywordblue{mapping} of $A$ into $B$). 
+    The set $A$ is called the \myKeywordblue{domain} of $f$ (we also say $f$ is defined on $A$), 
+    and the elements $f(x)$ are called the \myKeywordblue{values} of $f$.
+    The set of all values of $f$ is called the \myKeywordblue{range} of $f$.
 \end{mydef}
+\mybox{\myKeywordblue{Codomain}:  A set within which the values of a function lie (as opposed to the range, which is the set of values that the function actually takes). 
+
+\myKeywordblue{Range}:   If $f:D\rightarrow Y$ is a map (a.k.a. function, transformation, etc.) over a domain $D$, 
+then the range of $f$, also called the image of $D$ under $f$, 
+is defined as the set of all values that $f$ can take as its argument varies over $D$, i.e.,
+\begin{equation*}
+    \operatorname{Range}(f)=f(D)={f(\mathbf{X}):\mathbf{X} \in D}.
+\end{equation*}
+
+Note that among mathematicians, the word 
+``image''
+ is used more commonly than 
+``range.''
+
+
+The range is a subset of $Y$ and does not have to be all of $Y$.
+
+Unfortunately, term 
+``range''
+ is often used to mean domain--its precise opposite--in probability theory, with Feller (1968, p.200) and Evans et al. (2000, p.5) calling the set of values that a variate $X$ can assume (i.e., the set of values $x$ that a probability density function $P(x)$ is defined over) the 
+``range''
+, denoted by $R_X$ (Evans et al. 2000, p.5).
+
+Even worse, statistics most commonly uses 
+``range''
+ to refer to the completely different statistical quantity as the difference between the largest and smallest order statistics. In this work, this form of range is referred to as 
+``statistical range.''
+ 
+}
 
 \begin{mydef}
     \label{mydef:2.2}
