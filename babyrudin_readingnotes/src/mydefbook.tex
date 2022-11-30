@@ -131,5 +131,10 @@
 \newcommand\d{\ifmmode\dif\else\expandafter\daccent\fi}
 
 
+
 %% tikz setting
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+% 更换 \Re \Im 的符号为 Re 和 Im
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
