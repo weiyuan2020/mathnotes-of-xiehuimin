@@ -14,7 +14,7 @@
     Let $V_{1}$, be any neighborhood of $\mathbf{x}_1$. 
     If $V_{1}$ consists of all $\mathbf{y} \in \R^k$ 
     such that $\left| \mathbf{y} - \mathbf{x}_1 \right| < r$, 
-    the closure $\bar{V}_{1}$ of $V_1$ is the set of all $\mathbf{y} \in \R^k$ 
+    the closure $\overline{V}_{1}$ of $V_1$ is the set of all $\mathbf{y} \in \R^k$ 
     such that $\left| \mathbf{y} - \mathbf{x}_1 \right| \leq r$.
 
     Suppose $V_n$ has been constructed, 
@@ -22,16 +22,16 @@
     Since every point of $P$ is a limit point of $P$, 
     there is a neighborhood $V_{n+1}$ such that 
     \begin{inparaenum}[(i)]
-        \item $\bar{V}_{n+1} \subset V_n$,
-        \item $x_n \not\in \bar{V}_{n+1}$,
+        \item $\overline{V}_{n+1} \subset V_n$,
+        \item $x_n \not\in \overline{V}_{n+1}$,
         \item $V_{n+1} \cap P$ is not empty. 
     \end{inparaenum}
     By (iii), $V_{n+1}$ satisfies our induction hypothesis, 
     and the construction can proceed.
     
-    Put $K_n = \bar{V}_n \cap P$. 
-    Since $\bar{V}_n$ is closed and bounded, 
-    $\bar{V}_n$ is compact.
+    Put $K_n = \overline{V}_n \cap P$. 
+    Since $\overline{V}_n$ is closed and bounded, 
+    $\overline{V}_n$ is compact.
     Since $x_n \not\in K_{n+1}$, 
     no point of $P$ lies in $\cap_1^{\infty} K_n$.
     Since $K_n \subset P$, 
