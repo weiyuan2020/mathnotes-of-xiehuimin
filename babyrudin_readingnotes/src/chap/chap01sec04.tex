@@ -70,7 +70,7 @@ iff the appropriate one of following conditions is satisfied for integers $m$ an
 \end{enumerate}
 
 Formally, Archimedes' axiom states that if $AB$ and $CD$ are two line segments, then there exist a finite number of points $A_1, A_2, ..., A_n$ on $A$ union $B$ such that
-\[CD \equiv AA_1 \equiv A_1A_2 \equiv ... \equiv A_(n-1)A_n,\]
+\[CD \equiv AA_1 \equiv A_1A_2 \equiv ... \equiv A_{(n-1)}A_n,\]
 
 and $B$ is between $A$ and $A_n$ (Itô 1986, p.611). 
 A geometry in which Archimedes' lemma does not hold is called a non-Archimedean Geometry.
@@ -81,7 +81,7 @@ A geometry in which Archimedes' lemma does not hold is called a non-Archimedean 
         \item Let $A$ be the set of all $nx$, 
         where $n$ runs through the positive integers.
         If (a) were false, then $y$ would be an upper bound of $A$. 
-        But then $A$ has a least upper bound in $R$. 
+        But then $A$ has a \emph{least} upper bound in $\R$. 
         Put $\alpha = \sup A$. 
         Since $x > 0$, $\alpha - x < \alpha$, 
         and $\alpha - x$ is not an upper bound of $A$. 
@@ -96,13 +96,16 @@ A geometry in which Archimedes' lemma does not hold is called a non-Archimedean 
             n(y - x) > 1.
         \end{equation*}
         Apply (a) again, to obtain positive integers $m_1$ and $m_2$ 
-        such that $m_1 > nx$,
-        $m_2 > -nx$. Then
-        $-m_2 < nx < m_1$
+        such that $m_1 > nx$, $m_2 > -nx$. 
+
+        Then
+        \begin{equation*}
+            -m_2 < nx < m_1
+        \end{equation*}
         Hence there is an integer $m$ (with $-m_2 \leq m \leq m_1$) 
         such that
         \begin{equation*}
-            m - 1\leq 11x < m.
+            m - 1\leq n x < m.
         \end{equation*}
         If we combine these inequalities, we obtain
         \begin{equation*}
@@ -119,6 +122,7 @@ A geometry in which Archimedes' lemma does not hold is called a non-Archimedean 
 We shall now prove the existence of nth roots of positive reals. 
 This proof will show how the difficulty pointed out in the Introduction 
 (irrationality of $\sqrt{2}$) can be handled in $\R$.
+
 \begin{thm}
     \label{thm:1.21}
     For every real $x > 0$ and every integer $n> 0$ 
@@ -127,7 +131,12 @@ This proof will show how the difficulty pointed out in the Introduction
 \end{thm}
 
 This number $y$ is written $\sqrt[n]{x}$ or $x^{1/n}$.
-
+\mybox{
+    这里定义了$n$次根式, 最开始根式由二次方程的解引出, 将根式作为次方项处理.
+    有理数根式可以视为两个整数之比, 次方与开根号的顺序可以交换.
+    实数根式则视为有理数根式构成的序列的极限值.
+    复数根式需要通过欧拉公式 $e^{ix} = \cos x + i \sin x$ 理解.
+}
 \begin{proof}
     That there is at most one such $y$ is clear, 
     since $0 < y_1 < y_2$ implies $y_1^n < y_2^n$.

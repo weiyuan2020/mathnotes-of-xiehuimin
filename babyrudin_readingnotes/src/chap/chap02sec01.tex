@@ -1,29 +1,94 @@
 % chap02sec01
 \section{Finite, countable, and uncountable sets}
 
-We begin this section with a definition of the function concept.
+We begin this section with a definition of the \myKeywordblue{function} concept.
+
+\mybox{
+    Function
+
+    \url{https://mathworld.wolfram.com/Function.html}
+
+
+A function is a relation that uniquely associates members of one set with members of another set. 
+More formally, a function from $A$ to $B$ is an object $f$ such that every $a$ in $A$ is uniquely associated with an object $f(a)$ in $B$. 
+A function is therefore a many-to-one (or sometimes one-to-one) relation. 
+The set $A$ of values at which a function is defined is called its domain, 
+while the set $f(A)$ subset $B$ of values that the function can produce is called its range. 
+Here, the set $B$ is called the codomain of $f$.
+
+In the context of univariate, real-valued functions $f:A \subset \R\rightarrow \R$, 
+the fact that domain elements are mapped to unique range elements can be expressed graphically by way of the vertical line test.
+
+In some literature, the term 
+``map''
+ is synonymous with function. 
+Some caution must be exhibited, however, as it is not uncommon for the term map to denote a function with some sort of unspoken regularity assumption, 
+e.g., in point-set topology, where 
+``map''
+ sometimes refers to a function which is continuous with respect to some topology.
+}
+
+\mybox{
+
+\begin{center}
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+    
+    %Shape: Axis 2D [id:dp21476035781689284] 
+    \draw  (165.52,146.23) -- (314.72,146.23)(202.6,85.23) -- (202.6,213.23) (307.72,141.23) -- (314.72,146.23) -- (307.72,151.23) (197.6,92.23) -- (202.6,85.23) -- (207.6,92.23)  ;
+    %Shape: Wave [id:dp7563242846602689] 
+    \draw   (128.6,145.93) .. controls (132.68,149.37) and (136.58,152.63) .. (141.1,152.63) .. controls (145.62,152.63) and (149.52,149.37) .. (153.6,145.93) .. controls (157.68,142.5) and (161.58,139.23) .. (166.1,139.23) .. controls (170.62,139.23) and (174.52,142.5) .. (178.6,145.93) .. controls (182.68,149.37) and (186.58,152.63) .. (191.1,152.63) .. controls (195.62,152.63) and (199.52,149.37) .. (203.6,145.93) .. controls (207.68,142.5) and (211.58,139.23) .. (216.1,139.23) .. controls (220.62,139.23) and (224.52,142.5) .. (228.6,145.93) .. controls (232.68,149.37) and (236.58,152.63) .. (241.1,152.63) .. controls (245.62,152.63) and (249.52,149.37) .. (253.6,145.93) .. controls (257.68,142.5) and (261.58,139.23) .. (266.1,139.23) .. controls (270.62,139.23) and (274.52,142.5) .. (278.6,145.93) .. controls (282.68,149.37) and (286.58,152.63) .. (291.1,152.63) .. controls (294.73,152.63) and (297.96,150.53) .. (301.2,147.92) ;
+    %Shape: Parabola [id:dp3307772220116144] 
+    \draw   (167.6,53.23) .. controls (190.93,177.23) and (214.27,177.23) .. (237.6,53.23) ;
+    %Straight Lines [id:da017349586183422416] 
+    \draw    (148.3,200.53) -- (256.9,91.93) ;
+    
+\end{tikzpicture}
+\end{center}
+
+Examples of functions over the reals $\R$ include $\sin x$ (many-to-one), $x$ (one-to-one), $x^2$ (two-to-one except for the single point $x=0$), etc.
+
+Unfortunately, the term ``function'' is also used to refer to relations that map single points in the domain to possibly multiple points in the range. 
+These ``functions'' are called multivalued functions (or multiple-valued functions), and arise prominently in the theory of complex functions, 
+where the presence of multiple values engenders the use of so-called branch cuts.
+
+Several notations are commonly used to represent (non-multivalued) functions. 
+The most rigorous notation is $f:x\rightarrow f(x)$, which specifies that f is function acting upon a single number $x$ (i.e., f is a univariate, or one-variable, function) and returning a value $f(x)$. 
+To be even more precise, a notation like ``$f:R\rightarrow R$, where $f(x)=x^2$''
+ is sometimes used to explicitly specify the domain and codomain of the function. 
+The slightly different 
+``maps to''
+ notation $f:x|\rightarrow f(x)$ is sometimes also used when the function is explicitly considered as a 
+``map''.
+
+
+Generally speaking, the symbol $f$ refers to the function itself, while $f(x)$ refers to the value taken by the function when evaluated at a point $x$. 
+However, especially in more introductory texts, the notation $f(x)$ is commonly used to refer to the function $f$ itself (as opposed to the value of the function evaluated at $x$). 
+In this context, the argument $x$ is considered to be a dummy variable whose presence indicates that the function $f$ takes a single argument (as opposed to $f(x,y)$, etc.). 
+While this notation is deprecated by professional mathematicians, it is the more familiar one for most nonprofessionals. 
+Therefore, unless indicated otherwise by context, the notation $f(x)$ is taken in this work to be a shorthand for the more rigorous $f:x\rightarrow f(x)$.
+}
+
 \begin{mydef}
     \label{mydef:2.1}
-    % 2.1 Definition
-    Consider two sets $A$ and $B$, whose elements may be any objects whatsoever, and suppose that with each element $x$ of $A$ there is associated, in some manner, an element of $B$, which we denote by $f(x)$. Then $f$ is said to be a \emph{function} from $A$ to $B$ (or a \emph{mapping} of $A$ into $B$). The set $A$ is called the \emph{domain} of $f$ (we also say fis defined on $A$), and the elements $f(x)$ are called the \emph{values} of $f$. The set of all values of $f$ is called the \emph{range} of $f$.
+    Consider two sets $A$ and $B$, whose elements may be any objects whatsoever, and suppose that with each element $x$ of $A$ there is associated, in some manner, an element of $B$, which we denote by $f(x)$. Then $f$ is said to be a \myKeywordblue{function} from $A$ to $B$ (or a \myKeywordblue{mapping} of $A$ into $B$). The set $A$ is called the \myKeywordblue{domain} of $f$ (we also say fis defined on $A$), and the elements $f(x)$ are called the \myKeywordblue{values} of $f$. The set of all values of $f$ is called the \myKeywordblue{range} of $f$.
 \end{mydef}
 
 \begin{mydef}
     \label{mydef:2.2}
-    % 22 Definition 
     Let $A$ and $B$ be two sets and let $f$ be a mapping of $A$ into $B$.
-    If $E \subset A$, $f(E)$ is defined to be the set of all elements $f(x)$, for $x \in E$. We call $f(E)$ the image of $E$ under $f$. In this notation, $f(A)$ is the range of $f$. It is clear that $f(A) \subset B$. If $f(A) = B$, we say that $f$ maps $A$ \emph{onto} $B$. (Note that, according
-    to this usage, \emph{onto} is more specific than \emph{into}.)
+    If $E \subset A$, $f(E)$ is defined to be the set of all elements $f(x)$, for $x \in E$. We call $f(E)$ the image of $E$ under $f$. In this notation, $f(A)$ is the range of $f$. It is clear that $f(A) \subset B$. If $f(A) = B$, we say that $f$ maps $A$ \myKeywordblue{onto} $B$. (Note that, according
+    to this usage, \myKeywordblue{onto} is more specific than \myKeywordblue{into}.)
     \mybox{onto 满射? into 映射?} 
 
-    If $E \subset B$, $f^{-1}(E)$ denotes the set of all $x \in A$ such that $f(x)\in E$. We call $f^{-1}(E)$ the \emph{inverse image} of $E$ under $f$. If $y \in B$, $f^{-1}(y)$ is the set of all $x \in A$ such that $f(x) =y$. If, for each $y\in B$, $f^{-1}(y)$ consists of at most one element of $A$, then $f$ is said to be a 1-1 (\emph{one-to-one}) mapping of $A$ into $B$. This may also be expressed as follows: $f$ is a 1-1 mapping of $A$ into $B$ provided that $f(x_1) \neq f(x_2)$ whenever $x_1 \neq x_2$, $x_1 \in A$, $x_2 \in A$.
+    If $E \subset B$, $f^{-1}(E)$ denotes the set of all $x \in A$ such that $f(x)\in E$. We call $f^{-1}(E)$ the \myKeywordblue{inverse image} of $E$ under $f$. If $y \in B$, $f^{-1}(y)$ is the set of all $x \in A$ such that $f(x) =y$. If, for each $y\in B$, $f^{-1}(y)$ consists of at most one element of $A$, then $f$ is said to be a 1-1 (\myKeywordblue{one-to-one}) mapping of $A$ into $B$. This may also be expressed as follows: $f$ is a 1-1 mapping of $A$ into $B$ provided that $f(x_1) \neq f(x_2)$ whenever $x_1 \neq x_2$, $x_1 \in A$, $x_2 \in A$.
 
     (The notation $x_1 \neq x_2$, means that $x_1$ and $x_2$ are distinct elements; otherwise we write $x_1 = x_2$.)
 \end{mydef}
 
 \begin{mydef}
     \label{mydef:2.3}
-    If there exists a 1-1 mapping of $A$ \emph{onto} $B$, we say that $A$ and $B$ can be putin 1-1 correspondence, or that $A$ and $B$ have the same cardinal number, or, briefly, that $A$ and $B$ are equivalent, and we write $A\sim B$. This relation
+    If there exists a 1-1 mapping of $A$ \myKeywordblue{onto} $B$, we say that $A$ and $B$ can be putin 1-1 correspondence, or that $A$ and $B$ have the same cardinal number, or, briefly, that $A$ and $B$ are equivalent, and we write $A\sim B$. This relation
     clearly has the following properties :
 
     It is reflexive: $A\sim A$.
@@ -34,9 +99,12 @@ We begin this section with a definition of the function concept.
 
     Any relation with these three properties is called an equivalence relation.    
 \end{mydef}
-\mybox{等价关系:自反性, 对称性, 传递性}
+\mybox{等价关系:
+reflexive   自反性,
+symmetric   对称性,
+transitive  传递性.
 
-\mybox{集合等势是一种等价关系, 其满足自反性, 对称性, 传递性.}
+集合等势是一种等价关系, 其满足自反性, 对称性, 传递性.}
 
 \begin{mydef}
     \label{mydef:2.4}
@@ -69,12 +137,13 @@ We begin this section with a definition of the function concept.
         \end{array}
         \right.
     \end{equation*}
+    % todo 添加tikz注释
 }
 
 countable sets, enumerable, denumerable.
 
 $A, B \in$ finite set\\
-$A\sim B$ $\Longleftrightarrow$ $A, B$ contains sasme number of elements
+$A\sim B$ $\Longleftrightarrow$ $A, B$ contains same number of elements
 
 $A, B \in$ infinite set\\
 same number or elements? vague\\
@@ -85,13 +154,13 @@ same number or elements? vague\\
     \begin{equation*}
         f(n) = \left\{
             \begin{array}{ll}
-                \frac{n}{2} & (n \text{even})\\
-                -\frac{n-1}{2} & (n \text{odd})
+                \cfrac{n}{2} & (n \text{even})\\
+                -\cfrac{n-1}{2} & (n \text{odd})
             \end{array}
         \right.
     \end{equation*}
 \end{myExample}
-\mybox{$f(n)=(-1)^n\left\lfloor \frac{n}{2} \right\rfloor $}
+\mybox{$f(n)=(-1)^n\left\lfloor \cfrac{n}{2} \right\rfloor $}
 
 \begin{myRemark}
     a finite set cannot be equivalent to one of its proper subsets, but it's possible for infinite sets.
@@ -100,7 +169,8 @@ same number or elements? vague\\
 $J = 1,2,3,4,...$, $A = 0,1,-1,2,-2,...$,$J, A$are infinite sets, $J \subset A$.\\
 but there exist a function $f:J\rightarrow A$, $J \sim A$
 
-\begin{mydef}\label{mydef:2.7}
+\begin{mydef}
+    \label{mydef:2.7}
     $f(x)$, $x\in J = \mathbb{N}^+$.\\
     $\{x_n\}$, $x_1,x_2,x_3,...$\\
     $x_n$, terms of the sequence.\\
@@ -111,7 +181,8 @@ every countable set is range of a sequence of distinct terms.
 the elements of any countable set can be ``arranged in a sequence''.
 replace $J(\mathbb{N}^+)$ by $\mathbb{N} = \{x|, x\in Z,x \geq 0\}$, start with $0$ rather than $1$.
 
-\begin{thm}\label{thm:2.8}
+\begin{thm}
+    \label{thm:2.8}
     Every infinite subset of a countable set $A$ is countable
 \end{thm}
 
@@ -144,33 +215,41 @@ No uncountable set ca be a subset of a countable set.
     其势为$\aleph_0$, 康托尔使用一一对应关系作为无穷集合之间的等价关系.
     }
 
-\begin{mydef}\label{mydef:2.9}
+\begin{mydef}
+    \label{mydef:2.9}
     $\forall \alpha\in A$, $E_\alpha \subset \Omega$, $\{E_\alpha\}$ debites elements of $E_\alpha$. 
     collection of sets (or family of sets)  
     \mybox{sets of sets sounds strange}  
     union
-    \begin{equation}\label{eq:2.1}
+    \begin{equation}
+        \label{eq:2.1}
         S = \bigcup_{\alpha\in A} E_\alpha
     \end{equation}
     if $A$ consists of the integers $1,2,...,n$.
-    \begin{equation}\label{eq:2.2}
+    \begin{equation}
+        \label{eq:2.2}
         S = \bigcup_{m=1}^n E_m
     \end{equation}
-    \begin{equation}\label{eq:2.3}
+    \begin{equation}
+        \label{eq:2.3}
         S = E_1 \bigcup E_2 \bigcup \cdots \bigcup E_n.
     \end{equation}
     if $A$ is the set of all positive integers.
-    \begin{equation}\label{eq:2.4}
+    \begin{equation}
+        \label{eq:2.4}
         S = \bigcup_{m=1}^{\infty} E_m.
     \end{equation}
     intersection
-    \begin{equation}\label{eq:2.5}
+    \begin{equation}
+        \label{eq:2.5}
         P = \bigcap_{\alpha\in A} E_\alpha
     \end{equation}
-    \begin{equation}\label{eq:2.6}
+    \begin{equation}
+        \label{eq:2.6}
         S = \bigcap_{m=1}^n E_m = E_1 \cap E_2 \cap \cdots \cap E_n.
     \end{equation}
-    \begin{equation}\label{eq:2.7}
+    \begin{equation}
+        \label{eq:2.7}
         S = \bigcap_{m=1}^{\infty} E_m.
     \end{equation}
 
@@ -196,7 +275,8 @@ The commutative and associative laws are trivial:
 Thus the omission of parentheses in \ref{eq:2.3} and \ref{eq:2.6} is justified.
 
 The distributive law also holds:
-\begin{equation}\label{eq:2.10}
+\begin{equation}
+    \label{eq:2.10}
     A \cap \left( B \cup C\right) = 
     \left(A \cap B\right) \cup \left(A \cap C\right).
 \end{equation}
@@ -332,7 +412,8 @@ In fact, even the set of all algebraic numbers is countable (see Exercise 2).
 That not all infinite sets are, however, countable, is shown by the next
 theorem.
 
-\begin{thm}\label{thm:2.14}
+\begin{thm}
+    \label{thm:2.14}
     Theorem Let $A$ be the set of all sequences whose elements are the digits $0$ and $1$. This set $A$ is uncountable. 
 \end{thm}
 
