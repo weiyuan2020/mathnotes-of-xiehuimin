@@ -2,27 +2,30 @@
 \section{Compact sets}
 
 \mybox{
-    紧集 A subset $S$ of a topological space $X$ is compact if for every open cover of $S$ there exists a finite subcover of $S$. 
-    \url{https://mathworld.wolfram.com/CompactSet.html}
+    Compact set 紧集 \url{https://mathworld.wolfram.com/CompactSet.html}
+    
+    A subset $S$ of a topological space $X$ is compact if for every open cover of $S$ there exists a finite subcover of $S$. 
 
     紧集的任何开覆盖都有有限子覆盖
 
-    在 $\R^{n}$中, 下面三个条件等价:
-    有界闭（bounded and closed）；紧（compact）；列紧（sequentially compact）；
+    在 $\R^{n}$中, 下面三个条件等价: Theorem \ref{thm:2.41}
+    有界闭 (bounded and closed)；
+    紧 (compact)；
+    列紧 (sequentially compact)；
 }
 
 \begin{mydef}
     \label{mydef:2.31}
-    By an \emph{open cover} of a set $E$ in a metric space $X$ we mean a collection $\{G_{\alpha}\}$ of open subsets of $X$ such that $E \subset \cup_{\alpha} G_{\alpha}$.
+    By an \emph{open cover} of a set $E$ in a metric space $X$ we mean a collection $\sequence{G_{\alpha}}$ of open subsets of $X$ such that $E \subset \cup_{\alpha} G_{\alpha}$.
 \end{mydef}
 
 \begin{mydef}
     \label{mydef:2.32}
     A subset $K$ of a metric space $X$ is said to be \emph{compact} if every open cover of $K$ contains a \emph{finite} subcover.
 \end{mydef}
-\mybox{紧集的介绍从开覆盖开始, 紧集的每个开覆盖包含一个有限子覆盖.}
+\mybox{有限开覆盖定理. 紧集的介绍从开覆盖开始, 紧集的每个开覆盖包含一个有限子覆盖.}
 
-More explicitly, the requirement is that if $\{G_{\alpha}\}$ is an open cover of $K$, then there are finitely many indices $\alpha_1, ..., \alpha_n$ such that
+More explicitly, the requirement is that if $\sequence{G_{\alpha}}$ is an open cover of $K$, then there are finitely many indices $\alpha_1, ..., \alpha_n$ such that
 \begin{equation*}
     K \subset G_{\alpha_{1}} \cup \cdots \cup G_{\alpha_{n}}.
 \end{equation*}
@@ -53,7 +56,7 @@ it does make sense to talk of \emph{compact} metric spaces.
 
 \begin{proof}
     % Proof 
-    Suppose $K$ is compact relative to $X$, and let $\{V_\alpha\}$ be a collection of sets, open relative to $Y$, such that $K \subset \cup_\alpha V_\alpha$ theorem 2.30, there are sets $G_\alpha$, open relative to $X$, such that $V_\alpha = Y \cap G_\alpha$, for all $\alpha$; and since $K$ is compact relative to $X$, we have
+    Suppose $K$ is compact relative to $X$, and let $\sequence{V_\alpha}$ be a collection of sets, open relative to $Y$, such that $K \subset \cup_\alpha V_\alpha$ theorem 2.30, there are sets $G_\alpha$, open relative to $X$, such that $V_\alpha = Y \cap G_\alpha$, for all $\alpha$; and since $K$ is compact relative to $X$, we have
     \begin{equation}\label{eq:2.22}
         K \subset G_{\alpha_{1}} \cup \cdots \cup G_{\alpha_{n}}.
     \end{equation}
@@ -125,8 +128,8 @@ it does make sense to talk of \emph{compact} metric spaces.
 \begin{thm}
     \label{thm:2.36}
     % 2.36 Theorem
-    If $\{K_\alpha\}$ is a collection of compact subsets of a metric space $X$ 
-    such that the intersection of every finite subcollection of $\{K_\alpha\}$ is nonempty, 
+    If $\sequence{K_\alpha}$ is a collection of compact subsets of a metric space $X$ 
+    such that the intersection of every finite subcollection of $\sequence{K_\alpha}$ is nonempty, 
     then $\cap K_\alpha$ is nonempty.    
 \end{thm}
 
@@ -146,7 +149,7 @@ is empty, in contradiction to our hypothesis.
 \end{proof}
 
 \begin{myCorollary*}
-    If $\{K_\alpha\}$ is a sequence of nonempty compact sets such that $K_n \supset K_{n+1} (n=1,2,3,...)$, then $\cap_1^\infty K_n$ is not empty.
+    If $\sequence{K_\alpha}$ is a sequence of nonempty compact sets such that $K_n \supset K_{n+1} (n=1,2,3,...)$, then $\cap_1^\infty K_n$ is not empty.
 \end{myCorollary*}
 
 \begin{thm}
@@ -164,7 +167,7 @@ is empty, in contradiction to our hypothesis.
 
 \begin{thm}
     \label{thm:2.38}
-    If $\{I_n\}$ is a sequence of intervals in $\R^1$, 
+    If $\sequence{I_n}$ is a sequence of intervals in $\R^1$, 
     such that $I_n \supset I_{n+1}, (n=1,2,3,...)$, 
     then $\cap_1^\infty I_n$ is not empty.
 \end{thm}
@@ -182,7 +185,7 @@ is empty, in contradiction to our hypothesis.
     \end{equation*}
     so that $x \leq b_m$ for each $m$. 
     Since it is obvious that $a_m \leq x$, 
-    we see that $x \in I_m$ for $m = l, 2, 3, ...$.
+    we see that $x \in I_m$ for $m = 1, 2, 3, ...$.
 \end{proof}
 
 \begin{thm}
@@ -228,7 +231,7 @@ is empty, in contradiction to our hypothesis.
     Put
     \begin{equation*}
         \delta = 
-        \left\{ \sum_{1}^{k} (b_j - a_j)^2 \right\}^{1/2}
+        \left\sequence{ \sum_{1}^{k} (b_j - a_j)^2 \right}^{1/2}
     \end{equation*} 
     Then $ \left| \mathbf{x-y} \right| \leq \delta$, if $x \in I, y \in I$.
     
@@ -271,6 +274,13 @@ The equivalence of (a) and (b) in the next theorem is known as the Heine-Borel t
         \item Every infinite subset of $E$ has a limit point in $E$.
     \end{enumerate}
 \end{thm}
+
+\mybox{
+    在 $\R^{n}$中, 下面三个条件等价:
+    有界闭 (bounded and closed)；
+    紧 (compact)；
+    列紧 (sequentially compact)；
+}
 
 \begin{proof}
     If (a) holds, then $E \subset I$ for some $k$-cell $I$, 
