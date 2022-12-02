@@ -28,8 +28,7 @@ e.g., in point-set topology, where
  sometimes refers to a function which is continuous with respect to some topology.
 }
 
-\mybox{
-
+%  too long notes out side box
 \begin{center}
     \begin{tikzpicture}[x=0.7pt,y=0.7pt,yscale=-1,xscale=1]
     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
@@ -62,7 +61,10 @@ The slightly different
 ``map''.
 
 
-Generally speaking, the symbol $f$ refers to the function itself, while $f(x)$ refers to the value taken by the function when evaluated at a point $x$. 
+
+
+\mybox{
+    Generally speaking, the symbol $f$ refers to the function itself, while $f(x)$ refers to the value taken by the function when evaluated at a point $x$. 
 However, especially in more introductory texts, the notation $f(x)$ is commonly used to refer to the function $f$ itself (as opposed to the value of the function evaluated at $x$). 
 In this context, the argument $x$ is considered to be a dummy variable whose presence indicates that the function $f$ takes a single argument (as opposed to $f(x,y)$, etc.). 
 While this notation is deprecated by professional mathematicians, it is the more familiar one for most nonprofessionals. 
@@ -189,8 +191,8 @@ same number or elements? vague\\
     \begin{equation*}
         f(n) = \left\{
             \begin{array}{ll}
-                \cfrac{n}{2} & (n \text{even})\\
-                -\cfrac{n-1}{2} & (n \text{odd})
+                \cfrac{n}{2} & (n \text{  even})\\
+                -\cfrac{n-1}{2} & (n \text{  odd})
             \end{array}
         \right.
     \end{equation*}
@@ -292,7 +294,23 @@ No uncountable set ca be a subset of a countable set.
 \end{mydef}
 
 \begin{myExample}
-    some example of set relation
+    % some example of set relation
+    \begin{asparaenum}[(a)]
+        \item Suppose $E_1$ consists of $1,2,3$ and 
+        $E_2$ consists of $2,3,4$.
+        Then $E_1 \cup E_2$ consists of $1,2,3,4$,
+        whereas $E_1 \cap E_2$ consists of $2,3$.
+        \item Let $A$ be the set of real number $x$ such that $0< x\leq 1$. 
+        For every $x \in A$, let $E_x$ be the set of real numbers $y$ such that $0 < y < x$. Then 
+        \begin{asparaenum}[(i)]
+            \item \[E_y \subset E_x \text{ if and only if } 0 < x \leq z \leq 1;\] 
+            \item \[\bigcup_{x\in A}E_x = E_1;\]
+            \item \[\bigcap_{x\in A}E_x \text{ is empty};\]
+        \end{asparaenum}
+        (i) and (ii) are clear.
+        To prove (iii), we note that for every $y>0$, $y \not\in E_x$ if $x < y$. 
+        Hence $y \not\in \cap_{x\in A}E_x$.
+    \end{asparaenum}
 \end{myExample}
 
 \begin{myRemark}
@@ -339,7 +357,7 @@ If $0$ denotes the empty set, then
 If $A \subset B$, then
 \begin{equation}
     \begin{array}{cc}
-        A \bigcup B = B, & A \bigcap B = A.
+        A \cup B = B, & A \cap B = A.
     \end{array}
 \end{equation}
 
@@ -426,8 +444,8 @@ For $T$ is equivalent to a subset of \ref{eq:2.15}.
     \end{equation}
     For every fixed $b$, the set of pairs $(b, a)$ is equivalent to $A$, and hence countable. 
     Thus $B_n$ is the union of a countable set of countable sets. 
-    By Theorem \ref{thm:2.12}, Bn is countable.
-The theorem follows by induction.
+    By Theorem \ref{thm:2.12}, $B_n$ is countable.
+    The theorem follows by induction.
 \end{proof}
 
 \begin{myCorollary*}

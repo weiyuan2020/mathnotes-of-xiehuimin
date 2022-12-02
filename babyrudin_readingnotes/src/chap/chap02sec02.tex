@@ -32,33 +32,34 @@ which are discussed in Chaps. 7 and 11, respectively.
 
     Ralph Smith’s Formal Script Font (rsfs): Use the “mathrsfs” package.
     usepackage{mathrsfs}
-    ...
+    
     $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 
-    $\mathscr{abcdefghijklmnopqrstuvwxyz}$
+    % $\mathscr{abcdefghijklmnopqrstuvwxyz}$
 
-    % $\mathrsfs{abcdefghijklmnopqrstuvwxyz}$
-    $\mathcal{abcdefghijklmnopqrstuvwxyz}$
-    
+    % % $\mathrsfs{abcdefghijklmnopqrstuvwxyz}$
+    % $\mathcal{abcdefghijklmnopqrstuvwxyz}$ % 小写字母打印出来是乱码
     $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+    $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 }
 
-\begin{mydef}\label{mydef:2.17}
-% 2.17 Definition 
-By the \emph{segment} $(a, b)$ we mean the set of all real numbers $x$
+\begin{mydef}
+    \label{mydef:2.17}
+By the \myKeywordblue{segment} $(a, b)$ we mean the set of all real numbers $x$
 such that $a < x <b$.
 
-By the \emph{interval} $[a. b]$ we mean the set of all real numbers $x$ such that $a \leq x \leq b$
+By the \myKeywordblue{interval} $[a. b]$ we mean the set of all real numbers $x$ such that $a \leq x \leq b$
 
 Occasionally we shall also encounter ``half-open intervals'' $[a, b)$ and $(a, b]$; the first consists of all $x$ such that $a \leq x < b$, the second of all $x$ such that $a < x \leq b$
 \end{mydef}
 
-If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\R^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \emph{$k$-cell}.\\
+If $a_i <b_i$ for $i=1,...,k$, the set of all points $\mathbf{x} =(x_1, ..., x_k)$ in $\R^k$ whose coordinates satisfy the inequalities $a_i \leq x_i \leq _i (1 \leq i \leq k)$ is called a \myKeywordblue{$k$-cell}.\\
 Thus a $1$-cell is an interval, a $2$-cell is a rectangle, etc.
 
-If $\mathbf{x}\in \R^k$ and $r > 0$. the \emph{open (or closed) ball} $B$ with center at $\mathbf{x}$ and radius $r$ is defined to be the set of all $\mathbf{y} \in \R^k$ such that $|\mathbf{y} - \mathbf{x}| <r$ (or $|\mathbf{y} - \mathbf{x}| \leq r$).
+If $\mathbf{x}\in \R^k$ and $r > 0$. the \myKeywordblue{open (or closed) ball} $B$ with center at $\mathbf{x}$ and radius $r$ is defined to be the set of all $\mathbf{y} \in \R^k$ such that $|\mathbf{y} - \mathbf{x}| <r$ (or $|\mathbf{y} - \mathbf{x}| \leq r$).
 
-We call a set $E \subset \R^k$ \emph{convex} if
+We call a set $E \subset \R^k$ \myKeywordblue{convex} if
 
 \begin{equation*}
     \lambda\mathbf{x} + (1 - \lambda)\mathbf{y} \in E
@@ -66,7 +67,7 @@ We call a set $E \subset \R^k$ \emph{convex} if
 
 whenever $\mathbf{x} \in E$, $\mathbf{y} \in E$, and $0 < \lambda < 1$.
 
-For example, \emph{balls are convex}. For if |y -x| <r, |z-x| <r, and
+For example, \myKeywordblue{balls are convex}. For if |y -x| <r, |z-x| <r, and
 $0 < \lambda <1$, we have
 \begin{align*}
     |\lambda \mathbf{y} + (1-\lambda) \mathbf{z} - \mathbf{x}|
@@ -86,16 +87,16 @@ The same proof applies to closed balls. It is also easy to see that $k$-cells ar
 \begin{mydef}\label{mydef:2.18}
     Definition Let $X$ be a metric space. All points and sets mentioned below are understood to be elements and subsets of $X$.
     \begin{enumerate}[(a)]
-        \item A \emph{neighborhood} of $p$ is a set $N_r(p)$ consisting of all $q$ such that $d(p, q) < r$,for some $r > 0$. The number $r$ is called the \emph{radius} of $N_r(p)$.
-        \item A point $p$ is a \emph{limit point} of the set $E$ if \emph{every} neighborhood of $p$ contains a point $q \neq p$ such that $q \in E$.
-        \item If $p \in E$ and $p$ is not a limit point of $E$, then $p$ is called an \emph{isolated point} of $E$.
-        \item $E$ is \emph{closed} if every limit point of $E$ is a point of $E$.
-        \item A point $p$ is an \emph{interior} point of $E$ if there is a neighborhood $N$ of $p$ such that $N \subset E$.
-        \item $E$ is \emph{open} if every point of $E$ is an interior point of $E$.
-        \item The \emph{complement} of $E$ (denoted by $E^c$)is the set of all points $p \in X$ such that $p \not\in E$.
-        \item $E$ is \emph{perfect} if $E$ is closed and if every point of $E$ is a limit point of $E$.
-        \item $E$ is \emph{bounded} if there is a real number $M$ and a point $q \in X$ such that $d(p,q)< M$ for all $p \in E$.
-        \item $E$ is \emph{dense} in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
+        \item A \myKeywordblue{neighborhood} of $p$ is a set $N_r(p)$ consisting of all $q$ such that $d(p, q) < r$,for some $r > 0$. The number $r$ is called the \myKeywordblue{radius} of $N_r(p)$.
+        \item A point $p$ is a \myKeywordblue{limit point} of the set $E$ if \myKeywordblue{every} neighborhood of $p$ contains a point $q \neq p$ such that $q \in E$.
+        \item If $p \in E$ and $p$ is not a limit point of $E$, then $p$ is called an \myKeywordblue{isolated point} of $E$.
+        \item $E$ is \myKeywordblue{closed} if every limit point of $E$ is a point of $E$.
+        \item A point $p$ is an \myKeywordblue{interior} point of $E$ if there is a neighborhood $N$ of $p$ such that $N \subset E$.
+        \item $E$ is \myKeywordblue{open} if every point of $E$ is an interior point of $E$.
+        \item The \myKeywordblue{complement} of $E$ (denoted by $E^c$)is the set of all points $p \in X$ such that $p \not\in E$.
+        \item $E$ is \myKeywordblue{perfect} if $E$ is closed and if every point of $E$ is a limit point of $E$.
+        \item $E$ is \myKeywordblue{bounded} if there is a real number $M$ and a point $q \in X$ such that $d(p,q)< M$ for all $p \in E$.
+        \item $E$ is \myKeywordblue{dense} in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
     \end{enumerate}
 \end{mydef}
 
@@ -109,11 +110,13 @@ Let us note that in $\R^1$ neighborhoods are segments, whereas in $\R^2$ neighbo
     closed set 闭集, open set 开集, closure set 补集.\\
     perfect set 完全集, complete set 完备集, 
     dense 稠密 (有理数集 $\Q $ 是稠密的, 与之对应 实数集 $\R$ 是连续的.)
+
+    这里闭集的定义是包含所有极限点的集合, 而开集的定义是所有点均为内点. 乍一看这两个定义是不相关的, 但后续会证明开集的补集是闭集, 闭集的补集是开集. 这种定义与过去的定义不冲突, 并且更容易理解空集既是开集也是闭集.
 }
 
 \begin{thm}
     \label{thm:2.19}
-    Every neighborhood is un open set.
+    Every neighborhood is an open set.
 \end{thm}
 \begin{proof}
     Consider a neighborhood $E = N_r(p)$, 
@@ -260,10 +263,8 @@ but it is an open subset of $\R^1$.
 \end{proof}
 
 \mybox{
-    无限开集的并仍是开集, 有限开集的交仍是开集
-
-    无限闭集的交仍是闭集, 有限闭集的并仍是闭集
-
+    无限开集的并仍是开集, 有限开集的交仍是开集\\
+    无限闭集的交仍是闭集, 有限闭集的并仍是闭集\\
     下面给出一个反例
 }
 
@@ -280,8 +281,22 @@ but it is an open subset of $\R^1$.
 
 \begin{mydef}
     \label{mydef:2.26}
-    If $X$ is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the \emph{closure} of $E$ is the set $\overline{E}=E \cup E'$.
-\end{mydef}
+    If $X$ is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the \myKeywordblue{closure} of $E$ is the set $\overline{E}=E \cup E'$.
+\end{mydef} 
+\mybox{
+    Closure 闭包
+
+The term "closure" has various meanings in mathematics.
+
+The topological closure of a subset $A$ of a topological space $X$ is the smallest closed subset of $X$ containing $A$.
+
+If $R$ is a binary relation on some set $A$, then $R$ has reflexive, symmetric and transitive closures, each of which is the smallest relation on $A$, with the indicated property, containing $R$. Consequently, given any relation $R$ on any set $A$, there is always a smallest equivalence relation on $A$ containing $R$.
+
+For some arbitrary property $P$ of relations, the relation $R$ need not have a $P$-closure, i.e., there need not be a smallest relation on $A$ with the property $P$, and containing $R$. 
+For example, it often happens that a relation does not have an antisymmetric closure.
+
+In algebra, the algebraic closure of a field $F$ is a field $\bar{F}$ which can be said to be obtained from $F$ by adjoining all elements algebraic over $F$.
+}
 
 \begin{thm}
     \label{thm:2.27}
@@ -319,7 +334,7 @@ Compare this with the examples in Sec. 1.9.
 \begin{myRemark}
     Suppose $E \subset Y \subset X$, where $X$ is a metric space. To say that $E$ is an open subset of $X$ means that to each point $p \in E$ there is associated a positive number $r$ such that the conditions $d(p,q) < r$ , $g \in X$ imply that $q \in E$. But we have already observed (Sec. 2.16) that $Y$ is also a metric space, so that our definitions may equally well be made within $Y$. To be quite explicit, let us say that 
     
-    $E$ is \emph{open relative to $Y$} if to each $p \in E$ there is associated an $r > 0$ such that $q \in E$ whenever $d(p,q) <r$ and $g \in Y$. 
+    $E$ is \myKeywordblue{open relative to $Y$} if to each $p \in E$ there is associated an $r > 0$ such that $q \in E$ whenever $d(p,q) <r$ and $g \in Y$. 
     
     Example 2.21(g) showed that a set may be open relative to $Y$ without being an open subset of $X$. However, there is a simple relation between these concepts, which we now state.
 \end{myRemark}
