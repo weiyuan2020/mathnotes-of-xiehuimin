@@ -4,12 +4,15 @@
 Unless the contrary is explicitly stated, all numbers that are mentioned in these exercises are understood to be real.
 
 \begin{myExercise}
+    \label{ex:1.1}
     $r \in \Q $, $r \neq 0$, $x \not\in \Q $, $x \in \R$
     $r+x, rx$ $\not\in \Q , \in \R$
 \end{myExercise}
 
+
 \mySolve
-    if $r+x \in \Q $, there exists $m, n \in \mathbb{N}, n \neq 0$, s.t. $r+x = \frac{m}{n}$.
+
+if $r+x \in \Q $, there exists $m, n \in \mathbb{N}, n \neq 0$, s.t. $r+x = \frac{m}{n}$.
     $\because r\in \Q $, $r = \frac{p}{q}, p,q \in \mathbb{N}, q \neq 0$.
     \begin{align*}
         r + x &= \frac{m}{n}\\
@@ -26,22 +29,28 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
 
 
 \begin{myExercise}
-   prove that there is no rational number whose square is $12$. 
+    \label{ex:1.2}
+    prove that there is no rational number whose square is $12$. 
 \end{myExercise}
 
+
 \mySolve
-    If $\left(p/q\right)^2 = 12$, $p^2/q^2 = 12$. $p$ must be even, $p = 2m$.
+
+If $\left(p/q\right)^2 = 12$, $p^2/q^2 = 12$. $p$ must be even, $p = 2m$.
     $(2m)^2/q^2 = 12$, $m^2/q^2=3$. 
     $3$ is a prime number, $m = 3n$, $(3n)^2/q^2 = 3$, $3n^2 = q^2$, $q$ have a factor $3$,
     $\gcd(p,q) = \gcd(m,q) = \gcd(n,q) = 3 \neq 1$, contradict to the fact that $p,q$ are coprime.
 
 
 \begin{myExercise}
+    \label{ex:1.3}
     Prove Proposition \ref{myProposition:1.15}.
 \end{myExercise}
 
+
 \mySolve
-    \begin{asparaenum}[(a)]
+
+\begin{asparaenum}[(a)]
         \item $x \neq 0$, $xy \neq xz$. $x \neq 0$, $\exists 1/x$, $1/x\cdot x = 1$.
         \begin{align*}
             y & = \left(\frac{1}{}x \cdot x\right) y = \frac{1}{x}(xy)\\
@@ -59,18 +68,22 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
 
 
 \begin{myExercise}
+    \label{ex:1.4}
     $E = \varnothing$, $E$ 为有序的非空子集.
     $\alpha$ 是 $E$ 的下界
     $\beta$ 是 $E$ 的上界
     Prove that $\alpha \leq \beta$.
 \end{myExercise}
 
+
 \mySolve
-   $\forall x\in E$, $\alpha \leq x$, $x\leq \beta$.
+
+$\forall x\in E$, $\alpha \leq x$, $x\leq \beta$.
    $\alpha \leq x \leq \beta$, $\alpha \leq \beta$.
 
 
 \begin{myExercise}
+    \label{ex:1.5}
     $A$ 为 $\R$ 的非空子集, $A$ 有下界
     \begin{equation*}
         -A = \{-x|x\in A\}
@@ -78,7 +91,9 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
     Prove that $\inf A = -\sup (-A)$
 \end{myExercise}
 
+
 \mySolve
+
 (rudin)
     $\beta = \inf A$, $\alpha = \sup (-A)$.
     \begin{enumerate}[(1)]
@@ -91,6 +106,7 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
 
 
 \begin{myExercise}
+    \label{ex:1.6}
     Fix $b>1$,
     \begin{asparaenum}[(a)]
         \item If $m, n, p, q$ are integers, $n > 0, q > 0$, and $r = m/n = p/q$, prove that
@@ -112,8 +128,10 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
         \item Prove that $b^{x+y} = b^x b^y$ for all real $x$ and $y$.
     \end{asparaenum}
 \end{myExercise}
+
 \mySolve
-    \begin{asparaenum}[(a)]
+
+\begin{asparaenum}[(a)]
         \item $\frac{m}{n} = \frac{p}{q}$, $m,n,p,q \in \N$, $n>0,q>0$.
         \begin{equation*}
             b>1, \quad
@@ -170,38 +188,78 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
 \mybox{使用大于等于和小于等于同时成立证明等式}
 
 \begin{myExercise}
+    \label{ex:1.7}
     Fix $b>1, y>0$, and prove that there is a unique real $x$ such that $b^x =y$, by
     completing the following outline. (This $x$ is called the logarithm of $y$ to the base $b$.)
     \begin{enumerate}[(a)]
         \item For any positive integer $n$, $b^n - 1 \geq n(b- 1)$.
-        \item Hence $b- 1 \geq n(b^{1/n}- 1)$.
-        \item If $t>1$ and $n> (b-1)/(t- 1)$, then $b^{1/n} < t$.
+        \item Hence $b- 1 \geq n(b^{1/n}-1)$.
+        \item If $t>1$ and $n> (b-1)/(t-1)$, then $b^{1/n} < t$.
         \item If $w$ is such that $b^w < y$, then $b^{w+(1/n)} < y$ for sufficiently large $n$; to see this, apply part (c) with $t =y \cdot b^{-w}$.
         \item If $b^w > y$, then $b^{w-(1/n)} > y$ for sufficiently large $n$.
         \item Let $A$ be the set of all $w$ such that $b^w < y$, and show that $x = \sup A$ satisfies $b^x =y$.
         \item Prove that this $x$ is unique.
     \end{enumerate}
 \end{myExercise}
+
 \mySolve
-    \begin{asparaenum}[(a)]
-        \item $b^n - 1 = (b-1)(b^{n-1} + b^(n-2) + \cdots + 1)$
+
+\begin{asparaenum}[(a)]
+        \item $b^n - 1 = (b-1)(b^{(n-1)} + b^{(n-2)} + \cdots + 1) > n(b-1)$.
+        \item $b \rightarrow b^{1/n}$, $b - 1 = \left( b^{1/n} \right)^n -1 > n\left( b^{1/n}-1 \right)$.
+        \item $b-1 > n(b^{1/n}-1) > \frac{b-1}{t-1}(b^{1/n}-1)$. $\because b-1 > 0$, $1 > \frac{b^{1/n}-1}{t-1}$, $\because t-1 >0$, $t-1 > b^{1/n}-1$, $b^{1/n} < t$.
+        \item $t = y \cdot b^{-w} > 1$, $n > (b-1)/(t-1)$ is sufficiently large, $b^{1/n} < t = y \cdot b^{-w} $, $b^{w+(1/n)}<y$.
+        \item let $t = b^{w}/y > 1$, $n > (b-1)/(t-1)$ is sufficiently large, $b^{(1/n)} < t$, $b^{w-(1/n)}>y$.
+        \item $A = \{w|b^w<y\}$. let $x = \sup A$. if $b^x<y$, by (d) there exist $n$ s.t. $^{x+(1/n)}<y$, $x+(1/n) \in A$, $x \neq \sup A$. Else if $b^x>y$, there exist $n$ (large enough) s.t. $b^{x-(1/n)}>y$, $x-(1/n) \notin A$, $x \neq \sup A$. Therefore $b^x = y$ when $x = \sup A$.
+        \item Suppose there are two different number $x_1 \neq x_2$, $x_1 = \sup A$, $x_2 = \sup A$, let $x_1 > x_2$, there exists $x_1 > y >x_2$, $\because x_1 = \sup A$, $y \in A$, but we also have $x_2 = \sup A$, $y \not\in A$. therefore $x_1 \nleq x_2$ and vice versa. So that $x = \sup A$ is unique.
     \end{asparaenum}
 
 
 
 \begin{myExercise}
+    \label{ex:1.8}
     Prove that no order can be defined in the complex field that turns it into an ordered field. \\
     Hint: $-1$ is a square.
 \end{myExercise}
 
+\mybox{
+    这里序的定义的原则就是要使复数域成为 ordered field, 即满足 ordered field 的几条性质。
+没必要穷举, 只需根据 ordered field 的定义性质去推出矛盾。
+因为是全序, 所以有$i > 0$或$i < 0$。
+若$i > 0$, 则有$-1 > 0$。由此可得..., 矛盾。
+若$i < 0$, 则..., 矛盾。
+省略部分你来补全吧。
+
+A1:  与 ordered field 第二条性质矛盾。2，则$-i> 0$，有$(-i)^2=-1<0$，同上与第二条性质矛盾。对吧？
+
+Q2: 有点问题，因为$-1$与0的大小关系并不是已知的。要由$-1 > 0$得到$(-1)² = 1 > 0$，又$0 = -1+1 > 0+1 = 1$，矛盾。
+\url{https://tieba.baidu.com/p/4026030436}
+}
+
+\mySolve
+$-1+1=0, 1>0, \therefore -1<0$, $\N is an ordered set$, We already known that $\Q, \R$ are ordered field. (整数集, 有理数域, 实数域)
+
+If all complex number can made up an ordered field, there must exist an order in it. In this order, $i \neq 0$. if $i > 0$, $-1 = (i)^2 > 0$, contradict to the fact in $\R$. Else if $i < 0$, $-i > 0$, $(-i)^2 = -1 > 0$, still wrong. So the complex field can't be an ordered set.
+
+
 \begin{myExercise}
+    \label{ex:1.9}
     Suppose $z=a+ bi$, $w=c+di$. Define $z<w$ if $a<c$, and also if $a=c$ but
     $b < d$. Prove that this turns the set of all complex numbers into an ordered set.
     (This type of order relation is called a \emph{dictionary order}, or \emph{lexicographic order}, for
     obvious reasons.) Does this ordered set have the least-upper-bound property?
 \end{myExercise}
 
+\mySolve
+
+This ordered set doesn't have the least-upper-bound property.\\
+Suppose $S = {x+iy| x<a \text{ or } x=a, y<b}$,
+Let $E = {x+iy|x<a,y<b}$ $\sup E = a+ib \not\in S$.
+the least-upper-bound property : $E \subset S, E \neq \varnothing$, $E$ is bounded above, $\sup E \in S$.
+Therefore this ordered set doesn't have the least-upper-bound property.
+
 \begin{myExercise}    
+    \label{ex:1.10}
     Suppose $z = a + bi$, $w =u + iv$, and
     \begin{equation*}
         a = \left(\frac{|w|+u}{2}\right)^{1/2},\qquad
@@ -211,12 +269,35 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
     number (with one exception!) has two complex square roots.
 \end{myExercise}
 
+\mySolve
+\begin{align*}
+    z^2 &= (a+bi)^2 = a^2 + 2abi - b^2 \\
+    &= \frac{|w|+u}{2} + 2\left( \frac{|w|^2-u^2}{4} \right)^{1/2}i - \frac{|w|-u}{2}\\
+    &= u + 2 \sqrt{\frac{u^2 + v^2 - u^2}{4}}i \\
+    &= u + |v| i 
+\end{align*}
+$v \geq 0, |v| = v$, $x^2 = w$.
+
+$\bar{z}^2 = u - |v| i = w$ if $v \leq 0$(0 的情况是否重复了?).
+
+$\forall w$, there exist $z$, s.t. $z^2 = w$, $(-z)^2 = w$.
+If $w = 0$, $z = -z = 0$, other complex number have two complex square roots.
+
+
 \begin{myExercise}
+    \label{ex:1.11}
     If $z$ is a complex number, prove that there exists an $r \geq 0$ and a complex number
     $w$ with $|w| = 1$ such that $z =rw$. Are $w$ and $r$ always uniquely determined by $z$?
 \end{myExercise}
 
+\mySolve 
+$z = rw$, $r \in \R$, $r \geq 0$, $|w| = 1$.
+$|z| = |r||w| = |r|$, $w = \frac{z}{r} = \frac{z}{|z|}$,
+therefore $r,w$ are uniquely determined by $z$.
+
+
 \begin{myExercise}
+    \label{ex:1.12}
     If $z_1 ,..., z_n$ are complex, prove that
     \begin{equation*}
         |z_1 + z_2 ...+ z_n| \leq 
@@ -224,25 +305,79 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
     \end{equation*}
 \end{myExercise}
 
+\mySolve 
+\begin{align*}
+    |z_1 + z_2| &\leq |z_1| + |z_2| \\
+    |z_1 + z_2 + z_3| &\leq |z_1| + |z_2 + z_3| \leq |z_1| + |z_2| + |z_3| \\
+    \text{Suppose } |z_1 + \cdots + z_{n-1}| &\leq |z_1| + \cdots |z_{n-1}| \\ 
+    |z_1 + \cdot + z_{n-1} + z_n| &\leq |z_1| + \cdots |z_{n-1} + z_n| 
+    &\leq |z_1| + \cdots |z_{n-1}| + |z_n| \\ 
+\end{align*}
+
+
 \begin{myExercise}
+    \label{ex:1.13}
     If $x, y$ are complex, prove that
     \begin{equation*}
         ||x|-|y|| \leq |x-y|.
     \end{equation*}
 \end{myExercise}
 
+\mySolve 
+\begin{align*}
+    x &= x - y + y \\
+    |x| &\leq |x-y| + |y| 
+\end{align*}
+\begin{align*}
+    |x| - |y| &\leq  |x-y| \\
+    |y| - |x| &\leq  |y-x| = |x-y| \\
+    \left| |x| - |y| \right| &\leq |x - y|
+\end{align*}
+
+
 \begin{myExercise}
+    \label{ex:1.14}
     If $z$ is a complex number such that $|z| = 1$, that is, such that $z\bar{z} = 1$, compute
     \begin{equation*}
         |1+z|^2 + |1-z|^2
     \end{equation*}
 \end{myExercise}
 
+\mySolve
+\begin{align*}
+    |1+z|^2 &= (1+z)\overline{(1+z)} = (1+z)(1+\overline{z}) \\
+    &= 1+z+\overline{z}+z\overline{z}
+\end{align*}
+\begin{align*}
+    |1-z|^2 &= (1-z)\overline{(1-z)} = (1-z)(1-\overline{z}) \\
+    &= 1-z-\overline{z}+z\overline{z}
+\end{align*}
+\begin{equation*}
+    |1+z|^2 + |1-z|^2 = 2(1+z\overline{z}) = 2\times 2 = 4
+\end{equation*}
+
+
 \begin{myExercise}
+    \label{ex:1.15}
     Under what conditions does equality hold in the Schwarz inequality?
 \end{myExercise}
 
+\mySolve
+\begin{equation*}
+    \left|\sum a_j \overline{b_j}\right| \leq \sum |a_j|^2 \sum |b_j|^2 
+\end{equation*}
+\begin{align*}
+    |a_j + \lambda b_j|^2 
+    &= (a_j + \lambda b_j) \overline{(a_j + \lambda b_j)} \\
+    &= (a_j + \lambda b_j) (\overline{a_j} + \lambda \overline{b_j}) \\
+    &= |a_j|^2 + \lambda (a_j \overline{b_j} + \overline{a_j} b_j) + |b_j|^2 \lambda^2 
+\end{align*}
+$\Delta = (a_j \overline{b_j} + \overline{a_j} b_j)^2 - 4|a_j|^2|b_j|^2 \leq 0$ \\
+$\Delta = 0$, $b_j = k a_j$, $k \in \R$.
+
+
 \begin{myExercise}
+    \label{ex:1.16}
     Suppose $k \geq 3$, $\mathbf{x}, \mathbf{y} \in \R^k$, $|\mathbf{x} - \mathbf{y}| =d>0$, and $r >0$. Prove:
     \begin{asparaenum}[(a)]
         \item If $2r > d$, there are infinitely many $\mathbf{z} \in \R^k$ such that
@@ -255,7 +390,12 @@ Unless the contrary is explicitly stated, all numbers that are mentioned in thes
     How must these statements be modified if $k$ is $2$ or $1$?
 \end{myExercise}
 
+\mySolve
+
+
+
 \begin{myExercise}
+    \label{ex:1.17}
     Prove that
     \begin{equation*}
         |\mathbf{x} + \mathbf{y}|^2 + 
