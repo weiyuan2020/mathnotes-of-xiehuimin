@@ -391,7 +391,10 @@ $\Delta = 0$, $b_j = k a_j$, $k \in \R$.
 \end{myExercise}
 
 \mySolve
-
+$2r = |z-x|+|z-y| \geq |x-z+z-y| = |x-y| = d$.\\
+$2r > d$, there is infinitely $z$ s.t. $|z-x| =|z-y| =r$.\\
+$2r = d$, there is only one $z$ s.t. $|z-x| =|z-y| =r$, $z = \frac{x+y}{2}$.\\
+$2r < d$, there is no such $z$.
 
 
 \begin{myExercise}
@@ -405,12 +408,21 @@ $\Delta = 0$, $b_j = k a_j$, $k \in \R$.
     if $\mathbf{x} \in \R^k$ and $\mathbf{y} \in \R^k$. Interpret this geometrically, as a statement about parallelograms.
 \end{myExercise}
 
+\mySolve
+$|x+y|^2 = (x+y)\overline{(x+y)} = x\bar{x} + x\bar{y} + y\bar{x} + y\bar{y}$, \\
+$|x-y|^2 = (x-y)\overline{(x-y)} = x\bar{x} - x\bar{y} - y\bar{x} + y\bar{y}$, \\
+$|x+y|^2 + |x-y|^2 = 2(x\bar{x} + y\bar{y})$. \\
+$|x|^2 + |y|^2 = x\bar{x} + y\bar{y}$.
+
+
 \begin{myExercise}
+    \label{ex:1.18}
     If $k >2$ and $\mathbf{x}\in \R^k$, prove that there exists $\mathbf{y} \in \R^k$ such that $\mathbf{y} \neq 0$ but $\mathbf{x}\cdot\mathbf{y} =0$.
     Is this also true if $k =1$?
 \end{myExercise}
 
 \begin{myExercise}
+    \label{ex:1.19}
     Suppose $\mathbf{a} \in \R^k$, $\mathbf{b} \in\R^k$. Find $\mathbf{c} \in \R^k$ and $r > 0$ such that
     \begin{equation*}
         |\mathbf{x} - \mathbf{a}| = 2|\mathbf{x} - \mathbf{b}|
@@ -420,6 +432,7 @@ $\Delta = 0$, $b_j = k a_j$, $k \in \R$.
 \end{myExercise}
 
 \begin{myExercise}
+    \label{ex:1.20}
     With reference to the Appendix, suppose that property (III) were omitted from the
     definition of a cut. Keep the same definitions of order and addition. Show that
     the resulting ordered set has the least-upper-bound property, that addition satisfies
