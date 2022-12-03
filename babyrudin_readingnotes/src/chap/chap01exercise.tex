@@ -421,15 +421,33 @@ $|x|^2 + |y|^2 = x\bar{x} + y\bar{y}$.
     Is this also true if $k =1$?
 \end{myExercise}
 
+\mySolve
+$x = a+ai, y = a-ai$, $x \neq 0, y \neq 0$, $x\cdot y = a^2-a^2=0$.
+When $k=1$, it's false.
+
+
 \begin{myExercise}
     \label{ex:1.19}
     Suppose $\mathbf{a} \in \R^k$, $\mathbf{b} \in\R^k$. Find $\mathbf{c} \in \R^k$ and $r > 0$ such that
     \begin{equation*}
         |\mathbf{x} - \mathbf{a}| = 2|\mathbf{x} - \mathbf{b}|
     \end{equation*}
-    if and only if $|\mathbf{x} - \mathbf{a}| = r$.
+    if and only if $|\mathbf{x} - \mathbf{c}| = r$.
     (Solution: $3\mathbf{c} =4\mathbf{b}-\mathbf{a}$, $3r =2|\mathbf{b}-\mathbf{a}|$.)
 \end{myExercise}
+
+\mySolve
+$|x-a|^2 = 4|x-b|^2$.\\
+$x\bar{x} - x\bar{a} - a\bar{x} + a\bar{a} = 4(x\bar{x} - x\bar{b} - b\bar{x} + b\bar{b})$.\\
+$|x-c|^2 = r^2$.\\
+$x\bar{x} - x\bar{c} - c\bar{x} + c\bar{c} = r^2$.\\
+$x\overline{3c-4b+a}+\bar{x}(3c-4b+a)+3r^2-3c\bar{c}+4b\bar{b}-a\bar{a} = 0$.
+\begin{align*}
+    3c-4b+a&=0\\
+    3r^2 &= 3|c|^2 - 4|b|^2 + |a|^2 \\
+\end{align*}
+$3c = 4b-a$, $3r = 2|b-a|$.
+
 
 \begin{myExercise}
     \label{ex:1.20}
@@ -438,3 +456,7 @@ $|x|^2 + |y|^2 = x\bar{x} + y\bar{y}$.
     the resulting ordered set has the least-upper-bound property, that addition satisfies
     axioms (A1) to (A4) (with a slightly different zero-element!) but that (A5) fails.
 \end{myExercise}
+
+\mySolve
+
+
