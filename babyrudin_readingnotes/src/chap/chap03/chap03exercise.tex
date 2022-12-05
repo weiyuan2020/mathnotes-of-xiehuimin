@@ -127,9 +127,100 @@
         and deduce that $\sum \frac{a_n}{s_n^2}$ converges.
         \item What can be said about 
         \begin{equation*}
-            \sum \frac{a_n}{1+na_n} 
+            \sum \frac{a_n}{1+n a_n} 
             \text{ and }
             \sum \frac{a_n}{1+n^2a_n}
         \end{equation*}
     \end{asparaenum}
 \end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.12}
+    Suppose $a_n > 0$ and $\sum a_n$ converges. Put
+    \begin{equation*}
+        r_n = \sum_{m=n}^{\infty} a_m .
+    \end{equation*}
+    \begin{asparaenum}[(a)]
+        \item Prove that 
+        \begin{equation*}
+            \frac{a_m}{r_m} + \cdots +
+            \frac{a_n}{r_n} > 
+            1 - \frac{r_n}{r_m}
+        \end{equation*}
+        if $m<n$, and deduce that $\sum \frac{a_n}{r_n}$ diverges.
+        \item Prove that 
+        \begin{equation*}
+            \frac{a_n}{\sqrt{r_n}} < 
+            2\left( \sqrt{r_n} - \sqrt{r_{n+1}} \right)
+        \end{equation*}
+        and deduce that $\sum \frac{a_n}{\sqrt{r_n}}$ converges.
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.13}
+    Prove that the Cauchy product of two absolutely convergent series converges absolutely.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.14}
+    If $\{s_n\}$ is a complex sequence, define its arithmetic means $\sigma_n$ by 
+    \begin{equation*}
+        \sigma_n = \frac{s_0+s_1+\cdots+s_n}{n+1}
+        \quad 
+        (n=0,1,2,\dots).
+    \end{equation*}
+    \begin{asparaenum}[(a)]
+        \item If $\lim s_n = s$, prove that $\lim \sigma_n = s$.
+        \item Construct a sequence $\{s_n\}$ which does not converge, although $\lim \sigma_n= 0$.
+        \item Can it happen that $s_n> 0$ for all $n$ and that $\limsup s_n = \infty$, although $\lim \sigma_n= 0$?
+        \item Put $a_n = s_n - s_{n-1}$, for $n \geq 1$. 
+        Show that
+        \begin{equation*}
+            s_n-\sigma_n = \frac{1}{n+1}\sum_{k=1}^{n}k a_k .
+        \end{equation*}
+        Assume that $\lim (n a_n)= 0$ and that $\{\sigma_n\}$ converges. 
+        Prove that $\{s_n\}$ converges.
+        [This gives a converse of (a), but under the additional assumption that $n a_n \rightarrow 0$.]
+        \item Derive the last conclusion from a weaker hypothesis: 
+        Assume $M < \infty$, $| n a_n | \leq M$ for all $n$, 
+        and $\lim \sigma_n= \sigma$. 
+        Prove that $\lim s_n = \sigma$, by completing the following outline:
+        
+        If $m < n$, then
+        \begin{equation*}
+            s_n - \sigma_n 
+            = \frac{m+1}{n-m}(\sigma_n - \sigma_m)
+            = \frac{  1}{n-m}\sum_{i=m+1}^{n}(s_n - s_i) .
+        \end{equation*}
+        For these $i$,
+        \begin{equation*}
+            \left| s_n - s_i \right| 
+            \leq \frac{(n-i)M}{i+1} 
+            \leq \frac{(n-m-1)M} {m+2} .
+        \end{equation*}
+
+        Fix $\varepsilon > 0$ and associate with each $n$ the integer $m$ that satisfies
+        \begin{equation*}
+            m \leq \frac{n - \varepsilon}{1 + \varepsilon}
+            < m+1 .
+        \end{equation*}
+        Then $(m + 1)/(n - m) < 1/\varepsilon$ and $\left| s_n-s_i \right| < M\varepsilon$. Hence
+        \begin{equation*}
+            \limsup_{n \to \infty} \left| s_n - \sigma \right| \leq M \varepsilon .
+        \end{equation*}
+        Since $\varepsilon$ was arbitrary, $\lim s_n = \sigma$.
+    \end{asparaenum}
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.15}
+    Definition \ref{mydef:3.21} can be extended to the case
+    in which the $a_n$ lie in some fixed $\R^k$.
+    Absolute convergence is defined as convergence of $\sum \left| \mathbf{a_n} \right|$ , 
+    Show that Theorems \ref{thm:3.22}, \ref{thm:3.23}, \ref{thm:3.25}(a), \ref{thm:3.33}, \ref{thm:3.34 ratio test}, \ref{thm:3.42}, \ref{thm:3.45}, \ref{thm:3.47}, and \ref{thm:3.55} are true in this more general setting. 
+    (Only slight modifications are required in any of the proofs.)
+\end{myExercise}
+
