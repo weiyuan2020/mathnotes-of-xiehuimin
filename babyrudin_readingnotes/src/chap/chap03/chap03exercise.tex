@@ -1,0 +1,135 @@
+% chap03exercise
+\section*{Exercises}
+
+\begin{myExercise}
+    \label{ex:3.1}
+    Prove that convergence of $\{s_n\}$ implies convergence of $\{|s_n|\}$. 
+    Is the converse true?
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.2}
+    Calculate $\lim_{n \to \infty} (\sqrt{n^2+n}-n)$ 
+\end{myExercise}
+
+\mySolve
+\begin{align*}
+    \lim_{n \to \infty} n\left( \sqrt{1+\frac{1}{n}}-1 \right) 
+    &= \lim_{n \to \infty} \frac{ \sqrt{1+\frac{1}{n}}-1 }{\frac{1}{n}} \\
+    &= \lim_{n \to \infty} \frac{1+\frac{1}{2}\frac{1}{n}-1}{\frac{1}{n}} \\
+    &= \frac{1}{2} .
+\end{align*}
+
+\begin{myExercise}
+    \label{ex:3.3}
+    If $s_1 = \sqrt{2}$ , and 
+    \begin{equation*}
+        s_{n+1} = \sqrt{2+\sqrt{s_n}} 
+        \quad 
+        (n = 1,2,3,\dots),
+    \end{equation*}
+    prove that $\{s_n\}$ converges, and that $s_n < 2$ for $n=1,2,3,...$ .
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.4}
+    Find the upper and lower limits of the sequences $\{s_n\}$ defined by 
+    \begin{equation*}
+        s_1 = 0; \quad 
+        s_{2m} = \frac{s_{2m-1}}{2}; \quad 
+        s_{2m+1} = \frac{1}{2} + s_{2m} .
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.5}
+    For any two real sequences $\{a_n\}$, $\{b_n\}$, prove that
+    \begin{equation*}
+        \limsup_{n \to \infty} (a_n + b_n) \leq
+        \limsup_{n \to \infty} a_n +
+        \limsup_{n \to \infty} b_n ,
+    \end{equation*}
+    provided the sum on the right is not of the form $\infty - \infty$.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.6}
+    Investigate the behavior (convergence or divergence) of $\sum a_n$ if
+    \begin{enumerate}[(a)]
+        \item $a_n = \sqrt{n+1} - \sqrt{n}$ ;
+        \item $a_n = \frac{\sqrt{n+1} - \sqrt{n}}{n}$ ;
+        \item $a_n = (\sqrt[n]{n} - 1)^n$ ;
+        \item $a_n = \frac{1}{1+z^n}$ , for complex values of $z$.
+    \end{enumerate}
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.7}
+    Prove that the convergence of $\sum a_n$ implies the convergence of
+    \begin{equation*}
+        \sum \frac{\sqrt{a_n}}{n},
+    \end{equation*}
+    if $a_n \geq 0$ .
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.8}
+    If $\sum a_n$ converges, 
+    and if $\{b_n\}$ is monotonic and bounded, 
+    prove that $\sum a_n b_n$ converges.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.9}
+    Find the radius of convergence of each of the following power series:
+    \begin{enumerate}[(a)]
+        \item $\sum n^3z^n$ ,
+        \item $\sum \frac{2^n}{n!}z^n$ ,
+        \item $\sum \frac{2^n}{n^2}z^n$ ,
+        \item $\sum \frac{n^3}{3^n}z^n$ ,
+    \end{enumerate}
+\end{myExercise}
+
+\mySolve
+\begin{enumerate}
+    \item $\lim_{n \to \infty} \frac{1}{(1+1/n)^3} = 1$, $R = 1$.
+    \item $\lim_{n \to \infty} \frac{n + 1}{2} = \infty$, $R = \infty$.
+    \item $\lim_{n \to \infty} \frac{\left( 1+\frac{1}{n} \right)^2}{2} = \frac{1}{2}$, $R = \frac{1}{2}$.
+    \item $\lim_{n \to \infty} \frac{3}{\left( 1+\frac{1}{n} \right)^3} = 3$, $R = 3$.
+\end{enumerate}
+
+\begin{myExercise}
+    \label{ex:3.10}
+    Suppose that the coefficients of the power series $\sum a_n z^n$ are integers, 
+    infinitely many of which are distinct from zero. 
+    Prove that the radius of convergence is at most 1.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:3.11}
+    Suppose $a_n > 0$, $s_n = a_1 + ... + a_n$ and $\sum a_n$ diverges.
+    \begin{asparaenum}[(a)]
+        \item Prove that $\sum \frac{a_n}{1+a_n}$ diverges.
+        \item Prove that 
+        \begin{equation*}
+            \frac{a_{N+1}}{s_{N+1}} + \cdots +
+            \frac{a_{N+k}}{s_{N+k}} \geq 
+            1- \frac{s_N}{s_{N+k}}
+        \end{equation*}
+        and deduce that $\sum \frac{a_n}{s_n}$ diverges.
+        \item Prove that 
+        \begin{equation*}
+            \frac{a_n}{s_n^2} \leq \frac{1}{s_{n-1}} - \frac{1}{s_n}
+        \end{equation*}
+        and deduce that $\sum \frac{a_n}{s_n^2}$ converges.
+        \item What can be said about 
+        \begin{equation*}
+            \sum \frac{a_n}{1+na_n} 
+            \text{ and }
+            \sum \frac{a_n}{1+n^2a_n}
+        \end{equation*}
+    \end{asparaenum}
+\end{myExercise}

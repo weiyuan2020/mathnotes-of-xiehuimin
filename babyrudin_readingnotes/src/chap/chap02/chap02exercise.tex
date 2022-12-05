@@ -20,6 +20,7 @@
         + a_n = 0 .
     \end{equation*}
     Prove that the set of all algebraic numbers is countable. 
+    
     \emph{Hint}: For every positive integer $N$ 
     there are only finitely many equations with
     \begin{equation*}
@@ -137,7 +138,7 @@
 \begin{myExercise}
     \label{ex:2.14}
     Give an example of an open cover of the segment $(0, 1)$ 
-    which has no finite sub-cover.
+    which has no finite subcover.
 \end{myExercise}
 
 \begin{myExercise}
@@ -179,7 +180,7 @@
         \item If $A$ and $B$ are disjoint closed sets in some metric space $X$, prove that they are separated.
         \item Prove the same for disjoint open sets. 
         \item Fix $p \in X$, $S > 0$, define $A$ to be the set of all $q \in X$ for which $d(p, q) < S$, define $B$ similarly, with $>$ in place of $<$. Prove that $A$ and Bare separated.
-        \item Prove that every connected metric space with at least two points is uncountable. Hint: Use (c).
+        \item Prove that every connected metric space with at least two points is uncountable. \emph{Hint}: Use (c).
     \end{enumerate}
 \end{myExercise}
 
@@ -211,5 +212,104 @@
     \label{ex:2.22}
     A metric space is called \myKeywordblue{separable} if it contains a countable dense subset. 
     Show that $\R^k$ is separable. 
-    Hint: Consider the set of points which have only rational coordinates.
+    
+    \emph{Hint}: Consider the set of points which have only rational coordinates.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:2.23}
+    A collection $\{V_a\}$ of open subsets of $X$ is said to be a base for $X$ 
+    if the following is true: 
+    For every $x \in X$ and every open set $G \subset X$ such that $x \in G$, 
+    we have $x \in V_a \subset G$ for some $\alpha$. 
+    In other words, every open set in $X$ is the union of a 
+    sub-collection of $\{V_a\}$,
+    
+    Prove that every separable metric space has a countable base. 
+
+    \emph{Hint}: Take all neighborhoods with rational radius 
+    and center in some countable dense subset of $X$.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:2.24}
+    Let $X$ be a metric space in which every infinite subset has a limit point. 
+    Prove that $X$ is separable. 
+    
+    \emph{Hint}: Fix $\delta > 0$, and pick $x_1 \in X$. 
+    Having chosen $x_1, ... , x_j \in X$,
+    choose $x_{j+1} \in X$, 
+    if possible, so that $d(x_i, x_{j+1})\geq \delta$ for $i = 1, ... ,j$. 
+    Show that this process must stop after a finite number of steps, 
+    and that $X$ can therefore be covered by finitely many neighborhoods of radius $\delta$. 
+    Take $\delta = 1/n (n = 1, 2, 3, ... )$, 
+    and consider the centers of the corresponding neighborhoods.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:2.25}
+    Prove that every compact metric space $K$ has a countable base, 
+    and that $K$ is therefore separable. 
+    
+    \emph{Hint}: For every positive integer $n$, 
+    there are finitely many neighborhoods of radius $1/n$ whose union covers $K$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:2.26}
+    Let $X$ be a metric space in which every infinite subset has a limit point. 
+    Prove that $X$ is compact. 
+    
+    \emph{Hint}: By Exercises \ref{ex:2.23} and \ref{ex:2.24}, 
+    $X$ has a countable base. 
+    It follows that every open cover of $X$ has a countable subcover ${G_n}$, $n = l, 2, 3, ...$.
+    If no finite subcollection of ${G_n}$ covers $X$, 
+    then the complement $F_n$ of $G_1 \cup \cdots \cup G_n$
+    is nonempty for each $n$, but $\cap F_n$ is empty. 
+    If $E$ is a set which contains a point from each $F_n$, 
+    consider a limit point of $E$, and obtain a contradiction.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:2.27}
+    Define a point $p$ in a metric space $X$ to be a condensation point of a set $E \subset X$ if every neighborhood of $p$ contains uncountably many points of $E$. 
+    
+    Suppose $E \subset \R^k$, $E$ is uncountable, 
+    and let $P$ be the set of all condensation points of $E$.
+    Prove that $P$ is perfect and that 
+    at most countably many points of $E$ are not in $P$. 
+    In other words, show that $P^C \cap E$ is at most countable. 
+    
+    \emph{Hint}: Let $\{V_n\}$ be a countable base of $\R^k$, 
+    let $W$ be the union of those $V_n$ for which $E \cap V_n$
+    is at most countable, and show that $P = W^C$.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:2.28}
+    Prove that every closed set in a separable metric space is the union of a (possibly empty) perfect set and a set which is at most countable. 
+    (\emph{Corollary}: Every countable closed set in Rk has isolated points.) 
+    
+    \emph{Hint}: Use Exercise 27.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:2.29}
+    Prove that every open set in $\R^1$ is the union of an at most countable collection of disjoint segments. 
+
+    \emph{Hint}: Use Exercise 22.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:2.30}
+    Imitate the proof of Theorem \ref{thm:2.43} to obtain the following result:
+    \begin{enumerate}
+        \item If $\R^k = \cup_1^{\infty} F_n$, where each $F_n$ is a closed subset of $\R^k$, then at least one $F_n$ has a nonempty interior. 
+        \item Equivalent statement: If Gn is a dense open subset of $\R^k$, for $n = 1, 2, 3, ... $, then $\cap_1^{\infty} G_n$ is not empty (in fact, it is dense in $\R^k$).
+    \end{enumerate}
+    (This is a special case of Baire's theorem; see Exercise \ref{ex:3.22}, for the general case.)
 \end{myExercise}
