@@ -224,3 +224,158 @@
     (Only slight modifications are required in any of the proofs.)
 \end{myExercise}
 
+\begin{myExercise}
+    \label{ex:3.16}
+    Fix a positive number $\alpha$. 
+    Choose $x_1 > \sqrt{\alpha}$, 
+    and define $x_2, x_3, x_4, ...$ , 
+    by the recursion formula
+    \begin{equation*}
+        x_{n+1} = \frac{1}{2}\left( x_n + \frac{\alpha}{x_n} \right).
+    \end{equation*}
+    \begin{asparaenum}[(a)]
+        \item Prove that $\{x_n\}$ decreases monotonically and that $\lim x_n = \sqrt{\alpha}$.
+        \item  Put $\varepsilon_n = x_n - \sqrt{\alpha}$, and show that
+        \begin{equation*}
+            \varepsilon_{n+1} 
+            = \frac{\varepsilon_n^2}{2 x_n} 
+            < \frac{\varepsilon_n^2}{2 \sqrt{\alpha}} 
+        \end{equation*}
+        so that, setting $\beta = 2 \sqrt{\alpha}$,
+        \begin{equation*}
+            \varepsilon_{n+1} 
+            < \beta \left( \frac{\varepsilon_1}{\beta} \right)^{2^n}
+            \quad 
+            ( n = 1, 2, 3, ... ) .
+        \end{equation*}
+        \item  This is a good algorithm for computing square roots, 
+        since the recursion formula is simple and the convergence is extremely rapid. 
+        For example, if $\alpha = 3$ and $x_1 = 2$, 
+        show that $\varepsilon_1/\beta < \frac{1}{10}$ and that therefore
+        \begin{equation*}
+            \varepsilon_5 < 4 \cdot 10^{-16}, 
+            quad 
+            \varepsilon_6 < 4 \cdot 10^{-32}
+        \end{equation*}
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.17}
+    Fix $\alpha > 1$. Take $x_1 > \sqrt{\alpha}$, and define
+    \begin{equation*}
+        x_{n+1} = \frac{\alpha + x_n}{1 + x_n} = x_n + \frac{\alpha - x_n^2}{1 + x_n}.
+    \end{equation*}
+    \begin{enumerate}[(a)]
+        \item Prove that $x_1 > x_3 > x_5 >  \cdots$,
+        \item Prove that $x_2 < x_4 < x_6 <  \cdots$,
+        \item Prove that lim  $x_n = \sqrt{\alpha}$.
+        \item Compare the rapidity of convergence of this process with the one described in Exercise \ref{ex:3.16}.
+    \end{enumerate}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.18}
+    Replace the recursion formula of Exercise \ref{ex:3.16} by 
+    \begin{equation*}
+        x_{n+1} = \frac{p-1}{p}x_n + \frac{\alpha}{p}x_n^{-p+1}
+    \end{equation*}
+    where $p$ is a fixed positive integer, and describe the behavior of the resulting sequences $\{x_n\}$ .
+\end{myExercise}
+\mybox{recursion 递归}
+
+\begin{myExercise}
+    \label{ex:3.19}
+    Associate to each sequence $a = \{\alpha_n\}$, 
+    in which $\alpha_n$ is 0 or 2,
+    the real number 
+    \begin{equation*}
+        x(a) = \sum_{n=1}^{\infty} \frac{\alpha_n}{3^n} .
+    \end{equation*}
+    Prove that the set of all $x(a)$ is precisely the Cantor set described in Sec. \ref{mydef:2.44}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.20}
+    Suppose $\{p_n\}$ is a Cauchy sequence in a metric space $X$,
+    and some subsequence $\{p_{n_i}\}$ converges to a point $p \in X$ .
+    Prove that the full sequence $\{p_n\}$ converges to $p$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.21}
+    Prove the following analogue of Theorem \ref{thm:3.10}(b): 
+    If $\{E_n\}$ is a sequence of closed nonempty and bounded sets in a \emph{complete} metric space $X$, 
+    if $E_n \supset E_{n+1}$, and if $\diam$
+    \begin{equation*}
+        \lim_{n \to \infty} \diam E_n = 0 ,
+    \end{equation*}
+    then $\cap_1^{\infty} E_n$ consists of exactly one point.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.22}
+    Suppose $X$ is a nonempty complete metric space, 
+    and $\{G_n\}$ is a sequence of dense open subsets of $X$. 
+    Prove Baire's theorem, namely, that $\cap_1^{\infty} G_n$ is not
+    empty. 
+    (In fact, it is dense in $X$.) 
+    
+    \emph{Hint}: Find a shrinking sequence of neighborhoods $E_n$ such that 
+    $\overline{E} \subset G_n$, and apply Exercise \ref{ex:3.21}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.23}
+    Suppose $\{p_n\}$ and $\{q_n\}$ are Cauchy sequences in a metric space $X$. 
+    Show that the sequence $\{d(p_n, q_n)\}$ converges. 
+    
+    \emph{Hint}: For any $m, n$,
+    \begin{equation*}
+        d(p_n, q_n) \leq d(p_n, p_m) + d(p_m, q_m) + d(q_m , q_n);
+    \end{equation*}
+    it follows that 
+    \begin{equation*}
+        \left| d(p_n, q_n) - d(p_m, q_m) \right| 
+    \end{equation*}
+    is small if $m$ and $n$ are large.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.24}
+    Let $X$ be a metric space.
+    \begin{asparaenum}[(a)]
+        \item Call two Cauchy sequences $\{p_n\}$, $\{q_n\}$ in $X$ \emph{equivalent} if
+        \begin{equation*}
+            \lim_{n \to \infty}  d(p_n, q_n) = 0.
+        \end{equation*}
+        Prove that this is an equivalence relation.
+        \item Let $X^*$ be the set of all equivalence classes so obtained. If $P \in x^*$, $Q \in X^*$, $\{p_n\} \in P$, $\{q_n\} \in Q$, define
+        \begin{equation*}
+            \Delta(P, Q) = \lim_{n \to \infty} d (p_n, q_n) ;
+        \end{equation*}
+        by Exercise \ref{ex:3.23}, this limit exists. Show that the number $\Delta(P, Q)$ is unchanged if $\{p_n\}$ and $\{q_n\}$ are replaced by equivalent sequences, and hence that $\Delta$ is a distance
+        function in $X^*$.
+        \item Prove that the resulting metric space $X^*$ is complete.
+        \item For each $p \in X$, there is a Cauchy sequence all of whose terms are $p$; let $P_p$ be the element of $X^*$ which contains this sequence. Prove that
+        \begin{equation*}
+            \Delta(P_p, P_q) = d(p, q)
+        \end{equation*}
+        for all $p, q \in X$. 
+        In other words, the mapping $\phi$ defined by $\phi(p) = P_p$ is an isometry (i.e., a distance-preserving mapping) if $X$ into $X^*$ .
+        \item Prove that $\phi(X)$ is dense in $X^*$, and that $\phi(X) = X^*$ if $X$ is complete. By (d), we may identify $X$ and $\phi(X)$ and thus regard $X$ as embedded in the complete metric space $X^*$. We call $X^*$ the \emph{completion} of $X$.
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:3.25}
+    Let $X$ be the metric space whose points are the rational numbers, with the metric $d(x, y) =|x - y|$, What is the completion of this space? (Compare Exercise \ref{ex:3.24}.)
+\end{myExercise}
