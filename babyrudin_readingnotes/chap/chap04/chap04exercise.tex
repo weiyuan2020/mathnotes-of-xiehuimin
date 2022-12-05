@@ -97,3 +97,108 @@
     To every $\varepsilon > 0$ there exists a $\delta > 0$ 
     such that $\diam f(E) < \varepsilon$ for all $E \subset X$ with $\diam E < \delta$.
 \end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.10}
+    Complete the details of the following alternative proof of Theorem \ref{thm:4.19}: 
+    If $f$ is not uniformly continuous, 
+    then for some $\varepsilon > 0$ there are sequences $\{p_n\}, \{q_n\}$ in $X$ such that $d_X(p_n, q_n) \rightarrow 0$ but $d_Y(f(p_n),f(q_n)) > \varepsilon$. 
+    Use Theorem \ref{thm:2.37} to obtain a contradiction.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.11}
+    Suppose $f$ is a uniformly continuous mapping of a metric space $X$ into a metric space $Y$ and prove that $\{f(x_n)\}$ is a Cauchy sequence in $Y$ for every Cauchy sequence $\{x_n\}$ in $X$. 
+    Use this result to give an alternative proof of the theorem stated in Exercise \ref{ex:4.13}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.12}
+    A uniformly continuous function of a uniformly continuous function is uniformly continuous.
+    
+    State this more precisely and prove it.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.13}
+    Let $E$ be a dense subset of a metric space $X$, 
+    and let $f$ be a uniformly continuous real function defined on $E$.
+    Prove that $f$ has a continuous extension from $E$ to $X$
+    (see Exercise \ref{ex:4.5} for terminology). 
+    (Uniqueness follows from Exercise \ref{ex:4.4}.) 
+    
+    \emph{Hint}: For each $p \in X$ and each positive integer $n$, 
+    let $V_n(p)$ be the set of all $q \in E$ with $d(p, q) < 1/n$. 
+    Use Exercise \ref{ex:4.9} to show that the intersection of the closures of the sets $d(V_1(p)), d(V_2(p)), ...$ , 
+    consists of a single point, say $g(p)$, of $\R^1$. 
+    Prove that the function $g$ so defined on $X$ is the desired extension of $f$.
+    Could the range space $\R^1$ be replaced by $\R^k$? 
+    By any compact metric space?
+    By any complete metric space? 
+    By any metric space?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.14}
+    Let $I = [0, 1]$ be the closed unit interval. 
+    Suppose $f$ is a continuous mapping of $f$ into $I$. 
+    Prove that $f(x) = x$ for at least one $x \in I$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.15}
+    Call a mapping of $X$ into $Y$ open 
+    if $f(V)$ is an open set in $Y$ whenever $V$ is an open set in $X$.
+    Prove that every continuous open mapping of $\R^1$ into $\R^1$ is monotonic.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.16}
+    Let $[x]$ denote the largest integer contained in $x$, 
+    that is, $[x]$ is the integer such that $x - 1 < [x] \leq x$; 
+    and let $(x) = x - [x]$ denote the fractional part of $x$. 
+    What discontinuities do the functions $[x]$ and $(x)$ have?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.17}
+    Let $f$ be a real function defined on $(a, b)$. 
+    Prove that the set of points at which $f$ has a simple discontinuity is at most countable. 
+    
+    \emph{Hint}: Let $E$ be the set on which $f(x-) <f(x+ )$. 
+    With each point $x$ of $E$, associate a triple $(p, q, r)$ of rational numbers such that 
+    \begin{enumerate}
+        \item $f(x-) < p <f(x+ )$,
+        \item $a < q < t < x$ implies $f(t) < p$,
+        \item $x < t < r < b$ implies $f(t) > p$.
+    \end{enumerate} 
+    The set of all such triples is countable. 
+    Show that each triple is associated with at most one point of E. Deal similarly with the other possible types of simple discontinuities.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.18}
+    Every rational $x$ can be written in the form $x = m/n$, 
+    where $n > 0$, and $m$ and $n$ are integers without any common divisors. 
+    When $x = 0$, we take $n = 1$. 
+    Consider the function $f$ defined on $\R^1$ by 
+    \begin{equation*}
+        f(x) = \left\{ 
+            \begin{array}{ll}
+                0 & (x \text{ irrational}). \\
+                \frac{1}{n} & \left( x = \frac{m}{n} \right) .\\
+            \end{array}
+        \right.
+    \end{equation*} 
+    Prove that $f$ is continuous at every irrational point, 
+    and that $f$ has a simple discontinuity at every rational point.
+\end{myExercise}
