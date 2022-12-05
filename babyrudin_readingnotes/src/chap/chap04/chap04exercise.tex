@@ -55,3 +55,45 @@
     \emph{Hint}: Let the graph of $g$ be a straight line on each of the segments which constitute the complement of $E$ (compare Exercise \ref{ex:2.29}). 
     The result remains true if $\R^1$ is replaced by any metric space, but the proof is not so simple.
 \end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.6}
+    If $f$ is defined on $E$, the graph of $f$ is the set of points $(x, f(x))$, for $x \in E$. 
+    In particular, if $E$ is a set of real numbers, and $f'$ is real-valued, the graph of $f$ is a subset of the plane.
+    
+    Suppose $E$ is compact, and prove that $f$ is continuous on $E$ if and only if its graph is compact.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.7}
+    If $E \subset X$ and if $f$ is a function defined on $X$, 
+    the \emph{restriction} of $f$ to $E$ is the function $g$ whose domain of definition is $E$, such that $g(p) =f(p)$ for $p \in E$. 
+    Define $f$ and $g$ on $\R^2$ by: 
+    $f(0, 0) = g(0, 0) = 0$, 
+    $f(x, y) = xy^2 /(x^2 + y^4)$, 
+    $g(x, y) = xy^2 /(x^2 + y^6)$ 
+    if $(x, y) \neq  (0, 0)$. 
+    Prove that $f$ is bounded on $\R^2$, 
+    that $g$ is unbounded in every neighborhood of $(0, 0)$, 
+    and that $f$ is not continuous at $(0, 0)$; 
+    nevertheless, the restrictions of both $f$ and $g$ to every straight line in $\R^2$ are continuous!
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.8}
+    Let $f$ be a real uniformly continuous function on the bounded set $E$ in $\R^1$. 
+    Prove that $f$ is bounded on $E$. 
+
+    Show that the conclusion is false if boundedness of $E$ is omitted from the hypothesis.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.9}
+    Show that the requirement in the definition of uniform continuity can be rephrased as follows, in terms of diameters of sets: 
+    To every $\varepsilon > 0$ there exists a $\delta > 0$ 
+    such that $\diam f(E) < \varepsilon$ for all $E \subset X$ with $\diam E < \delta$.
+\end{myExercise}
