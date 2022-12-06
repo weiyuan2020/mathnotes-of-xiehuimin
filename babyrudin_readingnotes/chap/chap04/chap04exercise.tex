@@ -202,3 +202,150 @@
     Prove that $f$ is continuous at every irrational point, 
     and that $f$ has a simple discontinuity at every rational point.
 \end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.19}
+    Suppose $f$ is a real function with domain $\R^1$ which has the intermediate value property: 
+    If $f(a)< c <f(b)$, then $f(x) = c$ for some $x$ between $a$ and $b$.
+    
+    Suppose also, for every rational $r$, that the set of all $x$ with $f(x) = r$ is closed. 
+    
+    Prove that $f$ is continuous.
+    
+    \emph{Hint}: If $x_n \rightarrow x_0$ but $f(x_n) > r > f(x_0)$ for some $r$ and all $n$, 
+    then $f(tn) = r$ for some $t_n$ between $x_0$ and $x_n$; 
+    thus $t_n \rightarrow x_0$. 
+    Find a contradiction. 
+    (N. J. Fine, \emph{Amer. Math. Monthly}, vol. 73, 1966, p. 782.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.20}
+    If $E$ is a nonempty subset of a metric space $X$, 
+    define the distance from $x \in X$ to $E$ by
+    \begin{equation*}
+        \rho_{E}(x)  = \inf_{z \in E} d(x,z)
+    \end{equation*}
+    \begin{asparaenum}[(a)]
+    \item Prove that $\rho_E(x) = 0$ if and only if $x \in E$.
+    \item Prove that $\rho_E$ is a uniformly continuous function on $X$, by showing that
+    \begin{equation*}
+        \left| \rho_E(x) - \rho_E(y) \right| \leq d(x, y)
+    \end{equation*}
+    for all $x \in X, y \in X$.
+    \end{asparaenum}
+    \emph{Hint}: $\rho_E(x) \leq d(x, z) \leq d(x, y) + d(y, z),$ 
+    so that
+    \begin{equation*}
+        \rho_E(x) \leq d(x, y) + \rho_E(y).
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.21}
+    Suppose $K$ and $F$ are disjoint sets in a metric space $X$, $K$ is compact, $F$ is closed. 
+    Prove that there exists $\delta > 0$ 
+    such that $d(p, q) > \delta$ if $p \in K$, $q \in F$. 
+    
+    \emph{Hint}: $\rho_F$ is a continuous positive function on $K$.
+
+    Show that the conclusion may fail for two disjoint closed sets if neither is compact.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.22}
+    Let $A$ and $B$ be disjoint nonempty closed sets in a metric space $X$, and define
+    \begin{equation*}
+        f(p) = \frac{\rho_A(p)}{\rho_A(p) + \rho_B(p)}
+        \quad 
+        (p \in X).
+    \end{equation*}
+    Show that $f$ is a continuous function on $X$ whose range lies in $[0, 1]$, that $f(p) = 0$ precisely on $A$ and $f(p) = 1$ precisely on $B$. 
+    This establishes a converse of Exercise \ref{ex:4.3}: 
+    Every closed set $A \subset X$ is $Z(f)$ for some continuous real $f$ on $X$. 
+    Setting 
+    \begin{equation*}
+        V = f^{-1}([0, \tfrac{1}{2})), 
+        \quad 
+        W = f^{-1}((\tfrac{1}{2}, 1]),
+    \end{equation*}
+    show that $V$ and $W$ are open and disjoint, 
+    and that $A \subset V$, $B \subset W$. 
+    (Thus pairs of disjoint closed sets in a metric space can be covered by pairs of disjoint open sets. 
+    This property of metric spaces is called \emph{normality}.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.23}
+    A real-valued function $f$ defined in $(a, b)$ is said to be \emph{convex} if
+    \begin{equation*}
+        f(\lambda x + (1-\lambda)y) \leq
+        \lambda f(x) + (1-\lambda)f(y)
+    \end{equation*}
+    whenever $a < x < b, a < y < b, 0 < \lambda < 1$. 
+    Prove that every convex function is continuous. 
+    Prove that every increasing convex function of a convex function is convex. 
+    (For example, if $f$ is convex, so is $e^f$.)
+
+    If $f$ is convex in $(a, b)$ and if $a< s < t < u < b$, show that
+    \begin{equation*}
+        \frac{f(t) - f(s)}{t - s} \leq
+        \frac{f(u) - f(s)}{u - s} \leq
+        \frac{f(u) - f(t)}{u - t}  .
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.24}
+    Assume that $f$ is a continuous real function defined in $(a, b)$ such that
+    \begin{equation*}
+        f\left( \frac{x+y}{2} \right) \leq 
+        \frac{f(x) + f(y)}{2}
+    \end{equation*}
+    for all $x, y \in  (a, b)$. 
+    Prove that $f$ is convex.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.25}
+    If $A \subset \R^t$ and $B \subset \R^t$, 
+    define $A + B$ to be the set of all sums $x + y$ with $x \in A$, $y \in B$.
+    \begin{enumerate}[(a)]
+        \item If $K$ is compact and $C$ is closed in $\R^t$, 
+        prove that $K + C$ is closed.
+
+        \emph{Hint}: Take $\mathbf{z} \not\in K + C$, put $F= \mathbf{z}- C$, the set of all $\mathbf{z- y}$ with $\mathbf{y} \in C$. 
+        Then $K$ and $F$ are disjoint. 
+        Choose $\delta$ as in Exercise \ref{ex:4.24}. 
+        Show that the open ball with center $\mathbf{z}$ and radius $\delta$ does not intersect $K + C$.
+        \item Let $\alpha$ be an irrational real number. 
+        Let $C_1$ be the set of all integers, 
+        let $C_2$ be the set of all $n\alpha$ with $n \in C_1$. 
+        Show that $C_1$ and $C_2$ are closed subsets of $\R^1$ whose
+        sum $C_1 + C_2$ is not closed, by showing that $C_1 + C_2$ is a countable dense subset of $\R^1$.
+    \end{enumerate}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:4.26}
+    Suppose $X, Y, Z$ are metric spaces, and $Y$ is compact. 
+    Let $f$ map $X$ into $Y$, 
+    let $g$ be a continuous one-to-one mapping of $Y$ into $Z$, 
+    and put $h(x) = g(f(x))$ for $x \in X$.
+
+    Prove that $f$ is uniformly continuous if $h$ is uniformly continuous.
+    
+    \emph{Hint}: $g^{-1}$ has compact domain $g(Y)$, and $f(x) = g^{-1}(h(x))$. 
+    
+    Prove also that $f$ is continuous if $h$ is continuous. 
+
+    Show (by modifying Example \ref{ex:4.21}, or by finding a different example) that the compactness of $Y$ cannot be omitted from the hypotheses, even when $X$ and $Z$ are compact.
+\end{myExercise}
