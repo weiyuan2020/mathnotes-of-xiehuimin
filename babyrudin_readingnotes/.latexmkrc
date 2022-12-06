@@ -14,14 +14,3 @@ $bibtex_use = 2;
 $bibtex = 'bibtex %O %S';
 $bibtex_fudge = 1;
 # $bibtex = 'bibtex';
-<<<<<<< HEAD
-<<<<<<< HEAD
-# $out_dir = "temp";
-=======
-$out_dir = "temp";
->>>>>>> 76b7fb6 (bbr bibtex error)
-=======
-# $out_dir = "temp";
->>>>>>> 77db5c0 (1)
-#指定生成PDF文件的文件名，可以与LaTeX主文件名不一致
-#$jobname = "Book";
