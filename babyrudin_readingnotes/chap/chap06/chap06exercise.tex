@@ -1,0 +1,164 @@
+% chap06exercise
+
+\begin{myExercise}
+    \label{ex:6.1}
+    Suppose $\alpha$ increases on $[a, b]$, $a \leq x_0 \leq b$, 
+    $\alpha$ is continuous at $x_0$, $f(x_0) = 1$, and
+    $f(x) = 0$ if $x \neq x_0$. 
+    Prove that $f \in \mathscr{R}(\alpha)$ and that $\int f \d \alpha = 0$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.2}
+    Suppose $f \geq 0$, 
+    $f$ is continuous on $[a, b]$, and
+    $\int_{a}^{b} \d x = 0$. 
+    Prove that $f(x) = 0$
+    for all $x \in [a, b]$. 
+    (Compare this with Exercise \ref{ex:6.1}.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.3}
+    Define three functions $\beta_1$, $\beta_2$, $\beta_3$ as follows: 
+    $\beta_j(x) = 0$ if $x < 0$, 
+    $\beta_j(x) = 1$ if $x > 0$ 
+    for $j = 1, 2, 3$; 
+    and $\beta_1(0) = 0$, $\beta_2(0) =1$, $\beta_3(0) = \frac{1}{2}$. Let $f$ be a bounded function on $[-1,1]$.
+    \begin{asparaenum}[(a)]
+        \item Prove that $f \in \mathscr{R}(\beta_1)$ if and only if $f(0+) = f(0)$ and that then 
+        \begin{equation*}
+            \int f \d \beta_1 = f(0)
+        \end{equation*}
+        \item State and prove a similar result for $\beta_2$.
+        \item Prove that $f \in \mathscr{R}(\beta_3)$ if and only if $f$ is continuous at 0.
+        \item If $f$ is continuous at 0 prove that 
+        \begin{equation*}
+            \int f \d \beta_1 = 
+            \int f \d \beta_2 = 
+            \int f \d \beta_3 = f(0).
+        \end{equation*}
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.4}
+    If $f(x) = 0$ for all irrational $x$,
+    $f(x) = 1$ for all rational $x$, 
+    prove that $f \in \mathscr{R}$ on $[a, b]$ for any $a < b$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.5}
+    Suppose $f$ is a bounded real function on $[a, b]$, 
+    and $f^2 \in \mathscr{R}$ on $[a, b]$. 
+    Does it follow that $f \in \mathscr{R}$? 
+    Does the answer change if we assume that $f^3 \in \mathscr{R}$?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.6}
+    Let $P$ be the Cantor set constructed in Sec. \ref{mydef:2.44}. 
+    Let $f$ be a bounded real function on $[0, 1]$ which is continuous at every point outside $P$. 
+    Prove that $f \in \mathscr{R}$ on $[0, 1]$.
+    
+    \emph{Hint}: $P$ can be covered by finitely many segments whose total length can be made as small as desired. 
+    Proceed as in Theorem \ref{thm:6.10}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.7}
+    Suppose $f$ is a real function on $(0, 1]$ and $f \in \mathscr{R}$ on $[c, 1]$ for every $c > 0$. 
+    Define
+    \begin{equation*}
+        \int_{0}^{1} f(x) \d x =
+        \lim_{c \to 0} \int_{c}^{1} f(x) \d x
+    \end{equation*}
+    if this limit exists (and is finite).
+    \begin{enumerate}[(a)]
+        \item If $f \in \mathscr{R}$ on $[0,1]$, show that this definition of the integral agree with the old one.
+        \item Construct a function $f$ such that the above limit exists, although it fails to exist with $|f|$ in place of $f$.
+    \end{enumerate}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.8}
+    Suppose $f \in \mathscr{R}$ on $[a, b]$ for every $b > a$ where $a$ is fixed. 
+    Define
+    \begin{equation*}
+        \int_{a}^{\infty} f(x) \d x = 
+        \lim_{b \to \infty} \int_{a}^{b} f(x) \d x
+    \end{equation*}
+    if this limit exists (and is finite). 
+    In that case, we say that the integral on the left \myKeywordblue{converges}. 
+    If it also converges after $f$ has been replaced by $|f|$, it is said to converge \myKeywordblue{absolutely}.
+
+    Assume that $f(x) \geq 0$ and that $f$ decreases monotonically on $[1, \infty)$. 
+    Prove that
+    \begin{equation*}
+        \int_{1}^{\infty} f(x) \d x
+    \end{equation*}
+    converges if and only if 
+    \begin{equation*}
+        \sum_{n=1}^{\infty} f(n)
+    \end{equation*}
+    converges.
+    (This is the so-called ``integral test'' for convergence of series.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.9}
+    Show that integration by parts can sometimes be applied to the ``improper'' integrals defined in Exercises \ref{ex:6.7} and \ref{ex:6.8}. 
+    (State appropriate hypotheses, formulate a theorem, and prove it.) 
+    For instance show that
+    \begin{equation*}
+        \int_{0}^{\infty} \frac{\cos x}{1+x} \d x = 
+        \int_{0}^{\infty} \frac{\sin x}{(1+x)^2} \d x .
+    \end{equation*}
+    Show that one of these integrals converges \myKeywordblue{absolutely}, but that the other does not.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:6.10}
+    Let $p$ and $q$ be positive real numbers such that
+    \begin{equation*}
+        \frac{1}{p} + \frac{1}{q} = 1 .
+    \end{equation*}
+    Prove the following statements.
+    \begin{asparaenum}[(a)]
+        \item If $u \geq 0$ and $v \geq 0$, then
+        \begin{equation*}
+            uv \leq \frac{u^p}{p} + \frac{v^q}{q} .
+        \end{equation*}
+        Equality holds if and only of $u^p = v^q$.
+        \item If $f \in \mathscr{R}$, $g \in \mathscr{R}$, $f \geq 0$, $g \geq 0$, and 
+        \begin{equation*}
+            \int_{a}^{b} f^p \d \alpha = 1
+            \int_{a}^{b} g^q \d \alpha ,
+        \end{equation*}
+        then 
+        \begin{equation*}
+            \int_{a}^{b} fg \d \alpha \leq 1.
+        \end{equation*}
+        \item if $f$ and $g$ are complex functions in $\mathscr{R}$, then 
+        \begin{equation*}
+            \left| \int_{a}^{b} fg \d \alpha \right| \leq
+            \left\{ \int_{a}^{b} \left| f \right|^p \d \alpha \right\}^{1/p} 
+            \left\{ \int_{a}^{b} \left| g \right|^q \d \alpha \right\}^{1/q} .
+        \end{equation*}
+        This is \myKeywordblue{H\"{o}lder's inequality}.
+        When $p = q = 2$ it is usually called the Schwarz
+        inequality. 
+        (Note that Theorem \ref{thm:1.35} is a very special case of this.)
+        \item Show that H\"{o}lder's inequality is also true fir the ``proper'' integrals described in Exercises \ref{ex:6.7} and \ref{ex:6.8} 
+    \end{asparaenum}
+\end{myExercise}
