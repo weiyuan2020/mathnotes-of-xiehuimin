@@ -1,0 +1,392 @@
+% chap05exercise
+
+\section*{Exercise}
+
+
+\begin{myExercise}
+    \label{ex:5.1}
+    Let $f$ be defined for all real $x$, and suppose that 
+    \begin{equation*}
+        \left| f(x) - f(y) \right| \leq (x-y)^2
+    \end{equation*}
+    for all real $x$ and $y$.
+    Prove that $f$ is constant.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.2}
+    Suppose $f'(x)>0$ in $(a,b)$.
+    Prove that $f$ is strictly increasing in $(a,b)$,
+    and let $g$ be its inverse function.
+    Prove that $g$ is differentiable, 
+    and that 
+    \begin{equation*}
+        g'(f(x)) = \frac{1}{f'(x)}
+        \quad 
+        (a<x<b),
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.3}
+    Suppose $g$ is a real function on $\R^1$, 
+    with bounded derivative (say $|g'|\leq M$).
+    Fix $\varepsilon > 0$, and define $f(x) = x + \varepsilon g(x)$.
+    Prove that $f$ is one-to-one if $\varepsilon$ is small enough.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.4}
+    If 
+    \begin{equation*}
+        C_0 + \frac{C_1}{2} + \cdots + \frac{C_{n-1}}{n} + \frac{C_n}{n+1} = 0,
+    \end{equation*}
+    where $C_0,...,C_n$ are real constants,
+    prove that the equation 
+    \begin{equation*}
+        C_0 + C_1 x + \cdots + C_{n-1} x^{n-1} + C_n x^n = 0
+    \end{equation*}
+    has at least one real root between 0 and 1.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.5}
+    Suppose $f$ is defined and differentiable for every $x>0$,
+    and $f' \rightarrow 0$ as $x\rightarrow + \infty$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.6}
+    Suppose 
+    \begin{enumerate}[(a)]
+        \item $f$ is continuous for $x \geq 0$,
+        \item $f'(x)$ exists for $x>0$,
+        \item $f(0) = 0$,
+        \item $f'$ is monotonically increasing.
+    \end{enumerate}
+    Put 
+    \begin{equation*}
+        g(x) = \frac{f(x)}{x}
+        \quad 
+        (x>0)
+    \end{equation*}
+    and prove that $g$ is monotonically increasing.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.7}
+    Suppose $f'(x), g'(x)$ exists, 
+    $g'(x) \neq 0$, and $f(x) = g(x) = 0$.
+    Prove that 
+    \begin{equation*}
+        \lim_{t \to x} \frac{f(t)}{g(t)} = \frac{f'(x)}{g'(x)},
+    \end{equation*}
+    (This holds also for complex functions.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.8}
+    Suppose $f'$ is continuous on $[a,b]$ and $\varepsilon >0$ such that 
+    \begin{equation*}
+        \left| \frac{f(t)-f(x)}{t-x} -f'(x) \right| < \varepsilon
+    \end{equation*}
+    whenever $0 < |t - x| < \delta$, $a \leq x \leq b$, $a \leq t \leq b$. (This could be expressed by saying that $f$ is 
+    \myKeywordblue{uniformly differentiable} on $[a, b]$ 
+    if $f'$ is continuous on $[a, b]$.) 
+    Does this hold for vector-valued functions too?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.9}
+    Let $f$ be a continuous real function on $\R^1$, 
+    of which it is known that $f'(x)$ exists for all $x \neq 0$ 
+    and that $f'(x) \rightarrow 3$  as $x \rightarrow 0$. 
+    Does it follow that $f'(0)$ exists?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.10}
+    Suppose $f$ and $g$ are complex differentiable function on $(0,1)$,
+    $f(x) \rightarrow 0$,
+    $g(x) \rightarrow 0$,
+    $f'(x) \rightarrow A$,
+    $g'(x) \rightarrow B$ 
+    as $x \rightarrow 0$,
+    where $A$ and $B$ are complex numbers, $B \neq 0$.
+    Prove that 
+    \begin{equation*}
+        \lim_{x \to 0} \frac{f(x)}{g(x)} = \frac{A}{B}.
+    \end{equation*}
+    Compare with Example \ref{ex:5.18}.
+
+    \emph{Hint}: 
+    \begin{equation*}
+        \frac{f(x)}{g(x)} = \left\{ \frac{f(x)}{x} - A \right\}\cdot \frac{x}{g(x)} + A \cdot \frac{x}{g(x)}
+    \end{equation*}
+    Apply Theorem \ref{thm:5.13} to the real and imaginary parts of 
+    $f(x)/x$ and $g(x)/x$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.11}
+    Suppose $f$ is defined in a neighborhood of $x$, 
+    and suppose $f''(x)$ does exists.
+    Show that 
+    \begin{equation*}
+        \lim_{h \to 0} \frac{f(x+h)+f(x-h)-2f(x)}{h^2} = f''(x)
+    \end{equation*}
+    Show by an example that the limit may exist even if $f''(x)$ does not.
+    
+    \emph{Hint}: Use Theorem \ref{thm:5.13}.
+\end{myExercise}
+
+\begin{myExercise}
+    \label{ex:5.12}
+    If $f(x) = |x|^3$, compute $f'(x), f''(x)$ for all real $x$, 
+    and show that $f^{(3)}(0)$ does not exist.
+\end{myExercise}
+
+\mySolve
+$f(x) = |x|^3$.
+\begin{align*}
+    f(x)  &= 
+    \left\{ 
+        \begin{array}{ll}
+            x^3 & (x\geq 0), \\
+            -x^3 & (x < 0). \\
+        \end{array}
+     \right. \\
+    f'(x) &= \left\{ 
+        \begin{array}{ll}
+            3x^2 & (x\geq 0), \\
+            -3x^2 & (x < 0). \\
+        \end{array}
+     \right. \\
+     f''(x) &= \left\{ 
+        \begin{array}{ll}
+            6x & (x\geq 0), \\
+            -6x & (x < 0). \\
+        \end{array}
+     \right. 
+\end{align*}
+$f^{(3)}(x-) = -6$,
+$f^{(3)}(x+) = +6$,
+$f^{(3)}(x)$ doesn't exist.
+
+
+\begin{myExercise}
+    \label{ex:5.13}
+    Suppose $a$ and $c$ are real numbers, $c>0$,
+    and $f$ is defined on $[-1,1]$ by 
+    \begin{equation*}
+        f(x) = \left\{  
+            \begin{array}{ll}
+                x^a \sin (|x|^{-c}) & (\text{if } x \neq 0), \\
+                0                   & (\text{if } x =    0). \\
+            \end{array}
+        \right.
+    \end{equation*}
+    Prove the following statements:
+    \begin{enumerate}[(a)]
+        \item $f$ is continuous if and only if $a>0$.
+        \item $f'(0)$ exists if and only if $a>1$.
+        \item $f'$ is bounded if and only of $a\geq 1+c$.
+        \item $f'$ is continuous if and only if $a>1+c$.
+        \item $f''(0)$ exists if and only if $a>2+c$.
+        \item $f''$ is bounded if and only if $a\geq 2+2c$.
+        \item $f''$ is continuous if and only if $a>2+2c$.
+    \end{enumerate}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.14}
+    Let $f$ be a differentiable real function defined in $(a,b)$.
+    Prove that $f$ is convex if and only if $f'$ is monotonically increasing.
+    Assume next that $f''(x)$ exists for every $x \in (a,b)$,
+    and prove that $f$ is convex if and only if $f''(x) \geq 0$ for all $x \in (a,b)$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.15}
+    Suppose $a \in \R^1$, $f$ is twice-differentiable real function on $(a, \infty)$, and $M_0, M_1, M_2$ are the least upper bounds of $|f(x)|$, $|f'(x)|$, $|f''(x)|$, respectively, on $(a, \infty)$.
+    Prove that 
+    \begin{equation*}
+        M_1^2 \leq 4 M_0 M_2 .
+    \end{equation*}
+    \emph{Hint}: If $h>0$, Taylor's theorem shows that 
+    \begin{equation*}
+        f'(x) = \frac{1}{2h}\left[ f(x+2h) - f(x) \right] - h f''(\xi)
+    \end{equation*}
+    for some $\xi \in (x, x+2h)$.
+    Hence
+    \begin{equation*}
+        \left| f'(x) \right| \leq h M_2 + \frac{M_0}{h}.
+    \end{equation*}
+    To show that $M_1^2 = 4M_0 M_2$ can actually happen,
+    take $a = -1$, define 
+    \begin{equation*}
+        f(x) = \left\{ 
+            \begin{array}{ll}
+                2x^2-1 & (-1<x<0), \\
+                \frac{x^2-1}{x^2+1} & (0\leq x < \infty). \\
+            \end{array}
+        \right.
+    \end{equation*}
+    and show that 
+    $M_0 = 1$,
+    $M_1 = 4$,
+    $M_2 = 4$.
+    
+    Does $M_1^2 \leq 4 M_0 M_2$ hold for vector-valued functions too?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.16}
+    Suppose $f$ is twice-differentiable on $(0, \infty)$, 
+    $f''$ is bounded on $(0, \infty)$, 
+    and $f(x) \rightarrow 0$
+    as $x \rightarrow \infty$. 
+    Prove that $f'(x) \rightarrow 0$ 
+    as $x \rightarrow \infty$.
+
+    \emph{Hint}: Let $a \rightarrow \infty$ in Exercise \ref{ex:5.15}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.17}
+    Suppose $f$ is a real, three times differentiable function on $[-1, 1]$, such that
+    \begin{equation*}
+        f(-1) =0,   \quad
+        f(0) =0,    \quad
+        f(1) = 1,   \quad
+        f'(0) = 0.
+    \end{equation*}
+    Prove that $f^{(3)} (x) \geq 3$ for some $x \in (-1, 1)$. 
+
+    Note that equality holds for $\frac{1}{2}(x^3 + x^2)$. 
+    
+    \emph{Hint}: Use Theorem \ref{thm:5.15}, 
+    with $\alpha = 0$ and $\beta = \pm 1$, 
+    to show that there exist $s \in (0, 1)$ and $t \in (-1, 0)$ 
+    such that 
+    \begin{equation*}
+        f^{(3)}(s) + f^{(3)}(t) = 6.
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.18}
+    Suppose $f$ is a real function on $[a, b]$, 
+    $n$ is a positive integer, 
+    and $f^{(n-1)}$ exists for every $t \in [a, b]$. 
+    Let $\alpha, \beta$, and $P$ be as in Taylor's theorem (\ref{thm:5.15}). Define
+    \begin{equation*}
+        Q(t) = \frac{f(t)-f(\beta)}{t-\beta}
+    \end{equation*}
+    for $t \in [a,b]$, $t \neq \beta$, differentiate 
+    \begin{equation*}
+        f(t) - f(\beta) = (t - \beta) Q(t)
+    \end{equation*}
+    $n-1$ times at $t = \alpha$, and derive the following version of Taylor's theorem:
+    \begin{equation*}
+        f(\beta) = P(\beta) + \frac{Q^{(n-1)}(\alpha)}{(n-1)!}(\beta - \alpha)^n .
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.19}
+    Suppose $f$ is defined in $(-1,1)$ and $f'(0)$ exists. 
+    Suppose $-1 < \alpha_n < \beta_n < 1$,
+    $\alpha_n \rightarrow 0$, and 
+    $\beta \rightarrow 0$ as 
+    $n \rightarrow \infty$. 
+    Define the difference quotients
+    \begin{equation*}
+        D_n = \frac{f(\beta_n)-f(\alpha_n)}{\beta_n-\alpha_n} .
+    \end{equation*}
+    Prove the following statements:
+    \begin{enumerate}[(a)]
+        \item If $\alpha_n < 0 < \beta_n$, then $\lim D_n = f'(0)$.
+        \item If $0 < \alpha_n < \beta_n$ and $\{\beta_n/(\beta_n-\alpha_n)\}$ is bounded, then $\lim D_n = f'(0)$.
+        \item If $f'$ is continuous in $(-1,1)$, then $\lim D_n = f'(0)$.
+    \end{enumerate}
+    Give an example in which $f$ is differentiable in $(-1, 1)$ 
+    (but $f'$ is not continuous at 0) and in which $\alpha_n$ , 
+    $\beta_n$ tend to 0 in such a way that $\lim D_n$ exists 
+    but is different from $f'(0)$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.20}
+    Formulate and prove an inequality which follows from Taylor's theorem and which remains valid for vector-valued functions.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.21}
+    Let $E$ be a closed subset of $\R^1$. 
+    We saw in Exercise \ref{ex:4.22}, 
+    that there is a real continuous function $f$ on $\R^1$ whose zero set is $E$. 
+    Is it possible, for each closed set $E$, to find such an $f$ which is differentiable on $\R^1$, 
+    or one which is $n$ times differentiable, 
+    or even one which has derivatives of all orders on $\R^1$?
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.22}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.23}
+\end{myExercise}
+
+
+
+\begin{myExercise}
+    \label{ex:5.24}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.25}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.26}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.27}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.28}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:5.29}
+\end{myExercise}
+
