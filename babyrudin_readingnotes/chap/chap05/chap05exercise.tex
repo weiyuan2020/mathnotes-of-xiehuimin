@@ -352,41 +352,212 @@ $f^{(3)}(x)$ doesn't exist.
 
 \begin{myExercise}
     \label{ex:5.22}
+    Suppose $f$ is a real function on $( - \infty, \infty )$. 
+    Call $x$ a \myKeywordblue{fixed point} off if $f(x) = x$.
+    \begin{asparaenum}[(a)]
+        \item If $f$ is differentiable and $f'(t) \neq 1$ for every real $t$, prove that $f$ has at most one fixed point.
+        \item Show that the function $f$ defined by 
+        \begin{equation*}
+            f(t) = t + (1+e^t)^{-1}
+        \end{equation*}
+        has no fixed point, although $0 < f'(t) < 1$ for all real $t$.
+        \item However, if there is a constant $A<1$ such that $|f'(t)|\leq A$ for all real $t$, prove that a fixed point $x$ of $f$ exists, and that $x = \lim x_n$, where $x_1$ is an arbitrary real number and  
+        \begin{equation*}
+            x_{n+1} = f(x_n)
+        \end{equation*}
+        for $n = 1,2,3,\dots$.
+        \item Show that the process described in (c) can be visualized by the zig-zag path 
+        \begin{equation*}
+            (x_1, x_2) \rightarrow
+            (x_2, x_2) \rightarrow
+            (x_2, x_3) \rightarrow
+            (x_3, x_3) \rightarrow
+            (x_3, x_4) \rightarrow \cdots .
+        \end{equation*}
+    \end{asparaenum}
 \end{myExercise}
+\mybox{fixed point 不动点}
+
 
 
 \begin{myExercise}
     \label{ex:5.23}
+    The function $f$ defined bby 
+    \begin{equation*}
+        f(x) = \frac{x^3+1}{3}
+    \end{equation*}
+    has three fixed points, say $\alpha, \beta, \gamma$, where 
+    \begin{equation*}
+        -2<\alpha<-1, \quad 
+        0<\beta<1, \quad 
+        1<\gamma<2.
+    \end{equation*}
+    For arbitrary chosen $x_1$, define $\{x_n\}$ by setting $x_{n+1} = f(x_n)$.
+    \begin{enumerate}
+        \item If $x_1<\alpha$, prove that $x_n \rightarrow -\infty$ as $n \rightarrow \infty$.
+        \item If $\alpha<x_1<\gamma$, prove that $x_n \rightarrow \beta$ as $n \rightarrow \infty$.
+        \item If $\gamma<x_1$, prove that $x_n \rightarrow +\infty$ as $n \rightarrow \infty$.
+    \end{enumerate}
+    Thus $\beta$ can be located by this method, but $\alpha$ and $\gamma$ cannot.
 \end{myExercise}
 
 
 
 \begin{myExercise}
     \label{ex:5.24}
+    The process described in part (c) of Exercise \ref{ex:5.22} can of course also be applied to functions that map $(0,\infty)$ to $(0,\infty)$.
+
+    Fix some $\alpha > 1$, and put 
+    \begin{equation*}
+        f(x) = \frac{1}{2}\left( x + \frac{\alpha}{x} \right),
+        \quad 
+        g(x) = \frac{\alpha + x}{1+x}.
+    \end{equation*}
+    Both $f$ and $g$ have $\sqrt{\alpha}$ as their only fixed point in $(0, \infty  )$. 
+    Try to explain, on the basis of properties of $f$ and $g$, 
+    why the convergence in Exercise \ref{ex:3.16}, is so much more rapid than it is in Exercise \ref{ex:5.17}. 
+    (Compare $f'$ and $g'$, draw the zig-zags suggested in Exercise \ref{ex:5.22}.) 
+
+    Do the same when $0 < \alpha < 1$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:5.25}
+    Suppose $f$ is twice differentiable on $[a, b]$, 
+    $f(a) < 0$, $f(b) > 0$, $f'(x) \geq \delta > 0$, 
+    and $0 \leq f''(x) \leq M$ for all $x \in [a, b]$. 
+    Let $g$ be the unique point in $(a, b)$ at which $f(\xi) = 0$.
+
+    Complete the details in the following outline of Newton's method for computing $f$.
+    \begin{asparaenum}[(a)]
+        \item Choose $x_1 \in (\xi, b)$, and define $\{x_n\}$ by 
+        \begin{equation*}
+            x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.
+        \end{equation*}
+        Interpret this geometrically, in terms of a tangent to the graph of $f$.
+        \item Prove that $x_{n+1} < x_n$ and that 
+        \begin{equation*}
+            \lim_{n \to \infty} x_n = \xi.
+        \end{equation*}
+        \item Use Taylor's theorem to show that 
+        \begin{equation*}
+            x_{n+1}-\xi = \frac{f''(t_n)}{2f''(x_n)}(x_n-\xi)^2
+        \end{equation*}
+        for some $t_n \in (\xi, x_n)$.
+        \item If $A = M/2\delta$, deduce that 
+        \begin{equation*}
+            0 \leq x_{n+1} - \xi \leq \frac{1}{A}\left[ A(x_1 - \xi) \right]^{2^n}.
+        \end{equation*}
+        (Compare with Exercises \ref{ex:3.16} and \ref{eq:3.18}.)
+        \item Show that Newton's method amounts to finding a fixed point of the function $g$ defined by
+        \begin{equation*}
+            g(x) = x - \frac{f(x)}{f'(x)}
+        \end{equation*}
+        How does $g'(x)$ behave for $x$ near $\xi$?
+        \item Put $f(x) = x^{1/2}$ on $(-\infty,\infty)$ and try Newton's method. What happens? 
+    \end{asparaenum}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:5.26}
+    Suppose $f$ is a differentiable on $[a, b]$, $f(a) = 0$, 
+    and there is a real number $A$ such that 
+    $|f'(x)| \leq A |f(x)|$ on $[a, b]$. 
+    Prove that $f(x) = 0$ for all $x \in [a, b]$. 
+    
+    \emph{Hint}: Fix $x_0 \in [a, b]$, let
+    \begin{equation*}
+        M_0 = \sup |f(x)|, \quad 
+        M_1 = \sup |f'(x)|
+    \end{equation*}
+    for $a \leq x \leq x_0$. 
+    For any such $x$,
+    \begin{equation*}
+        \left| f(x) \right| \leq M_1(x_0-a) \leq A(x_0-a)M_0 .
+    \end{equation*}
+    Hence $M_0 = 0$ if $A(x_0 - a) < 1$. 
+    That is, $f= 0$ on $[a, x_0]$, Proceed.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:5.27}
+    Let $\phi$ be a real function defined on a rectangle $R$ in the plane, 
+    given by $a \leq x \leq b$, $\alpha \leq y \leq \beta$.
+    A \myKeywordblue{solution} of the initial-value problem 
+    \begin{equation*}
+        y' = \phi(x,y), \quad 
+        y(a) = c \quad 
+        (\alpha \leq c \leq \beta)
+    \end{equation*}
+    is, by definition, a differentiable function $f$ on $[a,b]$ 
+    such that $f(a)=c$, $\alpha \leq f(x) \leq \beta$,
+    and 
+    \begin{equation*}
+        f'(x) = \phi(x, f(x))
+        \quad 
+        (a \leq x \leq b).
+    \end{equation*}
+    Prove that such a problem has at most one solution if there is a constant $A$ such that 
+    \begin{equation*}
+        \left| \phi(x,y_2)-\phi(x,y_1) \right| \leq A \left| y_2 - y_1 \right| 
+    \end{equation*}
+    whenever $(x,y_1) \in R$ and $(x,y_2) \in R$.
+
+    \emph{Hint}: Apply Exercise \ref{ex:5.26} to the difference of two solutions. 
+    Note that this uniqueness theorem does not hold for the initial-value problem
+    \begin{equation*}
+        y' = y^{1/2}, \quad 
+        y(0) = 0,
+    \end{equation*}
+    which has two solutions: $f(x) = 0$ and $f(x) = x^2/4$. 
+    Find all other solutions.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:5.28}
+    Formulate and prove an analogous uniqueness theorem for systems of differential equations of the form
+    \begin{equation*}
+        y'_j = \phi_j(x,y_1,\dots,y_k), \quad 
+        y_j(a) = c_j, \quad 
+        (j = 1,2,\dots,k).
+    \end{equation*}
+    Note that this can be rewritten in the form
+    \begin{equation*}
+        \mathbf{y}' = \mathbf{\phi}(x,\mathbf{y}), \quad 
+        \mathbf{y}(a) = \mathbf{c}
+    \end{equation*}
+    where $\mathbf{y} = (y_1, ... , y_k)$ ranges over a k-cell, 
+    $\mathbf{\phi}$ is the mapping of a $(k + 1)$-cell into the Euclidean $k$-space whose components are the functions $\phi_1, ... , \phi_k$, 
+    and $c$ is the vector $(c_1, ... , c_k)$.
+    Use Exercise \ref{ex:5.26}, for vector-valued functions.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:5.29}
+    Specialize Exercise \ref{ex:5.28} by considering the system
+    \begin{align*}
+        y'_j &= y_{j+1} \quad (j = 1,\dots,k-1) , \\
+        y'_k &= f(x) - \sum_{j=1}^{k} g_j(x) y_j ,
+    \end{align*}
+    where $f, g_1, ... , g_k$ are continuous real functions on $[a, b]$, 
+    and derive a uniqueness theorem for solutions of the equation
+    \begin{equation*}
+        y^{(k)} + 
+        g_k(x) y^{(k-1)} + \cdots
+        g_2(x) y' + 
+        g_1(x) y  = f(x) 
+    \end{equation*}
+    subject to initial conditions
+    \begin{equation*}
+        y(a) = c_1, \quad 
+        y'(a) = c_2, \quad 
+        \dots, \quad 
+        y^{(k-1)}(a) = c_k.
+    \end{equation*}
 \end{myExercise}
 
