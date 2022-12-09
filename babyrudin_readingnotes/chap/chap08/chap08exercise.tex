@@ -1,0 +1,82 @@
+% chap08exercise
+\section{Exercises}
+
+\begin{myExercise}
+    \label{ex:8.1}
+    Define 
+    \begin{equation*}
+        f(x) = \left\{ 
+            \begin{array}{ll}
+                e^{-1/x^2} & (x \neq 0) , \\
+                0 & (x = 0) . \\
+            \end{array}
+         \right.
+    \end{equation*}
+    Prove that $f$ has derivatives of all orders at $x=0$,
+    and that $f^{(n)}(0)=0$ for $n=1,2,3,...$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.2}
+    Let $a_{ij}$ be the number in the $i$th row and $j$th column of the array 
+    \begin{equation*}
+        \begin{array}{ccccc}
+            -1 & 0 & 0 & 0 & \dots \\
+            \frac{1}{2} & -1 & 0 & 0 & \dots \\
+            \frac{1}{4} & \frac{1}{2} & -1 & 0 & \dots \\
+            \frac{1}{8} & \frac{1}{4} & \frac{1}{2} & -1 & \dots \\
+            \dots & \dots & \dots & \dots & \dots \\
+        \end{array}
+    \end{equation*}
+    so that 
+    \begin{equation*}
+        a_{ij} = \left\{ 
+            \begin{array}{ll}
+                0 & (i<j), \\
+                1 & (i=j), \\
+                2^{j-i} & (i>j). \\
+            \end{array}
+        \right.
+    \end{equation*}
+    Prove that 
+    \begin{equation*}
+        \sum_i \sum_j a_{ij} = -2, \quad 
+        \sum_j \sum_i a_{ij} = 0.
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.3}
+    Prove that 
+    \begin{equation*}
+        \sum_i \sum_j a_{ij} = 
+        \sum_j \sum_i a_{ij} 
+    \end{equation*}
+    if $a_{ij} \geq 0$ for all $i$ and $j$ (the case $+\infty=+\infty$ may occur).
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.4}
+    Prove the following limit relations:
+    \begin{enumerate}[(a)]
+        \item $\lim_{x \to 0} \frac{b^x-1}{x}=\log b$  $(b>0)$.
+        \item $\lim_{x \to 0} \frac{\log(1+x)}{x}=1$.
+        \item $\lim_{x \to 0} (1+x)^{1/x}=e$.
+        \item $\lim_{n \to \infty} \left( 1+\frac{x}{n} \right)^n=e^x$.
+    \end{enumerate}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.5}
+    Find the following limits 
+    \begin{enumerate}[(a)]
+        \item $\lim_{x \to 0} \frac{e-(1+x)^{1/x}}{x}$.
+        \item $\lim_{n \to \infty} \frac{n}{\log n}\left[ n^{1/n}-1 \right]$.
+        \item $\lim_{x \to 0} \frac{\tan x-x}{x(1-\cos x)}$.
+        \item $\lim_{x \to 0} \frac{x-\sin x}{\tan x-x}$.
+    \end{enumerate}
+\end{myExercise}
