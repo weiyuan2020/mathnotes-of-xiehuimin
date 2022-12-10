@@ -282,7 +282,7 @@
         \end{equation*}
         for every $x$.
         \item Assume only that $f \in \mathscr{R}$ on $[-\pi,\pi]$ and that $f$ is monotonic in some segment
-        $(\alpha, \beta)c [-\pi, \pi]$. 
+        $(\alpha, \beta) \in  [-\pi, \pi]$. 
         Prove that the conclusion of (b) holds for every $x \in (\alpha, \beta)$.
     \end{asparaenum}
     (This is an application of the localization theorem.)
@@ -410,4 +410,145 @@
     Compute $\operatorname{Ind}(\gamma)$ when $\gamma(t)=e^{int}$,$a=0$,$b=2\pi$.
 
     Explain why $\operatorname{Ind}(\gamma)$ is often called the \myKeywordblue{winding number} of $\gamma$ around 0.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.24}
+    Let $\gamma$ be as in Exercise \ref{ex:8.23}, and assume in addition that the range of $\gamma$ does not intersect the negative real axis. 
+    Prove that $\operatorname{Ind} (\gamma) = 0$. 
+
+    \emph{Hint:} For $0 \leq c < \infty$ ,
+    $\operatorname{Ind} (\gamma + c)$ is a continuous integer-valued function of $c$. 
+    Also, $\operatorname{Ind} (\gamma + c) \rightarrow 0$
+    as $c \rightarrow \infty$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.25}
+    Suppose $\gamma_1$ and $\gamma_2$ are curves as in Exercise \ref{ex:8.23}, and
+    \begin{equation*}
+        | \gamma_1(t) - \gamma_2(t) | < | \gamma_1(t) |
+        \quad
+        (a \leq t \leq b).
+    \end{equation*}
+    Prove that $\operatorname{Ind} (\gamma_1) = \operatorname{Ind} (\gamma_2)$,
+    
+    \emph{Hint:} Put $\gamma = \gamma_2/\gamma_1$, Then $|1 - \gamma| < 1$, hence $\operatorname{Ind} (\gamma) = 0$, by Exercise \ref{ex:8.24}. Also,
+    \begin{equation*}
+        \frac{\gamma'}{\gamma} =
+        \frac{\gamma'_2}{\gamma_2} -
+        \frac{\gamma'_1}{\gamma_1} .
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.26}
+    Let $\gamma$ be a closed curve in the complex plane (not necessarily differentiable) with parameter interval $[0, 2\pi]$, such that $\gamma(t) \neq 0$ for every $t \in [0, 2\pi]$.
+    
+    Choose $\delta > 0$ so that $| y(t) | > \delta$ for all $t \in [0, 2\pi]$. 
+    If $P_1$ and $P_2$ are trigonometric polynomials such that $|P_1(t) -y(t) | < \delta/4$ for all $t \in [0, 2\pi]$ (their existence is assured by Theorem \ref{thm:8.15}), prove that
+    \begin{equation*}
+        \operatorname{Ind}(P_1) =
+        \operatorname{Ind}(P_2) 
+    \end{equation*}
+    by applying Exercise \ref{ex:8.25}
+
+    Define this common value to be $\operatorname{Ind}(\gamma)$.
+
+    Prove that the statements of Exercises \ref{ex:8.24} and \ref{ex:8.25} hold without any differentiability assumption.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.27}
+    Let $f$ be a continuous complex function defined in the complex plane. 
+    Suppose there is a positive integer $n$ and a complex number $c \neq 0$ such that
+    \begin{equation*}
+        \lim_{|x| \to \infty} z^{-n} f(z) = c.
+    \end{equation*}
+    Prove that $f(z) = 0$ for at least one complex number $z$.
+
+    Note that this is a generalization of Theorem \ref{thm:8.8}.
+
+    \emph{Hint:} Assume $f(z) \neq 0$ for all $z$, define
+    \begin{equation*}
+        \gamma_r(t) = f(re^{it})
+    \end{equation*}
+    for $0 \leq r < \infty$ , $0 \leq t \leq 2\pi$, 
+    and prove the following statements about the curves $\gamma_r$:
+    \begin{enumerate}[(a)]
+        \item $\operatorname{Ind}(\gamma_0)=0$.
+        \item $\operatorname{Ind}(\gamma_r)=n$ for all sufficiently large $r$.
+        \item $\operatorname{Ind}(\gamma_r)$ is a continuous function of $r$, on $[0, \infty)$.
+    \end{enumerate}
+    [In (b) and (c), use the last part of Exercise \ref{ex:8.26}.]
+    
+    Show that (a), (b), and (c) are contradictory, since $n > 0$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.28}
+    Let $\overline{D}$ be the closed unit disc in the complex plane. 
+    (Thus $z \in \overline{D}$ if and only if $| z | \leq 1$.) 
+    Let $g$ be a continuous mapping of $\overline{D}$ into the unit circle $T$. 
+    (Thus, $|g(z)| = 1$ for every $z \in \overline{D}$.)
+
+    Prove that $g(z) = - z$ for at least one $z \in T$.
+    
+    \emph{Hint:} For $0 \leq r \leq 1$, $0 \leq t \leq 2\pi$, put
+    \begin{equation*}
+        \gamma_r(t) = g(r e^{it}),
+    \end{equation*}
+    and put $\psi(t) = e^{-it} \gamma_1(t)$. 
+    If $g(z) \neq -z$ for every $z \in T$, 
+    then $\psi(t) \neq -1$ for every $t \in [0, 2\pi]$. 
+    Hence $\operatorname{Ind} (\psi) = 0$, by Exercises \ref{ex:8.24} and \ref{ex:8.26}. \eqref{eq:1.1}
+    It follows that $\operatorname{Ind} (\gamma_1) = 1$.
+    But $\operatorname{Ind} (\gamma_0)= 0$. 
+    Derive a contradiction, as in Exercise \ref{ex:8.27}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.29}
+    Prove that every continuous mapping $f$ of $\overline{D}$ into $\overline{D}$ has a fixed point in $\overline{D}$.
+    
+    (This is the 2-dimensional case of Brouwer's fixed-point theorem.)
+    
+    \emph{Hint:} Assume $f(z) \neq  z$ for every z $\in \overline{D}$. 
+    Associate to each $z \in \overline{D}$ the point
+    $g(z) \in T$ which lies on the ray that starts at $f(z)$ and passes through $z$. 
+    Then $g$ maps $\overline{D}$ into $T$, $g(z) = z$ if $z \in T$, and $g$ is continuous, because
+    \begin{equation*}
+        g(z) = z - s(z)[f(z) - z],
+    \end{equation*}
+    where $s(z)$ is the unique nonnegative root of a certain quadratic equation whose coefficients are continuous functions of $f$ and $z$. 
+    Apply Exercise \ref{ex:8.28}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.30}
+    Use Stirling's formula to prove that
+    \begin{equation*}
+        \lim_{x \to \infty} \frac{\Gamma(x+c)}{x^c \Gamma(x)} = 1
+    \end{equation*}
+    for every real constant $c$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.31}
+    In the proof of Theorem \ref{thm:7.26} it was shown that
+    \begin{equation*}
+        \int_{-1}^{1} (1-x^2)^n \d x \geq \frac{4}{3\sqrt{n}}
+    \end{equation*}
+    for $n = 1, 2, 3, ...$. Use Theorem 8.20 and Exercise 30 to show the more precise result
+    \begin{equation*}
+        \lim_{n \to \infty} \sqrt{n} \int_{-1}^{1} (1-x^2)^n \d x = \sqrt{\pi} .
+    \end{equation*}
 \end{myExercise}
