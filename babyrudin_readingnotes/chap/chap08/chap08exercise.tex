@@ -80,3 +80,267 @@
         \item $\lim_{x \to 0} \frac{x-\sin x}{\tan x-x}$.
     \end{enumerate}
 \end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.6}
+    Suppose  $f(x) f(y) = f(x + y)$ for all real $x$ and $y$.
+    \begin{asparaenum}[(a)]
+        \item Assuming that $f$ is differentiable and not zero, prove that 
+        \begin{equation*}
+            f(x) = e^{cx}
+        \end{equation*}
+        where $c$ is a constant.
+        \item Prove the same thing, assuming only that $f$ is continuous.
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.7}
+    If $0<x<\frac{\pi}{2}$, prove that 
+    \begin{equation*}
+        \frac{2}{\pi}<\frac{\sin x}{x}<1.
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.8}
+    For $n=0,1,2,\dots$, and $x$ real, prove that 
+    \begin{equation*}
+        \left| \sin nx \right| \leq 
+        n \left| \sin x \right| .
+    \end{equation*}
+    Note that this inequality may be false for other values of $n$.
+    For instance,
+    \begin{equation*}
+        \left| \sin \frac{1}{2}\pi \right| >
+        \frac{1}{2}\left| \sin \pi \right| .
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.9}
+    \begin{asparaenum}[(a)]
+        \item Put $s_N=1+\left( \frac{1}{2} \right)+\cdots+\left( 1/N \right)$.
+        Prove that 
+        \begin{equation*}
+            \lim_{N \to \infty} \left( s_N - \log N \right)
+        \end{equation*}
+        exists.
+        (The limit, often denoted by $\gamma$, is called Euler's constant. 
+        Its numerical value is $0.5772\dots$. 
+        It is not known whether $\gamma$ is rational or not.)
+        \item Roughly how large must $m$ be so that $N=10^m$ satisfies $s_N>100$?
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.10}
+    Prove that $\sum 1/p$ diverges; 
+    the sum extends over all primes.
+
+    (This shows that the primes form a fairly substantial subset of the positive integers.)
+
+    \emph{Hint:} Given $N$, let $p_1,\dots,p_k$ be those primes that divide at least one integer $\leq N$.
+    Then 
+    \begin{align*}
+        \sum_{n=1}^{N}\frac{1}{n} 
+        &\leq \prod_{j=1}^{k} \left( 1+\frac{1}{p_j}+\frac{1}{p_j^2}+\cdots \right) \\
+        &= \prod_{j=1}^{k} \left( 1-\frac{1}{p_j} \right)^{-1} \\
+        &\leq \exp \sum_{j=1}^{k} \frac{2}{p_j} .
+    \end{align*}
+    The last inequality holds because
+    \begin{equation*}
+        (1-x)^{-1} \leq e^{2x}
+    \end{equation*}
+    if $0 \leq x \leq \frac{1}{2}$.
+
+    (There are many proofs of this result. See, for instance, the article by I. Niven in \emph{Amer. Math. Monthly}, vol. 78, 1971, pp. 272-273, and the one by R. Bellman in \emph{Amer. Math. Monthly}, vol. 50, 1943, pp. 318-319.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.11}
+    Suppose $f \in \mathscr{R}$ on $[0,A]$ for all $A<\infty$, and $f(x) \rightarrow 1$ as $x \rightarrow +\infty$.
+    Prove that 
+    \begin{equation*}
+        \lim_{t \to 0} t \int_{0}^{\infty} e^{-tx} f(x) \d x = 1
+        \quad 
+        (t>0).
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.12}
+    Suppose $0 < \delta < \pi$, $f(x) = 1$ if $|x | \leq \delta$, 
+    $f(x) = 0$ if $\delta < |x | \leq \pi$, 
+    and $f(x + 2\pi) = f(x)$ for all $x$.
+    \begin{asparaenum}[(a)]
+        \item Compute the Fourier coefficients of $f$.
+        \item Conclude that 
+        \begin{equation*}
+            \sum_{n=1}^{\infty} \frac{\sin(n\delta)}{n} = \frac{\pi-\delta}{2}
+            \quad 
+            (0 < \delta < \pi) .
+        \end{equation*}
+        \item Deduce from Parseval's theorem that 
+        \begin{equation*}
+            \sum_{n=1}^{\infty} \frac{\sin^2(n\delta)}{n^2\delta} = \frac{\pi-\delta}{2} .
+        \end{equation*}
+        \item Let $\delta \rightarrow 0$ and prove that
+        \begin{equation*}
+            \int_{0}^{\infty} \left( \frac{\sin x}{x} \right)^2 \d x = \frac{\pi}{2}.
+        \end{equation*}
+        \item Put $\delta = \pi/2$ in (c). What do you get?
+    \end{asparaenum}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.13}
+    Put $f(x) = x$ if $0 \leq x < 2\pi$, and apply Parseval's theorem to conclude that
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} .
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.14}
+    If $f(x) = (\pi - |x|)^2$ on $[-\pi, \pi]$, prove that
+    \begin{equation*}
+        f(x) = \frac{\pi^2}{3} + \sum_{n=1}^{\infty}\frac{4}{n^2}\cos nx
+    \end{equation*}
+    and deduce that 
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6},
+        \quad
+        \sum_{n=1}^{\infty} \frac{1}{n^4} = \frac{\pi^4}{90}.
+    \end{equation*}
+    (A recent article by E. L. Stark contains many references to series of the form $\sum n^{-s}$,
+    where $s$ is a positive integer. See \emph{Math. Mag.}, vol. 47, 1974, pp. 197-202.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.15}
+    With $D_n$ as defined in (\ref{eq:8.77}), put
+    \begin{equation*}
+        K_N(x) = \frac{1}{N+1} \sum_{n=0}^{N} D_n(x).
+    \end{equation*}
+    Prove that 
+    \begin{equation*}
+        K_N(x) = \frac{1}{N+1} \cdot \frac{1-\cos(N+1)x}{1-\cos x}
+    \end{equation*}
+    and that 
+    \begin{enumerate}[(a)]
+        \item $K_N \geq 0$,
+        \item $\frac{1}{2\pi} \int_{-\pi}^{\pi} K_N(x) \d x = 1$,
+        \item $K_N(x) \leq \frac{1}{N+1}\cdot \frac{2}{1-\cos \delta}$ if $0<\delta\leq|x|\leq\pi$.
+    \end{enumerate}
+    If $s_N = s_N(f; x)$ is the $N$th partial sum of the Fourier series of $f$, consider the arithmetic means
+    \begin{equation*}
+        \sigma_N = \frac{s_0+s_1+\cdots+s_N}{N+1}.
+    \end{equation*}
+    Prove that 
+    \begin{equation*}
+        \sigma_N(f;x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x-t)K_N(t) \d t,
+    \end{equation*}
+    and hence prove Fej\'{e}r's theorem:
+
+    \emph{If $f$ is continuous, with period $2\pi$, then $\sigma_N(f;x)\rightarrow f(x)$ uniformly on $[-\pi,\pi]$.}
+
+    \emph{Hint:} Use properties (a), (b), (c) to proceed as in Theorem \ref{thm:7.26}.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.16}
+    Prove a pointwise version of Fej\'{e}r's theorem:
+
+    \emph{If $f \in \mathscr{R}$ and $f(x+)$, $f(x-)$ exist for some $x$, then}
+    \begin{equation*}
+        \lim_{N \to \infty} \sigma_N (f;x) = \frac{1}{2}\left[ f(x+)-f(x-) \right].
+    \end{equation*}
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.17}
+    Assume $f$ is bounded and monotonic on $[-\pi, \pi)$, 
+    with Fourier coefficients $c_n$, as given by (\ref{eq:8.62}).
+    \begin{asparaenum}[(a)]
+        \item Use Exercise 17 of Chap. 6 to prove that {ncn} is a bounded sequence.
+        \item Combine (a) with Exercise \ref{ex:3.16} and with Exercise \ref{ex:3.14}(e), to conclude that 
+        \begin{equation*}
+            \lim_{N \to \infty} s_N(f;x) = \frac{1}{2}\left[ f(x+)-f(x-) \right].
+        \end{equation*}
+        for every $x$.
+        \item Assume only that $f \in \mathscr{R}$ on $[-\pi,\pi]$ and that $f$ is monotonic in some segment
+        $(\alpha, \beta)c [-\pi, \pi]$. 
+        Prove that the conclusion of (b) holds for every $x \in (\alpha, \beta)$.
+    \end{asparaenum}
+    (This is an application of the localization theorem.)
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.18}
+    Define
+    \begin{align*}
+        f(x) &= x^3 - \sin^2 x \tan x \\
+        g(x) &= 2x^2 - \sin^2 x - x\tan x.
+    \end{align*}
+    Find out, for each of these two functions, whether it is positive or negative for all $x \in (0, \pi/2)$, or whether it changes sign. 
+    Prove your answer.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.19}
+    Suppose $f$ is a continuous function on $\R^1$,
+    $f(x + 2\pi) = f(x)$, and $\alpha/\pi$ is irrational.
+    Prove that
+    \begin{equation*}
+        \lim_{N \to \infty} \frac{1}{N} \sum_{n=1}^{N} f(x+n\alpha) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \d t
+    \end{equation*}
+    for every $x$.
+
+    \emph{Hint:} Do it first for $f(x) = e^{ikx}$.
+\end{myExercise}
+
+
+\begin{myExercise}
+    \label{ex:8.20}
+    The following simple computation yields a good approximation to Stirling's formula.
+
+    For $m=1,2,3,\dots$, define 
+    \begin{equation*}
+        f(x) = (m+1-x) \log m + (x-m) \log (m+1)
+    \end{equation*}
+    if $m \leq x \leq m+1$, and define 
+    \begin{equation*}
+        g(x) = \frac{x}{m} - 1 + \log m
+    \end{equation*}
+    if $m-\frac{1}{2} \leq x \leq m+\frac{1}{2}$.
+    Draw the graphs of $f$ and $g$.
+    Note that $f(x) \leq \log{x} \leq g(x)$ \\
+    if $x \geq 1$ and that 
+    \begin{equation*}
+        \int_{1}^{n} f(x) \d x = \log (n!) - \frac{1}{2} \log n > -\frac{1}{8} + \int_{1}^{n} g(x) \d x.
+    \end{equation*}
+    Integrate $\log x$ over $[1,n]$.
+    Conclude that 
+    \begin{equation*}
+        \frac{7}{8} < \log(n!) - (n+\frac{1}{2}) \log n + n <1
+    \end{equation*}
+    for $n=2,3,4,\dots$. (\emph{Note:} $\log \sqrt{2\pi}\sim 0.918\dots$.) Thus 
+    \begin{equation*}
+        e^{7/8}<\frac{n!}{(n/e)^n\sqrt{n}}<e.
+    \end{equation*}
+\end{myExercise}
