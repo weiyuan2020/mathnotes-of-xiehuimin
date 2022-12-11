@@ -5,82 +5,212 @@
 
 \begin{myExercise}
     \label{ex:9.1}
+    If $S$ is a nonempty subset of a vector space $X$, 
+    prove (as asserted in Sec. \ref{mydef:9.1}) that
+    the span of $S$ is a vector space.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.2}
+    Prove (as asserted in Sec. \ref{mydef:9.6}) that $BA$ is linear if $A$ and $B$ are linear transformations.
+    
+    Prove also that $A^{- 1}$ is linear and invertible.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.3}
+    Assume $A \in  L(X, Y)$ and $A\mathbf{x}= \mathbf{0}$ only when $\mathbf{x}= \mathbf{0}$. 
+    Prove that $A$ is then 1-1.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.4}
+    Prove (as asserted in Sec. \ref{mydef:9.30}) that null spaces and ranges of linear transformations are vector spaces.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.5}
+    Prove that to every $A \in L(\R^n, \R^1)$ corresponds a unique $\mathbf{y} \in \R^n$ such that $A\mathbf{x = x \cdot y}$.
+    
+    Prove also that $\left\| A \right\| = \left| y \right| $.
+
+    \emph{Hint:} Under certain conditions, equality holds in the Schwarz inequality.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.6}
+    If $f (0, 0) = 0$ and
+    \begin{equation*}
+        f(x, y) = \frac{xy}{x^2 + y^2} \quad\text{if } (x, y) \neq (0, 0),
+    \end{equation*}
+    prove that $(D_1f)(x, y)$ and $(D_2f)(x, y)$ exist at every point of $\R^2$, although $f$ is not continuous at $(0, 0)$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.7}
+    Suppose that $f$ is a real-valued function defined in an open set $E \subset \R^n$, 
+    and that the partial derivatives $D_1f, \dots , D_nf$ are bounded in $E$. 
+    Prove that $f$ is continuous in $E$.
+
+    \emph{Hint:} Proceed as in the proof of Theorem \ref{thm:9.21}.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.8}
+    Suppose that $f$ is a differentiable real function in an open set $E \subset \R^n$, 
+    and that $f$ has a local maximum at a point $\mathbf{x} \in E$. 
+    Prove that $f'(\mathbf{x}) = 0$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.9}
+    If $\mathbf{f}$ is a differentiable mapping of a \myKeywordblue{connected} open set $E \subset \R^n$ into $\R^m$, 
+    and if $\mathbf{f}'(\mathbf{x}) = 0$ for every $\mathbf{x} \in E$, 
+    prove that $\mathbf{f}$ is constant in $E$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.10}
+    If $f$ is a real function defined in a convex open set $E \subset \R^n$, 
+    such that $(D_1f)(\mathbf{x}) = 0$ for every $\mathbf{x} \in E$, 
+    prove that $f(\mathbf{x})$ depends only on $x_2, ... , x_n$.
+
+    Show that the convexity of E can be replaced by a weaker condition, but that some condition is required. 
+    For example, if $n = 2$ and $E$ is shaped like a horseshoe, the statement may be false.
 \end{myExercise}
 
 
 
 \begin{myExercise}
     \label{ex:9.11}
+    If $f$ and $g$ are differentiable real functions in $\R^n$, 
+    prove that
+    \begin{equation*}
+        \nabla (fg) = 
+        f\nabla (g) + 
+        g\nabla (f) 
+    \end{equation*}
+    and that $\nabla (1/f)=-f^{-2}\nabla f$ wherever $f \neq 0$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.12}
+    Fix two real numbers $a$ and $b$, $0 <a< b$. 
+    Define a mapping $\mathbf{f} = (f_1,f_2,f_3)$of $\R^2$ into $\R^3$ by
+    \begin{align*}
+        f_1(s,t)&=(b+a\cos s)\cos t \\
+        f_2(s,t)&=(b+a\cos s)\sin t \\
+        f_3(s,t)&=a\sin s.
+    \end{align*}
+    Describe the range $K$ of $\mathbf{f}$. 
+    (It is a certain compact subset of $\R^3$.)
+    \begin{asparaenum}[(a)]
+        \item Show that there are exactly 4 points $\mathbf{p} \in K$ such that
+        \begin{equation*}
+            (\nabla f_1)(\mathbf{f}^{-1}(\mathbf{p})) = \mathbf{0}.
+        \end{equation*}
+        Find these points.
+        \item Determine the set of all $\mathbf{q} \in K$ such that
+        \begin{equation*}
+            (\nabla f_3)(\mathbf{f}^{-1}(\mathbf{q})) = \mathbf{0}.
+        \end{equation*}
+        \item Show that one of the points $\mathbf{p}$ found in part (a) corresponds to a local maximum of $f_1$, 
+        one corresponds to a local minimum, 
+        and that the other two are neither 
+        (they are so-called ``saddle points'').
+
+        Which of the points $\mathbf{q}$ found in part (b) correspond to maxima or minima?
+        \item Let $\lambda$  be an irrational real number, 
+        and define $\mathbf{g}(t) = \mathbf{f}(t, \lambda t)$. 
+        Prove that $\mathbf{g}$ is a 1-1 mapping of $\R^1$ onto a dense subset of $K$. 
+        Prove that
+        \begin{equation*}
+            \left| \mathbf{g}'(t) \right|^2 =
+            a^2 + \lambda^2(b + a \cos t)^2 .
+        \end{equation*}
+    \end{asparaenum}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.13}
+    Suppose $\mathbf{f}$ is a differentiable mapping of $\R^1$ into $\R^3$ 
+    such that $|\mathbf{f}(t)|=1$ for every $t$.
+    Prove that $\mathbf{f}'(t) \cdot \mathbf{f}(t) = 0$.
+
+    Interpret this result geometrically.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.14}
+    Define $f(0, 0) = 0$ and
+    \begin{equation*}
+        f(x, y) = \frac{x^3}{x^2+y^2}
+        \quad\text{if }(x, y) \neq (0, 0).
+    \end{equation*}
+    \begin{asparaenum}[(a)]
+        \item Prove that $D_1 f$ and $D_2 g$ are bounded functions in $\R^2$. (Hence $f$ is continuous.)
+        \item Let $\mathbf{u}$ be any unit vector in $\R^2$. Show that the directional derivative $(D_{\mathbf{u}}f)(0, 0)$ exists, and that its absolute value is at most 1.
+        \item Let $\gamma$ be a differentiable mapping of $\R^1$ into $\R^2$ 
+        (in other words, $\gamma$ is a differentiable curve in $\R^2$), 
+        with $\gamma(0) = (0, 0)$ and $| \gamma'(0) |> 0$. 
+        Put $g(t) =  f(\gamma(t))$ and prove that $g$ is differentiable for every $t \in \R^1$
+
+        If $\gamma \in \mathscr{C}'$, prove that $g \in \mathscr{C}'$.
+        \item In spite of this, prove that $f$ is not differentiable at $(0, 0)$.
+    \end{asparaenum}
+    \emph{Hint:} Formula (\ref{eq:8.40}) fails.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.15}
+    Define $f(0, 0) = 0$, and put
+    \begin{equation*}
+        f(x,y)=x^2+y^2-2x^2y-\frac{4x^6y^2}{(x^4+y^2)^2}
+    \end{equation*}
+    if $(x,y)\neq (0,0)$.
+    \begin{asparaenum}[(a)]
+        \item Prove, for all $(x, y) \in \R^2$ , that
+        \begin{equation*}
+            4x^3y^2 \leq (x^4+y^2)^2.
+        \end{equation*}
+        Conclude that $f$ is continuous.
+        \item For $0 \leq \theta \leq 2\pi$, $-\infty < t < \infty$, define
+        \begin{equation*}
+            g_{\theta}(t) = f(t\cos \theta, t\sin \theta).
+        \end{equation*}
+        Show that 
+        $g_{\theta} (0) = 0$, 
+        $g'_{\theta} (0) = 0$, 
+        $g''_{\theta} (0) = 2$. 
+        Each $g_{\theta}$ has therefore a strict local minimum at $t = 0$.
+
+        In other words, the restriction of $f$ to each line through $(0, 0)$ has a strict local minimum at $(0, 0)$.
+        \item Show that $(0, 0)$ is nevertheless not a local minimum for $f$, since $f(x, x^2) = -x^4$.
+    \end{asparaenum}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.16}
+    Show that the continuity of $\mathbf{f}'$ at the point $\mathbf{a}$ is needed in the inverse function theorem, even in the case $n = 1$ : If
+    \begin{equation*}
+        f(t) = t+2t^2\sin \left( \frac{1}{t} \right)
+    \end{equation*} 
+    for $t \neq 0$, and $f(0) = 0$, then $f'(0) = 1$, $f'$ is bounded in $(-1, 1)$, 
+    but $f$ is not one-to-one in any neighborhood of 0.
 \end{myExercise}
 
 

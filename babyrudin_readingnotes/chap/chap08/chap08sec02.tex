@@ -109,3 +109,95 @@ and summarize what we have proved so far.
 
 % todo add proof
 
+\begin{equation*}
+    e^x>\frac{x^{n+1}}{(n+1)!}
+\end{equation*}
+
+\begin{equation*}
+    x^n e^{-x} < \frac{(n+1)!}{x},
+\end{equation*}
+
+
+Since $E$ is strictly increasing and differentiable on $\R^1$, 
+it has an inverse function $L$ which is also strictly increasing and differentiable and whose domain is $E(\R^1)$, 
+that is, the set of all positive numbers. $L$ is defined by
+\begin{equation}
+    \label{eq:8.36}
+    E(L(y))=y \quad (y>0),
+\end{equation}
+or, equivalently, by
+\begin{equation}
+    \label{eq:8.37}
+    E(L(x))=x \quad (x\text{ real}).
+\end{equation}
+Differentiating (\ref{eq:8.37}), we get (compare Theorem \ref{thm:5.5})
+\begin{equation*}
+    L'(E(x)) \cdot E(x) = 1.
+\end{equation*}
+Writing $y = E(x)$, this gives us
+\begin{equation}
+    \label{eq:8.38}
+    L'(y) = \frac{1}{y} \quad (y>0).
+\end{equation}
+Taking $x = 0$ in (\ref{eq:8.37}), we see that $L(1) = 0$. 
+Hence (\ref{eq:8.38}) implies
+\begin{equation}
+    \label{eq:8.39}
+    L(y) = \int_{1}^{y} \frac{\d x}{x}.
+\end{equation}
+Quite frequently, (\ref{eq:8.39}) is taken as the starting-point of the theory of the logarithm and the exponential function. 
+Writing $u = E(x), v = E(y)$, (\ref{eq:8.26}) gives
+\begin{equation*}
+    L(uv)=L(E(x)\cdot E(y)) = L(E(x+y)) = x+y,
+\end{equation*}
+so that
+\begin{equation}
+    \label{eq:8.40}
+    L(uv)=L(u)+L(v) \quad (u>0,v>0).
+\end{equation}
+
+This shows that $L$ has the familiar property which makes logarithms useful tools for computation. 
+The customary notation for $L(x)$ is of course $\log x$.
+
+As to the behavior of $\log x$ as $x \rightarrow + \infty$ and as $x \rightarrow 0$, Theorem \ref{thm:8.6}(e) shows that
+\begin{align*}
+    \log x \rightarrow + \infty &\text{ as} x \rightarrow + \infty \\
+    \log x \rightarrow - \infty &\text{ as} x \rightarrow 0.
+\end{align*}
+
+It is easily seen that
+\begin{equation}
+    \label{eq:8.41}
+    x^n = E(nL(x))
+\end{equation}
+if $x > 0$ and $n$ is an integer. 
+Similarly, if $m$ is a positive integer, we have
+\begin{equation}
+    \label{eq:8.42}
+    x^{1/m} = E(\frac{1}{m}L(x)),
+\end{equation}
+
+% todo pp 190
+\begin{equation}
+    \label{eq:8.43}
+    x^{\alpha} = E(\alpha L(x)) = e^{\alpha \log x}
+\end{equation}
+
+\begin{equation}
+    \label{eq:8.44}
+    (x^{\alpha})' = E(\alpha L(x))\cdot \frac{\alpha}{x} = \alpha x^{\alpha-1}.
+\end{equation}
+
+
+\begin{equation}
+    \lim_{x \to +\infty} x^{-\alpha} \log x = 0
+\end{equation}
+
+
+\begin{align*}
+    x^{-\alpha} \log x 
+    &= x^{-\alpha} \int_{1}^{x} t^{-1} \d t
+    <  x^{-\alpha} \int_{1}^{x} t^{\varepsilon-1} \d t \\
+    &= x^{-\alpha} \frac{x^{\varepsilon}-1}{\varepsilon}
+    <   \frac{x^{\varepsilon-\alpha}}{\varepsilon} ,
+\end{align*}
