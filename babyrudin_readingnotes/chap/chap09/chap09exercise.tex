@@ -216,56 +216,160 @@
 
 \begin{myExercise}
     \label{ex:9.17}
+    Let $f = (f_1,f_2)$ be the mapping of $\R^2$ into $\R^2$ given by
+    \begin{equation*}
+        f_1(x,y) = e^x \cos y, 
+        \quad
+        f_2(x,y) = e^x \sin y, 
+    \end{equation*}
+    \begin{enumerate}[(a)]
+        \item What is the range of $f$?
+        \item Show that the Jacobian of $f$ is not zero at any point of $\R^2$. 
+        Thus every point of $\R^2$ has a neighborhood in which $f$ is one-to-one. 
+        Nevertheless, $f$ is not one-to-one on $\R^2$.
+        \item Put $\mathbf{a} = (0, \pi/3), \mathbf{b} = f(\mathbf{a})$, let $\mathbf{g}$ be the continuous inverse of $\mathbf{f}$, 
+        defined in a neighborhood of $\mathbf{b}$, such that $\mathbf{g(b) = a}$. 
+        Find an explicit formula for $\mathbf{g}$, compute $\mathbf{f'(a)}$ and $\mathbf{g'(b)}$, and verify the formula \eqref{eq:9.52}. 
+        \item What are the images under $\mathbf{f}$ of lines parallel to the coordinate axes?
+    \end{enumerate}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.18}
+    Answer analogous questions for the mapping defined by
+    \begin{equation*}
+        u = x^2-y^2, 
+        \quad 
+        v = 2xy.
+    \end{equation*}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.19}
+    Show that the system of equations 
+    \begin{align*}
+        3x +  y -  z +  u^2 &= 0 \\
+         x -  y + 2z +  u   &= 0 \\
+        2x + 2y - 3z + 2u   &= 0 
+    \end{align*}
+    can be solved 
+            for $x, y, u$ in terms of $z$;
+            for $x, z, u$ in terms of $y$;
+            for $y, z, u$ in terms of $x$;
+    but not for $x, y, z$ in terms of $u$.
 \end{myExercise}
+
+\mySolve
+\begin{equation*}
+    \begin{pmatrix}
+        3 &  1 & -1 \\
+        1 & -1 &  2 \\
+        2 &  2 & -3 \\
+    \end{pmatrix}
+    \begin{pmatrix}
+        x \\ y \\ z \\
+    \end{pmatrix} = 
+    \begin{pmatrix}
+        -u^2 \\ u \\ 2u \\
+    \end{pmatrix}
+\end{equation*}
 
 
 \begin{myExercise}
     \label{ex:9.20}
+    Take $n = m = 1$ in the implicit function theorem, and interpret the theorem (as well as its proof) graphically.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.21}
+    Define $f$ in $\R^2$ by
+    \begin{equation*}
+        f(x,y) = 2x^3-3x^2+2y^3+3y^2.
+    \end{equation*}
+    \begin{enumerate}[(a)]
+        \item Find the four points in $\R^2$ at which the gradient of $f$ is zero. 
+        Show that $f$ has exactly one local maximum and one local minimum in $\R^2$.
+        \item Let $S$ be the set of all $(x, y) \in \R^2$ at which $f(x, y) = 0$. 
+        Find those points of $S$ that have no neighborhoods in which the equation $f(x, y) = 0$ can be solved for $y$ in terms of $x$ 
+        (or for $x$ in terms of $y$). 
+        Describe $S$ as precisely as you can.
+    \end{enumerate}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.22}
+    Give a similar discussion for
+    \begin{equation*}
+        f(x,y)=2x^3+6xy^2-3x^2+3y^2.
+    \end{equation*}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.23}
+    Define $f$ in $\R^3$ by
+    \begin{equation*}
+        f(x,y_1,y_2) = x^2 y_1 + e^x + y_2 .
+    \end{equation*}
+    Show that $f(0, 1, -1) = 0$, $(D_1 f) (0, 1, -1) \neq 0$, 
+    and that there exists therefore a differentiable function $g$ in some neighborhood of $(1, -1)$ in $\R^2$, 
+    such that $g(1, -1) = 0$ and
+    \begin{equation*}
+        f(g(y_1, y_2), y_1, y_2) = 0.
+    \end{equation*}
+    Find $(D_1 g)(1, -1)$ and $(D_2 g)(1, -1)$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.24}
+    For $(x, y) \neq (0, 0)$, define $\mathbf{f} = (f_1,f_2)$ by
+    \begin{equation*}
+        f_1(x,y) = \frac{x^2-y^2}{x^2+y^2}, 
+        \quad 
+        f_2(x,y) = \frac{xy}{x^2+y^2}.
+    \end{equation*}
+    Compute the rank of $\mathbf{f}'(x, y)$, and find the range of $\mathbf{f}$.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.25}
+    Suppose $A \in L(\R^n, \R^m)$, let $r$ be the rank of $A$.
+    \begin{enumerate}[(a)]
+        \item Define $S$ as in the proof of Theorem \ref{thm:9.32}. Show that $SA$ is a projection in $\R^n$ whose null space is $\mathscr{N}(A)$ and whose range is $\mathscr{R}(S)$. \emph{Hint:} By \eqref{eq:9.68}, $SASA = SA$.
+        \item Use (a) to show that 
+        \begin{equation*}
+            \dim \mathscr{N}(A) + \dim \mathscr{R}(A) = n.
+        \end{equation*}
+    \end{enumerate}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.26}
+    Show that the existence (and even the continuity) of $D_{12}f$ does not imply the existence of $D_1 f$. 
+    For example, let $f(x, y) = g(x)$, where $g$ is nowhere differentiable.
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.27}
+    Put $f(0,0)=0$, and 
+    \begin{equation*}
+        f(x,y) = \frac{xy(x^2-y^2)}{x^2+y^2}
+    \end{equation*}
+    if $(x,y) \neq (0,0)$.
+    Prove that 
+    \begin{enumerate}[(a)]
+        \item $f, D_1 f, D_2 f$ are continuous in $\R^2$;
+        \item $D_{12}f$ and $D_{21}f$ exist at every point of $\R^2$, and are continuous except at $(0, 0)$;
+        \item $(D_{12}f)(0,0)=1$, and $(D_{21}f)(0,0)=-1$.
+    \end{enumerate}
 \end{myExercise}
 
 
