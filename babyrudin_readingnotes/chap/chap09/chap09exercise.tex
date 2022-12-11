@@ -375,16 +375,111 @@
 
 \begin{myExercise}
     \label{ex:9.28}
+    For $t \geq 0$, put
+    \begin{equation*}
+        \phi(x,t) = \left\{ 
+            \begin{array}{ll}
+                x & (0 \leq x \leq \sqrt{t}) \\
+                -x+2\sqrt{t} & (\sqrt{t} \leq x \leq \sqrt{t}) \\
+                0 & (\text{otherwise}), \\
+            \end{array}
+         \right.
+    \end{equation*}
+    and put $\phi(x,t)=-\phi(x,|t|)$ if $t<0$.
+
+    Show that $\phi$ is continuous on $\R^2$, and 
+    \begin{equation*}
+        (D_2 \phi)(x, 0) = 0
+    \end{equation*}
+    for all $x$. 
+    Define 
+    \begin{equation*}
+        f(t) = \int_{-1}^{1} \phi (x,t) \d x.
+    \end{equation*}
+    Show that $f(t)=t$ if $|t|<\frac{1}{4}$.
+    Hence 
+    \begin{equation*}
+        f'(0) \neq \int_{-1}^{1} (D_2 \phi) (x,0) \d x.
+    \end{equation*}
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.29}
+    Let $E$ be an open set in $\R^n$. 
+    The classes $\mathscr{C}'(E)$ and $\mathscr{C}''(E)$ are defined in the text.
+    By induction, $\mathscr{C}^{(k)} (E)$ can be defined as follows, for all positive integers $k$: 
+    To say that $f \in \mathscr{C}^{(k)} (E)$ means that the partial derivatives $D_1 f, ... , D_n f$ belong to $\mathscr{C}^{(k-1)} (E)$.
+
+    Assume $f \in \mathscr{C}^{(k)} (E)$. and show 
+    (by repeated application of Theorem \ref{thm:9.41}) 
+    that the $k$th-order derivative
+    \begin{equation*}
+        D_{i_1 i_2 \cdots i_k} f = D_{i_1} D_{i_2} \dots D_{i_k} f
+    \end{equation*}
+    is unchanged if the subscripts $i_1, ... , i_k$ are permuted.
+
+    For instance, if $n \geq 3$, then
+    \begin{equation*}
+        D_{1213} f = D_{3112} f
+    \end{equation*}
+    for every $f \in \mathscr{C}^{(4)}$,
 \end{myExercise}
 
 
 \begin{myExercise}
     \label{ex:9.30}
+    Let $f \in \mathscr{C}^{(m)} (E)$, 
+    where $E$ is an open subset of $\R^n$. 
+    Fix $\mathbf{a} \in E$, and suppose $x \in \R^n$ is so close to $\mathbf{0}$ that the points
+    \begin{equation*}
+        \mathbf{p}(t) = \mathbf{a} + t \mathbf{x}
+    \end{equation*}
+    lie in $E$ whenever $0 \leq t \leq 1$. 
+    Define
+    \begin{equation*}
+        h(t) = f(\mathbf{p}(t))
+    \end{equation*}
+    for all $t \in \R^1$ for which $\mathbf{p}(t) \in E$.
+    \begin{asparaenum}[(a)]
+        \item For $1 \leq k \leq m$, show (by repeated application of the chain rule) that 
+        \begin{equation*}
+            h^{(k)}(t) = \sum 
+            \left( D_{i_1 \cdots i_k} \right) \left( \mathbf{p}(t) \right) 
+            x_{i_1} \dots x_{i_k} .
+        \end{equation*}
+        The sum extends over all ordered $k$-tuples $(i_1, ... , i_k)$ in which each $i_j$ is one of the integers $1, ... , n$.
+        \item By Taylor's theorem \ref{thm:5.15},
+        \begin{equation*}
+            h(1) = \sum_{k=0}^{m-1} \frac{h^{(k)}(0)}{k!} + \frac{h^{(m)}(t)}{m!}
+        \end{equation*}
+        for some $t \in (0, 1)$. 
+        Use this to prove Taylor's theorem in $n$ variables by showing that the formula
+        \begin{equation*}
+            f(\mathbf{a+x}) = \sum_{k=0}^{m-1} \frac{1}{k!}
+            \sum \left( D_{i_1 \cdots i_k} f \right)(\mathbf{a})
+            x_{i_1} \dots x_{i_k} 
+            + r(\mathbf{x})
+        \end{equation*}
+        represents $f(\mathbf{a + x})$ as the sum of its so-called ``Taylor polynomial of degree $m - 1$,'' plus a remainder that satisfies
+        \begin{equation*}
+            \lim_{\mathbf{x} \to \mathbf{0}} \frac{r(\mathbf{x})}{|\mathbf{x}|^{m-1}} = 0.
+        \end{equation*}
+        Each of the inner sums extends over all ordered $k$-tuples $(i_1, ... , i_k)$, as in part (a); 
+        as usual, the zero-order derivative of $f$ is simply $f$, so that the constant term of the Taylor polynomial off at $\mathbf{a}$ is $f(\mathbf{a})$.
+        \item Exercise \ref{ex:9.29} shows that repetition occurs in the Taylor polynomial as written in part (b). 
+        For instance, $D_{113}$ occurs three times, as $D_{113}, D_{131}, D_{311}$, 
+        The sum of the corresponding three terms can be written in the form
+        \begin{equation*}
+            3\left( D_1^2 D_3 f \right)(\mathbf{a}) x_1^2 x_3 .
+        \end{equation*}
+        Prove (by calculating how often each derivative occurs) that the Taylor polynomial in (b) can be written in the form
+        \begin{equation*}
+            \sum \frac{(D_1^{s_1} \cdots D_n^{s_n} f)(\mathbf{a})}{s_1 ! \cdots s_n !} 
+            x_1^{s_1} \cdots x_n^{s_n} .
+        \end{equation*}
+        Here the summation extends over all ordered $n$-tuples $(s_1, ... , s_n)$ such that each $s$, is a nonnegative integer, and $s_1 + \cdots + s_n \leq m - 1$.
+    \end{asparaenum}
 \end{myExercise}
 
 
