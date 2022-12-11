@@ -3,7 +3,7 @@
 \section{Exercises}
 
 
-\begin{myExercise}
+\begin{myexercise}
     \label{ex:10.1}
     Let $H$ be a compact convex set in $\R^k$, with nonempty interior. 
     Let $f \in \mathscr{C}(H)$, put $f(\mathbf{x}) = 0$ in the complement of $H$, 
@@ -11,5 +11,51 @@
 
     Prove that $\int_H f$ is independent of the order in which the $k$ integrations are carried out.
 
-    \emph{Hint:} Approximate $f$ by functions that are continuous on $\R^k$ and whose supports are in $H$, as was done in Example \ref{myExample:10.47}.
-\end{myExercise}
+    \emph{Hint:} Approximate $f$ by functions that are continuous on $\R^k$ and whose supports are in $H$, as was done in Example \ref{newexample:10.47}.
+\end{myexercise}
+
+
+\begin{myexercise}
+    \label{ex:10.2}
+    For $i = 1, 2, 3, ...$ , let $\phi_i \in \mathscr{C}(\R^1)$ have support in $(2^{-i} , 2^{1-i})$, such that $\int \phi_i = 1$.
+    Put
+    \begin{equation*}
+        f(x,y) = \sum_{i=1}^{\infty}
+        \left[ 
+            \phi_{i}(x) -
+            \phi_{i+1}(x)
+         \right] \phi_i (y)
+    \end{equation*}
+    Then $f$ has compact support in $\R^2$, 
+    $f$ is continuous except at $(0,0)$,
+    and 
+    \begin{equation*}
+        \int \d y \int f(x,y) \d x = 0
+        \quad \text{ but } \quad
+        \int \d x \int f(x,y) \d y = 1.
+    \end{equation*}
+    Observe that $f$ is unbounded in every neighborhood of $(0, 0)$.
+\end{myexercise}
+
+
+\begin{myexercise}
+    \label{ex:10.3}
+    \begin{asparaenum}[(a)]
+        \item If $F$ is as in Theorem \ref{thm:10.7}, put 
+        $\mathbf{A} = \mathbf{F}'(0)$,
+        $\mathbf{F_{1}(x)} = \mathbf{A^{-1}F(x)}$.
+        Then $\mathbf{F'_1(0)}=I$.
+        Show that 
+        \begin{equation*}
+            \mathbf{F_1(x) = G_n \circ G_{n-1} \circ \cdots \circ G_1(x)}
+        \end{equation*}
+        in some neighborhood of $\mathbf{0}$,
+        for certain primitive mappings $\mathbf{G_n \circ \cdots \circ G_1(x)}$.
+        This gives another version of Theorem \ref{thm:10.7}:
+        \begin{equation*}
+            \mathbf{F(x) = F'(0) G_n \circ G_{n-1} \circ \cdots \circ G_1(x)}.
+        \end{equation*}
+        \item Prove that the mapping $(x, y) > (y, x)$ of $\R^2$ onto $\R^2$ is not the composition of any two primitive mappings, in any neighborhood of the origin. 
+        (This shows that the flips $B_1$ cannot be omitted from the statement of Theorem \ref{thm:10.7}.)
+    \end{asparaenum}
+\end{myexercise}
