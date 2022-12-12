@@ -59,3 +59,347 @@
         (This shows that the flips $B_1$ cannot be omitted from the statement of Theorem \ref{thm:10.7}.)
     \end{asparaenum}
 \end{myexercise}
+
+\begin{myexercise}    
+    \label{ex:10.4}
+    For $(x,y) \in \R^2$, define
+    \begin{equation*}
+        \mathbf{F}(x,y) = (e^x \cos y - 1, e^x \sin y).
+    \end{equation*}
+    Prove that $\mathbf{F = G_2 \circ G_1}$, where 
+    \begin{align*}
+        \mathbf{G}_1 (x,y) &= (e^x \cos y - 1, y) \\
+        \mathbf{G}_2 (u,v) &= (u, (1 + u) \tan v) 
+    \end{align*}
+    are primitive in some neighborhood of $(0, 0)$.
+
+    Compute the Jacobians of $\mathbf{G_1, G_2, F}$ at $(0, 0)$. 
+    Define
+    \begin{equation*}
+        \mathbf{H}_2 (x,y) = (x, e^x \sin y)
+    \end{equation*}
+    and find 
+    \begin{equation*}
+        \mathbf{H}_1 (u,v) = (h(u,v), v)
+    \end{equation*}
+    so that $\mathbf{F = H_1 \circ H_2}$ is some neighborhood of $(0,0)$.
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.5}
+    Formulate and prove an analogue of Theorem \ref{thm:10.8}, 
+    in which $K$ is a compact subset of an arbitrary metric space. 
+    (Replace the functions $\phi_i$ that occur in the
+    proof of Theorem \ref{thm:10.8} 
+    by functions of the type constructed in Exercise \ref{ex:4.22})
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.6}
+    Strengthen the conclusion of Theorem \ref{thm:10.8} by showing that the functions $\psi_i$ can be made differentiable, and even infinitely differentiable. 
+    (Use Exercise \ref{ex:8.1} in the construction of the auxiliary functions $\phi_i$.)
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.7}
+    \begin{enumerate}[(a)]
+        \item Show that the simplex $Q^k$ is the smallest convex subset of $\R^k$ that contains $\mathbf{0},\mathbf{e}_1,\dots,\mathbf{e}_k$.
+        \item Show that affine mappings take convex sets to convex sets.
+    \end{enumerate}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.8}
+    Let $H$ be the parallelogram in $\R^2$ whose vertices are $(1, 1), (3, 2), (4, 5), (2, 4)$.
+    Find the affine map $T$ which sends $(0, 0)$ to $(1, 1)$, $(1, 0)$ to $(3, 2)$, $(0, 1)$ to $(2, 4)$.
+    Show that $J_T = 5$. 
+    Use $T$ to convert the integral
+    \begin{equation*}
+        \alpha = \int_H e^{x-y} \d x \d y
+    \end{equation*}
+    to an integral over $I^2$ and thus compute $\alpha$.
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.9}
+    Define $(x, y) = T(r, \theta)$ on the rectangle
+    \begin{equation*}
+        0 \leq r \leq a, 
+        \quad 
+        0 \leq \theta \leq 2\pi
+    \end{equation*}
+    by the equations
+    \begin{equation*}
+        x = r \cos \theta , \quad 
+        y = r \sin \theta .
+    \end{equation*}
+    Show that $T$ maps this rectangle onto the closed disc $D$ with center at $(0, 0)$ and radius $a$, 
+    that $T$ is one-to-one in the interior of the rectangle, and that $J_T(r, \theta) = r$. 
+    If $f \in \mathscr{C}(D)$, prove the formula for integration in polar coordinates:
+    \begin{equation*}
+        \int_D f(x,y) \d x \d y = 
+        \int_{0}^{a} \int_{0}^{2\pi} f(T(r,\theta)) r \d r \d \theta .
+    \end{equation*}
+    \emph{Hint:} Let Do be the interior of $D$, minus the interval from $(0, 0)$ to $(0, a)$. 
+    As it stands, Theorem \ref{thm:10.9} applies to continuous functions $f$ whose support lies in $D_0$. 
+    To remove this restriction, proceed as in Example \ref{newexample:10.4}.
+\end{myexercise}
+
+
+
+\begin{myexercise}    
+    \label{ex:10.10}
+    Let $a \rightarrow \infty$ in \ref{ex:11.9} and prove that 
+    \begin{equation*}
+        \int_{\R^2} f(x,y) \d x \d y = 
+        \int_{0}^{\infty} \int_{0}^{2\pi} f(T(r,\theta)) r \d r \d \theta ,
+    \end{equation*}
+    for continuous functions f that decrease sufficiently rapidly as $|x | + | y | \rightarrow \infty$.
+    (Find a more precise formulation.) 
+    Apply this to
+    \begin{equation*}
+        f(x, y) = \exp (-x^2 - y^2)
+    \end{equation*}
+    to derive formula \eqref{eq:8.101}.
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.11}
+    Define $(u,v)=T(s,t)$ on the strip
+    \begin{equation*}
+        0<s<\infty , \quad
+        0<t<1
+    \end{equation*}
+    by setting $u = s - st$, $v = st$. 
+    Show that $T$ is a 1-1 mapping of the strip onto the positive quadrant $Q$ in $\R^2$.
+    Show that $J_T(s, t) = s$.
+
+    For x > 0, y > 0, integrate
+    \begin{equation*}
+        u^{x-1} e^{-u} v^{y-1} e^{-v} 
+    \end{equation*}
+    over $Q$, use Theorem \ref{thm:10.9} to convert the integral to one over the strip, and derive formula \eqref{eq:8.96} in this way.
+    (For this application, Theorem \ref{thm:10.9} has to be extended so as to cover certain improper integrals. 
+    Provide this extension.)
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.12}
+    Let $I^k$ be the set of all $\mathbf{u} = (u_1, ... , u_k) \in \R^k$ with $0 \leq u_i \leq 1$ for all $i$; 
+    let $Q^k$ be the set of all $\mathbf{x} = (x_1, ... , x_k) \in  \R^k$ with $x_i \geq 0, \sum x_i \leq 1$. 
+    ($I^k$ is the unit cube; 
+    $Q^k$ is the standard simplex in $\R^k$.) 
+    Define $\mathbf{x} = T(\mathbf{u})$ by
+    \begin{align*}
+        x_1 &= u_1 \\
+        x_2 &= (1-u_1)u_2 \\
+        ... & \dots
+        x_k &= (1-u_1)\cdots(1-u_{k-1})u_k. 
+    \end{align*}
+    Show that 
+    \begin{equation*}
+        \sum_{i=1}^{k} x_i = 1 - \prod_{i=1}^{k} (1-u_i) .
+    \end{equation*}
+
+    Show that $T$ maps $I^k$ onto $Q^k$, 
+    that $T$ is 1-1 in the interior of $I^k$, 
+    and that its inverse $S$ is defined in the interior of $Q^k$ by $u_1 = x_1$ and
+    \begin{equation*}
+        u_i = \frac{x_i}{1-x_1-\cdots-x_{i-1}}
+    \end{equation*}
+    for $i=2,\dots,k$.
+    Show that 
+    \begin{equation*}
+        J_T(\mathbf{u}) = 
+        (1-u_1)^{k-1}
+        (1-u_2)^{k-2}
+        \cdots 
+        (1-u_{k-1}),
+    \end{equation*}
+    and 
+    \begin{equation*}
+        J_S(\mathbf{x}) = 
+        \left[ 
+            (1-x_1)
+            (1-x_1-x_2)
+            \cdots
+            (1-x_1-\cdots-x_{k-1})
+         \right]^{-1} .
+    \end{equation*}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.13}
+    Let $r_1,\dots,r_k$ be nonnegative integers, and prove that
+    \begin{equation*}
+        \int_{Q^k} 
+        x_1^{r_1} 
+        \cdots 
+        x_k^{r_k}
+        \d x = 
+        \frac{r_1!\cdots r_k!}{(k+r_1+\cdots+r_k)!}
+    \end{equation*}
+    \emph{Hint:} Use Exercise \ref{ex:11.12}, Theorem \ref{thm:10.9} and \ref{thm:8.20}.
+
+    Note that the special case $r_1 = \cdots = r_k = 0$ 
+    shows that the volume of $Q^k$ is $1/k!$.
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.14}
+    Prove formula \eqref{eq:10.46}.
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.15}
+    If $\omega$ and $\lambda$ are $k$- and $m$-forms, respectively, prove that
+    \begin{equation*}
+        \omega \wedge \lambda = 
+        (-1)^{km} \lambda \wedge \omega .
+    \end{equation*}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.16}
+    If $k \geq 2$ and $\delta = [\mathbf{p}_0, \mathbf{p}_1, ... , \mathbf{p}_t]$ is an oriented affine $k$-simplex, 
+    prove that $\partial^2 \sigma = 0$, 
+    directly from the definition of the boundary operator $\partial$. 
+    Deduce from this that $\partial^2 \Psi = 0$ for every chain $\Psi$.
+    
+    \emph{Hint:} For orientation, do it first for $k= 2, k = 3$. 
+    In general, if $i <j$, let $\sigma_{ij}$ be the $(k - 2)$-simplex obtained by deleting $\mathbf{p}_i$ and $\mathbf{p}_j$ from $u$. 
+    Show that each $\sigma_{ij}$ occurs twice in $\partial^2 \sigma$, with opposite sign.
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.17}
+    Put $J^2 = \tau_1 + \tau_2$, where 
+    \begin{equation*}
+        \tau_1 =  \left[ \mathbf{0,e_1,e_1+e_2} \right], 
+        \quad 
+        \tau_2 = -\left[ \mathbf{0,e_2,e_2+e_1} \right].
+    \end{equation*}
+    Explain why it is reasonable to call $J^2$ the positively oriented unit square in $\R^2$ .
+    Show that $\partial J^2$ is the sum of 4 oriented affine 1-simplexes. Find these. What is $\partial (\tau_1 - \tau_2)$?
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.18}
+    Consider the oriented affine 3-simplex 
+    \begin{equation*}
+        \sigma_1 =  \left[ \mathbf{0,e_1,e_1+e_2,e_1+e_2+e_3} \right]
+    \end{equation*}
+    in $\R^3$.
+    Show that $\sigma_1$
+    (regarded as a linear transformation) has determinant 1.
+    Thus $\sigma_1$ is positively oriented.
+
+    Let $\sigma_2 , ... , \sigma_6$ be five other oriented 3-simplexes, obtained as follows: 
+    There are five permutations $(i_1, i_2, i_3)$ of $(1, 2, 3)$, distinct from $(1, 2, 3)$. 
+    Associate with each $(i_1, i_2, i_3)$ the simplex 
+    \begin{equation*}
+        s(i_1, i_2, i_3) \left[ \mathbf{0,e_{i_1},e_1+e_2} \right]
+    \end{equation*}
+    where $s$ is the sign that occurs in the definition of the determinant. 
+    (This is how $\tau_2$ was obtained from $\tau_1$ in Exercise \ref{ex:11.17}.)
+    
+    Show that $\sigma_2, \dots , \sigma_6$ are positively oriented.
+    
+    Put $J^3 = \sigma_1 + \dots + \sigma_6$. 
+    Then $J^3$ may be called the positively oriented unit cube in $\R^3$. 
+
+    Show that $\partial J^3$ is the sum of 12 oriented affine 2-simplexes. 
+    (These 12 triangles cover the surface of the unit cube $I^3$,)
+
+    Show that $\mathbf{x} = (\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3)$ is in the range of $\sigma_1$ if and only if $0 \leq x_3 \leq x_2 \leq x_1 \leq 1$,
+
+    Show that the ranges of $\sigma_1, ... , \sigma_6$ have disjoint interiors, and that their union covers $I^3$. 
+    (Compare with Exercise \ref{ex:11.13}; note that $3! = 6$.)
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.19}
+\end{myexercise}
+
+
+
+\begin{myexercise}    
+    \label{ex:10.20}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.21}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.22}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.23}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.24}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.25}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.26}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.27}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.28}
+\end{myexercise}
+
+
+\begin{myexercise}    
+    \label{ex:10.29}
+\end{myexercise}
+
+
+
+\begin{myexercise}
+    \label{ex:10.30}
+\end{myexercise}
+
+
+\begin{myexercise}
+    \label{ex:10.31}
+\end{myexercise}
+
+
+\begin{myexercise}
+    \label{ex:10.32}
+\end{myexercise}
+
+
