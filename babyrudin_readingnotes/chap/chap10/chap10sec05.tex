@@ -82,12 +82,79 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
 
 \begin{newexample}
     \label{newexample:10.12}
-    % todo add examples
+    \begin{enumerate}[(a)]
+        \item Let $\gamma$ be a 1-surface (a curve of class $\mathscr{C}$) in $\R^3$, with parameter domain $[0, 1 ]$.
+        Write $(x, y, z)$ in place of $(x_1, x_2 , x_3)$, and put
+        \begin{equation*}
+            \omega = x \d y + y \d x .
+        \end{equation*}
+        Then 
+        \begin{equation*}
+            \int_{\gamma} \omega = \int_{0}^{1} \left[ \gamma_1(t) \gamma'_2(t)+\gamma_2(t) \gamma'_1(t) \right] \d t = 
+            \gamma_1(1)
+            \gamma_2(1) -
+            \gamma_1(0)
+            \gamma_2(0) .
+        \end{equation*}
+        Note that in this example $\int_{\gamma} \omega$ depends only on the initial point $\gamma(0)$ and on the end point $\gamma(1)$ of $\gamma$. 
+        In particular, $\int_{\gamma} \omega = 0$ for every closed curve $\gamma$. 
+        (As we shall see later, this is true for every $1$-form w which is \myKeywordblue{exact}.) \\
+        Integrals of I-forms are often called line \myKeywordblue{integrals}.
+        \item Fix $a>0,b>0$, and define 
+        \begin{equation*}
+            \gamma(t) = (a \cos t, b \sin t)
+            \quad 
+            (0 \leq t \leq 2\pi),
+        \end{equation*}
+        so that $\gamma$ is closed curve in $\R^2$.
+        (Its range is an ellipse.)
+        Then 
+        \begin{equation*}
+            \int_{\gamma} x \d y =
+            \int_{0}^{2\pi} ab \cos ^2 t \d t = 
+            \pi ab,
+        \end{equation*}
+        whereas 
+        \begin{equation*}
+            \int_{\gamma} y \d x =
+            -\int_{0}^{2\pi} ab \sin ^2 t \d t = 
+            -\pi ab,
+        \end{equation*}
+        Note that $\int_{\gamma} x \d y$ is the area of the region bounded by $\gamma$. 
+        This is a special case of Green's theorem.
+        \item Let $D$ be the 3-cell defined by 
+        \begin{equation*}
+            0 \leq r \leq 1, 
+            \quad
+            0 \leq \theta \leq \pi, 
+            \quad
+            0 \leq \phi \leq 2\pi.
+        \end{equation*}
+        Define $\Phi(r,\theta,\phi)=(x,y,z)$, where 
+        \begin{align*}
+            x &= r \sin \theta \cos \phi \\
+            y &= r \sin \theta \sin \phi \\
+            z &= r \cos \theta. 
+        \end{align*}
+        Then 
+        \begin{equation*}
+            J_{\Phi}(r,\theta,\phi) = 
+            \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} =
+            r^2 \sin \theta.
+        \end{equation*}
+        Hence 
+        \begin{equation}
+            \label{eq:10.36}
+            \int_{\Phi} \d x \wedge \d y \wedge \d z = 
+            \int_{D} J_{\Phi} = \frac{4\pi}{3} .
+        \end{equation}
+        Note that $\Phi$ maps $D$ onto the closed unit ball of $\R^3$, that the mapping is 1-1 in the interior of $D$ (but certain boundary points are identified by $\Phi$), and that the integral \eqref{eq:10.36} is equal to the volume of $\Phi(D)$.
+    \end{enumerate}
 \end{newexample}
 
-\begin{myremark}
-    \label{myremark:10.13}
-    \myKeyword{ Elementary properties}
+\begin{mydef}
+    \label{mydef:10.13}
+    \myKeyword{Elementary properties}
     Let $\omega$, $\omega_1$, $\omega_2$ be $k$-forms in $E$.
     We write $\omega_1 = \omega_2$ 
     if and only if $\omega_1(\Phi) = \omega_2(\Phi)$
@@ -169,10 +236,11 @@ In fact, $1$-surfaces are precisely the same as continuously differentiable curv
     It follows that 0 is the only $k$-form in any open subset of $\R^n$, if $k > n$.
 
     The anticommutativity expressed by (\ref{eq:10.42}) is the reason for the inordinate amount of attention that has to be paid to minus signs when studying differential forms.    
-\end{myremark}
+\end{mydef}
 
 \begin{mydef}
-    \myKeyword{ Basic $k$-forms}
+    \label{mydef:10.14}
+    \myKeyword{Basic $k$-forms}
     If $i_1, \dots , i_k$ are integers such that 
     $1 \leq i_1 < i_2 < \cdots < i_k \leq n$, 
     and if $I$ is the ordered $k$-tuple $\{i_1, \dots , i_k\}$, 
@@ -281,7 +349,7 @@ since, for example,
 % todo add proof
 
 \begin{mydef}
-    \myKeyword{ Products of basic $k$-forms}
+    \myKeyword{Products of basic $k$-forms}
     Suppose 
     \begin{equation}
         \label{eq:10.51}
@@ -303,7 +371,7 @@ since, for example,
 \end{mydef}
 
 \begin{mydef}
-    \myKeyword{ Multiplication}
+    \myKeyword{Multiplication}
     Suppose $\omega$ and $\lambda$ are $p$- and $q$-forms, respectively, in
     some open set $E \subset \R^n$, with standard presentations
     \begin{equation}
@@ -316,7 +384,7 @@ since, for example,
 \end{mydef}
 
 \begin{mydef}
-    \myKeyword{ Differentiation}
+    \myKeyword{Differentiation}
     We shall now define a differentiation operator $\d$ which
     associates a $(k + 1)$-form $\d \omega$ to each $k$-form $\omega$ of class $\mathscr{C}'$ in some open set $E \in \R^n$.
 

@@ -26,23 +26,23 @@ Thus every subset of a euclidean space is a metric space. Other examples
 are the spaces $l(K)$ and $L^2 (\mu)$, 
 which are discussed in Chaps. 7 and 11, respectively.
 
-\mybox{
-    使用 mathescr 命令输入英文花体字(报错,改用 mathcal)
-    $\mathscr{l} (K)$ and $\mathscr{l}^2 (\mu)$
+% \mybox{
+%     使用 mathescr 命令输入英文花体字(报错,改用 mathcal)
+%     $\mathscr{l} (K)$ and $\mathscr{l}^2 (\mu)$
 
-    Ralph Smith’s Formal Script Font (rsfs): Use the “mathrsfs” package.
-    usepackage{mathrsfs}
+%     Ralph Smith’s Formal Script Font (rsfs): Use the “mathrsfs” package.
+%     usepackage{mathrsfs}
     
-    $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+%     $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 
-    % $\mathscr{abcdefghijklmnopqrstuvwxyz}$
+%     % $\mathscr{abcdefghijklmnopqrstuvwxyz}$
 
-    % % $\mathrsfs{abcdefghijklmnopqrstuvwxyz}$
-    % $\mathcal{abcdefghijklmnopqrstuvwxyz}$ % 小写字母打印出来是乱码
-    $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+%     % % $\mathrsfs{abcdefghijklmnopqrstuvwxyz}$
+%     % $\mathcal{abcdefghijklmnopqrstuvwxyz}$ % 小写字母打印出来是乱码
+%     $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 
-    $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
-}
+%     $\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+% }
 
 \begin{mydef}
     \label{mydef:2.17}
@@ -332,6 +332,7 @@ Compare this with the examples in Sec. 1.9.
 \end{proof}
 
 \begin{myremark}
+    \label{myremark:2.29}
     Suppose $E \subset Y \subset X$, where $X$ is a metric space. To say that $E$ is an open subset of $X$ means that to each point $p \in E$ there is associated a positive number $r$ such that the conditions $d(p,q) < r$ , $g \in X$ imply that $q \in E$. But we have already observed (Sec. 2.16) that $Y$ is also a metric space, so that our definitions may equally well be made within $Y$. To be quite explicit, let us say that 
     
     $E$ is \myKeywordblue{open relative to $Y$} if to each $p \in E$ there is associated an $r > 0$ such that $q \in E$ whenever $d(p,q) <r$ and $g \in Y$. 
