@@ -484,7 +484,7 @@
         
         \emph{Hint:} Consider the 3-surface $\Psi$ given by
         \begin{equation*}
-            \Psi(t,u,v) = \left\[ 1-t+tf(u,v) \right\] \sum (u,v) ,
+            \Psi(t,u,v) = \left[ 1-t+t f(u,v) \right] \sum (u,v) ,
         \end{equation*}
         where $(u, v) \in E$, $0 \leq t \leq 1$. 
         For fixed $v$, the mapping $(t, u) \rightarrow \Psi(t, u, v)$ is a 2-surface $\Psi$ to which (c) can be applied to show that $\int_{\Phi} \zeta = 0$. 
@@ -629,10 +629,10 @@
         \lambda = g_1 \d x + g_2 \d y
     \end{equation*}
     where 
-    \begin{equation*}
+    \begin{align*}
         g_1(x,y,z) &= \int_{c}^{z} f_2(x,y,s) \d s - \int_{b}^{y} f_3(x,t,c) \d t \\
         g_2(x,y,z) &= -\int_{c}^{z} f_1(x,y,s) \d s ,
-    \end{equation*}
+    \end{align*}
     for $(x, y, z) \in E$. 
     Prove that $\d \lambda = \omega$ in $E$.
 
@@ -672,7 +672,18 @@
 
 \begin{myexercise}
     \label{ex:10.30}
-    % If $N$ is the vector given by \eqref{eq:10.135}, prove that
+    If $N$ is the vector given by \eqref{eq:10.135}, 
+    prove that
+    \begin{equation*}
+        \det 
+        \begin{bmatrix}
+            \alpha_1 & \beta_1 & \alpha_2 \beta_3 - \alpha_3 \beta_2 \\
+            \alpha_2 & \beta_2 & \alpha_3 \beta_1 - \alpha_1 \beta_3 \\
+            \alpha_3 & \beta_3 & \alpha_1 \beta_2 - \alpha_2 \beta_1 \\
+        \end{bmatrix} = 
+        \left| \mathbf{N} \right|^2 .
+    \end{equation*}
+    Also, verify Eq. \eqref{eq:10.137}.
 \end{myexercise}
 
 
