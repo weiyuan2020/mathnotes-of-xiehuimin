@@ -1,7 +1,17 @@
 $pdf_mode = 5;
-# $pdflatex = "xelatex -file-line-error --shell-escape -src-specials -synctex=1 -interaction=nonstopmode %O %S;cp %D %R.pdf";
-# $xelatex = 'xelatex -file-line-error -halt-on-error -interaction=nonstopmode -no-pdf -synctex=1 %O %S';
+# If zero, do NOT generate a pdf version of the document. 
+# If equal to 1, generate a pdf version of the document using pdflatex, using the command specified by the $pdflatex variable. 
+# If equal to 2, generate a pdf version of the document from the ps file, by using the command specified by the $ps2pdf variable. 
+# If equal to 3, generate a pdf version of the document from the dvi file, by using the command specified by the $dvipdf variable. 
+# If equal to 4, generate a pdf version of the document using lualatex, using the command specified by the $lualatex variable. 
+# If equal to 5, generate a pdf version (and an xdv version) of the document using xelatex, using the commands specified by the $xelatex and xdvipdfmx variables.
+
+
 $xelatex = 'xelatex -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1 %O %S';
+# Specifies the command line for the LaTeX processing program of when the xelatex program is
+# called for. See the documentation of the -xelatex option for some special properties of latexmk’s
+# use of xelatex
+
 @generated_exts = (@generated_exts, 'synctex.gz');
 # 用于正反向搜索
 # $pdflatex = "xelatex -file-line-error --shell-escape -src-specials -synctex=1 -interaction=batchmode %O %S;cp %D %R.pdf";
