@@ -4,46 +4,100 @@
 
 \begin{myexercise}
     \label{ex:11.1}
+    If $f \geq 0$ and $\int_E f \d = 0$, prove that $f(x) = 0$ almost everywhere on $E$.
+
+    \emph{Hint:} Let $E_n$ be the subset of $E$ on which $f(x) > 1/n$.
+    Write $A = \bigcup E_n$.
+    Then $\mu(A)= 0$ if and only if $\mu(E_n)= 0$ for every $n$.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.2}
+    If $\int_A f d \mu = 0$ for every measurable subset $A$ of a measurable set $E$, then $f(x) = 0$ almost everywhere on $E$.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.3}
+    If $\{f_n\}$ is a sequence of measurable functions, prove that the set of points $x$ at which $\{f_n(x)\}$ converges is measurable.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.4}
+    If $f \in \mathscr{L}(\mu)$ on $E$ and $g$ is bounded and measurable on $E$, then $fg \in \mathscr{L}(\mu)$ on $E$.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.5}
+    Put
+    \begin{align*}
+        g(x)             & =
+        \begin{array}{l}
+            0 \\
+            1 \\
+        \end{array} &
+        \begin{array}{l}
+            (0 \leq x \leq \frac{1}{2}) \\
+            (\frac{1}{2} \leq x \leq 1) \\
+        \end{array}                     \\
+        f_{2k}(x)        & = g(x)   & (0 \leq x \leq 1) \\
+        f_{2k+1}(x)      & = g(1-x) & (0 \leq x \leq 1)
+    \end{align*}
+    Show that
+    \begin{equation*}
+        \liminf_{n \to \infty} f_n(x) = 0
+        \quad
+        (0 \leq x \leq 1),
+    \end{equation*}
+    but
+    \begin{equation*}
+        \int_{0}^{1} f_n(x) \d x = \frac{1}{2}.
+    \end{equation*}
+    [Compare with \eqref{eq:11.77}.]
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.6}
+    \begin{equation*}
+        f_n(x) = \begin{array}{ll}
+            \frac{1}{n} & (|x| \leq n), \\
+            0           & (|x|    > n).
+        \end{array}
+    \end{equation*}
+    Then $f_n(x) \rightarrow 0$ uniformly on $\R^1$, but
+    \begin{equation*}
+        \int_{-\infty}^{\infty} f_n \d x = 2
+        \quad
+        (n = 1,2,3,\dots).
+    \end{equation*}
+    (We write $\int_{-\infty}^{\infty}$ in place of $\int_{\R 1}$.)
+    Thus uniform convergence does not imply dominated convergence in the sense of Theorem \ref{thm:11.32}.
+    However, on sets of finite measure, uniformly convergent sequences of bounded functions do satisfy Theorem \ref{thm:11.32}.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.7}
+    Find a necessary and sufficient condition that $f \in \mathscr{R}(\alpha)$ on $[a, b]$.
+    \emph{Hint:} Consider Example \ref{neqexample:11.6}(b) and Theorem \ref{thm:11.33}.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.8}
+    If $f \in \mathscr{R}$ on $[a, b]$
+    and if $F(x) = \int_{a}^{b} f(t) \d t$,
+    prove that $F'(x) =f(x)$ almost everywhere on $[a, b]$.
 \end{myexercise}
 
 
 \begin{myexercise}
     \label{ex:11.9}
+    Prove that the function $F$ given by \eqref{eq:11.96} is continuous on $[a, b]$.
 \end{myexercise}
 
 
